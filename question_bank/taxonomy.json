@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "categories": [
+    {"id": "agent-architecture", "name": "AI Agent 架构设计", "scope": "Agent 定义与组成、规划与循环、工具调用、多 Agent 协作、上下文与记忆"},
+    {"id": "agent-performance", "name": "Agent 性能优化", "scope": "延迟定位、并行与流式、缓存、瓶颈排查与优化顺序"},
+    {"id": "agent-cost", "name": "Agent 成本优化", "scope": "模型路由、Token 成本、质量/速度/成本取舍"},
+    {"id": "rag-retrieval", "name": "RAG 检索与知识组织", "scope": "召回与重排、混合检索、分块策略、检索评测"},
+    {"id": "evaluation-reliability", "name": "Agent 评测与可靠性", "scope": "评测集设计、指标、回归、失败模式与防护、人工审批"},
+    {"id": "model-adaptation", "name": "模型选型与微调", "scope": "RAG 与微调选择、LoRA/QLoRA、数据准备、模型能力边界"},
+    {"id": "data-governance", "name": "Agent 数据治理", "scope": "会话数据沉淀、知识库质量、数据清洗与权限"},
+    {"id": "agent-engineering", "name": "Agent 工程化与运行环境", "scope": "环境管理、部署、MCP 与工具接入、可观测性"},
+    {"id": "agent-learning", "name": "Agent 学习与策略优化", "scope": "强化学习基础、奖励设计、PPO 等策略优化方法"}
+  ]
+}
