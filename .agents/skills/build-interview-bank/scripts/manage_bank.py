@@ -11,6 +11,7 @@ import argparse
 import datetime as _dt
 import hashlib
 import json
+import posixpath
 import re
 import sys
 from pathlib import Path, PurePosixPath
@@ -57,7 +58,8 @@ def load_taxonomy(path):
 
 
 def canonical_rel(question):
-    return f"{question['category_id']}/{question['difficulty']}/{question['id']}.json"
+    return (f"{question.get('category_id', '?')}/"
+            f"{question.get('difficulty', '?')}/{question.get('id', '?')}.json")
 
 
 def _nonempty_str(value):
@@ -370,13 +372,17 @@ def regenerate_question(bank_root, question, taxonomy):
         generate_editorial_markdown(question, taxonomy), encoding="utf-8")
 
 
-def _question_table(entries, taxonomy):
+def _question_table(entries, taxonomy, index_dir=""):
+    """index_dir 为索引文件所在目录（相对 bank 根的 POSIX 路径，根为空串），
+    链接据此换算为相对该索引文件的路径。"""
     if not entries:
         return ["暂无题目。", ""]
     rows = ["| 题目 | 分类 | 难度 | TAG |", "| --- | --- | --- | --- |"]
     for e in entries:
         name = taxonomy.get(e["category_id"], {}).get("name", e["category_id"])
-        link = f"[{e['id']} · {e['title']}]({e['file'].replace('.json', '.md')})"
+        md_path = e["file"].replace(".json", ".md")
+        link_path = posixpath.relpath(md_path, index_dir or ".")
+        link = f"[{e['id']} · {e['title']}]({link_path})"
         rows.append(f"| {link} | {name} | {DIFFICULTY_ZH[e['difficulty']]} | "
                     + " ".join(f"`{t}`" for t in e["tags"]) + " |")
     return rows + [""]
@@ -405,7 +411,7 @@ def _index_texts(bank_root, catalog, taxonomy):
     for category_id, category in taxonomy.items():
         entries = [e for e in questions if e["category_id"] == category_id]
         cat_lines = [f"# {category['name']}", "", f"范围：{category['scope']}", ""]
-        cat_lines += _question_table(entries, taxonomy)
+        cat_lines += _question_table(entries, taxonomy, index_dir=category_id)
         texts[bank_root / category_id / "README.md"] = "\n".join(cat_lines)
     return texts
 
@@ -431,61 +437,63 @@ def run_check(repo_root):
         taxonomy = load_taxonomy(bank_root / "taxonomy.json")
     except (OSError, ValueError) as exc:
         return [f"taxonomy 加载失败：{exc}"]
-    catalog = read_json(bank_root / "catalog.json")
+    try:
+        catalog = read_json(bank_root / "catalog.json")
+    except (OSError, ValueError) as exc:
+        return [f"catalog 加载失败：{exc}"]
     if catalog.get("version") != CONTRACT_VERSION:
         errors.append("catalog 必须为 1.0 版")
     for path in _iter_question_files(bank_root):
         question = read_json(path)
-        errors += validate_question(question, taxonomy)
+        question_id = question.get("id", "?")
+        validation_errors = validate_question(question, taxonomy)
+        errors += validation_errors
         rel = str(path.relative_to(bank_root)).replace("\\", "/")
         if rel not in {e["file"] for e in catalog["questions"]}:
-            errors.append(f"[{question.get('id', '?')}] 未登记入 catalog：{rel}")
+            errors.append(f"[{question_id}] 未登记入 catalog：{rel}")
         review_file = review_path(
-            repo_root, question.get("source", {}).get("batch_id", ""),
-            question.get("id", "?"))
+            repo_root, question.get("source", {}).get("batch_id", "")
+            if isinstance(question.get("source"), dict) else "",
+            question_id)
         if not review_file.exists():
-            errors.append(f"[{question.get('id', '?')}] 缺少独立审核记录")
+            errors.append(f"[{question_id}] 缺少独立审核记录")
         else:
             errors += review_errors(read_json(review_file), path.read_bytes(), question)
+        if validation_errors:
+            # 结构校验未过：派生 Markdown 的比对会因缺字段崩溃，跳过并继续审计其余题目。
+            continue
         student = path.with_suffix(".md")
         if not student.exists():
-            errors.append(f"[{question['id']}] 缺少学员版 Markdown")
+            errors.append(f"[{question_id}] 缺少学员版 Markdown")
         else:
             student_text = student.read_text(encoding="utf-8")
             if student_text != generate_student_markdown(question, taxonomy):
-                errors.append(f"[{question['id']}] 学员版 Markdown 与 JSON 不一致（应编辑 JSON 后重新生成）")
+                errors.append(f"[{question_id}] 学员版 Markdown 与 JSON 不一致（应编辑 JSON 后重新生成）")
             else:
                 for marker in EDITORIAL_LEAK_MARKERS:
                     if marker in student_text:
-                        errors.append(f"[{question['id']}] 学员版泄漏教研标记：{marker}")
+                        errors.append(f"[{question_id}] 学员版泄漏教研标记：{marker}")
                 prov = question.get("editorial_provenance", {})
                 for key in ("company", "role", "round"):
                     value = prov.get(key, "unspecified")
                     if value not in ("unspecified", "") and value in student_text:
-                        errors.append(f"[{question['id']}] 学员版泄漏 {key}：{value}")
-        editorial = bank_root / "editorial" / f"{question['id']}.md"
+                        errors.append(f"[{question_id}] 学员版泄漏 {key}：{value}")
+        editorial = bank_root / "editorial" / f"{question_id}.md"
         if not editorial.exists():
-            errors.append(f"[{question['id']}] 缺少教研版 Markdown")
+            errors.append(f"[{question_id}] 缺少教研版 Markdown")
         elif editorial.read_text(encoding="utf-8") != generate_editorial_markdown(question, taxonomy):
-            errors.append(f"[{question['id']}] 教研版 Markdown 与 JSON 不一致")
+            errors.append(f"[{question_id}] 教研版 Markdown 与 JSON 不一致")
     for entry in catalog["questions"]:
         if not (bank_root / entry["file"]).exists():
             errors.append(f"[{entry['id']}] catalog 指向的文件不存在：{entry['file']}")
 
     # 只读比较索引；不在此处写盘。
-    missing_index = False
     for path, text in _index_texts(bank_root, catalog, taxonomy).items():
         rel = path.relative_to(bank_root).as_posix()
         if not path.exists():
-            missing_index = True
             errors.append(f"[索引] {rel} 缺失")
         elif path.read_text(encoding="utf-8") != text:
             errors.append(f"[索引] {rel} 与当前题库不一致")
-    if missing_index and not catalog["questions"] and all(
-            e.startswith("[索引]") and e.endswith("缺失") for e in errors):
-        # 空题库引导：catalog 无题目且无其他错误时，缺失索引直接生成而非报错。
-        generate_indexes(bank_root, catalog, taxonomy)
-        return []
     return errors
 
 
@@ -539,8 +547,20 @@ def main(argv=None):
         if entry is None:
             errors = [f"题目未登记：{args.question}"]
         else:
-            regenerate_question(bank_root, read_json(bank_root / entry["file"]), taxonomy)
-            errors = []
+            question_path = bank_root / entry["file"]
+            question = read_json(question_path)
+            source = question.get("source", {}) if isinstance(question.get("source"), dict) else {}
+            review_file = review_path(repo_root, source.get("batch_id", ""),
+                                      question.get("id", args.question))
+            if not review_file.exists():
+                errors = [f"[{args.question}] 缺少独立审核记录："
+                          f"{review_file.relative_to(repo_root)}"]
+            else:
+                # 与登记同一道门禁：审核未过或 SHA 不匹配时拒绝重新生成。
+                errors = review_errors(read_json(review_file),
+                                       question_path.read_bytes(), question)
+            if not errors:
+                regenerate_question(bank_root, question, taxonomy)
     elif args.check:
         errors = run_check(repo_root)
     else:

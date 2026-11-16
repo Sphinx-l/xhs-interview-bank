@@ -337,6 +337,43 @@ class RegistrationTests(unittest.TestCase):
         mb.register_question(self.repo, self.rel)
         self.assertEqual(mb.main(["question_bank", "--check", "--root", str(self.repo)]), 0)
 
+    def test_check_reports_corrupt_catalog_without_crash(self):
+        mb.register_question(self.repo, self.rel)
+        (self.repo / "question_bank" / "catalog.json").write_text(
+            "{ 不是合法 JSON", encoding="utf-8")
+        errors = mb.run_check(self.repo)
+        self.assertTrue(any("catalog" in e for e in errors),
+                        f"期望错误包含 'catalog'，实际 {errors}")
+
+    def test_check_reports_invalid_fields_with_stale_md_without_crash(self):
+        bad = base_question(id="Q002", title="", difficulty="mid")
+        mb.write_json(self.repo / "question_bank" / "agent-architecture" / "low"
+                      / "Q002.json", bad)
+        (self.repo / "question_bank" / "agent-architecture" / "low"
+         / "Q002.md").write_text("# 旧的学员版\n", encoding="utf-8")
+        errors = mb.run_check(self.repo)
+        self.assertTrue(any("Q002" in e for e in errors))
+        self.assertTrue(any("title" in e for e in errors))
+
+    def test_index_readmes_use_dir_relative_links(self):
+        mb.register_question(self.repo, self.rel)
+        root_readme = (self.repo / "question_bank" / "README.md").read_text(
+            encoding="utf-8")
+        self.assertIn("(agent-architecture/low/Q001.md)", root_readme)
+        cat_readme = (self.repo / "question_bank" / "agent-architecture" / "README.md"
+                      ).read_text(encoding="utf-8")
+        self.assertIn("(low/Q001.md)", cat_readme)
+        self.assertNotIn("(agent-architecture/low/Q001.md)", cat_readme)
+
+    def test_question_cli_refuses_tampered_file(self):
+        mb.register_question(self.repo, self.rel)
+        tampered = base_question()
+        tampered["recommended_answer"]["summary"] = "被改过的答案"
+        mb.write_json(self.file, tampered)
+        self.assertEqual(
+            mb.main(["question_bank", "--question", "Q001", "--root", str(self.repo)]),
+            1)
+
 
 class EmptyBankTests(unittest.TestCase):
     def test_check_on_real_empty_bank(self):
