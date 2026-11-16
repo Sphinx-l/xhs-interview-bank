@@ -38,13 +38,15 @@ description: 从小红书关键词/话题搜索采集面试经验帖：冻结清
   "batch_id": "2026-11-16-agent-mianjing",
   "keyword": "Agent 面经",
   "collected_at": "2026-11-16T08:00:00+08:00",
-  "notes": [{"note_id": "…", "url": "…", "title": "…", "status": "retained", "reason": "", "company": "字节", "role": "Agent 开发", "round": "一面"}],
-  "candidates": [{"candidate_id": "C001", "question_verbatim": "面试问：…", "extraction": "note_text", "note_id": "…", "company": "字节", "role": "Agent 开发", "round": "一面", "status": "pending", "reason": ""}]
+  "notes": [{"note_id": "…", "url": "…", "title": "…", "status": "retained", "reason": "", "company": "字节", "role": "Agent 开发", "round": "一面", "interview_period": "2026-10"}],
+  "candidates": [{"candidate_id": "C001", "question_verbatim": "面试问：…", "extraction": "note_text", "note_id": "…", "company": "字节", "role": "Agent 开发", "round": "一面", "chain_order": 1, "status": "pending", "reason": ""}]
 }
 ```
 
 `candidates[].status`：`pending` / `admitted` / `duplicate_of:Q001` / `rejected`，理由写 `reason`。帖内重复题合并后再进 candidates。
 
+`candidates[].chain_order`：同帖追问链中的发问序号（≥1 整数）；散问、非追问链的题不填。编题阶段据此生成题目 `editorial_provenance.follow_up_chain`，是 high 难度评审的证据。
+
 ## manifest.json 核心字段
 
-`note_id`、`url`、`title`、`published_at`（核实到才填）、`status`（`retained` 或具体排除/失败状态）、`reason`、`company/role/round`（教研侧）、`question_ids`（该笔记产出题目）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用。
+`note_id`、`url`、`title`、`published_at`（核实到才填）、`interview_period`（帖内自述的面试时间，原文记录、不推断，无则 `unspecified`）、`status`（`retained` 或具体排除/失败状态）、`reason`、`company/role/round`（教研侧）、`question_ids`（该笔记产出题目）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用；批次 README 另记公司/岗位/轮次分布（教研侧，供冲刺包与公司索引取材）。

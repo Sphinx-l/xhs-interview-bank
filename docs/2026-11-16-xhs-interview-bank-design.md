@@ -1,7 +1,7 @@
 # 设计：小红书面经 → AI/Agent 面试题库工作流
 
 日期：2026-11-16
-状态：已与使用者确认，作为实施依据
+状态：已与使用者确认，作为实施依据；2026-11-17 增补第 11 节（面经情报层，契约升 1.1）
 
 ## 1. 背景与目标
 
@@ -76,7 +76,7 @@ xhs-interview-bank/
 
 ## 6. 答案编写与独立审核（build-interview-bank）
 
-### 6.1 数据契约（1.0 版）
+### 6.1 数据契约（1.0 版；2026-11-17 起升级为 1.1，增补见第 11 节）
 
 借鉴参考仓库 3.1 契约简化，从零定义，不兼容其历史数据：
 
@@ -137,3 +137,20 @@ python3 .agents/skills/build-interview-bank/scripts/manage_bank.py question_bank
 1. 搭建仓库骨架：两个 Skill 文档、契约与审核规范、脚本与测试、空题库结构。
 2. 首个关键词批次试运行，验证契约与脚本，暴露问题后修订。
 3. 扩展更多关键词批次，沉淀题库。
+
+## 11. 增补（2026-11-17）：面经情报层与契约 1.1
+
+**动机**：1.0 流程是单向漏斗——面经只作为裸题来源，去重命中的重复、公司/时间等信号当作损耗丢弃。但面经本身是「最近真实在考什么」的情报：训练营的考前冲刺包（公司近期面经、高频题）与「最近 N 周真题」都依赖这些信号。1.1 起在教研侧结构化保留。题库当时为 0 题，全部改动为增量字段与新命令，零迁移成本。
+
+| 变更 | 内容 |
+| --- | --- |
+| 出现轨迹 occurrences | `editorial_provenance.occurrences[]` 记录每次出现：`batch_id`、`note_id`/`recall_id`、`company/role/round`（自述）、`seen_at`（批次采集日）。`frequency` 改为派生值（=条数） |
+| sighting 命令 | `manage_bank.py question_bank --sighting QID --batch … --note … [--company/--role/--round/--seen-at]`：去重命中已有题时一条命令登记出现。脚本先验证登记前审核哈希一致，仅追加 occurrences 后重绑审核哈希并写 `revision_history`（知识内容不动）；同 `(batch_id, 来源ID)` 幂等拒绝 |
+| 时间维度 | catalog 条目派生 `first_seen`/`last_seen`（occurrences.seen_at 的 min/max），支撑「最近 N 周」查询与新鲜度统计 |
+| 公司索引 | 生成 `question_bank/editorial/by-company.md`（公司 × 题目 × 轮次 × 最近出现），仅教研侧；`--check` 纳入索引一致性审计 |
+| 追问链 | 题目侧 `editorial_provenance.follow_up_chain`（同场追问的 Qxxx 列表，含自身、按发问顺序）；采集侧 `candidates[].chain_order` 记同帖发问序号；high 难度「真实追问链」的证据落位于此 |
+| 学员回流渠道 | `source_type` 增加 `student_recall`（`recall_id` + `extraction: oral_recall`，无 `note_id`）：学员口述面经经导师复盘后可走同一入库门禁，sighting 用 `--recall` |
+| 采集元数据 | manifest 与 `note.json` 增加 `interview_period`（帖内自述面试时间，原文记录不推断，区别于 `published_at`）；批次 README 统计增加公司/岗位/轮次分布（教研侧） |
+| 审计增强 | `--check` 新增：catalog 条目与题目文件的派生字段一致性（漂移检测）、occurrences 公司名不泄漏进学员版、by-company 索引一致性 |
+
+学员版边界不变：occurrences、follow_up_chain、公司索引均只在教研侧，学员版 JSON 字段与 Markdown 不渲染、审计拦截泄漏。

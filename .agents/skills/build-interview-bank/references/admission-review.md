@@ -7,7 +7,15 @@
 - 合计 **>70% 不入库**，candidates 记 `duplicate_of:Qxx`，reason 写各项分值与理由。
 - 恰好 70% 复审：只有来源支持的实质增量才保留。
 - 这是教研语义评审，不冒充 Embedding 分数或统计概率。不靠换公司名、改数字、加模拟约束掩盖重复。
-- 同题面再出现：已有题 `frequency` +1 并修订教研备注，不新建题。
+- 同题面再出现：不新建题，改用 sighting 登记出现轨迹——
+
+```sh
+python .agents/skills/build-interview-bank/scripts/manage_bank.py question_bank \
+  --sighting Q001 --batch 2026-11-20-agent-mianjing --note <note_id> \
+  [--company 字节 --role "Agent 开发" --round 一面]
+```
+
+  脚本先验证登记前审核哈希与当前文件一致，仅追加 `editorial_provenance.occurrences` 与派生 `frequency`，再重绑审核哈希并在 `revision_history` 记录"知识内容未改动"；全程不动题目内容。学员口述来源的题目用 `--recall <recall_id>` 替代 `--note`。
 
 ## 难度
 
@@ -15,7 +23,7 @@
 | --- | --- |
 | low | 直接解释概念、组成、机制、区别 |
 | medium | 选型、定位瓶颈、边界判断 |
-| high | 帖子真实出现系统性追问链或跨模块设计题（保留原帖证据） |
+| high | 帖子/口述真实出现系统性追问链或跨模块设计题；追问链以 `editorial_provenance.follow_up_chain` 记录（按发问顺序、含自身），证据为采集侧 `chain_order` 与题面原文 |
 
 ## 独立知识审核（硬门禁）
 
