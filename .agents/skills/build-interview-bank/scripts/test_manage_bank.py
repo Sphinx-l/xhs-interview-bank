@@ -29,5 +29,136 @@ class TaxonomyTests(unittest.TestCase):
                 mb.load_taxonomy(path)
 
 
+def base_question(**overrides):
+    question = copy.deepcopy(BASE)
+    question.update(overrides)
+    return question
+
+
+BASE = {
+    "id": "Q001",
+    "version": "1.0",
+    "answer_type": "technical",
+    "category_id": "agent-architecture",
+    "difficulty": "low",
+    "title": "什么是 Agent？它和大模型的关系是什么？",
+    "tags": ["agent-definition", "tool-calling", "planning-loop"],
+    "question_guide": {
+        "background": "面试常从概念入手考察理解深度。",
+        "pain_point": "容易把 Agent 和大模型本身混为一谈。",
+        "focus": "Agent 的组成与自主循环，和大模型能力边界的区别。",
+        "approach": "先给定义，再讲组成，最后对比边界。"
+    },
+    "recommended_answer": {
+        "summary": "Agent 是以大模型为决策核心、能规划并调用工具完成多步任务的系统。",
+        "points": [
+            "大模型提供理解、推理与生成能力，是被调用的决策核心。",
+            "Agent 在其外增加规划循环、工具调用、记忆与环境交互。",
+            "判断边界：单轮问答用大模型即可，多步自主任务才需要 Agent。"
+        ]
+    },
+    "technical_answer": {
+        "sections": [
+            {"heading": "组成", "body": "典型 Agent 由规划、工具、记忆、执行四部分组成。"}
+        ]
+    },
+    "source": {
+        "source_type": "xhs_note",
+        "note_id": "65f0a1b200000000008d3a7b",
+        "question_verbatim": "面试问：说说你对 Agent 的理解，它和 LLM 啥区别",
+        "extraction": "note_text",
+        "batch_id": "2026-11-16-test-batch"
+    },
+    "editorial_provenance": {
+        "company": "某公司",
+        "role": "Agent 开发工程师",
+        "round": "一面",
+        "frequency": 2,
+        "notes": "两个面经帖出现同一题面"
+    },
+    "technical_references": [
+        {"title": "Building effective agents", "url": "https://www.anthropic.com/research/building-effective-agents"}
+    ],
+    "related_questions": []
+}
+
+
+class ValidateQuestionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.taxonomy = mb.load_taxonomy(
+            mb.REPO_ROOT / "question_bank" / "taxonomy.json")
+
+    def test_base_question_is_valid(self):
+        self.assertEqual(mb.validate_question(BASE, self.taxonomy), [])
+
+    def assert_field_error(self, overrides, fragment):
+        errors = mb.validate_question(base_question(**overrides), self.taxonomy)
+        self.assertTrue(any(fragment in e for e in errors),
+                        f"期望错误包含 {fragment!r}，实际 {errors}")
+
+    def test_rejects_bad_id_and_version(self):
+        self.assert_field_error({"id": "Q1"}, "ID")
+        self.assert_field_error({"version": "0.9"}, "version")
+
+    def test_rejects_unsupported_answer_type(self):
+        self.assert_field_error({"answer_type": "case_study"}, "technical")
+
+    def test_rejects_unknown_category_and_difficulty(self):
+        self.assert_field_error({"category_id": "no-such-cat"}, "分类")
+        self.assert_field_error({"difficulty": "mid"}, "难度")
+
+    def test_rejects_bad_tags(self):
+        self.assert_field_error({"tags": ["a", "b"]}, "TAG 数量")
+        self.assert_field_error(
+            {"tags": ["ai", "tool-calling", "planning-loop"]}, "泛词")
+        self.assert_field_error(
+            {"tags": ["Tool-Calling", "tool-calling", "planning-loop"]}, "重复")
+
+    def test_rejects_summary_in_technical_answer(self):
+        bad = base_question()
+        bad["technical_answer"]["summary"] = "不该存在"
+        self.assert_field_error(bad, "summary")
+
+    def test_rejects_bad_recommended_answer(self):
+        bad = base_question()
+        bad["recommended_answer"]["points"] = []
+        self.assert_field_error(bad, "points")
+        bad = base_question()
+        bad["recommended_answer"]["summary"] = " "
+        self.assert_field_error(bad, "summary")
+
+    def test_rejects_bad_source(self):
+        bad = base_question()
+        bad["source"]["source_type"] = "douyin_video"
+        self.assert_field_error(bad, "source_type")
+        bad = base_question()
+        bad["source"]["extraction"] = "ocr"
+        self.assert_field_error(bad, "extraction")
+        bad = base_question()
+        bad["source"]["batch_id"] = "test-batch"
+        self.assert_field_error(bad, "batch_id")
+
+    def test_rejects_missing_editorial_fields(self):
+        bad = base_question()
+        del bad["editorial_provenance"]["company"]
+        self.assert_field_error(bad, "company")
+
+    def test_rejects_bad_references(self):
+        self.assert_field_error({"technical_references": []}, "technical_references")
+        bad = base_question()
+        bad["technical_references"][0]["url"] = "ftp://x"
+        self.assert_field_error(bad, "url")
+
+    def test_rejects_bad_related_questions(self):
+        self.assert_field_error({"related_questions": ["Q001"]}, "自身")
+        self.assert_field_error(
+            {"related_questions": ["Q002", "Q002", "Q003", "Q004", "Q005"]}, "related")
+
+    def test_canonical_rel(self):
+        self.assertEqual(mb.canonical_rel(BASE),
+                         "agent-architecture/low/Q001.json")
+
+
 if __name__ == "__main__":
     unittest.main()
