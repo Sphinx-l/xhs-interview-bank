@@ -190,3 +190,73 @@ def validate_question(question, taxonomy):
         err("related_questions 重复")
 
     return errors
+
+
+def generate_student_markdown(question, taxonomy):
+    category = taxonomy.get(question["category_id"], {}).get("name", question["category_id"])
+    lines = [
+        f"# {question['id']} · {question['title']}",
+        "",
+        f"{category} · {DIFFICULTY_ZH[question['difficulty']]} · "
+        + " ".join(f"`{t}`" for t in question["tags"]),
+        "",
+        "## 背景描述",
+        "",
+        question["question_guide"]["background"],
+        "",
+        "## 引出的痛点",
+        "",
+        question["question_guide"]["pain_point"],
+        "",
+        "## 考点",
+        "",
+        question["question_guide"]["focus"],
+        "",
+        "## 思考方向与解题思路",
+        "",
+        question["question_guide"]["approach"],
+        "",
+        "## 推荐答案",
+        "",
+        question["recommended_answer"]["summary"],
+        "",
+    ]
+    lines += [f"- {p}" for p in question["recommended_answer"]["points"]]
+    lines += ["", "## 进阶理解", ""]
+    for sec in question["technical_answer"]["sections"]:
+        lines += [f"### {sec['heading']}", "", sec["body"], ""]
+    example = question["technical_answer"].get("example")
+    if example:
+        lines += ["**示例**：" + example["scenario"], ""]
+        for i, step in enumerate(example.get("steps", []), 1):
+            lines.append(f"{i}. {step}")
+        if example.get("steps"):
+            lines.append("")
+        lines += ["观察：" + example["observation"], ""]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def generate_editorial_markdown(question, taxonomy):
+    student = generate_student_markdown(question, taxonomy)
+    source = question["source"]
+    prov = question["editorial_provenance"]
+    lines = [
+        student.rstrip(),
+        "",
+        "---",
+        "",
+        "## 教研信息（不入学员版）",
+        "",
+        f"- 批次：`{source['batch_id']}`；笔记 ID：`{source['note_id']}`",
+        f"- 提取方式：{source['extraction']}",
+        f"- 题面原文：{source['question_verbatim']}",
+        f"- 公司/岗位/轮次（发帖人自述）：{prov['company']} / {prov['role']} / {prov['round']}",
+        f"- 同题面出现次数：{prov.get('frequency', 1)}",
+    ]
+    if prov.get("notes"):
+        lines.append(f"- 备注：{prov['notes']}")
+    lines += ["", "查证参考："]
+    for ref in question["technical_references"]:
+        lines.append(f"- [{ref['title']}]({ref['url']})")
+    lines.append("")
+    return "\n".join(lines)

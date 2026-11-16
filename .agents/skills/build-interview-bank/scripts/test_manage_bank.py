@@ -167,5 +167,51 @@ class ValidateQuestionTests(unittest.TestCase):
                          "agent-architecture/low/Q001.json")
 
 
+class MarkdownTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.taxonomy = mb.load_taxonomy(
+            mb.REPO_ROOT / "question_bank" / "taxonomy.json")
+        cls.student = mb.generate_student_markdown(BASE, cls.taxonomy)
+        cls.editorial = mb.generate_editorial_markdown(BASE, cls.taxonomy)
+
+    def test_student_has_required_sections(self):
+        text = self.student
+        for heading in ("# Q001 · ", "## 背景描述", "## 引出的痛点", "## 考点",
+                        "## 思考方向与解题思路", "## 推荐答案", "## 进阶理解"):
+            self.assertIn(heading, text)
+        self.assertIn("- 大模型提供理解、推理与生成能力", text)
+        self.assertIn("### 组成", text)
+
+    def test_student_has_metadata_line(self):
+        self.assertIn("AI Agent 架构设计", self.student)
+        self.assertIn("低", self.student)
+
+    def test_student_has_no_editorial_leakage(self):
+        for marker in mb.EDITORIAL_LEAK_MARKERS:
+            self.assertNotIn(marker, self.student)
+        self.assertNotIn("某公司", self.student)
+        self.assertNotIn(BASE["source"]["note_id"], self.student)
+
+    def test_editorial_contains_provenance(self):
+        self.assertIn("## 教研信息", self.editorial)
+        self.assertIn("某公司", self.editorial)
+        self.assertIn(BASE["source"]["note_id"], self.editorial)
+        self.assertIn(BASE["source"]["question_verbatim"], self.editorial)
+        self.assertIn("https://www.anthropic.com/research/building-effective-agents",
+                      self.editorial)
+
+    def test_example_rendered_when_present(self):
+        question = base_question()
+        question["technical_answer"]["example"] = {
+            "scenario": "开发者要给客服 Agent 加工单查询能力。",
+            "steps": ["定义工具描述", "让模型输出调用参数"],
+            "observation": "模型返回结构化参数，业务系统执行后把结果回填。"
+        }
+        text = mb.generate_student_markdown(question, self.taxonomy)
+        self.assertIn("开发者要给客服 Agent 加工单查询能力。", text)
+        self.assertIn("1. 定义工具描述", text)
+
+
 if __name__ == "__main__":
     unittest.main()
