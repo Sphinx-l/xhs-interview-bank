@@ -289,3 +289,269 @@ def review_errors(review, question_bytes, question):
     if not _nonempty_str(review.get("reviewed_at")):
         err("审核记录缺少 reviewed_at")
     return errors
+
+
+def _utc_now():
+    return _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds")
+
+
+def bank_file(repo_root, rel_path):
+    path = PurePosixPath(rel_path)
+    if path.is_absolute() or ".." in path.parts or "\\" in rel_path:
+        raise ValueError(f"题库内路径不合法：{rel_path}")
+    bank_root = Path(repo_root) / "question_bank"
+    target = bank_root / path
+    if not target.resolve().is_relative_to(bank_root.resolve()):
+        raise ValueError(f"题库内路径越界：{rel_path}")
+    return target
+
+
+def catalog_entry(question):
+    return {
+        "id": question["id"],
+        "title": question["title"],
+        "category_id": question["category_id"],
+        "difficulty": question["difficulty"],
+        "tags": question["tags"],
+        "answer_type": question["answer_type"],
+        "file": canonical_rel(question),
+        "batch_id": question["source"]["batch_id"],
+    }
+
+
+def register_question(repo_root, rel_path):
+    repo_root = Path(repo_root)
+    taxonomy = load_taxonomy(repo_root / "question_bank" / "taxonomy.json")
+    try:
+        target = bank_file(repo_root, rel_path)
+    except ValueError as exc:
+        return [str(exc)]
+    if not target.exists():
+        return [f"文件不存在：question_bank/{rel_path}"]
+    question = read_json(target)
+    errors = validate_question(question, taxonomy)
+    if rel_path != canonical_rel(question):
+        errors.append(
+            f"路径必须为 canonical 位置 question_bank/{canonical_rel(question)}，"
+            f"实际 {rel_path}")
+    data = target.read_bytes()
+    review_file = review_path(repo_root, question.get("source", {}).get("batch_id", ""),
+                              question.get("id", "?"))
+    if not review_file.exists():
+        errors.append(f"缺少独立审核记录：{review_file.relative_to(repo_root)}")
+    else:
+        errors += review_errors(read_json(review_file), data, question)
+    if errors:
+        return errors
+
+    catalog = read_json(repo_root / "question_bank" / "catalog.json")
+    for entry in catalog["questions"]:
+        if entry["id"] == question["id"] and entry["file"] != canonical_rel(question):
+            errors.append(f"ID {question['id']} 已登记于 {entry['file']}")
+            return errors
+    catalog["questions"] = [e for e in catalog["questions"] if e["id"] != question["id"]]
+    catalog["questions"].append(catalog_entry(question))
+    catalog["questions"].sort(key=lambda e: e["id"])
+    catalog["generated_at"] = _utc_now()
+    write_json(repo_root / "question_bank" / "catalog.json", catalog)
+    regenerate_question(repo_root / "question_bank", question, taxonomy)
+    generate_indexes(repo_root / "question_bank", catalog, taxonomy)
+    return []
+
+
+def regenerate_question(bank_root, question, taxonomy):
+    bank_root = Path(bank_root)
+    target = bank_root / canonical_rel(question)
+    target.with_suffix(".md").write_text(
+        generate_student_markdown(question, taxonomy), encoding="utf-8")
+    editorial_dir = bank_root / "editorial"
+    editorial_dir.mkdir(exist_ok=True)
+    (editorial_dir / f"{question['id']}.md").write_text(
+        generate_editorial_markdown(question, taxonomy), encoding="utf-8")
+
+
+def _question_table(entries, taxonomy):
+    if not entries:
+        return ["暂无题目。", ""]
+    rows = ["| 题目 | 分类 | 难度 | TAG |", "| --- | --- | --- | --- |"]
+    for e in entries:
+        name = taxonomy.get(e["category_id"], {}).get("name", e["category_id"])
+        link = f"[{e['id']} · {e['title']}]({e['file'].replace('.json', '.md')})"
+        rows.append(f"| {link} | {name} | {DIFFICULTY_ZH[e['difficulty']]} | "
+                    + " ".join(f"`{t}`" for t in e["tags"]) + " |")
+    return rows + [""]
+
+
+def _index_texts(bank_root, catalog, taxonomy):
+    """计算全部索引文件的精确内容；返回 {绝对路径: 文本}，不写盘。"""
+    bank_root = Path(bank_root)
+    questions = catalog["questions"]
+    texts = {}
+    lines = ["# 题库目录", "", f"共 {len(questions)} 题。", ""]
+    lines += _question_table(questions, taxonomy)
+    texts[bank_root / "README.md"] = "\n".join(lines)
+
+    tag_map = {}
+    for e in questions:
+        for t in e["tags"]:
+            tag_map.setdefault(t, []).append(e)
+    tag_lines = ["# TAG 索引", ""]
+    for t in sorted(tag_map):
+        ids = "、".join(e["id"] for e in sorted(tag_map[t], key=lambda e: e["id"]))
+        tag_lines.append(f"- `{t}`：{ids}")
+    tag_lines.append("")
+    texts[bank_root / "TAGS.md"] = "\n".join(tag_lines)
+
+    for category_id, category in taxonomy.items():
+        entries = [e for e in questions if e["category_id"] == category_id]
+        cat_lines = [f"# {category['name']}", "", f"范围：{category['scope']}", ""]
+        cat_lines += _question_table(entries, taxonomy)
+        texts[bank_root / category_id / "README.md"] = "\n".join(cat_lines)
+    return texts
+
+
+def generate_indexes(bank_root, catalog, taxonomy):
+    for path, text in _index_texts(bank_root, catalog, taxonomy).items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+
+def _iter_question_files(bank_root):
+    bank_root = Path(bank_root)
+    for path in sorted(bank_root.glob("*/*/*.json")):
+        if path.name not in ("catalog.json", "taxonomy.json") and path.is_file():
+            yield path
+
+
+def run_check(repo_root):
+    repo_root = Path(repo_root)
+    bank_root = repo_root / "question_bank"
+    errors = []
+    try:
+        taxonomy = load_taxonomy(bank_root / "taxonomy.json")
+    except (OSError, ValueError) as exc:
+        return [f"taxonomy 加载失败：{exc}"]
+    catalog = read_json(bank_root / "catalog.json")
+    if catalog.get("version") != CONTRACT_VERSION:
+        errors.append("catalog 必须为 1.0 版")
+    for path in _iter_question_files(bank_root):
+        question = read_json(path)
+        errors += validate_question(question, taxonomy)
+        rel = str(path.relative_to(bank_root)).replace("\\", "/")
+        if rel not in {e["file"] for e in catalog["questions"]}:
+            errors.append(f"[{question.get('id', '?')}] 未登记入 catalog：{rel}")
+        review_file = review_path(
+            repo_root, question.get("source", {}).get("batch_id", ""),
+            question.get("id", "?"))
+        if not review_file.exists():
+            errors.append(f"[{question.get('id', '?')}] 缺少独立审核记录")
+        else:
+            errors += review_errors(read_json(review_file), path.read_bytes(), question)
+        student = path.with_suffix(".md")
+        if not student.exists():
+            errors.append(f"[{question['id']}] 缺少学员版 Markdown")
+        else:
+            student_text = student.read_text(encoding="utf-8")
+            if student_text != generate_student_markdown(question, taxonomy):
+                errors.append(f"[{question['id']}] 学员版 Markdown 与 JSON 不一致（应编辑 JSON 后重新生成）")
+            else:
+                for marker in EDITORIAL_LEAK_MARKERS:
+                    if marker in student_text:
+                        errors.append(f"[{question['id']}] 学员版泄漏教研标记：{marker}")
+                prov = question.get("editorial_provenance", {})
+                for key in ("company", "role", "round"):
+                    value = prov.get(key, "unspecified")
+                    if value not in ("unspecified", "") and value in student_text:
+                        errors.append(f"[{question['id']}] 学员版泄漏 {key}：{value}")
+        editorial = bank_root / "editorial" / f"{question['id']}.md"
+        if not editorial.exists():
+            errors.append(f"[{question['id']}] 缺少教研版 Markdown")
+        elif editorial.read_text(encoding="utf-8") != generate_editorial_markdown(question, taxonomy):
+            errors.append(f"[{question['id']}] 教研版 Markdown 与 JSON 不一致")
+    for entry in catalog["questions"]:
+        if not (bank_root / entry["file"]).exists():
+            errors.append(f"[{entry['id']}] catalog 指向的文件不存在：{entry['file']}")
+
+    # 只读比较索引；不在此处写盘。
+    missing_index = False
+    for path, text in _index_texts(bank_root, catalog, taxonomy).items():
+        rel = path.relative_to(bank_root).as_posix()
+        if not path.exists():
+            missing_index = True
+            errors.append(f"[索引] {rel} 缺失")
+        elif path.read_text(encoding="utf-8") != text:
+            errors.append(f"[索引] {rel} 与当前题库不一致")
+    if missing_index and not catalog["questions"] and all(
+            e.startswith("[索引]") and e.endswith("缺失") for e in errors):
+        # 空题库引导：catalog 无题目且无其他错误时，缺失索引直接生成而非报错。
+        generate_indexes(bank_root, catalog, taxonomy)
+        return []
+    return errors
+
+
+def rebuild_all(repo_root):
+    repo_root = Path(repo_root)
+    bank_root = repo_root / "question_bank"
+    taxonomy = load_taxonomy(bank_root / "taxonomy.json")
+    catalog = {"version": CONTRACT_VERSION, "generated_at": _utc_now(), "questions": []}
+    errors = []
+    for path in _iter_question_files(bank_root):
+        question = read_json(path)
+        errors += validate_question(question, taxonomy)
+        review_file = review_path(
+            repo_root, question.get("source", {}).get("batch_id", ""),
+            question.get("id", "?"))
+        if not review_file.exists():
+            errors.append(f"[{question.get('id', '?')}] 缺少独立审核记录")
+        else:
+            errors += review_errors(read_json(review_file), path.read_bytes(), question)
+        catalog["questions"].append(catalog_entry(question))
+    if errors:
+        return errors
+    catalog["questions"].sort(key=lambda e: e["id"])
+    write_json(bank_root / "catalog.json", catalog)
+    for entry in catalog["questions"]:
+        regenerate_question(bank_root, read_json(bank_root / entry["file"]), taxonomy)
+    generate_indexes(bank_root, catalog, taxonomy)
+    return []
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="小红书面经题库管理")
+    sub = parser.add_subparsers(dest="command", required=True)
+    bank = sub.add_parser("question_bank")
+    group = bank.add_mutually_exclusive_group(required=True)
+    group.add_argument("--file", help="相对 question_bank/ 的新题 JSON 路径")
+    group.add_argument("--question", help="单题 ID，如 Q001（重新生成）")
+    group.add_argument("--check", action="store_true", help="全量只读审计")
+    group.add_argument("--all", action="store_true", help="全量重建")
+    bank.add_argument("--root", default=str(REPO_ROOT), help="仓库根目录（默认脚本所属仓库）")
+    args = parser.parse_args(argv)
+
+    repo_root = Path(args.root)
+    if args.file:
+        errors = register_question(repo_root, args.file)
+    elif args.question:
+        bank_root = repo_root / "question_bank"
+        taxonomy = load_taxonomy(bank_root / "taxonomy.json")
+        catalog = read_json(bank_root / "catalog.json")
+        entry = next((e for e in catalog["questions"] if e["id"] == args.question), None)
+        if entry is None:
+            errors = [f"题目未登记：{args.question}"]
+        else:
+            regenerate_question(bank_root, read_json(bank_root / entry["file"]), taxonomy)
+            errors = []
+    elif args.check:
+        errors = run_check(repo_root)
+    else:
+        errors = rebuild_all(repo_root)
+    for message in errors:
+        print(message, file=sys.stderr)
+    if errors:
+        return 1
+    print("OK")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

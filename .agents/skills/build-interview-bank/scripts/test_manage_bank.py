@@ -5,6 +5,7 @@ PYTHONDONTWRITEBYTECODE=1 D:/MSYS2/ucrt64/bin/python3 -m unittest discover \
 """
 import copy
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -257,6 +258,89 @@ class ReviewGateTests(unittest.TestCase):
         path = mb.review_path(Path("/repo"), "2026-11-16-test-batch", "Q001")
         self.assertEqual(
             path, Path("/repo/batches/2026-11-16-test-batch/reviews/content-Q001.json"))
+
+
+class RegistrationTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        repo = Path(self.tmp.name)
+        (repo / "question_bank").mkdir()
+        shutil.copy(mb.REPO_ROOT / "question_bank" / "taxonomy.json",
+                    repo / "question_bank" / "taxonomy.json")
+        mb.write_json(repo / "question_bank" / "catalog.json",
+                      {"version": "1.0", "generated_at": None, "questions": []})
+        target = repo / "question_bank" / "agent-architecture" / "low"
+        target.mkdir(parents=True)
+        self.repo = repo
+        self.rel = "agent-architecture/low/Q001.json"
+        self.file = target / "Q001.json"
+        data = json.dumps(BASE, ensure_ascii=False, indent=2) + "\n"
+        self.file.write_text(data, encoding="utf-8")
+        reviews = repo / "batches" / BASE["source"]["batch_id"] / "reviews"
+        reviews.mkdir(parents=True)
+        review = {
+            "question_id": "Q001",
+            "note_id": BASE["source"]["note_id"],
+            "author_agent": "author-agent",
+            "reviewer_agent": "reviewer-agent",
+            "canonical_path": "question_bank/" + self.rel,
+            "canonical_sha256": mb.sha256_bytes(self.file.read_bytes()),
+            "reviewed_sections": ["recommended_answer"],
+            "claims_checked": [],
+            "issues": [],
+            "revision_history": [],
+            "decision": "passed",
+            "reviewed_at": "2026-11-16T12:00:00"
+        }
+        mb.write_json(reviews / "content-Q001.json", review)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_register_then_check_clean(self):
+        errors = mb.register_question(self.repo, self.rel)
+        self.assertEqual(errors, [])
+        catalog = mb.read_json(self.repo / "question_bank" / "catalog.json")
+        self.assertEqual(catalog["questions"][0]["id"], "Q001")
+        self.assertTrue((self.file.with_suffix(".md")).exists())
+        self.assertTrue((self.repo / "question_bank" / "editorial" / "Q001.md").exists())
+        self.assertEqual(mb.run_check(self.repo), [])
+
+    def test_register_rejects_non_canonical_path(self):
+        shutil.copy(self.file, self.file.with_name("Q002.json"))
+        errors = mb.register_question(self.repo, "agent-architecture/low/Q002.json")
+        self.assertTrue(any("canonical" in e or "ID" in e for e in errors))
+
+    def test_register_rejects_missing_review(self):
+        (self.repo / "batches" / BASE["source"]["batch_id"] / "reviews"
+         / "content-Q001.json").unlink()
+        errors = mb.register_question(self.repo, self.rel)
+        self.assertTrue(any("审核" in e for e in errors))
+
+    def test_check_detects_tampered_question(self):
+        mb.register_question(self.repo, self.rel)
+        tampered = base_question()
+        tampered["recommended_answer"]["summary"] = "被改过的答案"
+        mb.write_json(self.file, tampered)
+        errors = mb.run_check(self.repo)
+        self.assertTrue(any("SHA-256" in e for e in errors))
+
+    def test_check_detects_stale_markdown(self):
+        mb.register_question(self.repo, self.rel)
+        md = self.file.with_suffix(".md")
+        md.write_text(md.read_text(encoding="utf-8") + "\n<!-- 手改 -->\n",
+                      encoding="utf-8")
+        errors = mb.run_check(self.repo)
+        self.assertTrue(any("Markdown" in e for e in errors))
+
+    def test_cli_check_exit_code(self):
+        mb.register_question(self.repo, self.rel)
+        self.assertEqual(mb.main(["question_bank", "--check", "--root", str(self.repo)]), 0)
+
+
+class EmptyBankTests(unittest.TestCase):
+    def test_check_on_real_empty_bank(self):
+        self.assertEqual(mb.main(["question_bank", "--check"]), 0)
 
 
 if __name__ == "__main__":
