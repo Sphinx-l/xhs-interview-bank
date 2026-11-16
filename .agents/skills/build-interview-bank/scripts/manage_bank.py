@@ -260,3 +260,32 @@ def generate_editorial_markdown(question, taxonomy):
         lines.append(f"- [{ref['title']}]({ref['url']})")
     lines.append("")
     return "\n".join(lines)
+
+
+def sha256_bytes(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def review_path(repo_root, batch_id, question_id):
+    return Path(repo_root) / "batches" / batch_id / "reviews" / f"content-{question_id}.json"
+
+
+def review_errors(review, question_bytes, question):
+    errors = []
+
+    def err(message):
+        errors.append(f"[{question.get('id', '?')}] {message}")
+
+    if review.get("decision") != "passed":
+        err(f"审核结论必须为 passed，实际 {review.get('decision')!r}")
+    if review.get("question_id") != question.get("id"):
+        err("审核记录的 question_id 与题目不一致")
+    if review.get("canonical_sha256") != sha256_bytes(question_bytes):
+        err("审核 SHA-256 与当前文件字节不一致")
+    if review.get("canonical_path") != "question_bank/" + canonical_rel(question):
+        err("审核记录的 canonical_path 与题目实际路径不一致")
+    if review.get("author_agent") == review.get("reviewer_agent"):
+        err("编写与审核不能是同一 Agent")
+    if not _nonempty_str(review.get("reviewed_at")):
+        err("审核记录缺少 reviewed_at")
+    return errors

@@ -213,5 +213,51 @@ class MarkdownTests(unittest.TestCase):
         self.assertIn("1. 定义工具描述", text)
 
 
+class ReviewGateTests(unittest.TestCase):
+    def make_review(self, **overrides):
+        data = json.dumps(BASE, ensure_ascii=False, indent=2).encode("utf-8")
+        review = {
+            "question_id": "Q001",
+            "note_id": BASE["source"]["note_id"],
+            "author_agent": "author-agent",
+            "reviewer_agent": "reviewer-agent",
+            "canonical_path": "question_bank/agent-architecture/low/Q001.json",
+            "canonical_sha256": mb.sha256_bytes(data),
+            "reviewed_sections": ["recommended_answer", "technical_answer"],
+            "claims_checked": ["Agent 组成说法对照 Anthropic 文档"],
+            "issues": [],
+            "revision_history": [],
+            "decision": "passed",
+            "reviewed_at": "2026-11-16T12:00:00"
+        }
+        review.update(overrides)
+        return review, data
+
+    def test_passed_review_matches(self):
+        review, data = self.make_review()
+        self.assertEqual(mb.review_errors(review, data, BASE), [])
+
+    def test_rejects_not_passed(self):
+        review, data = self.make_review(decision="needs_revision")
+        errors = mb.review_errors(review, data, BASE)
+        self.assertTrue(any("passed" in e for e in errors))
+
+    def test_rejects_hash_mismatch(self):
+        review, data = self.make_review()
+        review["canonical_sha256"] = "0" * 64
+        errors = mb.review_errors(review, data, BASE)
+        self.assertTrue(any("SHA-256" in e for e in errors))
+
+    def test_rejects_self_review(self):
+        review, data = self.make_review(reviewer_agent="author-agent")
+        errors = mb.review_errors(review, data, BASE)
+        self.assertTrue(any("同一" in e for e in errors))
+
+    def test_review_path_layout(self):
+        path = mb.review_path(Path("/repo"), "2026-11-16-test-batch", "Q001")
+        self.assertEqual(
+            path, Path("/repo/batches/2026-11-16-test-batch/reviews/content-Q001.json"))
+
+
 if __name__ == "__main__":
     unittest.main()
