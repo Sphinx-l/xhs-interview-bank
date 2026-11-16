@@ -133,14 +133,16 @@ def validate_question(question, taxonomy):
                     err(f"technical_answer.sections[{i}] 的 heading/body 不能为空")
         example = answer.get("example")
         if example is not None:
-            if (not isinstance(example, dict)
-                    or not _nonempty_str(example.get("scenario"))
-                    or not _nonempty_str(example.get("observation"))):
+            if not isinstance(example, dict):
                 err("example 需要非空 scenario 与 observation")
-            steps = example.get("steps", [])
-            if steps and not (isinstance(steps, list)
-                              and all(_nonempty_str(s) for s in steps)):
-                err("example.steps 必须为非空字符串列表")
+            else:
+                if (not _nonempty_str(example.get("scenario"))
+                        or not _nonempty_str(example.get("observation"))):
+                    err("example 需要非空 scenario 与 observation")
+                steps = example.get("steps", [])
+                if steps and not (isinstance(steps, list)
+                                  and all(_nonempty_str(s) for s in steps)):
+                    err("example.steps 必须为非空字符串列表")
 
     source = question.get("source")
     if not isinstance(source, dict):

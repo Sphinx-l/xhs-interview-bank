@@ -120,6 +120,13 @@ class ValidateQuestionTests(unittest.TestCase):
         bad["technical_answer"]["summary"] = "不该存在"
         self.assert_field_error(bad, "summary")
 
+    def test_rejects_non_dict_example_without_crash(self):
+        bad = base_question()
+        bad["technical_answer"]["example"] = "bad"
+        errors = mb.validate_question(bad, self.taxonomy)
+        self.assertTrue(any("example" in e for e in errors),
+                        f"期望错误包含 'example'，实际 {errors}")
+
     def test_rejects_bad_recommended_answer(self):
         bad = base_question()
         bad["recommended_answer"]["points"] = []
