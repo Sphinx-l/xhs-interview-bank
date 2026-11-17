@@ -17,7 +17,7 @@
 | `recommended_answer` | `summary` 1–2 句直接结论；`points` 1–6 条非空，覆盖题干全部子问；整体约 180–350 汉字 |
 | `technical_answer` | 无 `summary` 键；`sections` ≥1 段（heading/body）；可选 `example`（scenario/steps/observation） |
 | `source` | `source_type:"xhs_note"`、`note_id`、`question_verbatim`（题面原文，含原错别字）、`extraction`（`note_text/image_reading`）、`batch_id` |
-| `editorial_provenance` | `company/role/round`（无信息 `"unspecified"`）、`frequency`（≥1 整数）、`notes`；仅教研侧 |
+| `editorial_provenance` | `company/role/round`（无信息 `"unspecified"`）、`frequency`（≥1 整数）、`notes`；渲染为学员版「真题来源」行（标注发帖人自述），`notes` 明细仅教研侧 |
 | `technical_references` | ≥1 条 `{title,url}`，实际查阅的官方文档/论文 |
 | `related_questions` | 0–4 条，有具体理由才加，不含自身、不重复 |
 

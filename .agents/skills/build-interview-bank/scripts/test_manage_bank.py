@@ -189,10 +189,17 @@ class MarkdownTests(unittest.TestCase):
         self.assertIn("低", self.student)
 
     def test_student_has_no_editorial_leakage(self):
+        # 新政策：真题来源行允许携带公司/岗位/轮次（发帖人自述），其余正文仍不得泄漏。
+        body = "\n".join(
+            ln for ln in self.student.splitlines() if not ln.startswith("> 真题来源")
+        )
         for marker in mb.EDITORIAL_LEAK_MARKERS:
-            self.assertNotIn(marker, self.student)
-        self.assertNotIn("某公司", self.student)
+            self.assertNotIn(marker, body)
+        self.assertNotIn("某公司", body)
         self.assertNotIn(BASE["source"]["note_id"], self.student)
+        # 来源行应包含公司与免责标注
+        self.assertIn("真题来源：某公司", self.student)
+        self.assertIn("发帖人自述", self.student)
 
     def test_editorial_contains_provenance(self):
         self.assertIn("## 教研信息", self.editorial)

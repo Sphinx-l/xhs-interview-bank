@@ -196,11 +196,30 @@ def validate_question(question, taxonomy):
 
 def generate_student_markdown(question, taxonomy):
     category = taxonomy.get(question["category_id"], {}).get("name", question["category_id"])
+    prov = question.get("editorial_provenance", {})
+    company = prov.get("company")
+    role = prov.get("role")
+    round_ = prov.get("round")
+    freq = prov.get("frequency", 1)
+    if company and company != "unspecified":
+        src = company
+        if role and role != "unspecified":
+            src += f" · {role}"
+        if round_ and round_ != "unspecified":
+            src += f" · {round_}"
+        if freq and int(freq) > 1:
+            src += f" · 同题另见 {int(freq) - 1} 处"
+        src += "（发帖人自述，未核实）"
+        source_line = f"> 真题来源：{src}"
+    else:
+        source_line = "> 真题来源：面经帖自述信息不详（未核实）"
     lines = [
         f"# {question['id']} · {question['title']}",
         "",
         f"{category} · {DIFFICULTY_ZH[question['difficulty']]} · "
         + " ".join(f"`{t}`" for t in question["tags"]),
+        "",
+        source_line,
         "",
         "## 背景描述",
         "",
@@ -470,14 +489,19 @@ def run_check(repo_root):
             if student_text != generate_student_markdown(question, taxonomy):
                 errors.append(f"[{question_id}] 学员版 Markdown 与 JSON 不一致（应编辑 JSON 后重新生成）")
             else:
+                # 「真题来源」行按政策允许携带公司/岗位/轮次（发帖人自述），
+                # 校验时剔除该行，其余正文仍不得出现教研标记与公司信息。
+                body_text = "\n".join(
+                    ln for ln in student_text.splitlines() if not ln.startswith("> 真题来源")
+                )
                 for marker in EDITORIAL_LEAK_MARKERS:
-                    if marker in student_text:
+                    if marker in body_text:
                         errors.append(f"[{question_id}] 学员版泄漏教研标记：{marker}")
                 prov = question.get("editorial_provenance", {})
                 for key in ("company", "role", "round"):
                     value = prov.get(key, "unspecified")
-                    if value not in ("unspecified", "") and value in student_text:
-                        errors.append(f"[{question_id}] 学员版泄漏 {key}：{value}")
+                    if value not in ("unspecified", "") and value in body_text:
+                        errors.append(f"[{question_id}] 学员版正文泄漏 {key}（仅来源行允许）：{value}")
         editorial = bank_root / "editorial" / f"{question_id}.md"
         if not editorial.exists():
             errors.append(f"[{question_id}] 缺少教研版 Markdown")

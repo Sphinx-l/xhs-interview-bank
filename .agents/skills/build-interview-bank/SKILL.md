@@ -17,7 +17,8 @@ description: 将面经裸题编写为教学面试题：语义去重、来源定�
 
 ## 硬性规则
 
-- 公司/岗位/轮次、发帖人、原帖信息只进 `editorial_provenance` 与批次记录，学员版 JSON 字段与 Markdown 均不得出现。
+- 公司/岗位/轮次经 `editorial_provenance` 记录，并在学员版 Markdown 的「真题来源」行渲染（标注发帖人自述、未核实）；答案正文等学员侧 JSON 字段（title/tags/question_guide/recommended_answer/technical_answer/example）仍不得内嵌公司名——公司信息只走来源行，不混入教学内容。
+- 发帖人身份与原帖正文/图片只进批次记录（教研侧），学员版不展示；按公司刷真题的入口为批次目录 `mianjing/`（学员可用）。
 - 不虚构企业项目、业绩数字；无结果的验证写验证计划。
 - ID 全局唯一递增（Q001 起），编号空洞不复用；编号分配前检查 catalog 与本批预留。
 - 修订已有题：改 JSON → 重新独审绑定新 SHA → `--question Qxx` 重新生成。
