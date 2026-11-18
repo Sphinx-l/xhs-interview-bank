@@ -1,45 +1,80 @@
 ---
 name: harvest-xhs-interviews
-description: 从小红书关键词/话题搜索采集面试经验帖：冻结清单、筛选 AI/Agent 方向候选、正文与图片画面复核提取裸题，产出批次 manifest 与 candidates 交接给 build-interview-bank。
+description: 从小红书关键词/话题搜索采集面试经验帖：冻结清单、筛选 Agent/大模型开发技术方向候选、正文与图片画面复核提取题目，产出按公司/岗位/轮次组织的完整面经（mianjing/）与批次 manifest；当前阶段只采集问题，不编答案。
 ---
 
 # 小红书面经采集与筛选
 
-产出「冻结清单 + 裸题候选表」，交给 build-interview-bank Skill 编题。本 Skill 不编写答案。
+**主产物是按公司/岗位/轮次组织的完整面经原文版**（`mianjing/`，保留原帖题目顺序与完整性）——「面经最重要的是完整性真题而非专项训练」，不按考点/难度拆分（2026-11-18 用户确认）。当前阶段只采集问题；build-interview-bank 编题入库流程暂停，答案阶段恢复时才启用。本 Skill 不编写答案。
 
 ## 批次建立
 
-- 每次搜索采集建一个批次：`batches/YYYY-MM-DD-keyword-slug/`，含 `README.md`、`manifest.json`、`screening_log.md`、`notes/`（正文快照与图片）、`reviews/`（编题阶段写入）。不覆盖旧批次。
+- 每次搜索采集建一个批次：`batches/YYYY-MM-DD-keyword-slug/`，含 `README.md`、`manifest.json`、`screening_log.md`、`notes/`（正文快照与图片）、`mianjing/`（**主产物**：逐题面经原文 + 按公司索引）、`reviews/`（编题阶段写入，当前不建）。不覆盖旧批次。
 - 记录采集日期、关键词、结果总数、是否加载到底。
+
+### 渠道维度（2026-11-18 新增，重点搜集社招）
+
+- 每篇题源必须记录 `channel`：`社招` / `校招` / `实习` / `未标注`（按帖内「社招/秋招/春招/N届/实习/工作N年」等标记推断，推断性质在 reason 注明）。
+- **采集优先级：社招 > 校招 > 实习**。定期用定向关键词补社招：「社招 Agent 面经」「大模型 社招」「Agent 社招 一面」「X 年经验 大模型」等；公司/岗位/轮次齐全的社招帖优先复核。
+- manifest 与 mianjing/ 索引都要展示渠道。
 
 ## 搜索与冻结清单
 
-- 入口为关键词/话题搜索（如「Agent 面经」「大模型面试题」），经用户已登录浏览器操作，滚动分页。
+- 入口为关键词/话题搜索（如「Agent 面经」「大模型面试」），经用户已登录浏览器操作，滚动分页。
+- **冻结时必须保存每张卡片的完整 href（含 xsec_token）**：详情页直链 `/explore/<id>` 会 404，只能用带 token 的搜索结果链接打开（`href_map.json`）。
 - 按笔记 ID 去重，排除广告与推荐流；冻结本批清单。工具与登录状态随环境变化，不沿用旧 tab ID 或过期签名；新采集方式先用一个候选验证再批量。
 - 遇验证码/风控如实记录并停止，不轮询猜测接口；不持久化 Cookie、令牌、私钥。
 
 ## 筛选规则
 
-- 标题/正文初筛直接排除并记录理由（「按标题排除，未读正文」或复核结论）：非 AI/Agent 方向、纯引流卖课、明显 AI 批量生成的题目合集（无真实面试来源痕迹）、剧情/日常。
-- 候选笔记读完整内容后复核：题面是否真实面试题、是否属于技术范围。公司/岗位/轮次一律视为发帖人自述，原文记录，值为空用 `unspecified`，不推断、不核实、不进学员版。
+### 范围（硬规则）
+
+- **仅 Agent/大模型开发技术方向**（算法/工程/应用开发/AI Infra/数据/评测/测试）。**不采**：AI 产品经理、产品运营、HRBP、销售、前端岗、纯 Java 八股岗、量化/半导体等非方向（2026-11-18 用户规则）。
+- 公司/岗位/轮次一律视为发帖人自述，原文记录，值为空用 `unspecified`，不推断、不核实；有部门信息一并记录。
+
+### 标题/内容排除模式（2026-11-18 批次验证有效）
+
+- **营销卖课/AI 生成合集**：背完/通过率/题库/封神/911页/码住/押题/一次性整理/高频题汇总/速成/一周过/可下载/dd我/商品——无真实面试来源痕迹。
+- **方法论/备考杂谈**：如何准备/备考强度/上岸攻略/反问环节/学习路线/心得——不是题面。
+- **AI 生成模板假面经**：同一套题目（Q1-Q12 逐条同文）换公司名批量发帖（2026-11-18 抓到淘天/携程同文两帖）。判定法：跨笔记比对题面列表，同文即假。
+- **转载重复**：不同笔记题面逐条相同 → 保留一篇为题源，其余标 `duplicate_repost` 并在 reason 写明合并目标。
+- 剧情/日常/开奖讨论/新闻。
+
+### 复核
+
+- 候选笔记读完整内容后复核：题面是否真实面试题、是否属于技术范围。
+- 正文只有话题标签的，题面在图片或评论区——进图片/评论补采流程，不要直接判排除。
 
 ## 内容获取与画面复核
 
 - 图文笔记：保存正文原文快照与原图到 `notes/<note_id>/`。
-- 题目在图片里的，由 Agent 视觉读取图片，提取文字保存为 `notes/<note_id>/image-extract.md`，每条题面标注来源图片文件名与「画面提取」。图片不可靠读取的题不入库，记 `unreadable_image`。不引入 OCR 工具，不把画面提取记为正文原文。
+- **图片型笔记必须翻轮播补采**：首屏 DOM 只有第一张图，需逐次点 next 按钮收集全部图片 URL；评论区滚动加载，独立详情页评论容器选择器不稳定，取不到就如实记 `fetch_failed`，不猜测补录。
+- 题目在图片里的，由 Agent 视觉读取图片，提取文字保存为 `notes/<note_id>/image-extract.md`，每条题面标注来源图片文件名与「画面提取」，并按公司补入 `mianjing/`。图片不可靠读取的题不入库，记 `unreadable_image`。不引入 OCR 工具，不把画面提取记为正文原文。
 - 视频笔记本阶段不处理，记 `out_of_scope_video`。
 
-## 裸题候选表 candidates.json
+## 采集工程注意事项（弱配置机器，2026-11-18）
 
-批次根目录保存，是两个 Skill 的交接产物：
+- **全程只用一个浏览器标签页**，tabbit 任务始终 `--tab` 复用；每个新任务名都会新开初始页，任务结束要清理多余页面。多页面 = 页面崩溃。
+- **单次浏览器程序 ≤20 个页面访问**（170 秒硬截止），长任务拆小步、结果落盘可断点续跑；程序被硬截止终止后页面会 crash，要先 finish 旧任务、新开任务再用新页面。
+- 详情爬取节奏 ~3.5s/篇正常，明显变慢是风控前兆，暂停休息。
+
+## mianjing/（主产物）
+
+- 每篇题源笔记一个文件：`<公司>__<note_id前8位>.md`，头部为来源链接、公司/岗位/轮次（自述未核实）、题目数；正文按**原帖顺序**逐条列全部题目（含自我介绍、手撕、反问，保证完整性）。
+- `mianjing/README.md`：按公司汇总的索引（公司 → 篇目列表）。
+- 图片型与 fetch_failed 的笔记在索引中标注「待画面提取/待补采」，处理完补入。
+
+## 裸题候选表 candidates.json（次要交接产物）
+
+批次根目录保存（编题阶段恢复时使用）：
 
 ```json
 {
-  "batch_id": "2026-11-16-agent-mianjing",
-  "keyword": "Agent 面经",
-  "collected_at": "2026-11-16T08:00:00+08:00",
-  "notes": [{"note_id": "…", "url": "…", "title": "…", "status": "retained", "reason": "", "company": "字节", "role": "Agent 开发", "round": "一面"}],
-  "candidates": [{"candidate_id": "C001", "question_verbatim": "面试问：…", "extraction": "note_text", "note_id": "…", "company": "字节", "role": "Agent 开发", "round": "一面", "status": "pending", "reason": ""}]
+  "batch_id": "2026-11-17-llm-mianjing",
+  "keyword": "大模型面试",
+  "collected_at": "2026-11-18T00:30:00+08:00",
+  "notes": [{"note_id": "…", "url": "…", "title": "…", "status": "retained", "reason": "", "company": "字节跳动", "role": "Agent 开发", "round": "一面"}],
+  "candidates": [{"candidate_id": "C001", "question_verbatim": "…", "extraction": "note_text", "note_id": "…", "company": "字节跳动", "role": "Agent 开发", "round": "一面", "status": "pending", "reason": ""}]
 }
 ```
 
@@ -47,4 +82,4 @@ description: 从小红书关键词/话题搜索采集面试经验帖：冻结清
 
 ## manifest.json 核心字段
 
-`note_id`、`url`、`title`、`published_at`（核实到才填）、`status`（`retained` 或具体排除/失败状态）、`reason`、`company/role/round`（教研侧）、`question_ids`（该笔记产出题目）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用。
+`note_id`、`url`、`title`、`published_at`（核实到才填）、`status`（`retained` / `excluded` / `duplicate_repost` / `fetch_failed` / `out_of_scope_video`）、`reason`、`company/role/round`（自述）、`channel`（社招/校招/实习/未标注，推断）、`question_ids`（编题阶段填写）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用。

@@ -2,3 +2,13 @@ __pycache__/
 *.pyc
 .cache/
 .venv/
+
+# 采集批次临时文件（中间 JSON/脚本保留作证据，输出转储不入库）
+batches/**/*.out
+batches/**/_review*.txt
+batches/**/_cand_review*.txt
+batches/**/_bodies.txt
+batches/**/_retained_titles.txt
+batches/**/_review_titles.txt
+batches/**/_run.js
+batches/**/_transcript_toolresults.txt
