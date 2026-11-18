@@ -1,0 +1,70 @@
+{
+  "id": "Q028",
+  "version": "1.0",
+  "answer_type": "technical",
+  "category_id": "agent-performance",
+  "difficulty": "high",
+  "title": "Agent 的流式响应怎么实现？为什么用 SSE？流式输出下工具调用事件怎么推给前端？断线后如何恢复之前的输出？",
+  "tags": ["SSE流式", "事件推送", "断线恢复", "工具调用事件"],
+  "question_guide": {
+    "background": "流式输出是 Agent 前后端的必考实现题，追问从选型（SSE vs WebSocket）一路打到工具事件协议与断线续传。",
+    "pain_point": "只做过纯文本流式的话，Agent 的中间工具调用、多阶段进度如何在同一条流上表达、断线后如何不丢已生成内容，是实现层的真难点。",
+    "focus": "SSE 的选型理由、Agent 事件流的协议设计（区分文本增量与工具事件）、断线重连的恢复机制。",
+    "approach": "先定选型，再设计事件协议，最后讲断线恢复与会话终止的后端协同。"
+  },
+  "recommended_answer": {
+    "summary": "用 SSE 实现服务端到前端的单向流：Agent 每步产出结构化事件（文本增量、工具调用开始/结束、轮次、完成/错误）按序推送；SSE 是纯 HTTP、单向、自动重连，适合 LLM 流式这种服务端单向推送场景；断线恢复靠服务端把事件持久化到会话缓冲，重连带 Last-Event-ID 续传增量。",
+    "points": [
+      "选型：LLM 输出是服务端→客户端的单向流，SSE 走纯 HTTP、无需升级协议、浏览器原生 EventSource 自动重连；WebSocket 的双向能力在此场景是多余的复杂度。",
+      "事件协议：不能只推文本——定义结构化事件类型（text_delta / tool_call_start / tool_result / round / done / error），带序号或事件 ID，前端按类型渲染聊天气泡或工具卡片。"
+      ,
+      "工具调用期间也有东西可推：工具开始时推『正在调用 X』状态，长工具可推进度，结束推结果摘要——避免用户面对数十秒空白。",
+      "断线恢复：服务端把每个事件写入会话级缓冲（Redis 等，带序号）；客户端重连带 Last-Event-ID，服务端补发其后增量；任务在后端继续跑不随连接断开而取消。",
+      "主动取消：用户停止时前端发取消请求，后端向执行器发取消信号终止循环并落状态，而非仅断开连接。",
+      "网关兼容：SSE 需要禁用代理缓冲、设置长超时，这是部署期最常见的坑。"
+    ]
+  },
+  "technical_answer": {
+    "sections": [
+      {
+        "heading": "为什么是 SSE",
+        "body": "MDN 对 SSE 的定位：服务端向前端推送事件的开发方式，客户端代码与 WebSocket 相近，但它是单向连接——客户端不能向服务端发消息。LLM 对话恰好是典型单向流：请求一次发出，之后只有服务端持续产出。SSE 相对 WebSocket 的工程优势：纯 HTTP 不需协议升级、经过网关/负载均衡更省心、浏览器 EventSource 原生支持且自动重连、断线重连可用 Last-Event-ID 语义续传。双向需求（用户中途输入新指令）用普通 HTTP 请求另行发送即可，不值得为此上 WebSocket。"
+      },
+      {
+        "heading": "Agent 事件流协议设计",
+        "body": "纯文本流的 chat 补全接口不够用——Agent 一轮里混杂模型文本增量、工具调用、多轮循环。设计一套事件信封：{id, event, data}，event 取 text_delta（正文增量）、thinking_delta（推理过程，可选）、tool_call_start（工具名+参数摘要）、tool_progress（进度，长任务）、tool_result（结果摘要，原文可只给引用）、round（进入第 N 轮）、done（终止原因：完成/预算耗尽/取消）、error（可读错误）。前端按事件类型分流渲染：文本进气泡，工具事件渲染成可展开的工具卡片。要点：①事件带全局递增 ID，断线重连与乱序检测都靠它；②工具原始返回不整段推送（可能巨大且含敏感数据），推摘要+引用；③done 事件必须带终止原因，前端据此区分正常结束与降级。"
+      },
+      {
+        "heading": "断线恢复与取消的协同",
+        "body": "恢复的关键在服务端：任务生命周期与连接生命周期解耦——连接断了任务继续在后台执行，所有事件写入会话级事件日志（Redis list 或流，key=会话 ID，带序号）。客户端重连时带 Last-Event-ID，服务端从事件日志补发其后的全部事件；若任务已结束则直接补发到 done。注意用户关闭页面不等同于取消：是否终止任务应是显式业务决定（对客场景常继续跑完并落库，用户回来可见结果）。主动取消走独立 HTTP 接口：后端向执行循环发取消信号（检查点处退出、记录已完成部分），并推送 done{reason: cancelled}。工程细节：SSE 经过的每层代理都要关闭响应缓冲（否则事件被攒着一次性吐出）、拉长读超时；压测时要覆盖断线重连路径。"
+      }
+    ],
+    "example": {
+      "scenario": "数据分析 Agent，前端页面在生成到一半时网络闪断。",
+      "steps": [
+        "断开前：前端已收到事件 1-40（两轮文本 + 一次工具调用卡片）。",
+        "服务端：任务继续执行，事件 41-58 持续写入会话事件日志。",
+        "重连：EventSource 自动重连带 Last-Event-ID=40，服务端补发 41 起的增量，前端无损续显；任务最终 done{reason:completed}。"
+      ],
+      "observation": "『连接』与『任务』解耦 + 带序号的事件日志，是流式 Agent 断线不丢内容的全部秘密。"
+    }
+  },
+  "source": {
+    "source_type": "xhs_note",
+    "note_id": "6adf46d4000000001401bf7c",
+    "question_verbatim": "流式输出下，工具调用事件怎么往前端正向推送，断线重连怎么恢复",
+    "extraction": "note_text",
+    "batch_id": "2026-11-17-agent-mianjing"
+  },
+  "editorial_provenance": {
+    "company": "月之暗面",
+    "role": "Agent Harness",
+    "round": "二面",
+    "frequency": 4,
+    "notes": "合并候选 C158（主源，月之暗面二面）、C249（unspecified 教育公司：sse 流式在用户关闭浏览器断开后如何保持之前输出）、C288（字节抖音一面后端：流式响应怎么实现，为什么用 SSE）、C187（淘天一面：FastAPI 加 SSE，图状态机里怎么抓每个节点结果实时推前端）。"
+  },
+  "technical_references": [
+    {"title": "Using server-sent events - MDN（SSE 单向连接定位与 EventSource 客户端模型）", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events"}
+  ],
+  "related_questions": ["Q026", "Q029"]
+}

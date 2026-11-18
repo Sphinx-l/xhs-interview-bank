@@ -1,0 +1,66 @@
+{
+  "id": "Q035",
+  "version": "1.0",
+  "answer_type": "technical",
+  "category_id": "agent-learning",
+  "difficulty": "medium",
+  "title": "Reward Model 适合解决什么问题？在 Agent 系统中如何使用？",
+  "tags": ["Reward Model", "RLHF", "偏好学习", "任务奖励"],
+  "question_guide": {
+    "background": "RM 是从对齐走向 Agent 自我改进的桥梁概念题，考察对『学一个打分器』适用边界的理解。",
+    "pain_point": "把 RM 当成万能打分机：不知道它学的是人类偏好近似、可被 reward hacking，也不知道 Agent 场景里任务奖励常常比偏好 RM 更直接。",
+    "focus": "RM 的原理（偏好排序学习）、适合解决的问题类型、Agent 场景的两种用法（偏好 RM 与任务奖励）、失效模式。",
+    "approach": "先讲 RM 原理与经典流程，再映射到 Agent 的两种奖励来源，最后讲失效与守护。"
+  },
+  "recommended_answer": {
+    "summary": "Reward Model 通过学习人类对输出的偏好排序获得打分能力，适合解决『好没有唯一标准答案、但人类能比较优劣』的评估与优化问题；经典流程是 InstructGPT 的 SFT→偏好 RM→RL 三段。Agent 场景两种用法：端到端偏好 RM 给整条轨迹打分，或用可机检的任务奖励（测试通过、对账一致）直接当奖励——后者更客观，前者覆盖主观质量。",
+    "points": [
+      "原理：收集输出两两比较的人类偏好数据，训练 RM 给输出打分；InstructGPT 的做法就是收集模型输出的人工排序，用于其后的强化学习阶段。"
+      ,
+      "适合的问题：开放式生成质量（有用性、无害性）、无唯一解的比较型评估、作为 RL 的奖励信号——『人评贵且慢』的场景用它做可扩展近似。",
+      "Agent 用法一（任务奖励）：可机检的目标直接当奖励——测试通过率、对账一致、任务完成断言，客观且难作弊。",
+      "Agent 用法二（偏好 RM/裁判）：端到端给轨迹或结果打分，覆盖格式、风格等主观维度；可由裁判模型或人工标注偏好训练而来。",
+      "失效模式：reward hacking——策略学会钻奖励空子（生成讨好 RM 的冗长输出）；RM 泛化差、分布漂移后打分失真。",
+      "守护手段：奖励信号混合（任务奖励+偏好+规则惩罚）、定期用人工标注校准 RM、KL 约束防止策略偏离过远。"
+    ]
+  },
+  "technical_answer": {
+    "sections": [
+      {
+        "heading": "RM 的原理与定位",
+        "body": "RM 回答的问题是：当『好』无法用规则穷举、但人类看到两个输出能说出哪个更好时，把这种比较判断规模化。训练数据是输出对的人工偏好标注（A 优于 B），模型学习输出到标量的映射，使得偏好序被保持。它的经典位置在 InstructGPT 流程中：先用标注者示范做 SFT，再收集模型输出的排序数据训练 RM，最后以 RM 为奖励用 RL 优化——1.3B 的 InstructGPT 在人类评估中胜过未对齐的大模型，说明对齐带来的收益可以超过参数量。RM 的本质是『人类判断的可扩展近似器』：人工评估贵且慢，RM 训练一次、推理廉价。"
+      },
+      {
+        "heading": "Agent 场景的两种奖励与失效守护",
+        "body": "Agent 任务的奖励设计比聊天更幸运：很多目标可机检。两种来源并用：①任务奖励——代码任务用测试通过、数据任务用对账断言、流程任务用完成校验，客观、即时、难作弊，应优先；②偏好 RM——覆盖任务奖励测不到的主观维度（表达质量、交互礼貌、方案优雅），可由裁判模型批量生成偏好对再训练，或直接用裁判模型在线打分（此即裁判模型与 RM 的合流）。失效与守护：reward hacking 是头号风险——策略发现冗长、堆砌关键词能骗高分，对策是奖励混合（任务奖励为主、偏好与规则惩罚为辅）、对生成物加长度/格式惩罚项；RM 自身会随策略分布漂移而失真，需定期用新的人工标注校准；RL 阶段加 KL 惩罚约束策略不要偏离 SFT 初始模型过远，防止钻空子的极端行为。"
+      }
+    ],
+    "example": {
+      "scenario": "代码 Agent 想通过 RL 提升真实任务表现。",
+      "steps": [
+        "奖励设计：测试通过率 + 静态检查通过（任务奖励）；代码可读性偏好分（裁判 RM）；超时与冗余输出的惩罚项。",
+        "训练中监控：发现策略生成大量注释凑长度骗偏好分——加入长度惩罚并下调偏好权重。",
+        "上线前：人工抽检校准 RM 与任务奖励的一致性，KL 约束下的策略在真实任务集上验证提升。"
+      ],
+      "observation": "Agent 的奖励工程口诀：能机检的用任务奖励打底，主观维度用偏好 RM 补充，再防着策略钻两者的空子。"
+    }
+  },
+  "source": {
+    "source_type": "xhs_note",
+    "note_id": "69f9f8c5000000003503ac05",
+    "question_verbatim": "reward model适合解决什么问题",
+    "extraction": "note_text",
+    "batch_id": "2026-11-17-agent-mianjing"
+  },
+  "editorial_provenance": {
+    "company": "携程",
+    "role": "AI 应用开发",
+    "round": "一面",
+    "frequency": 1,
+    "notes": "主源候选 C215（携程一面）。"
+  },
+  "technical_references": [
+    {"title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，示范 SFT→输出排序训练 RM→RL 流程）", "url": "https://arxiv.org/abs/2203.02155"}
+  ],
+  "related_questions": ["Q033", "Q024"]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "Q005",
+  "version": "1.0",
+  "answer_type": "technical",
+  "category_id": "agent-architecture",
+  "difficulty": "high",
+  "title": "Multi-Agent 与 Single-Agent 的本质区别是什么？多 Agent 的收益与代价如何权衡？什么时候应该退回单 Agent？",
+  "tags": ["Multi-Agent", "上下文隔离", "任务编排", "架构权衡"],
+  "question_guide": {
+    "background": "多 Agent 是面试的高频系统设计题，面试官通常从『为什么不用一个 Agent + 多个 Skill 替代』切入，考察候选人对多 Agent 真实收益边界的理解。",
+    "pain_point": "为多而多的 Multi-Agent 会引入通信开销、状态不一致与错误级联，性能反而低于单 Agent；判断何时值得拆是多 Agent 架构的第一问题。",
+    "focus": "多 Agent 相对单 Agent 的结构性收益（上下文隔离与并行）、新增代价（通信、一致性、成本）、以及退化为单 Agent 的判据。",
+    "approach": "先明确拆分的本质是上下文与职责的隔离，再对比收益与代价清单，最后给出可操作的拆分/回退判据。"
+  },
+  "recommended_answer": {
+    "summary": "多 Agent 的本质不是多个模型，而是把任务按职责拆进多个独立上下文窗口：收益是隔离污染、专注上下文与并行；代价是通信折损、状态一致性与错误级联。单窗口装得下、通信成本超过隔离收益时应退回单 Agent。",
+    "points": [
+      "本质区别：单 Agent 的工具、记忆、历史共享一个窗口；多 Agent 按职责拆分上下文，经结构化消息协作。",
+      "收益一：上下文隔离——各自窗口精简，选工具与推理准确率更高。",
+      "收益二：并行与专业化——无依赖子任务并行；各 Agent 的提示、模型档位、工具集可独立调优甚至独立 SFT。",
+      "代价：Agent 间传摘要而非完整对话，压缩即丢信息；并发写共享资源需冲突消解；多 Agent 成本数倍；上游幻觉可能被下游当事实传播。",
+      "单 Agent + 多 Skill 不能完全替代：Skill 解决能力复用，不解决上下文膨胀；任务小到单窗口够用时它才是更优解。",
+      "回退判据：子任务需高频细粒度同步、传递信息超摘要承载、延迟成本不可接受时，退回单 Agent 或 Workflow 编排的单点 Agent。"
+    ]
+  },
+  "technical_answer": {
+    "sections": [
+      {
+        "heading": "拆分的本质：上下文经济学",
+        "body": "上下文窗口是稀缺资源，注意力随 token 数稀释。Single-Agent 的隐含假设是『整个任务的相关信息装得进一个窗口』——工具清单、历史轨迹、中间产物全部在场。当任务超过这个假设（工具上百个、中间文件几十份、轨迹上百轮），单 Agent 表现为选错工具率上升、关键信息被挤出窗口、跨阶段指令互相干扰。Multi-Agent 的解法是把信息按『谁需要』分组：每个子 Agent 的窗口只装自己的职责提示、专属工具与必要输入，主 Agent 只持有任务级状态与各子 Agent 的结构化汇报。Anthropic 把 orchestrator-workers 列为标准生产模式，正是这一逻辑的体现：中心 LLM 动态拆分任务并委托给 worker，再汇总结果。"
+      },
+      {
+        "heading": "代价的工程化展开",
+        "body": "①通信协议设计：Agent 间传什么——完整对话不可行（等价于共享全部上下文），通常传任务规格（输入、约束、验收标准）+ 结构化结果（JSON 产物 + 摘要 + 置信度）；信息在压缩中必然折损，需要定义『必须显式传递』的关键字段。②共享状态与并发：多 Agent 并发写同一资源（如同一文件、同一世界状态）需要锁、版本冲突检测或主 Agent 串行合并；一个 Agent 的幻觉写入共享状态会被其他 Agent 当作事实传播，需对写入做来源标记与校验。③失败处理：子 Agent 失败时主 Agent 可重试、换路或降级，但重试带来重复副作用，要求工具幂等。④成本：多 Agent 的 token 消耗常是单 Agent 的数倍，需要预算控制与按职责选模型档位（规划用强模型，执行用便宜模型）。"
+      },
+      {
+        "heading": "拆分与回退的操作判据",
+        "body": "拆分判据（满足越多越该拆）：工具集天然分组（检索组/代码组/发布组）；子任务可并行；中间产物体积大但下游只需要摘要；不同职责需要不同的 Prompt/SFT/模型。回退判据：子任务间需要高频细粒度同步（每步都要看对方原始输出）；任务本身单窗口装得下；延迟/成本预算紧；团队缺乏多 Agent 可观测与调试能力（多 Agent 的 Trace 复杂度呈乘积增长）。实践中主流形态是混合：Workflow 固化主干流程，个别复杂节点内嵌 ReAct 单 Agent，仅在真正并行的扇出处引入多 Agent。"
+      }
+    ],
+    "example": {
+      "scenario": "代码库批量重构任务：把某服务从 REST 迁到 gRPC，涉及 40 个文件。",
+      "steps": [
+        "单 Agent 方案：所有文件的解析结果、修改计划、diff 都堆在一个上下文里，第 20 个文件时窗口已装满早期文件内容，出现遗漏与自相矛盾的修改。",
+        "多 Agent 方案：主 Agent 做依赖分析与任务拆分；3 个 Worker 各领一组文件并行修改，各自上下文只含自己文件与接口契约；主 Agent 合并 diff、跑集成测试，冲突文件回炉。",
+        "回退情形：若拆分后发现接口契约每改一个文件都变、Worker 间每步都要同步契约全文，通信成本超过收益，则退回单 Agent 串行处理。"
+      ],
+      "observation": "多 Agent 的价值在信息分组与并行，不在 Agent 数量本身；判据永远是『单窗口是否装得下』与『通信成本是否小于隔离收益』。"
+    }
+  },
+  "source": {
+    "source_type": "xhs_note",
+    "note_id": "6adf62390000000018006e6c",
+    "question_verbatim": "Multi-Agent和Single-Agent最大的区别是什么？",
+    "extraction": "image_reading",
+    "batch_id": "2026-11-17-agent-mianjing"
+  },
+  "editorial_provenance": {
+    "company": "字节跳动（抖音）",
+    "role": "Agent 开发",
+    "round": "一面",
+    "frequency": 3,
+    "notes": "合并候选 C265（主源，字节抖音图片）、C148（月之暗面二面：任务拆分/状态共享/结果冲突仲裁）、C305（阿里巴巴三面：多 Agent 通信协议、何时退化为单 Agent）。关联候选 C266（多 Agent 优势）、C267（额外问题）、C268（为何不能单 Agent+多 Skill 替代）的追问维度已并入答案。"
+  },
+  "technical_references": [
+    {"title": "Building effective agents（Anthropic Engineering，orchestrator-workers 与 agents）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+  ],
+  "related_questions": ["Q003", "Q006"]
+}

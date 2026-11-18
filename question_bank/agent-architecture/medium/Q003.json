@@ -1,0 +1,69 @@
+{
+  "id": "Q003",
+  "version": "1.0",
+  "answer_type": "technical",
+  "category_id": "agent-architecture",
+  "difficulty": "medium",
+  "title": "ReAct 与 Plan-Execute 两种范式有什么区别？分别适合什么任务？为什么简单任务不该先做完整 Plan？",
+  "tags": ["ReAct", "Plan-Execute", "任务规划", "范式选型"],
+  "question_guide": {
+    "background": "『你们 Agent 用的 ReAct 还是 Plan-and-Execute』是高频开场题，追问方向通常是两类范式的失败模式与混合使用。",
+    "pain_point": "死守单一范式会在另一类任务上翻车：长链路任务用 ReAct 容易中途漂移，简单任务用 Plan-Execute 白付规划成本。",
+    "focus": "控制流归属差异、各自适用任务特征、规划开销与稳定性的权衡、混合路由方案。",
+    "approach": "先对比两种范式的控制结构，再给出任务特征到范式的匹配表，最后说明生产系统常见的『路由 + 混合』做法。"
+  },
+  "recommended_answer": {
+    "summary": "ReAct 每一步都由模型即时决策、走一步看一步，灵活但长任务易漂移；Plan-Execute 先生成完整计划再逐步执行，全局性好但计划质量依赖规划器且响应慢，适合步骤多、依赖关系复杂的任务；生产上常按任务复杂度路由，简单任务直连 ReAct。",
+    "points": [
+      "控制流差异：ReAct 的决策粒度是单步（每轮根据最新观察决定下一步）；Plan-Execute 把决策前置为一次性计划（Planner 产出子任务列表），Executor 按计划执行，必要时 Re-plan。",
+      "ReAct 适合：步数少（一般 3-5 步内）、路径不确定、需要边探索边调整的任务，如单点查询、信息核实、简单客服工单。",
+      "Plan-Execute 适合：步数多、子任务间有依赖与并行关系、需要进度可追踪与断点恢复的任务，如多源报告生成、批量代码改造、多 Agent 协作编排。",
+      "简单任务先做完整 Plan 的代价：多一次 LLM 调用增加首响延迟与成本，且 Planner 可能对简单任务过度拆分（过度规划），反而引入执行偏差。",
+      "失败模式：ReAct 长任务中途目标漂移、陷入循环；Plan-Execute 计划一步错步步错，需要重规划机制兜底。",
+      "生产方案：入口按复杂度路由（简单 query 直接 ReAct，复杂 query 走 Plan-Execute），执行中允许 Executor 上报异常触发局部 Re-plan。"
+    ]
+  },
+  "technical_answer": {
+    "sections": [
+      {
+        "heading": "两种范式的结构对比",
+        "body": "ReAct 是『感知-决策-行动』的滚动式控制：每轮只决定下一个动作，计划隐含在推理轨迹中，优点是对环境变化自适应强，缺点是没有全局视图，长任务（十几步以上）容易遗忘初始目标或重复探索。Plan-Execute 把任务求解拆成 Planner 与 Executor 两个角色：Planner 一次生成结构化计划（子任务列表、依赖图、可并行的分支），Executor 逐项执行并把状态写回计划看板，偏差超阈值时触发 Re-plan。这本质是用『显式计划』换『全局一致性』，代价是规划延迟和计划本身的可靠性风险。"
+      },
+      {
+        "heading": "按任务特征选型",
+        "body": "判断维度：①步数与深度——浅任务 ReAct 足够，深任务需要计划防止漂移；②子任务依赖——有 DAG 依赖（先取数再分析再成文）时计划可显式表达并行与顺序，ReAct 串行浪费并行机会；③可逆性——动作不可逆（发送、支付）时应先计划并经确认再执行；④延迟预算——交互式场景难以承受先规划的额外一跳。据此可以得出工程路由规则：用轻量分类器或模型自评（任务需要几步、是否可并行）把 query 分到 ReAct 快路径或 Plan-Execute 慢路径。"
+      },
+      {
+        "heading": "为什么不能所有任务都过 Planner",
+        "body": "假设 Planner 准确率有限，把简单任务（一问一查一答）也送入规划，等价于给高流量路径叠加一个错误源和一次额外时延：规划过度拆分会放大执行噪声，拆出的伪依赖会串行化本可省略的步骤。面试常见追问『简单任务为什么不能直接用 ReAct 完成』考察的正是这层成本意识——Planner 是为复杂度买的保险，简单任务没有可保的风险。"
+      }
+    ],
+    "example": {
+      "scenario": "知识问答机器人同时收到两类问题。",
+      "steps": [
+        "『公司年假政策是什么』：单跳检索可答，路由到 ReAct，一次检索两轮内返回。",
+        "『对比过去三年三个业务线的营收并生成分析报告』：多源取数、口径对齐、先算后写，路由到 Plan-Execute：Planner 拆出 6 个带依赖的子任务，两个取数任务并行执行，全部完成后进入成文阶段。"
+      ],
+      "observation": "同一系统内按复杂度分流，比统一用单一范式在延迟、成本、稳定性三个维度都更优。"
+    }
+  },
+  "source": {
+    "source_type": "xhs_note",
+    "note_id": "6adc069a0000000025023c8e",
+    "question_verbatim": "ReAct 和 Plan-Execute 的区别，分别适合什么任务",
+    "extraction": "note_text",
+    "batch_id": "2026-11-17-agent-mianjing"
+  },
+  "editorial_provenance": {
+    "company": "字节跳动",
+    "role": "Agent Harness",
+    "round": "一面",
+    "frequency": 4,
+    "notes": "合并候选 C063（主源，字节 Harness 一面）、C228（百度）、C313（unspecified，问框架是 ReAct 还是 Plan-and-Execute）、C264（字节抖音一面，追问简单任务为何不能直接 ReAct）。"
+  },
+  "technical_references": [
+    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"},
+    {"title": "Building effective agents（Anthropic Engineering，orchestrator-workers 模式）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+  ],
+  "related_questions": ["Q002", "Q004"]
+}

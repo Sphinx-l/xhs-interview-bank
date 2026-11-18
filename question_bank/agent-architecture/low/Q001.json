@@ -1,0 +1,65 @@
+{
+  "id": "Q001",
+  "version": "1.0",
+  "answer_type": "technical",
+  "category_id": "agent-architecture",
+  "difficulty": "low",
+  "title": "AI Agent 与普通 LLM 对话应用的本质区别是什么？Agent 的核心组件有哪些？",
+  "tags": ["agent组成", "工具调用", "规划循环", "上下文管理"],
+  "question_guide": {
+    "background": "很多团队在已有对话机器人基础上增加工具能力后，会宣称做了 Agent，面试官需要区分候选人是否理解概念的边界。",
+    "pain_point": "把任何带 Prompt 的 LLM 调用都叫 Agent，会导致系统设计缺乏循环、状态与工具编排等关键结构。",
+    "focus": "Agent 相对单次 LLM 调用新增的能力维度，以及构成一个 Agent 必备的组件清单。",
+    "approach": "先给出定义层面的区别，再按『模型—工具—循环—状态』拆解核心组件，最后说明边界并非非黑即白。"
+  },
+  "recommended_answer": {
+    "summary": "普通 LLM 对话是单轮文本进文本出；Agent 是让 LLM 在循环中动态决定过程与工具使用、与环境交互并维护状态的系统，区别在于自主性与行动能力。",
+    "points": [
+      "对话应用的控制流由代码写死：每次请求独立调用一次模型，模型只负责生成回复；Agent 的控制流由模型在运行时决定，Anthropic 的经典定义是『LLM 动态指挥自己的过程与工具使用』。",
+      "核心组件一：模型与推理（ReAct 式边想边干）与任务规划（Plan-Execute 式先计划后执行）。",
+      "核心组件二：工具调用，通过 Function Calling / MCP 等协议执行检索、代码、API 等真实动作，把模型的输出变成对环境的影响。",
+      "核心组件三：循环与终止条件，Agent 依据观察结果迭代直到完成任务或触发停止条件。",
+      "核心组件四：状态与记忆，包括会话内的短期上下文管理和跨会话的长期记忆。",
+      "边界是谱系而非开关：固定代码路径编排 LLM 的叫 Workflow，模型自主决策的才叫 Agent，两者常组合使用。"
+    ]
+  },
+  "technical_answer": {
+    "sections": [
+      {
+        "heading": "为什么『是不是 Agent』取决于控制权归属",
+        "body": "Anthropic 在 Building effective agents 中给出的架构区分是：Workflow 指通过预定义代码路径编排 LLM 与工具的系统；Agent 指 LLM 动态指挥自身流程与工具使用的系统。因此判断标准不是接了多少工具，而是『下一步做什么』由谁决定：写在代码里的是 Workflow，由模型在循环中决定的是 Agent。普通对话应用连 Workflow 都算不上，只是单次调用的增强封装。"
+      },
+      {
+        "heading": "核心组件的展开",
+        "body": "一个可落地的 Agent 通常包含：①模型层，负责推理、规划与生成工具调用，选型时关注指令跟随、工具调用格式准确率与上下文窗口；②工具层，每个工具有清晰的名称、描述与 JSON Schema 参数定义，执行结果回灌进上下文；③循环层，即 Agent Loop，每轮执行『推理→动作→观察』，并配置最大轮数、token 预算、耗时上限等终止条件；④状态层，管理短期上下文（当前会话消息与中间结果）和长期记忆（向量化存储的偏好与事实）；⑤可观测与安全层，记录 Trace、限制工具权限，避免失控。缺了循环与工具执行，系统就退化为对话应用；缺了状态管理，长任务会丢失信息。"
+      }
+    ],
+    "example": {
+      "scenario": "客服场景中，用户问『我的订单为什么还没到』。",
+      "steps": [
+        "对话应用：把问题与知识库片段拼进 Prompt，模型生成一段解释文本，无法查真实物流。",
+        "Agent：模型判断需要查询物流，调用订单查询工具拿到真实状态，发现包裹滞留，再调用工单工具为用户催件，最后基于观察结果组织回复。"
+      ],
+      "observation": "同样是 LLM 应用，Agent 因为拥有工具与循环，能把模型的输出转化为对业务系统的真实操作，并用观察结果修正下一步行动。"
+    }
+  },
+  "source": {
+    "source_type": "xhs_note",
+    "note_id": "6ac86853000000001801b00e",
+    "question_verbatim": "AI Agent 与普通 LLM Chat 的本质区别是什么，核心组件有哪些",
+    "extraction": "image_reading",
+    "batch_id": "2026-11-17-agent-mianjing"
+  },
+  "editorial_provenance": {
+    "company": "unspecified",
+    "role": "Agent 开发",
+    "round": "一面",
+    "frequency": 2,
+    "notes": "合并候选 C072（某厂一面，图片）与 C318（字节跳动 AI Agent 一面）。定义依据 Anthropic Building effective agents 的 Workflow/Agent 区分。"
+  },
+  "technical_references": [
+    {"title": "Building effective agents（Anthropic Engineering）", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
+    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"}
+  ],
+  "related_questions": []
+}

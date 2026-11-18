@@ -1,5 +1,606 @@
 {
   "version": "1.0",
-  "generated_at": null,
-  "questions": []
+  "generated_at": "2026-11-17T13:46:35+00:00",
+  "questions": [
+    {
+      "id": "Q001",
+      "title": "AI Agent 与普通 LLM 对话应用的本质区别是什么？Agent 的核心组件有哪些？",
+      "category_id": "agent-architecture",
+      "difficulty": "low",
+      "tags": [
+        "agent组成",
+        "工具调用",
+        "规划循环",
+        "上下文管理"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/low/Q001.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q002",
+      "title": "ReAct 范式的工作流程是怎样的？工程实现中消息格式如何设计，tool_response 用什么角色传回？",
+      "category_id": "agent-architecture",
+      "difficulty": "medium",
+      "tags": [
+        "ReAct",
+        "消息格式",
+        "工具调用",
+        "Thought-Action-Observation"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/medium/Q002.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q003",
+      "title": "ReAct 与 Plan-Execute 两种范式有什么区别？分别适合什么任务？为什么简单任务不该先做完整 Plan？",
+      "category_id": "agent-architecture",
+      "difficulty": "medium",
+      "tags": [
+        "ReAct",
+        "Plan-Execute",
+        "任务规划",
+        "范式选型"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/medium/Q003.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q004",
+      "title": "Agent Loop 的核心流程怎么设计？什么时候停？怎么防死循环与重复调用？终止后如何校验结果？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "Agent Loop",
+        "终止条件",
+        "死循环检测",
+        "结果校验"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q004.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q005",
+      "title": "Multi-Agent 与 Single-Agent 的本质区别是什么？多 Agent 的收益与代价如何权衡？什么时候应该退回单 Agent？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "Multi-Agent",
+        "上下文隔离",
+        "任务编排",
+        "架构权衡"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q005.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q006",
+      "title": "Workflow 与 Agent 的本质区别是什么？什么场景应该选 Workflow（固定编排）而不是自主 Agent？",
+      "category_id": "agent-architecture",
+      "difficulty": "medium",
+      "tags": [
+        "Workflow",
+        "自主决策",
+        "编排选型",
+        "可预测性"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/medium/Q006.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q007",
+      "title": "Agent 的记忆机制怎么分层设计？短期记忆、长期记忆和 Summary 各自存什么、何时读写？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "记忆分层",
+        "短期记忆",
+        "长期记忆",
+        "摘要记忆"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q007.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q008",
+      "title": "Agent 的长期记忆应该如何设计？什么条件下写入、如何组织存储、如何召回与更新？用户偏好改变时怎么处理？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "长期记忆",
+        "记忆写入",
+        "记忆召回",
+        "偏好更新"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q008.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q009",
+      "title": "多轮对话超出模型上下文窗口时如何处理？滑动窗口和动态摘要各适合什么场景？压缩时应该保留哪些信息？",
+      "category_id": "agent-architecture",
+      "difficulty": "medium",
+      "tags": [
+        "上下文压缩",
+        "滑动窗口",
+        "动态摘要",
+        "长对话"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/medium/Q009.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q010",
+      "title": "上下文预算有限时，系统提示、工具 Schema、记忆、轨迹与中间结果如何做全局分配？如何量化压缩损失？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "上下文工程",
+        "预算分配",
+        "压缩损失",
+        "上下文管理"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q010.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q011",
+      "title": "MCP（Model Context Protocol）的原理是什么？传输方式有哪些？它与 Function Calling 是什么关系、解决了什么问题？",
+      "category_id": "agent-engineering",
+      "difficulty": "medium",
+      "tags": [
+        "MCP",
+        "Function Calling",
+        "协议设计",
+        "工具生态"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/medium/Q011.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q012",
+      "title": "Function Calling 的基本原理是什么？模型与程序分别负责什么？没有 MCP 之前大模型是怎么调工具的？",
+      "category_id": "agent-engineering",
+      "difficulty": "low",
+      "tags": [
+        "Function Calling",
+        "工具调用原理",
+        "JSON Schema",
+        "结构化输出"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/low/Q012.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q013",
+      "title": "如何设计工具的描述与参数 Schema，才能提升大模型的调用准确率、减少瞎编参数？",
+      "category_id": "agent-engineering",
+      "difficulty": "medium",
+      "tags": [
+        "工具Schema",
+        "参数校验",
+        "工具描述",
+        "防呆设计"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/medium/Q013.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q014",
+      "title": "工具库有上百个工具（或几百个用户自定义 Skill）时，如何让模型快速准确地选中工具？召回率下降怎么解决？",
+      "category_id": "agent-engineering",
+      "difficulty": "medium",
+      "tags": [
+        "工具检索",
+        "两级加载",
+        "Skill召回",
+        "动态挂载"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/medium/Q014.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q015",
+      "title": "工具调用失败、超时、返回异常格式或部分成功时如何容错？重试怎么设计、如何保证幂等？高风险工具（如支付）如何兜底？",
+      "category_id": "agent-engineering",
+      "difficulty": "high",
+      "tags": [
+        "工具容错",
+        "重试幂等",
+        "熔断降级",
+        "结果验证"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/high/Q015.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q016",
+      "title": "如何向不懂技术的人解释 RAG？什么是 Embedding，为什么文本要向量化？余弦相似度在 RAG 中起什么作用？",
+      "category_id": "rag-retrieval",
+      "difficulty": "low",
+      "tags": [
+        "RAG概念",
+        "Embedding",
+        "余弦相似度",
+        "检索增强"
+      ],
+      "answer_type": "technical",
+      "file": "rag-retrieval/low/Q016.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q017",
+      "title": "RAG 的完整流程是怎样的？从文档入库到线上检索，Query 改写、切分、召回、重排、注入各环节怎么做、优化过哪些点？",
+      "category_id": "rag-retrieval",
+      "difficulty": "high",
+      "tags": [
+        "RAG全链路",
+        "Query改写",
+        "召回重排",
+        "上下文注入"
+      ],
+      "answer_type": "technical",
+      "file": "rag-retrieval/high/Q017.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q018",
+      "title": "为什么 RAG 检索要用 BM25 关键词 + 向量 Dense 的混合方案？只用向量不行吗？两路结果怎么合并？",
+      "category_id": "rag-retrieval",
+      "difficulty": "medium",
+      "tags": [
+        "混合检索",
+        "BM25",
+        "向量检索",
+        "结果融合"
+      ],
+      "answer_type": "technical",
+      "file": "rag-retrieval/medium/Q018.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q019",
+      "title": "RRF 的全称和作用是什么？它与 Rerank 有什么区别？为什么 RAG 流程要引入父子索引？",
+      "category_id": "rag-retrieval",
+      "difficulty": "medium",
+      "tags": [
+        "RRF",
+        "Rerank",
+        "父子索引",
+        "召回重排"
+      ],
+      "answer_type": "technical",
+      "file": "rag-retrieval/medium/Q019.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q020",
+      "title": "文档为什么要切片？Chunk Size 和 Overlap 如何确定？为什么不能只用固定长度切分？递归/结构化切分好在哪里？",
+      "category_id": "rag-retrieval",
+      "difficulty": "medium",
+      "tags": [
+        "Chunk切分",
+        "重叠窗口",
+        "递归切分",
+        "结构化切分"
+      ],
+      "answer_type": "technical",
+      "file": "rag-retrieval/medium/Q020.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q021",
+      "title": "Agent 系统的效果评测体系怎么设计？除了准确率还要看哪些指标？埋点怎么收集？人工标注还是线上指标？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "high",
+      "tags": [
+        "Agent评测",
+        "指标体系",
+        "任务成功率",
+        "线上指标"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/high/Q021.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q022",
+      "title": "Agent 的评测集怎么构建与分类？评测成本如何计算？没有用户反馈数据时怎么做抽检？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "medium",
+      "tags": [
+        "评测集构建",
+        "场景分层",
+        "抽样抽检",
+        "评测成本"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/medium/Q022.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q023",
+      "title": "Bad case 怎么定位与归因？多 Agent 体系下如何定位是哪个环节的问题？修复后怎么验证没有影响其他 case？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "high",
+      "tags": [
+        "Badcase闭环",
+        "归因定位",
+        "回归集",
+        "修复验证"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/high/Q023.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q024",
+      "title": "用 LLM 做裁判（LLM-as-judge）评估输出质量时有哪些系统性偏差？如何控制位置、长度、自增强等偏差与评测污染？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "medium",
+      "tags": [
+        "LLM-as-judge",
+        "位置偏差",
+        "长度偏差",
+        "评测校准"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/medium/Q024.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q025",
+      "title": "Agent 的可观测性体系怎么设计？Trace/Span/决策日志如何支撑根因定位？海量日志怎么排查？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "high",
+      "tags": [
+        "可观测性",
+        "Trace",
+        "决策日志",
+        "根因定位"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/high/Q025.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q026",
+      "title": "Agent 长任务耗时从 5 分钟涨到 20 分钟，怎么排查延迟？不同业务场景下延迟和效果怎么取舍？",
+      "category_id": "agent-performance",
+      "difficulty": "medium",
+      "tags": [
+        "延迟排查",
+        "延迟效果取舍",
+        "性能归因",
+        "长任务"
+      ],
+      "answer_type": "technical",
+      "file": "agent-performance/medium/Q026.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q027",
+      "title": "工程侧的推理加速有哪些方向？Continuous Batching 和 KV Cache 是什么？vLLM 这类框架为什么能大幅提升吞吐？",
+      "category_id": "agent-performance",
+      "difficulty": "medium",
+      "tags": [
+        "推理加速",
+        "KV Cache",
+        "Continuous Batching",
+        "vLLM"
+      ],
+      "answer_type": "technical",
+      "file": "agent-performance/medium/Q027.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q028",
+      "title": "Agent 的流式响应怎么实现？为什么用 SSE？流式输出下工具调用事件怎么推给前端？断线后如何恢复之前的输出？",
+      "category_id": "agent-performance",
+      "difficulty": "high",
+      "tags": [
+        "SSE流式",
+        "事件推送",
+        "断线恢复",
+        "工具调用事件"
+      ],
+      "answer_type": "technical",
+      "file": "agent-performance/high/Q028.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q029",
+      "title": "用户中途取消任务、或版本热更新时正在运行的 Agent 怎么处理？",
+      "category_id": "agent-performance",
+      "difficulty": "medium",
+      "tags": [
+        "任务取消",
+        "热更新",
+        "检查点",
+        "优雅终止"
+      ],
+      "answer_type": "technical",
+      "file": "agent-performance/medium/Q029.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q030",
+      "title": "为控制延迟和成本，Agent 调用大模型有哪些优化策略？缓存、压缩、模型路由各自怎么做？代价与效果如何权衡？",
+      "category_id": "agent-cost",
+      "difficulty": "medium",
+      "tags": [
+        "成本优化",
+        "模型路由",
+        "Prompt缓存",
+        "成本效果权衡"
+      ],
+      "answer_type": "technical",
+      "file": "agent-cost/medium/Q030.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q031",
+      "title": "Prompt 已经调到极限了，下一步怎么办？换模型、升参数还是做 SFT？怎么决策？人工调 Prompt 和自动化调优怎么选？",
+      "category_id": "model-adaptation",
+      "difficulty": "high",
+      "tags": [
+        "Prompt天花板",
+        "SFT决策",
+        "模型升级",
+        "自动化调优"
+      ],
+      "answer_type": "technical",
+      "file": "model-adaptation/high/Q031.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q032",
+      "title": "为什么有些场景下 SFT 效果不好？SFT 的失败模式有哪些、什么问题根本不该用 SFT 解决？",
+      "category_id": "model-adaptation",
+      "difficulty": "medium",
+      "tags": [
+        "SFT失效场景",
+        "数据质量",
+        "知识注入",
+        "泛化边界"
+      ],
+      "answer_type": "technical",
+      "file": "model-adaptation/medium/Q032.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q033",
+      "title": "Agentic 模型的 CPT、SFT、RL 三阶段训练流程分别是什么？为什么 SFT 时要 mask 掉 observation tokens？",
+      "category_id": "model-adaptation",
+      "difficulty": "high",
+      "tags": [
+        "Agentic训练",
+        "三阶段流程",
+        "observation mask",
+        "损失掩码"
+      ],
+      "answer_type": "technical",
+      "file": "model-adaptation/high/Q033.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q034",
+      "title": "多模态大模型的具体结构是什么样的？视觉编码器和语言模型如何衔接？",
+      "category_id": "model-adaptation",
+      "difficulty": "medium",
+      "tags": [
+        "多模态架构",
+        "视觉编码器",
+        "模态衔接",
+        "投影层"
+      ],
+      "answer_type": "technical",
+      "file": "model-adaptation/medium/Q034.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q035",
+      "title": "Reward Model 适合解决什么问题？在 Agent 系统中如何使用？",
+      "category_id": "agent-learning",
+      "difficulty": "medium",
+      "tags": [
+        "Reward Model",
+        "RLHF",
+        "偏好学习",
+        "任务奖励"
+      ],
+      "answer_type": "technical",
+      "file": "agent-learning/medium/Q035.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q036",
+      "title": "RAG 知识库更新有哪些难点？文档局部修改时如何做增量更新？多存储间（如 MySQL 与 ES）的数据一致性怎么保证？",
+      "category_id": "data-governance",
+      "difficulty": "medium",
+      "tags": [
+        "知识库更新",
+        "增量更新",
+        "数据一致性",
+        "版本管理"
+      ],
+      "answer_type": "technical",
+      "file": "data-governance/medium/Q036.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q037",
+      "title": "Prompt 注入、工具越权、数据外泄如何在架构层做纵深防御？权限最小化、沙箱与审计如何协同？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "Prompt注入",
+        "纵深防御",
+        "权限最小化",
+        "沙箱审计"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q037.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q038",
+      "title": "Agent 的模型幻觉怎么处理？RAG 出现过幻觉吗？幻觉在多 Agent 之间传播怎么防？",
+      "category_id": "evaluation-reliability",
+      "difficulty": "medium",
+      "tags": [
+        "幻觉缓解",
+        "RAG忠实度",
+        "跨Agent传播",
+        "溯源"
+      ],
+      "answer_type": "technical",
+      "file": "evaluation-reliability/medium/Q038.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q039",
+      "title": "场景设计：用 Agent 实现一个 AI 面试程序，你会怎么设计？它有什么缺点？需要保证哪些核心指标？怎么避免每步重新规划导致路径震荡？",
+      "category_id": "agent-architecture",
+      "difficulty": "high",
+      "tags": [
+        "场景设计",
+        "AI面试",
+        "面试官Agent",
+        "路径震荡"
+      ],
+      "answer_type": "technical",
+      "file": "agent-architecture/high/Q039.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    },
+    {
+      "id": "Q040",
+      "title": "Coding Agent 从用户提出需求到编码、测试的完整流程怎么设计？需求澄清、Spec/技术设计/任务拆解怎么区分？各阶段产物如何客观比较与确认？",
+      "category_id": "agent-engineering",
+      "difficulty": "high",
+      "tags": [
+        "Coding Agent",
+        "需求澄清",
+        "Spec设计",
+        "产物评审"
+      ],
+      "answer_type": "technical",
+      "file": "agent-engineering/high/Q040.json",
+      "batch_id": "2026-11-17-agent-mianjing"
+    }
+  ]
 }
