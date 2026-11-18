@@ -1,11 +1,16 @@
 {
   "id": "Q008",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "Agent 的长期记忆应该如何设计？什么条件下写入、如何组织存储、如何召回与更新？用户偏好改变时怎么处理？",
-  "tags": ["长期记忆", "记忆写入", "记忆召回", "偏好更新"],
+  "tags": [
+    "长期记忆",
+    "记忆写入",
+    "记忆召回",
+    "偏好更新"
+  ],
   "question_guide": {
     "background": "长期记忆是 Agent 记忆题的深水区，面试官常沿『写什么→怎么判该写→存哪→怎么取→偏好变了怎么办』连环追问。",
     "pain_point": "全量对话入库会造成记忆污染（噪声、过时、冲突条目泛滥），召回越用越差；没有更新与冲突消解机制，记忆会越积越错。",
@@ -59,11 +64,27 @@
     "company": "网易互娱",
     "role": "Agent 开发",
     "round": "unspecified",
-    "frequency": 6,
-    "notes": "合并候选 C104（主源，网易互娱）、C227（百度：长期 Memory 什么条件下写入）、C163（unspecified：Agent 长期记忆怎么实现）、C196（携程：长期 memory 存什么、什么时候加载）、C386（虾皮：长期记忆如何组织，哪些直接注入哪些按需检索）、C387（虾皮：如何判断对话值得存成记忆）。关联 C389（用户偏好改变时如何更新记忆、追溯原始对话）的追问维度已并入答案。"
+    "frequency": 1,
+    "notes": "合并候选 C104（主源，网易互娱）、C227（百度：长期 Memory 什么条件下写入）、C163（unspecified：Agent 长期记忆怎么实现）、C196（携程：长期 memory 存什么、什么时候加载）、C386（虾皮：长期记忆如何组织，哪些直接注入哪些按需检索）、C387（虾皮：如何判断对话值得存成记忆）。关联 C389（用户偏好改变时如何更新记忆、追溯原始对话）的追问维度已并入答案。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=6（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6accaec100000000020130e4",
+        "company": "网易互娱",
+        "role": "Agent 开发",
+        "round": "unspecified",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Memory overview - Docs by LangChain（Profile vs Collection、hot path vs background、Store）", "url": "https://docs.langchain.com/oss/python/concepts/memory"}
+    {
+      "title": "Memory overview - Docs by LangChain（Profile vs Collection、hot path vs background、Store）",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory"
+    }
   ],
-  "related_questions": ["Q007", "Q009"]
+  "related_questions": [
+    "Q007",
+    "Q009"
+  ]
 }

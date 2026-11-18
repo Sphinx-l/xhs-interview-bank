@@ -1,11 +1,16 @@
 {
   "id": "Q015",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-engineering",
   "difficulty": "high",
   "title": "工具调用失败、超时、返回异常格式或部分成功时如何容错？重试怎么设计、如何保证幂等？高风险工具（如支付）如何兜底？",
-  "tags": ["工具容错", "重试幂等", "熔断降级", "结果验证"],
+  "tags": [
+    "工具容错",
+    "重试幂等",
+    "熔断降级",
+    "结果验证"
+  ],
   "question_guide": {
     "background": "这是工具层最重的系统性追问链：面试官会从『超时了怎么办』开始，连环追到重试策略、幂等设计、支付级兜底与脏数据校验。",
     "pain_point": "盲目重试非幂等工具会造成重复支付/重复发消息；不重试则一次网络抖动就中断长任务；返回部分成功或脏数据时不校验，错误会静默流入下游。",
@@ -59,12 +64,31 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 6,
-    "notes": "合并候选 C061（主源，字节 Harness 一面）、C078（某厂一面：参数解析失败或 JSON 格式不对怎么处理）、C152（月之暗面二面：工具返回数据过大截断、工具失败重试熔断幂等）、C302（阿里巴巴三面：工具返回超时、部分成功、脏数据的结果验证与一致性补偿）、C324（字节：外部 API 超时或异常格式的重试降级）、C347（字节 2-2：支付接口超时如何处理）。"
+    "frequency": 1,
+    "notes": "合并候选 C061（主源，字节 Harness 一面）、C078（某厂一面：参数解析失败或 JSON 格式不对怎么处理）、C152（月之暗面二面：工具返回数据过大截断、工具失败重试熔断幂等）、C302（阿里巴巴三面：工具返回超时、部分成功、脏数据的结果验证与一致性补偿）、C324（字节：外部 API 超时或异常格式的重试降级）、C347（字节 2-2：支付接口超时如何处理）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=6（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agents 的错误恢复与 ground truth 获取）", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
-    {"title": "Graph API overview - Docs by LangChain（节点重执行与幂等性要求）", "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agents 的错误恢复与 ground truth 获取）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "title": "Graph API overview - Docs by LangChain（节点重执行与幂等性要求）",
+      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"
+    }
   ],
-  "related_questions": ["Q004", "Q013"]
+  "related_questions": [
+    "Q004",
+    "Q013"
+  ]
 }

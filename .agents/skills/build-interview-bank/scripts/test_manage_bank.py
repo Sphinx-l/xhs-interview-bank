@@ -1,7 +1,6 @@
 # test_manage_bank.py
-"""manage_bank 单元测试。运行：
-PYTHONDONTWRITEBYTECODE=1 D:/MSYS2/ucrt64/bin/python3 -m unittest discover \
-  -s .agents/skills/build-interview-bank/scripts -p 'test_*.py' -v
+"""manage_bank 单元测试。运行（仓库根目录，任意 Python ≥ 3.9）：
+python -m unittest discover -s .agents/skills/build-interview-bank/scripts -p 'test_*.py' -v
 """
 import copy
 import json
@@ -38,7 +37,7 @@ def base_question(**overrides):
 
 BASE = {
     "id": "Q001",
-    "version": "1.0",
+    "version": "1.1",
     "answer_type": "technical",
     "category_id": "agent-architecture",
     "difficulty": "low",
@@ -75,6 +74,24 @@ BASE = {
         "role": "Agent 开发工程师",
         "round": "一面",
         "frequency": 2,
+        "occurrences": [
+            {
+                "batch_id": "2026-11-16-test-batch",
+                "note_id": "65f0a1b200000000008d3a7b",
+                "company": "某公司",
+                "role": "Agent 开发工程师",
+                "round": "一面",
+                "seen_at": "2026-11-16"
+            },
+            {
+                "batch_id": "2026-11-10-test-other",
+                "note_id": "65f0a1b200000000008d3a99",
+                "company": "另一公司",
+                "role": "Agent 开发",
+                "round": "二面",
+                "seen_at": "2026-11-10"
+            }
+        ],
         "notes": "两个面经帖出现同一题面"
     },
     "technical_references": [
@@ -152,6 +169,77 @@ class ValidateQuestionTests(unittest.TestCase):
         del bad["editorial_provenance"]["company"]
         self.assert_field_error(bad, "company")
 
+    def test_rejects_missing_or_bad_occurrences(self):
+        bad = base_question()
+        del bad["editorial_provenance"]["occurrences"]
+        self.assert_field_error(bad, "occurrences")
+        bad = base_question()
+        bad["editorial_provenance"]["occurrences"] = []
+        self.assert_field_error(bad, "occurrences")
+        bad = base_question()
+        bad["editorial_provenance"]["occurrences"][0]["seen_at"] = "2026/11/16"
+        self.assert_field_error(bad, "seen_at")
+        bad = base_question()
+        bad["editorial_provenance"]["occurrences"][1]["batch_id"] = \
+            bad["editorial_provenance"]["occurrences"][0]["batch_id"]
+        bad["editorial_provenance"]["occurrences"][1]["note_id"] = \
+            bad["editorial_provenance"]["occurrences"][0]["note_id"]
+        self.assert_field_error(bad, "重复")
+        bad = base_question()
+        del bad["editorial_provenance"]["occurrences"][0]["company"]
+        self.assert_field_error(bad, "company")
+
+    def test_rejects_frequency_mismatch(self):
+        bad = base_question()
+        bad["editorial_provenance"]["frequency"] = 3
+        self.assert_field_error(bad, "frequency")
+        bad = base_question()
+        bad["editorial_provenance"]["frequency"] = "2"
+        self.assert_field_error(bad, "frequency")
+
+    def test_validates_follow_up_chain(self):
+        good = base_question()
+        good["editorial_provenance"]["follow_up_chain"] = ["Q001", "Q002"]
+        self.assertEqual(mb.validate_question(good, self.taxonomy), [])
+        bad = base_question()
+        bad["editorial_provenance"]["follow_up_chain"] = ["Q002"]
+        self.assert_field_error(bad, "follow_up_chain")
+        bad = base_question()
+        bad["editorial_provenance"]["follow_up_chain"] = ["Q001", "Q001"]
+        self.assert_field_error(bad, "follow_up_chain")
+        bad = base_question()
+        bad["editorial_provenance"]["follow_up_chain"] = ["Q1", "Q001"]
+        self.assert_field_error(bad, "follow_up_chain")
+
+    def test_student_recall_source(self):
+        good = base_question()
+        good["source"] = {
+            "source_type": "student_recall",
+            "recall_id": "R001",
+            "question_verbatim": "口述：面试官问了 Agent 的记忆怎么设计",
+            "extraction": "oral_recall",
+            "batch_id": "2026-11-20-student-recall"
+        }
+        good["editorial_provenance"]["occurrences"] = [{
+            "batch_id": "2026-11-20-student-recall",
+            "recall_id": "R001",
+            "company": "unspecified",
+            "role": "unspecified",
+            "round": "unspecified",
+            "seen_at": "2026-11-20"
+        }]
+        good["editorial_provenance"]["frequency"] = 1
+        self.assertEqual(mb.validate_question(good, self.taxonomy), [])
+        bad = copy.deepcopy(good)
+        del bad["source"]["recall_id"]
+        self.assert_field_error(bad, "recall_id")
+        bad = copy.deepcopy(good)
+        bad["source"]["extraction"] = "note_text"
+        self.assert_field_error(bad, "oral_recall")
+        bad = copy.deepcopy(good)
+        bad["source"]["note_id"] = "65f0a1b200000000008d3a7b"
+        self.assert_field_error(bad, "note_id")
+
     def test_rejects_bad_references(self):
         self.assert_field_error({"technical_references": []}, "technical_references")
         bad = base_question()
@@ -201,6 +289,10 @@ class MarkdownTests(unittest.TestCase):
         self.assertIn("真题来源：某公司", self.student)
         self.assertIn("发帖人自述", self.student)
 
+    def test_student_has_no_occurrence_company_leak(self):
+        self.assertNotIn("另一公司", self.student)
+        self.assertNotIn("2026-11-10-test-other", self.student)
+
     def test_editorial_contains_provenance(self):
         self.assertIn("## 教研信息", self.editorial)
         self.assertIn("某公司", self.editorial)
@@ -208,6 +300,16 @@ class MarkdownTests(unittest.TestCase):
         self.assertIn(BASE["source"]["question_verbatim"], self.editorial)
         self.assertIn("https://www.anthropic.com/research/building-effective-agents",
                       self.editorial)
+
+    def test_editorial_contains_occurrences_and_chain(self):
+        question = base_question()
+        question["editorial_provenance"]["follow_up_chain"] = ["Q001", "Q002"]
+        text = mb.generate_editorial_markdown(question, self.taxonomy)
+        self.assertIn("出现轨迹", text)
+        self.assertIn("2026-11-16-test-batch", text)
+        self.assertIn("另一公司", text)
+        self.assertIn("首见 2026-11-10，最近 2026-11-16", text)
+        self.assertIn("同场追问链：Q001 → Q002", text)
 
     def test_example_rendered_when_present(self):
         question = base_question()
@@ -275,7 +377,7 @@ class RegistrationTests(unittest.TestCase):
         shutil.copy(mb.REPO_ROOT / "question_bank" / "taxonomy.json",
                     repo / "question_bank" / "taxonomy.json")
         mb.write_json(repo / "question_bank" / "catalog.json",
-                      {"version": "1.0", "generated_at": None, "questions": []})
+                      {"version": mb.CONTRACT_VERSION, "generated_at": None, "questions": []})
         target = repo / "question_bank" / "agent-architecture" / "low"
         target.mkdir(parents=True)
         self.repo = repo
@@ -381,10 +483,101 @@ class RegistrationTests(unittest.TestCase):
             mb.main(["question_bank", "--question", "Q001", "--root", str(self.repo)]),
             1)
 
+    def test_sighting_appends_occurrence_and_rebinds_hash(self):
+        self.assertEqual(mb.register_question(self.repo, self.rel), [])
+        errors = mb.register_sighting(
+            self.repo, "Q001", "2026-11-17-test-second", "note-xyz",
+            company="某公司", role="Agent 开发", round_="一面")
+        self.assertEqual(errors, [])
+        question = mb.read_json(self.file)
+        occurrences = question["editorial_provenance"]["occurrences"]
+        self.assertEqual(len(occurrences), 3)
+        self.assertEqual(question["editorial_provenance"]["frequency"], 3)
+        # 审核哈希已重绑、catalog 已刷新、派生产物已再生，全量审计应通过。
+        self.assertEqual(mb.run_check(self.repo), [])
+        editorial = (self.repo / "question_bank" / "editorial" / "Q001.md"
+                     ).read_text(encoding="utf-8")
+        self.assertIn("2026-11-17-test-second", editorial)
+        review = mb.read_json(self.repo / "batches" / BASE["source"]["batch_id"]
+                              / "reviews" / "content-Q001.json")
+        self.assertEqual(len(review["revision_history"]), 1)
+
+    def test_sighting_updates_by_company_index(self):
+        self.assertEqual(mb.register_question(self.repo, self.rel), [])
+        self.assertEqual(
+            mb.register_sighting(self.repo, "Q001", "2026-11-17-test-second",
+                                 "note-xyz", company="字节"),
+            [])
+        by_company = (self.repo / "question_bank" / "editorial" / "by-company.md"
+                      ).read_text(encoding="utf-8")
+        self.assertIn("## 字节", by_company)
+        self.assertIn("Q001", by_company)
+        self.assertIn("(../agent-architecture/low/Q001.md)", by_company)
+
+    def test_sighting_rejects_duplicate(self):
+        mb.register_question(self.repo, self.rel)
+        occurrence = BASE["editorial_provenance"]["occurrences"][0]
+        errors = mb.register_sighting(self.repo, "Q001",
+                                      occurrence["batch_id"], occurrence["note_id"])
+        self.assertTrue(any("已登记" in e for e in errors),
+                        f"期望错误包含 '已登记'，实际 {errors}")
+
+    def test_sighting_rejects_unregistered_question(self):
+        errors = mb.register_sighting(self.repo, "Q009", "2026-11-17-test-x", "n1")
+        self.assertTrue(any("未登记" in e for e in errors))
+
+    def test_sighting_rejects_tampered_baseline(self):
+        mb.register_question(self.repo, self.rel)
+        tampered = base_question()
+        tampered["title"] = "被手改的标题"
+        mb.write_json(self.file, tampered)
+        errors = mb.register_sighting(self.repo, "Q001", "2026-11-17-test-y", "n2")
+        self.assertTrue(any("门禁" in e or "SHA" in e for e in errors),
+                        f"期望门禁错误，实际 {errors}")
+
+    def test_sighting_cli_roundtrip(self):
+        mb.register_question(self.repo, self.rel)
+        self.assertEqual(
+            mb.main(["question_bank", "--sighting", "Q001",
+                     "--batch", "2026-11-17-test-z", "--note", "n3",
+                     "--company", "字节", "--round", "一面",
+                     "--root", str(self.repo)]),
+            0)
+        self.assertEqual(mb.run_check(self.repo), [])
+
+    def test_sighting_cli_requires_note_xor_recall(self):
+        mb.register_question(self.repo, self.rel)
+        self.assertEqual(
+            mb.main(["question_bank", "--sighting", "Q001",
+                     "--batch", "2026-11-17-test-w",
+                     "--root", str(self.repo)]),
+            1)
+
+    def test_check_detects_catalog_drift(self):
+        mb.register_question(self.repo, self.rel)
+        catalog = mb.read_json(self.repo / "question_bank" / "catalog.json")
+        catalog["questions"][0]["frequency"] = 99
+        mb.write_json(self.repo / "question_bank" / "catalog.json", catalog)
+        errors = mb.run_check(self.repo)
+        self.assertTrue(any("catalog 条目" in e for e in errors),
+                        f"期望 catalog 漂移错误，实际 {errors}")
+
 
 class EmptyBankTests(unittest.TestCase):
-    def test_check_on_real_empty_bank(self):
-        self.assertEqual(mb.main(["question_bank", "--check"]), 0)
+    def test_check_on_empty_temp_bank(self):
+        # 真实题库已有 40 题存档，空库审计改在临时仓库验证（2026-11-18 合并后修正）
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            (repo / "question_bank").mkdir()
+            shutil.copy(mb.REPO_ROOT / "question_bank" / "taxonomy.json",
+                        repo / "question_bank" / "taxonomy.json")
+            mb.write_json(repo / "question_bank" / "catalog.json",
+                          {"version": "1.1", "generated_at": None, "questions": []})
+            taxonomy = mb.load_taxonomy(repo / "question_bank" / "taxonomy.json")
+            mb.generate_indexes(repo / "question_bank",
+                                mb.read_json(repo / "question_bank" / "catalog.json"), taxonomy)
+            self.assertEqual(mb.run_check(repo), [])
 
 
 if __name__ == "__main__":

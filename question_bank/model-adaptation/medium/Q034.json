@@ -1,11 +1,16 @@
 {
   "id": "Q034",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "model-adaptation",
   "difficulty": "medium",
   "title": "多模态大模型的具体结构是什么样的？视觉编码器和语言模型如何衔接？",
-  "tags": ["多模态架构", "视觉编码器", "模态衔接", "投影层"],
+  "tags": [
+    "多模态架构",
+    "视觉编码器",
+    "模态衔接",
+    "投影层"
+  ],
   "question_guide": {
     "background": "多模态结构题考的是对『视觉-语言两段式架构』的理解，追问点在衔接层的具体做法与训练策略。",
     "pain_point": "只会说『把图片变成向量拼进 LLM』而说不出视觉 token 怎么来、投影层怎么训、各部分冻不冻结，会被判定没实际了解。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "主流多模态大模型是三段式：视觉编码器（ViT/CLIP 系）把图像切成 patch 编为视觉特征序列；投影衔接层把视觉特征对齐到语言模型的向量空间（线性投影或 Q-Former 类查询压缩）；语言模型把视觉 token 与文本 token 拼接后统一处理。训练上先对齐预训练投影层（视觉编码器与 LLM 常冻结或轻调），再做多模态指令微调。",
     "points": [
-      "视觉编码器：图像切 patch 序列经 ViT 输出特征（或 CLIP 预训练编码器提供对齐性好的特征），多数方案沿用预训练权重。"
-      ,
+      "视觉编码器：图像切 patch 序列经 ViT 输出特征（或 CLIP 预训练编码器提供对齐性好的特征），多数方案沿用预训练权重。",
       "衔接方式一（线性投影，LLaVA 代表）：一个可训练的投影矩阵把每个视觉特征映射为语言模型的输入 embedding，实现简单、保留全部视觉信息。",
       "衔接方式二（Q-Former 类）：一组可学习查询向量从视觉特征中抽取固定数量的 token，压缩序列长度但引入信息瓶颈。",
       "语言模型侧：视觉 token 与文本 token 拼成统一序列进入 LLM，LLaVA 的定义即『连接视觉编码器与 LLM 的端到端多模态模型』。",
@@ -57,10 +61,25 @@
     "role": "AI Agent",
     "round": "三轮技术面+HR面（2-2）",
     "frequency": 1,
-    "notes": "主源候选 C333（字节 2-2 一面，图片）。"
+    "notes": "主源候选 C333（字节 2-2 一面，图片）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=1（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a03b843000000000803d1a9",
+        "company": "字节跳动",
+        "role": "AI Agent",
+        "round": "三轮技术面+HR面（2-2）",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Visual Instruction Tuning（LLaVA，arXiv 2304.08485，连接视觉编码器与 LLM 的端到端多模态模型、GPT-4 生成的多模态指令数据）", "url": "https://arxiv.org/abs/2304.08485"}
+    {
+      "title": "Visual Instruction Tuning（LLaVA，arXiv 2304.08485，连接视觉编码器与 LLM 的端到端多模态模型、GPT-4 生成的多模态指令数据）",
+      "url": "https://arxiv.org/abs/2304.08485"
+    }
   ],
-  "related_questions": ["Q001"]
+  "related_questions": [
+    "Q001"
+  ]
 }

@@ -1,11 +1,16 @@
 {
   "id": "Q003",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "medium",
   "title": "ReAct 与 Plan-Execute 两种范式有什么区别？分别适合什么任务？为什么简单任务不该先做完整 Plan？",
-  "tags": ["ReAct", "Plan-Execute", "任务规划", "范式选型"],
+  "tags": [
+    "ReAct",
+    "Plan-Execute",
+    "任务规划",
+    "范式选型"
+  ],
   "question_guide": {
     "background": "『你们 Agent 用的 ReAct 还是 Plan-and-Execute』是高频开场题，追问方向通常是两类范式的失败模式与混合使用。",
     "pain_point": "死守单一范式会在另一类任务上翻车：长链路任务用 ReAct 容易中途漂移，简单任务用 Plan-Execute 白付规划成本。",
@@ -58,12 +63,31 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 4,
-    "notes": "合并候选 C063（主源，字节 Harness 一面）、C228（百度）、C313（unspecified，问框架是 ReAct 还是 Plan-and-Execute）、C264（字节抖音一面，追问简单任务为何不能直接 ReAct）。"
+    "frequency": 1,
+    "notes": "合并候选 C063（主源，字节 Harness 一面）、C228（百度）、C313（unspecified，问框架是 ReAct 还是 Plan-and-Execute）、C264（字节抖音一面，追问简单任务为何不能直接 ReAct）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"},
-    {"title": "Building effective agents（Anthropic Engineering，orchestrator-workers 模式）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629"
+    },
+    {
+      "title": "Building effective agents（Anthropic Engineering，orchestrator-workers 模式）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q002", "Q004"]
+  "related_questions": [
+    "Q002",
+    "Q004"
+  ]
 }

@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-2",
   "canonical_path": "question_bank/agent-architecture/medium/Q009.json",
-  "canonical_sha256": "5ccc6d4dd39812ab52efb8275c0b4f5c3c90f565a0779d0386f4bf561e9793a4",
+  "canonical_sha256": "9e1c638eafe2337f0db9a05ce4b7c9d9f9aa52a071a849ab43e28a53ecb6cfdb",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 唯一不通过项已修复）。recommended_answer 的 summary+points 由约 470 压缩至约 287 汉字，落入契约区间；6 条要点保留；其余结构项 round 1 已核合规且未改动。",
     "difficulty": "通过（同 round 1）。题面本质是压缩策略选型+保留边界判断，各合并候选均为单问选型/边界题、无单帖连环追问链证据，medium 定档恰当，未因合并 7 候选虚升。",
@@ -17,11 +25,25 @@
     "verbatim_fidelity": "通过。verbatim 未改动。"
   },
   "claims_checked": [
-    {"claim": "完整历史即使装进窗口，模型也会被陈旧、离题内容分心，性能下降且更慢更贵，需主动移除或遗忘过期信息", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"}
+    {
+      "claim": "完整历史即使装进窗口，模型也会被陈旧、离题内容分心，性能下降且更慢更贵，需主动移除或遗忘过期信息",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
-    {"round": 1, "decision": "rejected", "issue": "recommended_answer 约 470 汉字超契约上限", "resolution": "压缩至约 287 汉字，策略菜单/场景/必保清单覆盖保留"}
+    {
+      "round": 1,
+      "decision": "rejected",
+      "issue": "recommended_answer 约 470 汉字超契约上限",
+      "resolution": "压缩至约 287 汉字，策略菜单/场景/必保清单覆盖保留"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
   ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:05:00+08:00"

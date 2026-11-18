@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "generated_at": "2026-11-17T13:46:35+00:00",
+  "version": "1.1",
+  "generated_at": "2026-11-18T13:35:16+00:00",
   "questions": [
     {
       "id": "Q001",
@@ -15,7 +15,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/low/Q001.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac86853000000001801b00e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q002",
@@ -30,7 +34,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/medium/Q002.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac86853000000001801b00e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q003",
@@ -45,7 +53,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/medium/Q003.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q004",
@@ -60,7 +72,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q004.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q005",
@@ -75,7 +91,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q005.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adf62390000000018006e6c",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q006",
@@ -90,7 +110,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/medium/Q006.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "69f9f8c5000000003503ac05",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q007",
@@ -105,7 +129,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q007.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q008",
@@ -120,7 +148,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q008.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6accaec100000000020130e4",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q009",
@@ -135,7 +167,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/medium/Q009.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q010",
@@ -150,7 +186,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q010.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6add53de000000002b01d079",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q011",
@@ -165,7 +205,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/medium/Q011.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6aa3b16e000000001001d751",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q012",
@@ -180,7 +224,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/low/Q012.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac865b1000000000b0061c2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q013",
@@ -195,7 +243,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/medium/Q013.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a60ba0300000000f017ac2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q014",
@@ -210,7 +262,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/medium/Q014.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a03b843000000000803d1a9",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q015",
@@ -225,7 +281,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/high/Q015.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q016",
@@ -240,7 +300,11 @@
       ],
       "answer_type": "technical",
       "file": "rag-retrieval/low/Q016.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ad82cec0000000033011965",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q017",
@@ -255,7 +319,11 @@
       ],
       "answer_type": "technical",
       "file": "rag-retrieval/high/Q017.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac86853000000001801b00e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q018",
@@ -270,7 +338,11 @@
       ],
       "answer_type": "technical",
       "file": "rag-retrieval/medium/Q018.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adf62390000000018006e6c",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q019",
@@ -285,7 +357,11 @@
       ],
       "answer_type": "technical",
       "file": "rag-retrieval/medium/Q019.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac865b1000000000b0061c2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q020",
@@ -300,7 +376,11 @@
       ],
       "answer_type": "technical",
       "file": "rag-retrieval/medium/Q020.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adf62390000000018006e6c",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q021",
@@ -315,7 +395,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/high/Q021.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "69f9f8c5000000003503ac05",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q022",
@@ -330,7 +414,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/medium/Q022.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac865b1000000000b0061c2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q023",
@@ -345,7 +433,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/high/Q023.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q024",
@@ -360,7 +452,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/medium/Q024.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6add53de000000002b01d079",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q025",
@@ -375,7 +471,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/high/Q025.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6add53de000000002b01d079",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q026",
@@ -390,7 +490,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-performance/medium/Q026.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q027",
@@ -405,7 +509,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-performance/medium/Q027.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a0320240000000006023ed4",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q028",
@@ -420,7 +528,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-performance/high/Q028.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adf46d4000000001401bf7c",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q029",
@@ -435,7 +547,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-performance/medium/Q029.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6adc069a0000000025023c8e",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q030",
@@ -450,7 +566,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-cost/medium/Q030.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a60ba03000000000f017ac2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q031",
@@ -465,7 +585,11 @@
       ],
       "answer_type": "technical",
       "file": "model-adaptation/high/Q031.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a0320240000000006023ed4",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q032",
@@ -480,7 +604,11 @@
       ],
       "answer_type": "technical",
       "file": "model-adaptation/medium/Q032.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "69f9f8c5000000003503ac05",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q033",
@@ -495,7 +623,11 @@
       ],
       "answer_type": "technical",
       "file": "model-adaptation/high/Q033.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a03b843000000000803d1a9",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q034",
@@ -510,7 +642,11 @@
       ],
       "answer_type": "technical",
       "file": "model-adaptation/medium/Q034.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a03b843000000000803d1a9",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q035",
@@ -525,7 +661,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-learning/medium/Q035.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "69f9f8c5000000003503ac05",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q036",
@@ -540,7 +680,11 @@
       ],
       "answer_type": "technical",
       "file": "data-governance/medium/Q036.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac865b1000000000b0061c2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q037",
@@ -555,7 +699,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q037.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6add53de000000002b01d079",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q038",
@@ -570,7 +718,11 @@
       ],
       "answer_type": "technical",
       "file": "evaluation-reliability/medium/Q038.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a61be15000000000f00b322",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q039",
@@ -585,7 +737,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-architecture/high/Q039.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6a1c1e5c000000003501dd46",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     },
     {
       "id": "Q040",
@@ -600,7 +756,11 @@
       ],
       "answer_type": "technical",
       "file": "agent-engineering/high/Q040.json",
-      "batch_id": "2026-11-17-agent-mianjing"
+      "batch_id": "2026-11-17-agent-mianjing",
+      "origin_id": "6ac865b1000000000b0061c2",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "frequency": 1
     }
   ]
 }

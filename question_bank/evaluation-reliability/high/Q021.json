@@ -1,11 +1,16 @@
 {
   "id": "Q021",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "high",
   "title": "Agent 系统的效果评测体系怎么设计？除了准确率还要看哪些指标？埋点怎么收集？人工标注还是线上指标？",
-  "tags": ["Agent评测", "指标体系", "任务成功率", "线上指标"],
+  "tags": [
+    "Agent评测",
+    "指标体系",
+    "任务成功率",
+    "线上指标"
+  ],
   "question_guide": {
     "background": "评测体系是 Agent 负责人必答题，考察从离线评测集到线上监控的全链路指标设计，追问常落在『没有用户反馈怎么办』。",
     "pain_point": "只有一个端到端准确率无法定位问题层（模型/检索/工具/编排），也无法支撑迭代决策；没有埋点则线上退化无从发现。",
@@ -59,11 +64,27 @@
     "company": "携程",
     "role": "AI 应用开发",
     "round": "一面",
-    "frequency": 5,
-    "notes": "合并候选 C201（主源，携程一面）、C156（月之暗面二面：任务成功率、工具选错率、参数错误率、成本、耗时怎么埋点）、C162（unspecified：如何量化评估一个 agent 的性能好坏）、C326（字节一面：评估 Agent 系统关注哪些关键指标、如何收集监控）、C352（字节 2-2 二面：如何量化评估上线 Agent 好坏，除准确率还有哪些指标）。"
+    "frequency": 1,
+    "notes": "合并候选 C201（主源，携程一面）、C156（月之暗面二面：任务成功率、工具选错率、参数错误率、成本、耗时怎么埋点）、C162（unspecified：如何量化评估一个 agent 的性能好坏）、C326（字节一面：评估 Agent 系统关注哪些关键指标、如何收集监控）、C352（字节 2-2 二面：如何量化评估上线 Agent 好坏，除准确率还有哪些指标）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=5（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "69f9f8c5000000003503ac05",
+        "company": "携程",
+        "role": "AI 应用开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，度量性能并基于评测迭代的主张）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，度量性能并基于评测迭代的主张）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q022", "Q023"]
+  "related_questions": [
+    "Q022",
+    "Q023"
+  ]
 }

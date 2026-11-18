@@ -1,11 +1,16 @@
 {
   "id": "Q013",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-engineering",
   "difficulty": "medium",
   "title": "如何设计工具的描述与参数 Schema，才能提升大模型的调用准确率、减少瞎编参数？",
-  "tags": ["工具Schema", "参数校验", "工具描述", "防呆设计"],
+  "tags": [
+    "工具Schema",
+    "参数校验",
+    "工具描述",
+    "防呆设计"
+  ],
   "question_guide": {
     "background": "工具定义质量直接决定调用准确率，Anthropic 称之为 ACI（Agent-Computer Interface）工程；面试官用这道题区分『会接工具』与『会设计工具』。",
     "pain_point": "描述含糊、参数开放自由度过大、缺乏示例与边界说明，模型就会选错工具或编造参数；而把这些责任推给『模型不够强』是错误归因。",
@@ -58,11 +63,27 @@
     "company": "字节跳动",
     "role": "AI Agent",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C319（主源，字节一面）、C223（百度：Tool 参数 Schema 如何设计降低模型生成错误参数的概率）、C314（unspecified：怎么让模型老老实实调用工具，不瞎编参数）。"
+    "frequency": 1,
+    "notes": "合并候选 C319（主源，字节一面）、C223（百度：Tool 参数 Schema 如何设计降低模型生成错误参数的概率）、C314（unspecified：怎么让模型老老实实调用工具，不瞎编参数）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a60ba0300000000f017ac2",
+        "company": "字节跳动",
+        "role": "AI Agent",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，Appendix 2: Prompt engineering your tools / ACI）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，Appendix 2: Prompt engineering your tools / ACI）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q012", "Q014"]
+  "related_questions": [
+    "Q012",
+    "Q014"
+  ]
 }

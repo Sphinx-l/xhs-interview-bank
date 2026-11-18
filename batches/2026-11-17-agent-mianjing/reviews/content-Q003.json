@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer",
   "canonical_path": "question_bank/agent-architecture/medium/Q003.json",
-  "canonical_sha256": "3d1a4790e85963ba7b8a7699e1bd716300e89e0fa092384342fa595722bddd18",
+  "canonical_sha256": "8dae54191e06cf77959b12824c2eade4ab730f698cb095aa9bb0332701234ec1",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q002,Q004] 合规。summary+points 纯汉字约 345 字，在区间内。",
     "difficulty": "通过。范式选型与权衡判断，符合 medium。",
@@ -18,8 +26,16 @@
     "length": "通过。summary+points 纯汉字约 345 字，在区间内。"
   },
   "claims_checked": [
-    {"claim": "ReAct 逐步决策、计划隐含在推理轨迹中（Yao et al., 2022）", "evidence": "https://arxiv.org/abs/2210.03629", "result": "confirmed"},
-    {"claim": "Anthropic 建议从简单模式起步、按需增加复杂度（与本题混合路由结论一致）", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+    {
+      "claim": "ReAct 逐步决策、计划隐含在推理轨迹中（Yao et al., 2022）",
+      "evidence": "https://arxiv.org/abs/2210.03629",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Anthropic 建议从简单模式起步、按需增加复杂度（与本题混合路由结论一致）",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
@@ -29,6 +45,11 @@
       "reviewed_at": "2026-11-17T19:43:28+08:00",
       "issue": "technical_answer.sections[2].body 出现『字节系面经』——公司名与面经原帖信息泄漏进学员侧正文，须改写。",
       "resolution": "编写者已将该句改写为『面试常见追问……』，round 2 复核确认泄漏已消除、其余内容未变。"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
     }
   ],
   "notes": "round 2 复审通过。修订仅改动一处旁白措辞，其余字段与 round 1 审核版本一致。",

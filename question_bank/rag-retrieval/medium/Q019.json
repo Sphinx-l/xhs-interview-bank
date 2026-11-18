@@ -1,11 +1,16 @@
 {
   "id": "Q019",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "rag-retrieval",
   "difficulty": "medium",
   "title": "RRF 的全称和作用是什么？它与 Rerank 有什么区别？为什么 RAG 流程要引入父子索引？",
-  "tags": ["RRF", "Rerank", "父子索引", "召回重排"],
+  "tags": [
+    "RRF",
+    "Rerank",
+    "父子索引",
+    "召回重排"
+  ],
   "question_guide": {
     "background": "这道题把 RAG 检索层的三个易混概念放在一题里考：融合（RRF）、精排（Rerank）、索引组织（父子块），用来区分背词与理解。",
     "pain_point": "把 RRF 当成排序模型、把 Rerank 当成融合方法，或者不知道父子索引解决的是『检索粒度与生成粒度冲突』，都会在这题暴露。",
@@ -59,11 +64,27 @@
     "company": "虾皮",
     "role": "Agent 开发",
     "round": "一面/二面",
-    "frequency": 3,
-    "notes": "合并候选 C384（主源，虾皮一面）、C339（字节 2-2 一面：RAG 流程中为什么要引入父子索引？BM25 和向量检索如何融合？）、C247（unspecified 教育公司：讲解召回重排的策略）。"
+    "frequency": 1,
+    "notes": "合并候选 C384（主源，虾皮一面）、C339（字节 2-2 一面：RAG 流程中为什么要引入父子索引？BM25 和向量检索如何融合？）、C247（unspecified 教育公司：讲解召回重排的策略）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac865b1000000000b0061c2",
+        "company": "虾皮",
+        "role": "Agent 开发",
+        "round": "一面/二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Reciprocal rank fusion - Elasticsearch Reference（RRF 定义、公式、k=60）", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html"}
+    {
+      "title": "Reciprocal rank fusion - Elasticsearch Reference（RRF 定义、公式、k=60）",
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html"
+    }
   ],
-  "related_questions": ["Q018", "Q017"]
+  "related_questions": [
+    "Q018",
+    "Q017"
+  ]
 }

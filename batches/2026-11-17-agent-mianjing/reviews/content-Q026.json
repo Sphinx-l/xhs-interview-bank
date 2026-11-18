@@ -4,7 +4,7 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-6",
   "canonical_path": "question_bank/agent-performance/medium/Q026.json",
-  "canonical_sha256": "ab93a7cf1a14735ef1253023b3bea8a4843619438a779574b81869b461fec73d",
+  "canonical_sha256": "3b3536b72c1eb9eec57ec32d6607c45b94357bd8463db64cf18971d6dfdacd26",
   "review_round": 1,
   "reviewed_sections": [
     "recommended_answer",
@@ -39,7 +39,13 @@
     }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:31:38+08:00"
 }

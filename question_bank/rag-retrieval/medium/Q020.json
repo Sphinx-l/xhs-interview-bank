@@ -1,11 +1,16 @@
 {
   "id": "Q020",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "rag-retrieval",
   "difficulty": "medium",
   "title": "文档为什么要切片？Chunk Size 和 Overlap 如何确定？为什么不能只用固定长度切分？递归/结构化切分好在哪里？",
-  "tags": ["Chunk切分", "重叠窗口", "递归切分", "结构化切分"],
+  "tags": [
+    "Chunk切分",
+    "重叠窗口",
+    "递归切分",
+    "结构化切分"
+  ],
   "question_guide": {
     "background": "切分是 RAG 入库侧的基础题，考察对『块大小决定检索精度与上下文完整性平衡』的理解，追问常落在 size/overlap 的确定方法。",
     "pain_point": "拍脑袋给 512/50 的固定切分会让表格被打散、条款被腰斩、语义被切在边界——检索命中的块要么缺上下文要么全是噪声。",
@@ -59,11 +64,27 @@
     "company": "字节跳动（抖音）",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 5,
-    "notes": "合并候选 C284（主源，字节抖音一面图片）、C209（携程一面：chunk 切分为什么不能只用固定长度）、C220（携程一面：文档为什么要切片，chunk size 和 overlap 如何确定）、C230（百度：递归字符切分相比固定长度切分有什么优势）、C246（unspecified 教育公司：手动干预切片是怎么实现的，已并入进阶手段）。"
+    "frequency": 1,
+    "notes": "合并候选 C284（主源，字节抖音一面图片）、C209（携程一面：chunk 切分为什么不能只用固定长度）、C220（携程一面：文档为什么要切片，chunk size 和 overlap 如何确定）、C230（百度：递归字符切分相比固定长度切分有什么优势）、C246（unspecified 教育公司：手动干预切片是怎么实现的，已并入进阶手段）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=5（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adf62390000000018006e6c",
+        "company": "字节跳动（抖音）",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Chunking Strategies for LLM Applications（Pinecone Learn，切分定义与大小取舍）", "url": "https://www.pinecone.io/learn/chunking-strategies/"}
+    {
+      "title": "Chunking Strategies for LLM Applications（Pinecone Learn，切分定义与大小取舍）",
+      "url": "https://www.pinecone.io/learn/chunking-strategies/"
+    }
   ],
-  "related_questions": ["Q017", "Q019"]
+  "related_questions": [
+    "Q017",
+    "Q019"
+  ]
 }

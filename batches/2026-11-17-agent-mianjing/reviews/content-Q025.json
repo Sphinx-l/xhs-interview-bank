@@ -1,45 +1,50 @@
 {
- "question_id": "Q025",
- "note_id": "6add53de000000002b01d079",
- "author_agent": "claude-opus-5-5-author",
- "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
- "canonical_path": "question_bank/evaluation-reliability/high/Q025.json",
- "canonical_sha256": "4a56d142bfe02f1834f7a217eddbfd3c7c0e957074ce1a9c713a118d52c172ce",
- "review_round": 2,
- "reviewed_sections": [
-  "recommended_answer",
-  "technical_answer",
-  "example",
-  "question_guide",
-  "source",
-  "editorial_provenance",
-  "technical_references"
- ],
- "dimensions": {
-  "structure_contract": "通过。recommended_answer 未变，合计纯汉字 359 字，在 402 硬上限内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
-  "difficulty": "通过（round 1 结论维持）。主源 C307 原帖即为跨模块设计题，high 定档有据。",
-  "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
-  "technical_accuracy": "通过。round 1 内容结论维持；新增支撑句（第 1 节『这与 Anthropic 的主张同源：Agent 需要在每一步从环境获得 ground truth（工具调用结果、代码执行反馈）来评估自身进展——Trace 与决策日志就是把逐步 ground truth 固化为可回放证据的机制』）与 Building effective agents 主张一致，且与决策日志设计自然勾连，非装饰性。",
-  "answer_responsiveness": "通过。题面三问覆盖关系未变；example 的 92%→84% 定位演示完整。",
-  "provenance_merge": "通过。frequency=3 与合并候选数（C307 主源+C092+C417）一致；round 1 指出的 C417 跨题分工问题已通过 Q023 侧修订解决（Q023 已删除该内容并声明由本题承接），现 C417 仅本题计数；company=阿里巴巴、role=大模型 Agent、round=三面 与主源 note.json 一致。",
-  "verbatim_fidelity": "通过。question_verbatim 与主源候选 C307 逐字一致；extraction=note_text 一致。"
- },
- "claims_checked": [
-  {
-   "claim": "technical_references 的 Building effective agents 条目（agent 需在每步从环境获得 ground truth 以评估进展）",
-   "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
-   "result": "confirmed：第 1 节新增支撑句明确引述该主张并将 Trace/决策日志解释为逐步 ground truth 的固化机制，装饰性引用问题已修复"
-  }
- ],
- "issues": [],
- "revision_history": [
-  {
-   "round": 1,
-   "date": "2026-11-17",
-   "issue": "technical_references 装饰性引用，正文无支撑句；另 C417 跨题使用待理顺",
-   "resolution": "编写者新增与 ground truth 主张勾连的支撑句；C417 分工由 Q023 侧修订理顺，round 2 复核通过"
-  }
- ],
- "decision": "passed",
- "reviewed_at": "2026-11-17T23:55:00+08:00"
+  "question_id": "Q025",
+  "note_id": "6add53de000000002b01d079",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
+  "canonical_path": "question_bank/evaluation-reliability/high/Q025.json",
+  "canonical_sha256": "1b21e0c50d1a6cf31cfae5a1f698a9e90e9c04f2185de864ab89a293f3e0f1cc",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 未变，合计纯汉字 359 字，在 402 硬上限内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
+    "difficulty": "通过（round 1 结论维持）。主源 C307 原帖即为跨模块设计题，high 定档有据。",
+    "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
+    "technical_accuracy": "通过。round 1 内容结论维持；新增支撑句（第 1 节『这与 Anthropic 的主张同源：Agent 需要在每一步从环境获得 ground truth（工具调用结果、代码执行反馈）来评估自身进展——Trace 与决策日志就是把逐步 ground truth 固化为可回放证据的机制』）与 Building effective agents 主张一致，且与决策日志设计自然勾连，非装饰性。",
+    "answer_responsiveness": "通过。题面三问覆盖关系未变；example 的 92%→84% 定位演示完整。",
+    "provenance_merge": "通过。frequency=3 与合并候选数（C307 主源+C092+C417）一致；round 1 指出的 C417 跨题分工问题已通过 Q023 侧修订解决（Q023 已删除该内容并声明由本题承接），现 C417 仅本题计数；company=阿里巴巴、role=大模型 Agent、round=三面 与主源 note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim 与主源候选 C307 逐字一致；extraction=note_text 一致。"
+  },
+  "claims_checked": [
+    {
+      "claim": "technical_references 的 Building effective agents 条目（agent 需在每步从环境获得 ground truth 以评估进展）",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed：第 1 节新增支撑句明确引述该主张并将 Trace/决策日志解释为逐步 ground truth 的固化机制，装饰性引用问题已修复"
+    }
+  ],
+  "issues": [],
+  "revision_history": [
+    {
+      "round": 1,
+      "date": "2026-11-17",
+      "issue": "technical_references 装饰性引用，正文无支撑句；另 C417 跨题使用待理顺",
+      "resolution": "编写者新增与 ground truth 主张勾连的支撑句；C417 分工由 Q023 侧修订理顺，round 2 复核通过"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T23:55:00+08:00"
 }

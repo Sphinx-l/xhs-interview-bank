@@ -1,11 +1,16 @@
 {
   "id": "Q001",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "low",
   "title": "AI Agent 与普通 LLM 对话应用的本质区别是什么？Agent 的核心组件有哪些？",
-  "tags": ["agent组成", "工具调用", "规划循环", "上下文管理"],
+  "tags": [
+    "agent组成",
+    "工具调用",
+    "规划循环",
+    "上下文管理"
+  ],
   "question_guide": {
     "background": "很多团队在已有对话机器人基础上增加工具能力后，会宣称做了 Agent，面试官需要区分候选人是否理解概念的边界。",
     "pain_point": "把任何带 Prompt 的 LLM 调用都叫 Agent，会导致系统设计缺乏循环、状态与工具编排等关键结构。",
@@ -54,12 +59,28 @@
     "company": "unspecified",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 2,
-    "notes": "合并候选 C072（某厂一面，图片）与 C318（字节跳动 AI Agent 一面）。定义依据 Anthropic Building effective agents 的 Workflow/Agent 区分。"
+    "frequency": 1,
+    "notes": "合并候选 C072（某厂一面，图片）与 C318（字节跳动 AI Agent 一面）。定义依据 Anthropic Building effective agents 的 Workflow/Agent 区分。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=2（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac86853000000001801b00e",
+        "company": "unspecified",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering）", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
-    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"}
+    {
+      "title": "Building effective agents（Anthropic Engineering）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629"
+    }
   ],
   "related_questions": []
 }

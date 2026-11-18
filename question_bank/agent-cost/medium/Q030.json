@@ -1,11 +1,16 @@
 {
   "id": "Q030",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-cost",
   "difficulty": "medium",
   "title": "为控制延迟和成本，Agent 调用大模型有哪些优化策略？缓存、压缩、模型路由各自怎么做？代价与效果如何权衡？",
-  "tags": ["成本优化", "模型路由", "Prompt缓存", "成本效果权衡"],
+  "tags": [
+    "成本优化",
+    "模型路由",
+    "Prompt缓存",
+    "成本效果权衡"
+  ],
   "question_guide": {
     "background": "成本优化是 Agent 商业化的必答题，考察手段清单与『每一分优化都有代价』的权衡意识。",
     "pain_point": "多轮 Agent 的输入 token 随轮次累积重复计费，成本失控常在上线后爆发；只列手段不讲代价与适用边界的回答不合格。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "三大手段：缓存（相同子问题结果缓存、系统提示/工具 Schema 前缀缓存）、压缩（滚动摘要与工具结果截断降低累积输入）、模型路由（按任务难度分流到不同档位模型）；每项都有代价（缓存失效、压缩失真、小模型能力边界），权衡靠单位成本的效果增量评估——这是自主系统『用延迟和成本换效果』命题的成本侧。",
     "points": [
-      "结果缓存：语义相同或完全相同的请求直接返回缓存答案；代价是失效策略（数据变了缓存要跟着失效）与命中率问题。"
-      ,
+      "结果缓存：语义相同或完全相同的请求直接返回缓存答案；代价是失效策略（数据变了缓存要跟着失效）与命中率问题。",
       "前缀/提示缓存：Agent 每轮输入包含大量重复前缀（系统提示、工具 Schema、历史），利用推理侧前缀缓存（含 KV 复用）大幅降低重复部分成本；需保持前缀字节稳定才易命中。",
       "压缩：历史滚动摘要、工具大结果截断/外置，直接降低每轮输入；代价是有损，需保护关键约束与工具调用配对。",
       "模型路由：意图分类/难度预估把简单任务分给小模型，复杂任务留给旗舰模型；代价是路由错分的质量风险，需按分错率监控。",
@@ -42,8 +46,7 @@
     "example": {
       "scenario": "客服 Agent 月推理成本 40 万元，需要压降一半且质量不明显下降。",
       "steps": [
-        "账单分析：70% 成本来自多轮累积输入中的重复前缀与历史。"
-      ,
+        "账单分析：70% 成本来自多轮累积输入中的重复前缀与历史。",
         "组合优化：前缀缓存（字节稳定化后命中率 80%，前缀成本约减七成）；历史摘要压缩（输入再降三成）；格式转换类请求路由到小模型（占总请求四成，单价降至 1/10）。",
         "验证：回归集质量分下降 <1%，可接受；月成本降到约 19 万。"
       ],
@@ -61,12 +64,31 @@
     "company": "字节跳动",
     "role": "AI Agent",
     "round": "一面",
-    "frequency": 2,
-    "notes": "合并候选 C329（主源，字节一面）与 C099（网易互娱：如何权衡方法的代价和效果提升——已并入权衡框架段）。"
+    "frequency": 1,
+    "notes": "合并候选 C329（主源，字节一面）与 C099（网易互娱：如何权衡方法的代价和效果提升——已并入权衡框架段）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=2（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a60ba03000000000f017ac2",
+        "company": "字节跳动",
+        "role": "AI Agent",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agentic systems 以延迟和成本换任务表现）", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
-    {"title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention（vLLM Blog，copy-on-write 前缀共享的显存复用）", "url": "https://blog.vllm.ai/2023/06/20/vllm.html"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agentic systems 以延迟和成本换任务表现）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention（vLLM Blog，copy-on-write 前缀共享的显存复用）",
+      "url": "https://blog.vllm.ai/2023/06/20/vllm.html"
+    }
   ],
-  "related_questions": ["Q026", "Q009"]
+  "related_questions": [
+    "Q026",
+    "Q009"
+  ]
 }

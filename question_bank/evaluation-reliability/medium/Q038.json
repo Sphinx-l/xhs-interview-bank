@@ -1,11 +1,16 @@
 {
   "id": "Q038",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "medium",
   "title": "Agent 的模型幻觉怎么处理？RAG 出现过幻觉吗？幻觉在多 Agent 之间传播怎么防？",
-  "tags": ["幻觉缓解", "RAG忠实度", "跨Agent传播", "溯源"],
+  "tags": [
+    "幻觉缓解",
+    "RAG忠实度",
+    "跨Agent传播",
+    "溯源"
+  ],
   "question_guide": {
     "background": "幻觉是所有 LLM 应用的标配考题，Agent 场景的特殊性在于幻觉会沿链路传播与放大。",
     "pain_point": "只答『提示词里让它别编』是初级答案——材料缺失时的编造、跨 Agent 的伪事实传播，都需要结构性方案。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "幻觉按成因分三类处理：知识缺失型靠 RAG 补证据并强制引用；材料噪声型靠检索质量与忠实度校验；指令冲突型靠提示结构治理。通用手段是『有据可答、无据则拒』+ 生成后引用回溯校验；多 Agent 场景要给中间结论标置信度与来源，未经证实的信息不得写入共享状态，阻断传播链。",
     "points": [
-      "成因分类：模型不知道（知识缺失）、材料里有噪声或错误（被带偏）、指令冲突或上下文过载（顾此失彼）。"
-      ,
+      "成因分类：模型不知道（知识缺失）、材料里有噪声或错误（被带偏）、指令冲突或上下文过载（顾此失彼）。",
       "知识缺失型：RAG 补证据 + 提示强制『仅依据材料作答』；检索为空时明确拒答或转人工，不许模型自由发挥。",
       "材料噪声型：提升检索精度（重排、过滤过期内容）治源头；生成后做引用回溯——答案里的每个关键论断能否定位到材料。",
       "通用校验：忠实度检查（裁判模型对比答案与材料的支持关系）、关键事实抽检、可机检字段用规则验证。",
@@ -56,11 +60,27 @@
     "company": "unspecified",
     "role": "Agent 开发",
     "round": "unspecified",
-    "frequency": 4,
-    "notes": "合并候选 C164（主源，unspecified 图片）、C379（虾皮一面：RAG 有没有出现过幻觉？如何处理？）、C402（虾皮二面：Coding Agent 的幻觉会造成什么影响？如何降低）、C416（米哈游二面：多 Agent 共享状态时如何防止一个 Agent 的幻觉被另一个当作事实传播）。"
+    "frequency": 1,
+    "notes": "合并候选 C164（主源，unspecified 图片）、C379（虾皮一面：RAG 有没有出现过幻觉？如何处理？）、C402（虾皮二面：Coding Agent 的幻觉会造成什么影响？如何降低）、C416（米哈游二面：多 Agent 共享状态时如何防止一个 Agent 的幻觉被另一个当作事实传播）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a61be15000000000f00b322",
+        "company": "unspecified",
+        "role": "Agent 开发",
+        "round": "unspecified",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models（arXiv 2210.03629，与 Wikipedia 交互克服纯思维链的幻觉与错误传播）", "url": "https://arxiv.org/abs/2210.03629"}
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models（arXiv 2210.03629，与 Wikipedia 交互克服纯思维链的幻觉与错误传播）",
+      "url": "https://arxiv.org/abs/2210.03629"
+    }
   ],
-  "related_questions": ["Q017", "Q005"]
+  "related_questions": [
+    "Q017",
+    "Q005"
+  ]
 }

@@ -1,11 +1,16 @@
 {
   "id": "Q027",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-performance",
   "difficulty": "medium",
   "title": "工程侧的推理加速有哪些方向？Continuous Batching 和 KV Cache 是什么？vLLM 这类框架为什么能大幅提升吞吐？",
-  "tags": ["推理加速", "KV Cache", "Continuous Batching", "vLLM"],
+  "tags": [
+    "推理加速",
+    "KV Cache",
+    "Continuous Batching",
+    "vLLM"
+  ],
   "question_guide": {
     "background": "推理加速是自部署模型团队的高频题，考察对服务层优化（区别于模型压缩）的原理级理解。",
     "pain_point": "只会报框架名字说不清原理——不知道 KV Cache 为什么大、为什么要分页管理、continuous batching 与静态批的差别，一追问就断。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "推理加速分三层：请求内优化（KV Cache 避免重复计算注意力键值）、批调度优化（continuous batching 动态进出请求消除队头阻塞）、显存管理优化（PagedAttention 分页管理 KV Cache 消除碎片浪费）；vLLM 组合三者，官方口径较 HF Transformers 最高 24 倍吞吐提升。",
     "points": [
-      "KV Cache：自回归生成时缓存已算过的注意力 K/V 张量，避免每步重算全部历史；代价是大（LLaMA-13B 单序列可达 GB 级）且随序列长度动态变化，难管理。"
-      ,
+      "KV Cache：自回归生成时缓存已算过的注意力 K/V 张量，避免每步重算全部历史；代价是大（LLaMA-13B 单序列可达 GB 级）且随序列长度动态变化，难管理。",
       "传统批处理的问题：静态批要等最慢的序列结束，短请求被迫陪跑；continuous batching 按步粒度动态插入新请求、移除已完成请求，GPU 利用率大幅提升。",
       "PagedAttention：借鉴操作系统虚拟内存分页，把 KV Cache 切成块按需分配，消除显存碎片与预留浪费——官方分析现有系统因此浪费 60%-80% 显存。",
       "vLLM 收益来源：分页显存管理允许更大并发，叠加 continuous batching，官方口径较 HF Transformers 最高 24 倍吞吐且不改模型结构。",
@@ -56,11 +60,27 @@
     "company": "携程",
     "role": "Agent 开发",
     "round": "二面",
-    "frequency": 4,
-    "notes": "合并候选 C126（主源，携程二面）、C124（携程二面：工程侧会不会做推理优化，主要从哪些方向）、C125（携程二面：做过哪些推理加速手段）、C127（携程二面：vLLM 这类推理框架怎么用，效果提升主要体现在哪）。"
+    "frequency": 1,
+    "notes": "合并候选 C126（主源，携程二面）、C124（携程二面：工程侧会不会做推理优化，主要从哪些方向）、C125（携程二面：做过哪些推理加速手段）、C127（携程二面：vLLM 这类推理框架怎么用，效果提升主要体现在哪）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a0320240000000006023ed4",
+        "company": "携程",
+        "role": "Agent 开发",
+        "round": "二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention（vLLM Blog，KV Cache 体积/动态性、60-80% 显存浪费、24x 吞吐）", "url": "https://blog.vllm.ai/2023/06/20/vllm.html"}
+    {
+      "title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention（vLLM Blog，KV Cache 体积/动态性、60-80% 显存浪费、24x 吞吐）",
+      "url": "https://blog.vllm.ai/2023/06/20/vllm.html"
+    }
   ],
-  "related_questions": ["Q026", "Q030"]
+  "related_questions": [
+    "Q026",
+    "Q030"
+  ]
 }

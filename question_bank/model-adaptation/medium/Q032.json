@@ -1,11 +1,16 @@
 {
   "id": "Q032",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "model-adaptation",
   "difficulty": "medium",
   "title": "为什么有些场景下 SFT 效果不好？SFT 的失败模式有哪些、什么问题根本不该用 SFT 解决？",
-  "tags": ["SFT失效场景", "数据质量", "知识注入", "泛化边界"],
+  "tags": [
+    "SFT失效场景",
+    "数据质量",
+    "知识注入",
+    "泛化边界"
+  ],
   "question_guide": {
     "background": "SFT 失效是算法工程边界的经典辨析题，考察对『监督微调能学什么、不能学什么』的理解。",
     "pain_point": "把 SFT 当万金油：数据没对齐任务分布、错误根源在检索或工具、或者试图注入易变知识——练完不涨甚至倒退，还烧掉标注预算。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "SFT 失败集中在三处：数据侧（分布不对齐、量不足、质量差、过拟合套路）；任务侧（缺的是知识或推理而非行为模式，示范教不会）；知识侧（注入易变事实，训练完就过期）。判别原则：SFT 教『怎么做的行为』，不教事实知识——检索缺数据、工具报错应修系统而非微调。",
     "points": [
-      "数据失败：训练样本与线上分布不对齐（人工编的多、真实的长尾少）、量级不足（数百条学不稳风格）、标注不一致——表现为离线涨线上不涨。"
-      ,
+      "数据失败：训练样本与线上分布不对齐（人工编的多、真实的长尾少）、量级不足（数百条学不稳风格）、标注不一致——表现为离线涨线上不涨。",
       "过拟合套路：样本模式单一，模型学会复现训练集的固定话术与路径，新场景泛化差；AgentTuning 类工作特意混合通用语料，正是为了微调 agent 能力的同时保住通用能力。",
       "任务性质失败：目标是补知识（事实问答）或补推理深度，SFT 用示范教行为模式，教不会模型没有的能力，此类应换模型或外挂知识库。",
       "知识时效失败：把价格、政策等易变事实练进权重，一变就全错且无法局部更新——易变知识该放 RAG。",
@@ -57,10 +61,26 @@
     "role": "AI 应用开发",
     "round": "一面",
     "frequency": 1,
-    "notes": "主源候选 C214（携程一面）。"
+    "notes": "主源候选 C214（携程一面）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=1（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "69f9f8c5000000003503ac05",
+        "company": "携程",
+        "role": "AI 应用开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 数据混合通用语料以保持通用能力）", "url": "https://arxiv.org/abs/2310.12823"}
+    {
+      "title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 数据混合通用语料以保持通用能力）",
+      "url": "https://arxiv.org/abs/2310.12823"
+    }
   ],
-  "related_questions": ["Q031", "Q033"]
+  "related_questions": [
+    "Q031",
+    "Q033"
+  ]
 }

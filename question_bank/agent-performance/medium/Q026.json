@@ -1,11 +1,16 @@
 {
   "id": "Q026",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-performance",
   "difficulty": "medium",
   "title": "Agent 长任务耗时从 5 分钟涨到 20 分钟，怎么排查延迟？不同业务场景下延迟和效果怎么取舍？",
-  "tags": ["延迟排查", "延迟效果取舍", "性能归因", "长任务"],
+  "tags": [
+    "延迟排查",
+    "延迟效果取舍",
+    "性能归因",
+    "长任务"
+  ],
   "question_guide": {
     "background": "延迟突增是线上 Agent 的典型事故题，考察『先定位再优化』的排查纪律，以及按业务场景做延迟-效果权衡的判断力。",
     "pain_point": "不看 Trace 就猜测『换小模型提速』，常常压错地方——延迟大头可能在某个慢工具或循环轮次暴涨，而不是模型本身。",
@@ -16,8 +21,7 @@
     "summary": "排查靠 Trace 分段计时归因：把端到端耗时拆到模型推理、工具执行、检索、排队各段，对比正常/异常样本找到突增段；常见根因是慢工具、循环轮次暴涨、输入变长导致推理变慢、限流排队。取舍按场景定延迟预算：交互式场景保首字延迟，批处理场景保吞吐与效果。",
     "points": [
       "排查第一步：对比同任务新旧 Trace 的分段耗时（每轮模型调用、每个工具、检索、排队），定位突增段，不要先猜。",
-      "模型段变慢的常见原因：上下文变长（多轮累积输入 token）、模型/档位变更、推理服务负载高排队。"
-      ,
+      "模型段变慢的常见原因：上下文变长（多轮累积输入 token）、模型/档位变更、推理服务负载高排队。",
       "非模型段常见原因：某外部工具 P95 劣化、重试风暴、检索库变大未调索引、循环轮次从 N 涨到 3N。",
       "修复对策：慢工具加超时+降级、上下文压缩控输入长度、并行化无依赖工具调用、缓存重复子问题的结果。",
       "取舍框架：交互对话保首字延迟（可牺牲总耗时用流式）；批处理报告保最终质量（可牺牲耗时）；交易类硬 SLA 场景宁可降级回答也不超时。",
@@ -56,11 +60,27 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C067（主源，字节 Harness 一面）、C192（携程一面：长链路 Agent 为什么能接受十几分钟耗时）、C193（携程一面：不同业务场景下延迟和效果怎么取舍）。"
+    "frequency": 1,
+    "notes": "合并候选 C067（主源，字节 Harness 一面）、C192（携程一面：长链路 Agent 为什么能接受十几分钟耗时）、C193（携程一面：不同业务场景下延迟和效果怎么取舍）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agentic systems 以延迟和成本换任务表现）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agentic systems 以延迟和成本换任务表现）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q027", "Q030"]
+  "related_questions": [
+    "Q027",
+    "Q030"
+  ]
 }

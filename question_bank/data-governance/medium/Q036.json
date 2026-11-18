@@ -1,11 +1,16 @@
 {
   "id": "Q036",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "data-governance",
   "difficulty": "medium",
   "title": "RAG 知识库更新有哪些难点？文档局部修改时如何做增量更新？多存储间（如 MySQL 与 ES）的数据一致性怎么保证？",
-  "tags": ["知识库更新", "增量更新", "数据一致性", "版本管理"],
+  "tags": [
+    "知识库更新",
+    "增量更新",
+    "数据一致性",
+    "版本管理"
+  ],
   "question_guide": {
     "background": "知识库运营是 RAG 系统上线后的长期主战场，考察数据治理而非算法能力。",
     "pain_point": "全量重建索引慢且贵、局部修改导致新旧内容共存、多存储间不一致让检索命中脏数据——知识库不治理，检索质量随时间必然劣化。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "知识库更新的核心设计是块级增量：文档变更时 diff 到受影响 chunk，仅重建这些块的索引并原子替换；配合版本号、生效时间与下线标记做生命周期治理；多存储一致性用『单写源 + 变更事件驱动的异步同步 + 对账补偿』，而非双写。",
     "points": [
-      "增量更新：以文档为单位做内容 diff，定位受影响 chunk 只重建它们；块 ID 稳定（如按内容哈希+位置），未变块索引复用。"
-      ,
+      "增量更新：以文档为单位做内容 diff，定位受影响 chunk 只重建它们；块 ID 稳定（如按内容哈希+位置），未变块索引复用。",
       "原子替换：新版本块建好后一次性切换引用（别名/版本指针），避免重建期间新旧混杂被同时检索到。",
       "版本治理：每块带生效时间、失效时间与版本链；新版本生效不等于旧版本删除——保留历史支持回溯与审计。",
       "局部修改难点：改动一句可能影响其所在块及邻近块（overlap），diff 粒度要对齐切分逻辑，否则出现残留旧句。",
@@ -56,11 +60,27 @@
     "company": "虾皮",
     "role": "Agent 开发",
     "round": "一面/二面",
-    "frequency": 3,
-    "notes": "合并候选 C378（主源，虾皮一面）、C211（携程一面：文档版本、有效期、更新机制怎么设计）、C244（unspecified 教育公司：RAG 项目中 MySQL 和 ES 数据一致性怎么做的）。"
+    "frequency": 1,
+    "notes": "合并候选 C378（主源，虾皮一面）、C211（携程一面：文档版本、有效期、更新机制怎么设计）、C244（unspecified 教育公司：RAG 项目中 MySQL 和 ES 数据一致性怎么做的）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac865b1000000000b0061c2",
+        "company": "虾皮",
+        "role": "Agent 开发",
+        "round": "一面/二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS，把模型连到频繁更新的信息源是 RAG 核心价值之一）", "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"}
+    {
+      "title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS，把模型连到频繁更新的信息源是 RAG 核心价值之一）",
+      "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+    }
   ],
-  "related_questions": ["Q017", "Q020"]
+  "related_questions": [
+    "Q017",
+    "Q020"
+  ]
 }

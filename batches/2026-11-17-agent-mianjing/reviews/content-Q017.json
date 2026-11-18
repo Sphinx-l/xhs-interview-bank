@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
   "canonical_path": "question_bank/rag-retrieval/high/Q017.json",
-  "canonical_sha256": "d54cf7418967097ce418deb8360afaa49d5e10a909d77e7b3425ae1471c7b707",
+  "canonical_sha256": "342082b1b005f55d56490ed59acc85bccd4255bcc311aa5c5f1a996ebda00af6",
   "review_round": 1,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。recommended_answer 合计纯汉字 357 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 6 条覆盖题干全部子环节；question_guide 四键非空；tags 4 个（RAG全链路/Query改写/召回重排/上下文注入）具体。",
     "difficulty": "通过。high 有真实依据：主源 C076 verbatim 本身即跨模块全链路设计+优化点题（Query 改写/切分/Embedding/检索/Rerank/Context 注入六环节），合并候选 C065（链路怎么设计）、C204、C283（完整讲一下）同为系统性链路题，属跨模块设计而非补写升档。",
@@ -17,10 +25,20 @@
     "verbatim_fidelity": "通过。question_verbatim 与主源候选 C076 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
   },
   "claims_checked": [
-    {"claim": "RAG 需要数据准备（文档组织/更新外部数据源）且输出应带来源引用、生成后需校验", "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/", "result": "confirmed：AWS 页数据准备与 citations 主题支撑离线链路段（解析→清洗→切分→入库）及『生成并做引用与事实校验』『引用回溯』表述，引用条目标题已注明『数据准备与来源引用』范围，非装饰性引用"}
+    {
+      "claim": "RAG 需要数据准备（文档组织/更新外部数据源）且输出应带来源引用、生成后需校验",
+      "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
+      "result": "confirmed：AWS 页数据准备与 citations 主题支撑离线链路段（解析→清洗→切分→入库）及『生成并做引用与事实校验』『引用回溯』表述，引用条目标题已注明『数据准备与来源引用』范围，非装饰性引用"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T21:45:00+08:00"
 }

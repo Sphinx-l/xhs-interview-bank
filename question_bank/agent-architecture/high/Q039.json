@@ -1,11 +1,16 @@
 {
   "id": "Q039",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "场景设计：用 Agent 实现一个 AI 面试程序，你会怎么设计？它有什么缺点？需要保证哪些核心指标？怎么避免每步重新规划导致路径震荡？",
-  "tags": ["场景设计", "AI面试", "面试官Agent", "路径震荡"],
+  "tags": [
+    "场景设计",
+    "AI面试",
+    "面试官Agent",
+    "路径震荡"
+  ],
   "question_guide": {
     "background": "开放场景设计题，考察把 Workflow/Agent 模式组合成产品的能力——标准追问是产品缺陷、核心指标与路径震荡。",
     "pain_point": "设计成完全自主的单 Agent 会导致面试流程不可控、体验不稳定；不理解路径震荡（每步重新规划推翻前面路径）会暴露工程经验不足。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "设计原则是『流程固定、内容自主』：面试流程用 Workflow 固化（开场→逐题提问→追问→结束评估），出题与追问两个环节内嵌自主 Agent（根据回答质量动态追问）；指标保面试有效性（题目覆盖、评分一致性）与体验（首响、节奏）；防震荡靠题目与评分计划在阶段开始时锁定，追问只在当前题目局部调整，不允许推翻已完成环节。",
     "points": [
-      "流程主干（Workflow）：开场建档案→按能力维度出题→每题问答（含 0-2 次追问）→全维度评估报告；主干固定保证体验一致。"
-      ,
+      "流程主干（Workflow）：开场建档案→按能力维度出题→每题问答（含 0-2 次追问）→全维度评估报告；主干固定保证体验一致。",
       "自主环节一（出题 Agent）：按岗位画像与候选人已答情况动态选题，避免重复考已验证的能力点。",
       "自主环节二（追问 Agent）：判断回答深度——答浅了追问细节、答满了一笔带过；追问限定在当前题目的局部上下文。",
       "评估环节：评分维度与 rubric 事前锁定，逐题评分 + 全局汇总分离，保证评分一致性（多次面试同一人分数稳定）。",
@@ -56,11 +60,27 @@
     "company": "腾讯",
     "role": "Agent 开发",
     "round": "二面",
-    "frequency": 4,
-    "notes": "合并候选 C051（主源，腾讯二面）、C052（同帖：你认为你设计的这个产品有什么缺点吗）、C053（同帖：需要重点保证哪些核心指标或功能）、C054（同帖：怎么避免每一步出现重新规划，导致路径震荡）。"
+    "frequency": 1,
+    "notes": "合并候选 C051（主源，腾讯二面）、C052（同帖：你认为你设计的这个产品有什么缺点吗）、C053（同帖：需要重点保证哪些核心指标或功能）、C054（同帖：怎么避免每一步出现重新规划，导致路径震荡）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a1c1e5c000000003501dd46",
+        "company": "腾讯",
+        "role": "Agent 开发",
+        "round": "二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，workflow 固定路径与 agent 自主节点的组合模式）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，workflow 固定路径与 agent 自主节点的组合模式）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q006", "Q003"]
+  "related_questions": [
+    "Q006",
+    "Q003"
+  ]
 }

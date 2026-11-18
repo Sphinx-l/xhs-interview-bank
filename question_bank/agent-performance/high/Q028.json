@@ -1,11 +1,16 @@
 {
   "id": "Q028",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-performance",
   "difficulty": "high",
   "title": "Agent 的流式响应怎么实现？为什么用 SSE？流式输出下工具调用事件怎么推给前端？断线后如何恢复之前的输出？",
-  "tags": ["SSE流式", "事件推送", "断线恢复", "工具调用事件"],
+  "tags": [
+    "SSE流式",
+    "事件推送",
+    "断线恢复",
+    "工具调用事件"
+  ],
   "question_guide": {
     "background": "流式输出是 Agent 前后端的必考实现题，追问从选型（SSE vs WebSocket）一路打到工具事件协议与断线续传。",
     "pain_point": "只做过纯文本流式的话，Agent 的中间工具调用、多阶段进度如何在同一条流上表达、断线后如何不丢已生成内容，是实现层的真难点。",
@@ -16,8 +21,7 @@
     "summary": "用 SSE 实现服务端到前端的单向流：Agent 每步产出结构化事件（文本增量、工具调用开始/结束、轮次、完成/错误）按序推送；SSE 是纯 HTTP、单向、自动重连，适合 LLM 流式这种服务端单向推送场景；断线恢复靠服务端把事件持久化到会话缓冲，重连带 Last-Event-ID 续传增量。",
     "points": [
       "选型：LLM 输出是服务端→客户端的单向流，SSE 走纯 HTTP、无需升级协议、浏览器原生 EventSource 自动重连；WebSocket 的双向能力在此场景是多余的复杂度。",
-      "事件协议：不能只推文本——定义结构化事件类型（text_delta / tool_call_start / tool_result / round / done / error），带序号或事件 ID，前端按类型渲染聊天气泡或工具卡片。"
-      ,
+      "事件协议：不能只推文本——定义结构化事件类型（text_delta / tool_call_start / tool_result / round / done / error），带序号或事件 ID，前端按类型渲染聊天气泡或工具卡片。",
       "工具调用期间也有东西可推：工具开始时推『正在调用 X』状态，长工具可推进度，结束推结果摘要——避免用户面对数十秒空白。",
       "断线恢复：服务端把每个事件写入会话级缓冲（Redis 等，带序号）；客户端重连带 Last-Event-ID，服务端补发其后增量；任务在后端继续跑不随连接断开而取消。",
       "主动取消：用户停止时前端发取消请求，后端向执行器发取消信号终止循环并落状态，而非仅断开连接。",
@@ -60,11 +64,27 @@
     "company": "月之暗面",
     "role": "Agent Harness",
     "round": "二面",
-    "frequency": 4,
-    "notes": "合并候选 C158（主源，月之暗面二面）、C249（unspecified 教育公司：sse 流式在用户关闭浏览器断开后如何保持之前输出）、C288（字节抖音一面后端：流式响应怎么实现，为什么用 SSE）、C187（淘天一面：FastAPI 加 SSE，图状态机里怎么抓每个节点结果实时推前端）。"
+    "frequency": 1,
+    "notes": "合并候选 C158（主源，月之暗面二面）、C249（unspecified 教育公司：sse 流式在用户关闭浏览器断开后如何保持之前输出）、C288（字节抖音一面后端：流式响应怎么实现，为什么用 SSE）、C187（淘天一面：FastAPI 加 SSE，图状态机里怎么抓每个节点结果实时推前端）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adf46d4000000001401bf7c",
+        "company": "月之暗面",
+        "role": "Agent Harness",
+        "round": "二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Using server-sent events - MDN（SSE 单向连接定位与 EventSource 客户端模型）", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events"}
+    {
+      "title": "Using server-sent events - MDN（SSE 单向连接定位与 EventSource 客户端模型）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events"
+    }
   ],
-  "related_questions": ["Q026", "Q029"]
+  "related_questions": [
+    "Q026",
+    "Q029"
+  ]
 }

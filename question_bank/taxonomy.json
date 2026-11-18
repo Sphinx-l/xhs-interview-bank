@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "categories": [
     {"id": "agent-architecture", "name": "AI Agent 架构设计", "scope": "Agent 定义与组成、规划与循环、工具调用、多 Agent 协作、上下文与记忆"},
     {"id": "agent-performance", "name": "Agent 性能优化", "scope": "延迟定位、并行与流式、缓存、瓶颈排查与优化顺序"},

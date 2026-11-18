@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
   "canonical_path": "question_bank/rag-retrieval/medium/Q019.json",
-  "canonical_sha256": "e8dc298e7b61115f8a961f94dfd7941e8cbf99f6d07faa38fddc693b0ec8ee31",
+  "canonical_sha256": "4f84a9af2c8de60f5c55d51b14e300316c0e8db7f17c7af698242ee47fc242fe",
   "review_round": 1,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。recommended_answer 合计纯汉字 349 字，在 180-350 契约区间内；points 6 条覆盖三问；question_guide 四键非空；tags 4 个（RRF/Rerank/父子索引/召回重排）具体，RRF 为专有名词允许。",
     "difficulty": "通过。三概念辨析+边界判断（融合器 vs 精排器 vs 索引组织的分工、粒度冲突的原因），属概念定位与边界题，medium 定档正确；无系统性追问链故不升 high。",
@@ -17,10 +25,20 @@
     "verbatim_fidelity": "通过。question_verbatim『RRF 的全称和作用是什么？它与 Rerank 有什么区别？』与主源候选 C384 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
   },
   "claims_checked": [
-    {"claim": "RRF 把多个不同相关性指标的结果集合成一个、无需调参、指标间无需相关；每路按排名贡献 1/(k+rank)（rank 从 1 起，k 默认 60）", "evidence": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html", "result": "confirmed：technical_answer 第 1 节明确引用官方定位与公式，与文档一致，非装饰性引用"}
+    {
+      "claim": "RRF 把多个不同相关性指标的结果集合成一个、无需调参、指标间无需相关；每路按排名贡献 1/(k+rank)（rank 从 1 起，k 默认 60）",
+      "evidence": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html",
+      "result": "confirmed：technical_answer 第 1 节明确引用官方定位与公式，与文档一致，非装饰性引用"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T21:55:00+08:00"
 }

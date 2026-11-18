@@ -1,45 +1,50 @@
 {
- "question_id": "Q022",
- "note_id": "6ac865b1000000000b0061c2",
- "author_agent": "claude-opus-5-5-author",
- "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
- "canonical_path": "question_bank/evaluation-reliability/medium/Q022.json",
- "canonical_sha256": "994c090ec19a0715d48427514cf89cafffd5eecdaceb4a4b96ae53ec6ef14bb5",
- "review_round": 2,
- "reviewed_sections": [
-  "recommended_answer",
-  "technical_answer",
-  "example",
-  "question_guide",
-  "source",
-  "editorial_provenance",
-  "technical_references"
- ],
- "dimensions": {
-  "structure_contract": "通过。recommended_answer 未变，合计纯汉字 365 字，在 402 硬上限内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
-  "difficulty": "通过（round 1 结论维持）。评测集构建的选型与取舍判断，medium 定档正确。",
-  "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样；新增句仅含 Anthropic 技术文献出处，符合批次惯例。",
-  "technical_accuracy": "通过。round 1 内容结论维持；新增支撑句（第 1 节末『Anthropic 的工程实践同样主张用全面评测度量性能、在评测之上迭代实现，评测集正是这一循环的对照组』）与 Building effective agents 的评测主张一致，表述准确。",
-  "answer_responsiveness": "通过。题面三问覆盖关系未变；Prompt Cache 维度按 notes 说明未展开，可接受。",
-  "provenance_merge": "通过。frequency=3 与合并候选数（C383 主源+C234+C116）一致；C098 以关联身份并入稳定性段；company/role/round 与主源 note.json 一致。",
-  "verbatim_fidelity": "通过。question_verbatim 与主源候选 C383 逐字一致；extraction=image_reading 一致。"
- },
- "claims_checked": [
-  {
-   "claim": "technical_references 的 Building effective agents 条目（以评测驱动迭代的主张）",
-   "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
-   "result": "confirmed：第 1 节末新增支撑句明确引述『用全面评测度量性能、在评测之上迭代实现』并落到评测集定位，装饰性引用问题已修复，且句子与该文献实际主张一致"
-  }
- ],
- "issues": [],
- "revision_history": [
-  {
-   "round": 1,
-   "date": "2026-11-17",
-   "issue": "technical_references 装饰性引用，正文无支撑句",
-   "resolution": "编写者在第 1 节末新增与文献主张对应的支撑句，round 2 复核通过"
-  }
- ],
- "decision": "passed",
- "reviewed_at": "2026-11-17T23:55:00+08:00"
+  "question_id": "Q022",
+  "note_id": "6ac865b1000000000b0061c2",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
+  "canonical_path": "question_bank/evaluation-reliability/medium/Q022.json",
+  "canonical_sha256": "3ed2f4e1631dd50d1d7dfc7a6201487970bd2df3529c6260c1b6b9129abd3100",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 未变，合计纯汉字 365 字，在 402 硬上限内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
+    "difficulty": "通过（round 1 结论维持）。评测集构建的选型与取舍判断，medium 定档正确。",
+    "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样；新增句仅含 Anthropic 技术文献出处，符合批次惯例。",
+    "technical_accuracy": "通过。round 1 内容结论维持；新增支撑句（第 1 节末『Anthropic 的工程实践同样主张用全面评测度量性能、在评测之上迭代实现，评测集正是这一循环的对照组』）与 Building effective agents 的评测主张一致，表述准确。",
+    "answer_responsiveness": "通过。题面三问覆盖关系未变；Prompt Cache 维度按 notes 说明未展开，可接受。",
+    "provenance_merge": "通过。frequency=3 与合并候选数（C383 主源+C234+C116）一致；C098 以关联身份并入稳定性段；company/role/round 与主源 note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim 与主源候选 C383 逐字一致；extraction=image_reading 一致。"
+  },
+  "claims_checked": [
+    {
+      "claim": "technical_references 的 Building effective agents 条目（以评测驱动迭代的主张）",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed：第 1 节末新增支撑句明确引述『用全面评测度量性能、在评测之上迭代实现』并落到评测集定位，装饰性引用问题已修复，且句子与该文献实际主张一致"
+    }
+  ],
+  "issues": [],
+  "revision_history": [
+    {
+      "round": 1,
+      "date": "2026-11-17",
+      "issue": "technical_references 装饰性引用，正文无支撑句",
+      "resolution": "编写者在第 1 节末新增与文献主张对应的支撑句，round 2 复核通过"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T23:55:00+08:00"
 }

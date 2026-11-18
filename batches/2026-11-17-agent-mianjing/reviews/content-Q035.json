@@ -4,7 +4,7 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
   "canonical_path": "question_bank/agent-learning/medium/Q035.json",
-  "canonical_sha256": "483154bc2d4d3644ae1d07f2a28d8965496296837d8197789de5cdc81606f7b3",
+  "canonical_sha256": "1e7c19fac1bc97830bf53cd4c5a100fe9f0bc20080024bc295954cc1894f1ac0",
   "review_round": 1,
   "reviewed_sections": [
     "recommended_answer",
@@ -43,7 +43,13 @@
     "非阻塞：recommended_answer 纯汉字 373 字，超 350 目标 23 字（低于 402 硬上限）",
     "非阻塞：candidates.json 中 C215 状态仍为 pending，登记时需同步 admitted+question_id=Q035"
   ],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:43:25+08:00"
 }

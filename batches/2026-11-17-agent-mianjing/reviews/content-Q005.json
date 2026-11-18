@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer",
   "canonical_path": "question_bank/agent-architecture/high/Q005.json",
-  "canonical_sha256": "f673c05cd27d327c973ceb7885b03f87bc74b888f9456c9d761c04df8a83dcc7",
+  "canonical_sha256": "8e721d50a1701fcd073775ec4f9cc74495b4519bfff046c6e3c5596e1c0d2a22",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 两项问题均已修复）。结构字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q003,Q006] 合规。recommended_answer 压缩后 summary+points 纯汉字约 308 字，回到契约区间；technical_references 已删除无正文支撑的 LangGraph Graph API 条目，仅保留 Anthropic Building effective agents（≥1 条满足契约），且该条支撑 orchestrator-workers 论断。",
     "difficulty": "通过。note 6adf6239 中真实追问链 C265→C266→C267→C268 及 C148/C305 设计维度证据不变，high 定档成立。",
@@ -17,8 +25,16 @@
     "verbatim_fidelity": "通过。verbatim 保留原帖题面（含全角问号）未改写。"
   },
   "claims_checked": [
-    {"claim": "orchestrator-workers：中心 LLM 动态拆分任务、委托 worker LLM、汇总结果", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
-    {"claim": "Anthropic 建议：寻找最简单可行方案，仅在可度量收益时增加复杂度（与本题回退判据一致）", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+    {
+      "claim": "orchestrator-workers：中心 LLM 动态拆分任务、委托 worker LLM、汇总结果",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Anthropic 建议：寻找最简单可行方案，仅在可度量收益时增加复杂度（与本题回退判据一致）",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
@@ -28,6 +44,11 @@
       "reviewed_at": "2026-11-17T19:43:28+08:00",
       "issue": "① recommended_answer 纯汉字约 469 字超契约上限约 34%；② technical_references 含 LangGraph Graph API 但正文无任何对应引用点。",
       "resolution": "编写者已将 recommended_answer 压缩至约 308 汉字并删除 LangGraph 条目；round 2 复核确认两项均修复，四子问覆盖与技术论断无失真。"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
     }
   ],
   "notes": "round 2 复审通过。修订涉及 recommended_answer 压缩与 technical_references 删条，technical_answer/example/source/provenance 与 round 1 审核版本一致。",

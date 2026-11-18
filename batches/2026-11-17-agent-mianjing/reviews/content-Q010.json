@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-2",
   "canonical_path": "question_bank/agent-architecture/high/Q010.json",
-  "canonical_sha256": "daa25df43b826710c1bc0d3517586f304f40880fa5ea494523ba2583ca3033fe",
+  "canonical_sha256": "70ea6befe69633a2827baf4e6e9d994f7a668a8f12252ee1fca1850fe16cc57e",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 两项不通过均已修复）。其一，recommended_answer 由约 457 压缩至约 326 汉字，落入契约区间，6 要点保留。其二，technical_references 中无正文支撑的 Graph API 条目已删除，现仅剩 Memory overview 一条（该条的『长上下文分心』动机引用与答案内容对应）。其余结构项 round 1 已核合规且未改动。",
     "difficulty": "通过（同 round 1）。主源 note 6add53de 第 4 题本身即跨模块（系统提示/工具 Schema/记忆/轨迹/中间产物）全局预算设计题，high 有原帖逐字证据。",
@@ -17,11 +25,25 @@
     "verbatim_fidelity": "通过。verbatim 未改动。"
   },
   "claims_checked": [
-    {"claim": "长对话中完整历史即使装进窗口也降低有效性（被陈旧/离题内容分心、更慢更贵），需消息管理——本题预算分配的动机引用", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"}
+    {
+      "claim": "长对话中完整历史即使装进窗口也降低有效性（被陈旧/离题内容分心、更慢更贵），需消息管理——本题预算分配的动机引用",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
-    {"round": 1, "decision": "rejected", "issue": "① recommended_answer 约 457 汉字超契约上限；② Graph API 参考条目在学员侧内容中无对应引用点", "resolution": "① 压缩至约 326 汉字，分配/量化/动态降级覆盖保留；② 删除 Graph API 条目，technical_references 仅保留 Memory overview"}
+    {
+      "round": 1,
+      "decision": "rejected",
+      "issue": "① recommended_answer 约 457 汉字超契约上限；② Graph API 参考条目在学员侧内容中无对应引用点",
+      "resolution": "① 压缩至约 326 汉字，分配/量化/动态降级覆盖保留；② 删除 Graph API 条目，technical_references 仅保留 Memory overview"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
   ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:05:00+08:00"

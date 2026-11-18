@@ -1,11 +1,16 @@
 {
   "id": "Q011",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-engineering",
   "difficulty": "medium",
   "title": "MCP（Model Context Protocol）的原理是什么？传输方式有哪些？它与 Function Calling 是什么关系、解决了什么问题？",
-  "tags": ["MCP", "Function Calling", "协议设计", "工具生态"],
+  "tags": [
+    "MCP",
+    "Function Calling",
+    "协议设计",
+    "工具生态"
+  ],
   "question_guide": {
     "background": "MCP 是 2025 年以来 Agent 岗的高频题，追问通常从原理一路打到『与 FC 的区别』『streamable 传输』『有什么坑』。",
     "pain_point": "只会说『MCP 是工具调用协议』而说不清 Host/Client/Server 三方结构与它相对 FC 的生态位，会被判定为只看过营销文。",
@@ -58,12 +63,31 @@
     "company": "unspecified",
     "role": "Agent 开发",
     "round": "unspecified",
-    "frequency": 6,
-    "notes": "合并候选 C008（主源）、C009（同帖追问：mcp 的协议与 streamable 格式）、C181（淘天一面：MCP 有什么坑，已计入短板段）、C229（百度：MCP 相比直接 FC 解决什么问题）、C153（月之暗面二面：FC 和 MCP 分别解决什么）、C360（字节 2-2 三面：MCP、A2A、Skills、Function Call 的区别）。"
+    "frequency": 1,
+    "notes": "合并候选 C008（主源）、C009（同帖追问：mcp 的协议与 streamable 格式）、C181（淘天一面：MCP 有什么坑，已计入短板段）、C229（百度：MCP 相比直接 FC 解决什么问题）、C153（月之暗面二面：FC 和 MCP 分别解决什么）、C360（字节 2-2 三面：MCP、A2A、Skills、Function Call 的区别）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=6（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6aa3b16e000000001001d751",
+        "company": "unspecified",
+        "role": "Agent 开发",
+        "round": "unspecified",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Core architecture - Model Context Protocol（Host/Client/Server 架构、JSON-RPC 消息、stdio 与 Streamable HTTP、initialize 生命周期）", "url": "https://modelcontextprotocol.io/docs/concepts/architecture"},
-    {"title": "Building effective agents（Anthropic Engineering，MCP 作为增强 LLM 的接入方式）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Core architecture - Model Context Protocol（Host/Client/Server 架构、JSON-RPC 消息、stdio 与 Streamable HTTP、initialize 生命周期）",
+      "url": "https://modelcontextprotocol.io/docs/concepts/architecture"
+    },
+    {
+      "title": "Building effective agents（Anthropic Engineering，MCP 作为增强 LLM 的接入方式）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q012", "Q014"]
+  "related_questions": [
+    "Q012",
+    "Q014"
+  ]
 }

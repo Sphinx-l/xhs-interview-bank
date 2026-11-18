@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
   "canonical_path": "question_bank/rag-retrieval/medium/Q018.json",
-  "canonical_sha256": "38b010e248ba8b1abdddf882f2b648aeff32f54c2f546aebc6d833c00b731e9a",
+  "canonical_sha256": "2c35d5e8d7950f0b4308751d554e886782c0b051366564efa05f24e989c07d0d",
   "review_round": 1,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。recommended_answer 合计纯汉字 358 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 6 条覆盖三问；question_guide 四键非空；tags 4 个（混合检索/BM25/向量检索/结果融合）具体，无泛词。",
     "difficulty": "通过。检索层选型题（为什么混合、只用 Dense 行不行、融合方法怎么选），medium 定档正确。",
@@ -17,10 +25,20 @@
     "verbatim_fidelity": "通过。question_verbatim『为什么你们检索要用BM25+Dense Retrieval，只用Dense不行吗？』与主源候选 C287 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
   },
   "claims_checked": [
-    {"claim": "RRF 将多个具有不同相关性指标的结果集合成一个，无需调参、指标间无需相关；score = Σ 1/(k + rank)，rank 从 1 起，rank_constant 默认 60", "evidence": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html", "result": "confirmed：points 第 5 条与 technical_answer 第 2 节（含『Elasticsearch 默认 60』定位表述）与官方文档一致，非装饰性引用"}
+    {
+      "claim": "RRF 将多个具有不同相关性指标的结果集合成一个，无需调参、指标间无需相关；score = Σ 1/(k + rank)，rank 从 1 起，rank_constant 默认 60",
+      "evidence": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html",
+      "result": "confirmed：points 第 5 条与 technical_answer 第 2 节（含『Elasticsearch 默认 60』定位表述）与官方文档一致，非装饰性引用"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T21:50:00+08:00"
 }

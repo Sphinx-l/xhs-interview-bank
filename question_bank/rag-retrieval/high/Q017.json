@@ -1,11 +1,16 @@
 {
   "id": "Q017",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "rag-retrieval",
   "difficulty": "high",
   "title": "RAG 的完整流程是怎样的？从文档入库到线上检索，Query 改写、切分、召回、重排、注入各环节怎么做、优化过哪些点？",
-  "tags": ["RAG全链路", "Query改写", "召回重排", "上下文注入"],
+  "tags": [
+    "RAG全链路",
+    "Query改写",
+    "召回重排",
+    "上下文注入"
+  ],
   "question_guide": {
     "background": "RAG 全链路是 Agent 项目面试的必考叙述题，面试官会要求逐环讲输入输出，并追问每环的优化点与失败模式。",
     "pain_point": "只会背『切分-向量化-检索-生成』四步，说不出每环的工程选项与取舍，等于没有实际维护过 RAG 系统。",
@@ -59,11 +64,27 @@
     "company": "unspecified",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 4,
-    "notes": "合并候选 C076（主源，某厂一面图片）、C065（字节 Harness 一面：RAG 链路怎么设计，切分、召回、重排、兜底）、C204（携程一面：从文档入库到线上检索完整链路）、C283（字节抖音一面：RAG 怎么做的，从文档进入系统完整讲）。关联 C285（Query Rewrite 环节）、C286（改写改错怎么办）已并入答案在线链路段。"
+    "frequency": 1,
+    "notes": "合并候选 C076（主源，某厂一面图片）、C065（字节 Harness 一面：RAG 链路怎么设计，切分、召回、重排、兜底）、C204（携程一面：从文档入库到线上检索完整链路）、C283（字节抖音一面：RAG 怎么做的，从文档进入系统完整讲）。关联 C285（Query Rewrite 环节）、C286（改写改错怎么办）已并入答案在线链路段。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac86853000000001801b00e",
+        "company": "unspecified",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS，数据准备与来源引用）", "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"}
+    {
+      "title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS，数据准备与来源引用）",
+      "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+    }
   ],
-  "related_questions": ["Q016", "Q018"]
+  "related_questions": [
+    "Q016",
+    "Q018"
+  ]
 }

@@ -1,11 +1,16 @@
 {
   "id": "Q010",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "上下文预算有限时，系统提示、工具 Schema、记忆、轨迹与中间结果如何做全局分配？如何量化压缩损失？",
-  "tags": ["上下文工程", "预算分配", "压缩损失", "上下文管理"],
+  "tags": [
+    "上下文工程",
+    "预算分配",
+    "压缩损失",
+    "上下文管理"
+  ],
   "question_guide": {
     "background": "这是面向资深候选人的系统性设计题：不再问单个压缩技巧，而是把上下文当作稀缺资源做全局最优化分配。",
     "pain_point": "各模块各自为战地往上下文里塞内容（Prompt 工程师加指令、工具团队加 Schema、记忆团队加召回），预算很快耗尽且无人对整体效果负责。",
@@ -60,11 +65,27 @@
     "company": "阿里巴巴",
     "role": "大模型 Agent",
     "round": "三面",
-    "frequency": 2,
-    "notes": "合并候选 C303（主源，阿里巴巴三面）与 C361（字节 2-2 三面：Agent 的上下文工程有哪些主流技术、如何设计有效的上下文管理策略）。"
+    "frequency": 1,
+    "notes": "合并候选 C303（主源，阿里巴巴三面）与 C361（字节 2-2 三面：Agent 的上下文工程有哪些主流技术、如何设计有效的上下文管理策略）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=2（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6add53de000000002b01d079",
+        "company": "阿里巴巴",
+        "role": "大模型 Agent",
+        "round": "三面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Memory overview - Docs by LangChain（长上下文分心与消息管理动机）", "url": "https://docs.langchain.com/oss/python/concepts/memory"}
+    {
+      "title": "Memory overview - Docs by LangChain（长上下文分心与消息管理动机）",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory"
+    }
   ],
-  "related_questions": ["Q009", "Q008"]
+  "related_questions": [
+    "Q009",
+    "Q008"
+  ]
 }

@@ -1,11 +1,16 @@
 {
   "id": "Q016",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "rag-retrieval",
   "difficulty": "low",
   "title": "如何向不懂技术的人解释 RAG？什么是 Embedding，为什么文本要向量化？余弦相似度在 RAG 中起什么作用？",
-  "tags": ["RAG概念", "Embedding", "余弦相似度", "检索增强"],
+  "tags": [
+    "RAG概念",
+    "Embedding",
+    "余弦相似度",
+    "检索增强"
+  ],
   "question_guide": {
     "background": "这是 RAG 方向的入门概念题，考察候选人能否用通俗语言讲清三个互相咬合的概念，而不是背术语。",
     "pain_point": "只会说『RAG 就是检索+生成』而讲不清为什么要检索、向量是什么，说明没有真正建立认知模型。",
@@ -54,11 +59,26 @@
     "company": "携程",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C216（主源，携程一面）、C219（同帖：什么是 Embedding？为什么文本需要向量化？）、C218（同帖：什么是余弦相似度？它在 RAG 中起什么作用？）。"
+    "frequency": 1,
+    "notes": "合并候选 C216（主源，携程一面）、C219（同帖：什么是 Embedding？为什么文本需要向量化？）、C218（同帖：什么是余弦相似度？它在 RAG 中起什么作用？）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ad82cec0000000033011965",
+        "company": "携程",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS）", "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"}
+    {
+      "title": "What is RAG? - Retrieval-Augmented Generation AI Explained（AWS）",
+      "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+    }
   ],
-  "related_questions": ["Q017"]
+  "related_questions": [
+    "Q017"
+  ]
 }

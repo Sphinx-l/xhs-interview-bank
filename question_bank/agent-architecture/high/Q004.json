@@ -1,11 +1,16 @@
 {
   "id": "Q004",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "Agent Loop 的核心流程怎么设计？什么时候停？怎么防死循环与重复调用？终止后如何校验结果？",
-  "tags": ["Agent Loop", "终止条件", "死循环检测", "结果校验"],
+  "tags": [
+    "Agent Loop",
+    "终止条件",
+    "死循环检测",
+    "结果校验"
+  ],
   "question_guide": {
     "background": "Agent Loop 是 Harness 的心脏，面试官会沿『循环结构→终止条件→异常处理→结果信任』逐层追问，考察候选人是否真正在生产环境维护过失控的循环。",
     "pain_point": "循环没有多档终止与死循环检测，线上会出现 token 烧穿预算、任务永不结束、模型自称完成但实际没做完三类事故。",
@@ -60,12 +65,30 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 4,
-    "notes": "合并候选 C058（主源，字节 Harness 一面）、C144（月之暗面二面：终止条件除 max_turns 还控 token/耗时/预算/重复动作）、C278（字节抖音：Agent Loop 一般什么时候结束）、C320（字节：循环或偏离目标时的终止与反思机制）。关联候选 C277（重复调用同一工具判死循环）、C279（模型自称完成是否校验）已并入本题答案维度。"
+    "frequency": 1,
+    "notes": "合并候选 C058（主源，字节 Harness 一面）、C144（月之暗面二面：终止条件除 max_turns 还控 token/耗时/预算/重复动作）、C278（字节抖音：Agent Loop 一般什么时候结束）、C320（字节：循环或偏离目标时的终止与反思机制）。关联候选 C277（重复调用同一工具判死循环）、C279（模型自称完成是否校验）已并入本题答案维度。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agents 与 stopping conditions）", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
-    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agents 与 stopping conditions）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629"
+    }
   ],
-  "related_questions": ["Q003"]
+  "related_questions": [
+    "Q003"
+  ]
 }

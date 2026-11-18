@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-3",
   "canonical_path": "question_bank/agent-engineering/medium/Q013.json",
-  "canonical_sha256": "06168e5bcbad207f2810d8b3edfad5b9feeaeca53962e90494416318685b9c43",
+  "canonical_sha256": "ab0150eb78dca88190162ff78b66582eb5df1195a624a3090e3a286eb3c34d3e",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 唯一不通过项已修复）。recommended_answer 由 426 压缩至 288 纯汉字，落入契约区间，6 要点与描述层/Schema 层/防呆层/闭环层/验收的覆盖结构保留。其余结构项 round 1 已核合规。",
     "difficulty": "通过（同 round 1）。设计/选型判断，medium 成立。",
@@ -17,11 +25,25 @@
     "verbatim_fidelity": "通过。question_verbatim 未改写。"
   },
   "claims_checked": [
-    {"claim": "好工具定义像写给初级工程师的 docstring，含示例用法、边界、输入格式要求、与其他工具的明确区分；poka-yoke 防呆；SWE-bench 中相对路径改强制绝对路径；避免行号计数与转义负担、格式贴近自然文本", "evidence": "https://www.anthropic.com/engineering/building-effective-agents（Appendix 2）", "result": "confirmed"}
+    {
+      "claim": "好工具定义像写给初级工程师的 docstring，含示例用法、边界、输入格式要求、与其他工具的明确区分；poka-yoke 防呆；SWE-bench 中相对路径改强制绝对路径；避免行号计数与转义负担、格式贴近自然文本",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents（Appendix 2）",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
-    {"round": 1, "decision": "rejected", "issue": "recommended_answer 426 纯汉字超上限约 21.7%", "resolution": "压缩至 288 纯汉字，覆盖维度与技术实质不变"}
+    {
+      "round": 1,
+      "decision": "rejected",
+      "issue": "recommended_answer 426 纯汉字超上限约 21.7%",
+      "resolution": "压缩至 288 纯汉字，覆盖维度与技术实质不变"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
   ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T21:05:00+08:00"

@@ -80,6 +80,8 @@ description: 从小红书关键词/话题搜索采集面试经验帖：冻结清
 
 `candidates[].status`：`pending` / `admitted` / `duplicate_of:Q001` / `rejected`，理由写 `reason`。帖内重复题合并后再进 candidates。
 
+`candidates[].chain_order`：同帖追问链中的发问序号（≥1 整数）；散问、非追问链的题不填。编题阶段据此生成题目 `editorial_provenance.follow_up_chain`，是 high 难度评审的证据。
+
 ## manifest.json 核心字段
 
-`note_id`、`url`、`title`、`published_at`（核实到才填）、`status`（`retained` / `excluded` / `duplicate_repost` / `fetch_failed` / `out_of_scope_video`）、`reason`、`company/role/round`（自述）、`channel`（社招/校招/实习/未标注，推断）、`question_ids`（编题阶段填写）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用。
+`note_id`、`url`、`title`、`published_at`（核实到才填）、`interview_period`（帖内自述的面试时间，原文记录、不推断，无则 `unspecified`）、`status`（`retained` / `excluded` / `duplicate_repost` / `cross_source_repost` / `fetch_failed` / `out_of_scope_video`）、`reason`、`company/role/round`（自述）、`channel`（社招/校招/实习/未标注，推断）、`question_ids`（编题阶段填写）。统计口径：可见笔记数、标题排除数、内容复核数、画面提取数、不可读数分别记录，不混用；批次 README 另记公司/岗位/轮次与渠道分布。

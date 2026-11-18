@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
   "canonical_path": "question_bank/rag-retrieval/medium/Q020.json",
-  "canonical_sha256": "56c110a66a5dc00aa04d3b6c561e623067b057e15f29759b724214bdc609ada3",
+  "canonical_sha256": "ddbb71b9fefc68d82a2551afa1c36820078c6885a3fbfd87abe2e2ce529e660f",
   "review_round": 1,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。recommended_answer 合计纯汉字 360 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 6 条覆盖四问；question_guide 四键非空；tags 4 个（Chunk切分/重叠窗口/递归切分/结构化切分）具体，无泛词。",
     "difficulty": "通过。策略选型与取舍判断（size/overlap 怎么定、为什么不能固定长度、结构化/递归好在哪），medium 定档正确。",
@@ -17,10 +25,20 @@
     "verbatim_fidelity": "通过。question_verbatim『原始文档是怎么切Chunk的？Chunk Size和overlap多少？怎么确定？』与主源候选 C284 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
   },
   "claims_checked": [
-    {"claim": "chunking 是把大文本拆成较小片段的预处理，目标是『足够大以包含有意义信息』与『足够小以支撑高性能低延迟』之间平衡；chunk size 需考虑内容性质与 Embedding 模型及其 token 限制", "evidence": "https://www.pinecone.io/learn/chunking-strategies/", "result": "confirmed：technical_answer 第 1 节开头即引用该定义并展开为三约束决定块大小，非装饰性引用"}
+    {
+      "claim": "chunking 是把大文本拆成较小片段的预处理，目标是『足够大以包含有意义信息』与『足够小以支撑高性能低延迟』之间平衡；chunk size 需考虑内容性质与 Embedding 模型及其 token 限制",
+      "evidence": "https://www.pinecone.io/learn/chunking-strategies/",
+      "result": "confirmed：technical_answer 第 1 节开头即引用该定义并展开为三约束决定块大小，非装饰性引用"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T22:00:00+08:00"
 }

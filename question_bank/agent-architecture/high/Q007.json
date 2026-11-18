@@ -1,11 +1,16 @@
 {
   "id": "Q007",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "Agent 的记忆机制怎么分层设计？短期记忆、长期记忆和 Summary 各自存什么、何时读写？",
-  "tags": ["记忆分层", "短期记忆", "长期记忆", "摘要记忆"],
+  "tags": [
+    "记忆分层",
+    "短期记忆",
+    "长期记忆",
+    "摘要记忆"
+  ],
   "question_guide": {
     "background": "记忆分层是多轮对话与长任务 Agent 的必考设计题，追问通常落在『为什么要分三层』与『每层的读写时机』。",
     "pain_point": "把所有历史塞进一个上下文或一张向量表，要么爆窗口，要么丢结构；不分层的记忆在长对话中必然失效。",
@@ -59,12 +64,31 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C059（主源，字节 Harness 一面）、C195（携程一面：memory 为什么要分短期、长期、summary）、C340（字节 2-2 一面：短期/长期记忆分别如何实现）。"
+    "frequency": 1,
+    "notes": "合并候选 C059（主源，字节 Harness 一面）、C195（携程一面：memory 为什么要分短期、长期、summary）、C340（字节 2-2 一面：短期/长期记忆分别如何实现）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Memory overview - Docs by LangChain（short-term/long-term/checkpointer/store/记忆类型）", "url": "https://docs.langchain.com/oss/python/concepts/memory"},
-    {"title": "Graph API overview - Docs by LangChain（State 与 checkpointer 持久化）", "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"}
+    {
+      "title": "Memory overview - Docs by LangChain（short-term/long-term/checkpointer/store/记忆类型）",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory"
+    },
+    {
+      "title": "Graph API overview - Docs by LangChain（State 与 checkpointer 持久化）",
+      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"
+    }
   ],
-  "related_questions": ["Q008", "Q009"]
+  "related_questions": [
+    "Q008",
+    "Q009"
+  ]
 }

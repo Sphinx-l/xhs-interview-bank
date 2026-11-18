@@ -1,11 +1,16 @@
 {
   "id": "Q023",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "high",
   "title": "Bad case 怎么定位与归因？多 Agent 体系下如何定位是哪个环节的问题？修复后怎么验证没有影响其他 case？",
-  "tags": ["Badcase闭环", "归因定位", "回归集", "修复验证"],
+  "tags": [
+    "Badcase闭环",
+    "归因定位",
+    "回归集",
+    "修复验证"
+  ],
   "question_guide": {
     "background": "Bad case 闭环是评测簇的最高频追问链：拿到坏样本→定位层→修复→回归验证→沉淀，每一环都有追问点。",
     "pain_point": "只修当前 case 不跑回归，会『修好一类压坏另一类』；没有分层归因手段，多 Agent 系统里坏 case 只能靠猜。",
@@ -60,11 +65,27 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 6,
-    "notes": "合并候选 C066（主源，字节 Harness 一面）、C117（携程二面：Badcase 拿到后怎么定位是哪个 Agent 的问题）、C157（月之暗面二面：归因到模型/prompt/检索/工具、回流成回归集）、C203（携程一面： badcase 怎么回流到评测集和后续迭代）、C382（虾皮一面：修复 bad case 后怎么验证有没有影响其他问题）、C418（米哈游二面：任务完成率 70% 如何归因并建立 Badcase 闭环）。（C417 线上线下不一致排查题由 Q025 承接，本题不使用。）"
+    "frequency": 1,
+    "notes": "合并候选 C066（主源，字节 Harness 一面）、C117（携程二面：Badcase 拿到后怎么定位是哪个 Agent 的问题）、C157（月之暗面二面：归因到模型/prompt/检索/工具、回流成回归集）、C203（携程一面： badcase 怎么回流到评测集和后续迭代）、C382（虾皮一面：修复 bad case 后怎么验证有没有影响其他问题）、C418（米哈游二面：任务完成率 70% 如何归因并建立 Badcase 闭环）。（C417 线上线下不一致排查题由 Q025 承接，本题不使用。）；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=6（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agents 需从环境逐步获得 ground truth 评估进展）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agents 需从环境逐步获得 ground truth 评估进展）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q021", "Q022"]
+  "related_questions": [
+    "Q021",
+    "Q022"
+  ]
 }

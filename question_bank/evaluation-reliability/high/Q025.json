@@ -1,11 +1,16 @@
 {
   "id": "Q025",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "high",
   "title": "Agent 的可观测性体系怎么设计？Trace/Span/决策日志如何支撑根因定位？海量日志怎么排查？",
-  "tags": ["可观测性", "Trace", "决策日志", "根因定位"],
+  "tags": [
+    "可观测性",
+    "Trace",
+    "决策日志",
+    "根因定位"
+  ],
   "question_guide": {
     "background": "可观测性是 Agent 生产化的底座题，追问常到『日志太多怎么查』『如何从 Trace 做因果归因』的深度。",
     "pain_point": "只有 print 日志的 Agent 系统一旦出错就要逐条翻千行 JSONL；没有决策日志，无法区分『模型没想到』与『信息没给到』。",
@@ -60,11 +65,27 @@
     "company": "阿里巴巴",
     "role": "大模型 Agent",
     "round": "三面",
-    "frequency": 3,
-    "notes": "合并候选 C307（主源，阿里巴巴三面）、C092（网易互娱：全链路可视化怎么做的，jsonl 日志过多如何排查）、C417（米哈游二面：线上成功率下降但离线评测无变化，按什么顺序排查模型、检索、工具、编排，已并入归因流程与 example）。"
+    "frequency": 1,
+    "notes": "合并候选 C307（主源，阿里巴巴三面）、C092（网易互娱：全链路可视化怎么做的，jsonl 日志过多如何排查）、C417（米哈游二面：线上成功率下降但离线评测无变化，按什么顺序排查模型、检索、工具、编排，已并入归因流程与 example）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6add53de000000002b01d079",
+        "company": "阿里巴巴",
+        "role": "大模型 Agent",
+        "round": "三面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，agent 需在每步从环境获得 ground truth 以评估进展）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，agent 需在每步从环境获得 ground truth 以评估进展）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q023", "Q021"]
+  "related_questions": [
+    "Q023",
+    "Q021"
+  ]
 }

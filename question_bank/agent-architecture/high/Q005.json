@@ -1,11 +1,16 @@
 {
   "id": "Q005",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "Multi-Agent 与 Single-Agent 的本质区别是什么？多 Agent 的收益与代价如何权衡？什么时候应该退回单 Agent？",
-  "tags": ["Multi-Agent", "上下文隔离", "任务编排", "架构权衡"],
+  "tags": [
+    "Multi-Agent",
+    "上下文隔离",
+    "任务编排",
+    "架构权衡"
+  ],
   "question_guide": {
     "background": "多 Agent 是面试的高频系统设计题，面试官通常从『为什么不用一个 Agent + 多个 Skill 替代』切入，考察候选人对多 Agent 真实收益边界的理解。",
     "pain_point": "为多而多的 Multi-Agent 会引入通信开销、状态不一致与错误级联，性能反而低于单 Agent；判断何时值得拆是多 Agent 架构的第一问题。",
@@ -59,11 +64,27 @@
     "company": "字节跳动（抖音）",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C265（主源，字节抖音图片）、C148（月之暗面二面：任务拆分/状态共享/结果冲突仲裁）、C305（阿里巴巴三面：多 Agent 通信协议、何时退化为单 Agent）。关联候选 C266（多 Agent 优势）、C267（额外问题）、C268（为何不能单 Agent+多 Skill 替代）的追问维度已并入答案。"
+    "frequency": 1,
+    "notes": "合并候选 C265（主源，字节抖音图片）、C148（月之暗面二面：任务拆分/状态共享/结果冲突仲裁）、C305（阿里巴巴三面：多 Agent 通信协议、何时退化为单 Agent）。关联候选 C266（多 Agent 优势）、C267（额外问题）、C268（为何不能单 Agent+多 Skill 替代）的追问维度已并入答案。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adf62390000000018006e6c",
+        "company": "字节跳动（抖音）",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，orchestrator-workers 与 agents）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，orchestrator-workers 与 agents）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q003", "Q006"]
+  "related_questions": [
+    "Q003",
+    "Q006"
+  ]
 }

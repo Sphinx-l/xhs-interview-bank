@@ -1,10 +1,12 @@
-"""小红书面经题库：登记、校验与生成脚本（契约 1.0）。仅标准库。
+"""小红书面经题库：登记、校验与生成脚本（契约 1.1）。仅标准库，任意 Python ≥ 3.9。
 
-用法（仓库根目录）：
-  python3 .../manage_bank.py question_bank --file <相对question_bank的JSON路径>
-  python3 .../manage_bank.py question_bank --question Q001
-  python3 .../manage_bank.py question_bank --check
-  python3 .../manage_bank.py question_bank --all
+用法（仓库根目录，python 可按环境换成 py / python3）：
+  python .../manage_bank.py question_bank --file <相对question_bank的JSON路径>
+  python .../manage_bank.py question_bank --question Q001
+  python .../manage_bank.py question_bank --check
+  python .../manage_bank.py question_bank --all
+  python .../manage_bank.py question_bank --sighting Q001 --batch <批次ID> \
+      --note <笔记ID> [--recall <口述ID>] [--company X] [--role Y] [--round Z] [--seen-at YYYY-MM-DD]
 """
 
 import argparse
@@ -19,15 +21,19 @@ from pathlib import Path, PurePosixPath
 SKILL_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SKILL_DIR.parents[3]
 
-CONTRACT_VERSION = "1.0"
+CONTRACT_VERSION = "1.1"
 DIFFICULTIES = ("low", "medium", "high")
 DIFFICULTY_ZH = {"low": "低", "medium": "中", "high": "高"}
 GENERIC_TAGS = {"ai", "面试", "高级", "人工智能", "大模型", "agent", "llm"}
 GUIDE_KEYS = ("background", "pain_point", "focus", "approach")
-EXTRACTIONS = ("note_text", "image_reading")
+SOURCE_TYPES = ("xhs_note", "student_recall")
+XHS_EXTRACTIONS = ("note_text", "image_reading")
+RECALL_EXTRACTION = "oral_recall"
+OCCURRENCE_KEYS = ("batch_id", "company", "role", "round", "seen_at")
 EDITORIAL_LEAK_MARKERS = ("发帖人", "博主", "原帖", "原视频", "教研", "来源：小红书")
 ID_RE = re.compile(r"^Q\d{3}$")
 BATCH_ID_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def read_json(path):
@@ -43,7 +49,7 @@ def load_taxonomy(path):
     """读取并做最小结构校验，返回 {分类ID: 分类对象}。"""
     data = read_json(path)
     if data.get("version") != CONTRACT_VERSION:
-        raise ValueError("taxonomy 必须为 1.0 版")
+        raise ValueError(f"taxonomy 必须为 {CONTRACT_VERSION} 版")
     categories = {}
     for category in data.get("categories", []):
         for key in ("id", "name", "scope"):
@@ -147,17 +153,26 @@ def validate_question(question, taxonomy):
                     err("example.steps 必须为非空字符串列表")
 
     source = question.get("source")
+    source_type = source.get("source_type") if isinstance(source, dict) else None
     if not isinstance(source, dict):
         err("source 缺失")
     else:
-        if source.get("source_type") != "xhs_note":
-            err("source.source_type 必须为 xhs_note")
-        if not _nonempty_str(source.get("note_id")):
-            err("source.note_id 不能为空")
+        if source_type not in SOURCE_TYPES:
+            err("source.source_type 必须为 xhs_note 或 student_recall")
+        if source_type == "student_recall":
+            if not _nonempty_str(source.get("recall_id")):
+                err("student_recall 来源必须提供 recall_id")
+            if _nonempty_str(source.get("note_id")):
+                err("student_recall 来源不得填写 note_id")
+            if source.get("extraction") != RECALL_EXTRACTION:
+                err("student_recall 的 source.extraction 必须为 oral_recall")
+        elif source_type == "xhs_note":
+            if not _nonempty_str(source.get("note_id")):
+                err("source.note_id 不能为空")
+            if source.get("extraction") not in XHS_EXTRACTIONS:
+                err("source.extraction 必须为 note_text 或 image_reading")
         if not _nonempty_str(source.get("question_verbatim")):
             err("source.question_verbatim 不能为空")
-        if source.get("extraction") not in EXTRACTIONS:
-            err("source.extraction 必须为 note_text 或 image_reading")
         if not BATCH_ID_RE.match(source.get("batch_id", "")):
             err("source.batch_id 必须形如 2026-11-16-keyword-slug")
 
@@ -168,9 +183,46 @@ def validate_question(question, taxonomy):
         for key in ("company", "role", "round"):
             if key not in prov or not isinstance(prov[key], str):
                 err(f"editorial_provenance.{key} 必须存在（无信息填 unspecified）")
-        frequency = prov.get("frequency", 1)
-        if not isinstance(frequency, int) or isinstance(frequency, bool) or frequency < 1:
-            err("editorial_provenance.frequency 必须为 ≥1 的整数")
+        occurrences = prov.get("occurrences")
+        if not isinstance(occurrences, list) or not occurrences:
+            err("editorial_provenance.occurrences 至少 1 条（首条为入库来源）")
+        else:
+            origin_key = ("recall_id" if source_type == "student_recall" else "note_id")
+            seen_pairs = set()
+            for i, occ in enumerate(occurrences):
+                if not isinstance(occ, dict):
+                    err(f"occurrences[{i}] 必须为对象")
+                    continue
+                for key in OCCURRENCE_KEYS:
+                    if not _nonempty_str(occ.get(key)):
+                        err(f"occurrences[{i}].{key} 不能为空（无信息填 unspecified）")
+                if not _nonempty_str(occ.get(origin_key)):
+                    err(f"occurrences[{i}].{origin_key} 不能为空")
+                if not DATE_RE.match(occ.get("seen_at", "")):
+                    err(f"occurrences[{i}].seen_at 必须为 YYYY-MM-DD")
+                if not BATCH_ID_RE.match(occ.get("batch_id", "")):
+                    err(f"occurrences[{i}].batch_id 必须形如 2026-11-16-keyword-slug")
+                pair = (occ.get("batch_id", ""), occ.get(origin_key, ""))
+                if pair in seen_pairs:
+                    err(f"occurrences[{i}] 重复：{pair[0]}/{pair[1]} 已登记")
+                seen_pairs.add(pair)
+        frequency = prov.get("frequency")
+        if frequency is not None:
+            if not isinstance(frequency, int) or isinstance(frequency, bool):
+                err("editorial_provenance.frequency 必须为整数")
+            elif isinstance(occurrences, list) and occurrences \
+                    and frequency != len(occurrences):
+                err(f"frequency 必须等于 occurrences 条数（当前 {len(occurrences)} 条）")
+        chain = prov.get("follow_up_chain")
+        if chain is not None:
+            if (not isinstance(chain, list) or not chain
+                    or any(not isinstance(c, str) or not ID_RE.match(c) for c in chain)):
+                err("follow_up_chain 必须为 Qxxx ID 的非空列表")
+            else:
+                if question.get("id") not in chain:
+                    err("follow_up_chain 必须包含自身 ID")
+                if len(set(chain)) != len(chain):
+                    err("follow_up_chain 重复")
 
     refs = question.get("technical_references")
     if not isinstance(refs, list) or not refs:
@@ -261,6 +313,14 @@ def generate_editorial_markdown(question, taxonomy):
     student = generate_student_markdown(question, taxonomy)
     source = question["source"]
     prov = question["editorial_provenance"]
+    occurrences = prov.get("occurrences")
+    if not isinstance(occurrences, list):
+        occurrences = []
+    frequency = len(occurrences) or prov.get("frequency", 1)
+    dates = sorted(str(o.get("seen_at")) for o in occurrences
+                   if isinstance(o, dict) and o.get("seen_at"))
+    span = f"（首见 {dates[0]}，最近 {dates[-1]}）" if dates else ""
+    origin_id = source.get("recall_id") or source.get("note_id", "")
     lines = [
         student.rstrip(),
         "",
@@ -268,12 +328,20 @@ def generate_editorial_markdown(question, taxonomy):
         "",
         "## 教研信息（不入学员版）",
         "",
-        f"- 批次：`{source['batch_id']}`；笔记 ID：`{source['note_id']}`",
-        f"- 提取方式：{source['extraction']}",
+        f"- 批次：`{source['batch_id']}`；来源 ID：`{origin_id}`（{source.get('extraction', '?')}）",
         f"- 题面原文：{source['question_verbatim']}",
         f"- 公司/岗位/轮次（发帖人自述）：{prov['company']} / {prov['role']} / {prov['round']}",
-        f"- 同题面出现次数：{prov.get('frequency', 1)}",
+        f"- 同题面出现次数：{frequency}{span}",
     ]
+    if occurrences:
+        lines.append("- 出现轨迹（自述信息，教研侧）：")
+        for occ in occurrences:
+            oid = occ.get("recall_id") or occ.get("note_id", "?")
+            lines.append(f"  - {occ.get('seen_at', '?')} · {occ.get('company', '?')}"
+                         f" / {occ.get('role', '?')} / {occ.get('round', '?')}"
+                         f" · `{occ.get('batch_id', '?')}` · `{oid}`")
+    if prov.get("follow_up_chain"):
+        lines.append("- 同场追问链：" + " → ".join(prov["follow_up_chain"]))
     if prov.get("notes"):
         lines.append(f"- 备注：{prov['notes']}")
     lines += ["", "查证参考："]
@@ -328,15 +396,29 @@ def bank_file(repo_root, rel_path):
 
 
 def catalog_entry(question):
+    source = question.get("source") if isinstance(question.get("source"), dict) else {}
+    prov = question.get("editorial_provenance")
+    if not isinstance(prov, dict):
+        prov = {}
+    occurrences = prov.get("occurrences")
+    if not isinstance(occurrences, list):
+        occurrences = []
+    dates = sorted(str(o.get("seen_at")) for o in occurrences
+                   if isinstance(o, dict) and o.get("seen_at"))
+    origin_key = "recall_id" if source.get("source_type") == "student_recall" else "note_id"
     return {
-        "id": question["id"],
-        "title": question["title"],
-        "category_id": question["category_id"],
-        "difficulty": question["difficulty"],
-        "tags": question["tags"],
-        "answer_type": question["answer_type"],
+        "id": question.get("id"),
+        "title": question.get("title"),
+        "category_id": question.get("category_id"),
+        "difficulty": question.get("difficulty"),
+        "tags": question.get("tags"),
+        "answer_type": question.get("answer_type"),
         "file": canonical_rel(question),
-        "batch_id": question["source"]["batch_id"],
+        "batch_id": source.get("batch_id"),
+        "origin_id": source.get(origin_key),
+        "first_seen": dates[0] if dates else None,
+        "last_seen": dates[-1] if dates else None,
+        "frequency": len(occurrences),
     }
 
 
@@ -407,6 +489,54 @@ def _question_table(entries, taxonomy, index_dir=""):
     return rows + [""]
 
 
+def _by_company_text(bank_root, catalog):
+    """公司 × 题目索引（教研侧）。从各题 occurrences 聚合；文件缺失时跳过（另行报错）。"""
+    bank_root = Path(bank_root)
+    by_company = {}
+    for entry in catalog["questions"]:
+        path = bank_root / entry.get("file", "")
+        if not path.exists():
+            continue
+        question = read_json(path)
+        prov = question.get("editorial_provenance")
+        if not isinstance(prov, dict):
+            continue
+        for occ in prov.get("occurrences", []):
+            if not isinstance(occ, dict):
+                continue
+            company = occ.get("company")
+            if not _nonempty_str(company) or company == "unspecified":
+                continue
+            by_company.setdefault(company, []).append({
+                "id": question.get("id", "?"),
+                "title": question.get("title", ""),
+                "role": occ.get("role", "unspecified"),
+                "round": occ.get("round", "unspecified"),
+                "seen_at": str(occ.get("seen_at", "")),
+                "md": entry.get("file", "").replace(".json", ".md"),
+            })
+    lines = ["# 公司 × 题目索引（教研侧）", "",
+             "由各题 `editorial_provenance.occurrences` 聚合生成，仅教研侧使用，不入学员版。",
+             "公司名为发帖人/学员自述，不做事实核实。", ""]
+    if not by_company:
+        lines += ["暂无公司署名的出现记录。", ""]
+    for company in sorted(by_company):
+        sightings = sorted(by_company[company],
+                           key=lambda s: (s["seen_at"], s["id"]), reverse=True)
+        lines += [f"## {company}", "",
+                  "| 题目 | 轮次 | 岗位 | 最近出现 |", "| --- | --- | --- | --- |"]
+        seen_ids = set()
+        for s in sightings:
+            if s["id"] in seen_ids:
+                continue
+            seen_ids.add(s["id"])
+            link_path = posixpath.relpath(s["md"], "editorial")
+            lines.append(f"| [{s['id']} · {s['title']}]({link_path}) "
+                         f"| {s['round']} | {s['role']} | {s['seen_at']} |")
+        lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def _index_texts(bank_root, catalog, taxonomy):
     """计算全部索引文件的精确内容；返回 {绝对路径: 文本}，不写盘。"""
     bank_root = Path(bank_root)
@@ -432,6 +562,8 @@ def _index_texts(bank_root, catalog, taxonomy):
         cat_lines = [f"# {category['name']}", "", f"范围：{category['scope']}", ""]
         cat_lines += _question_table(entries, taxonomy, index_dir=category_id)
         texts[bank_root / category_id / "README.md"] = "\n".join(cat_lines)
+
+    texts[bank_root / "editorial" / "by-company.md"] = _by_company_text(bank_root, catalog)
     return texts
 
 
@@ -461,7 +593,7 @@ def run_check(repo_root):
     except (OSError, ValueError) as exc:
         return [f"catalog 加载失败：{exc}"]
     if catalog.get("version") != CONTRACT_VERSION:
-        errors.append("catalog 必须为 1.0 版")
+        errors.append(f"catalog 必须为 {CONTRACT_VERSION} 版")
     for path in _iter_question_files(bank_root):
         question = read_json(path)
         question_id = question.get("id", "?")
@@ -470,6 +602,10 @@ def run_check(repo_root):
         rel = str(path.relative_to(bank_root)).replace("\\", "/")
         if rel not in {e["file"] for e in catalog["questions"]}:
             errors.append(f"[{question_id}] 未登记入 catalog：{rel}")
+        stored = next((e for e in catalog["questions"] if e.get("id") == question_id), None)
+        if stored is not None and stored != catalog_entry(question):
+            errors.append(f"[{question_id}] catalog 条目与题目文件不一致"
+                          f"（重新 --file 登记或 --all 重建）")
         review_file = review_path(
             repo_root, question.get("source", {}).get("batch_id", "")
             if isinstance(question.get("source"), dict) else "",
@@ -548,6 +684,83 @@ def rebuild_all(repo_root):
     return []
 
 
+def register_sighting(repo_root, question_id, batch_id, origin_id,
+                      company="unspecified", role="unspecified",
+                      round_="unspecified", seen_at=None):
+    """为已入库题目登记一次新的出现（去重命中时调用）。
+
+    门禁约定：登记前先验证审核哈希与当前文件一致；本次修改仅追加
+    editorial_provenance.occurrences 与派生 frequency，知识内容不动，
+    由脚本重绑审核哈希并写入 revision_history 备查。
+    """
+    repo_root = Path(repo_root)
+    bank_root = repo_root / "question_bank"
+    if not ID_RE.match(question_id or ""):
+        return [f"题目 ID 不合法：{question_id!r}"]
+    if not BATCH_ID_RE.match(batch_id or ""):
+        return [f"batch_id 必须形如 2026-11-16-keyword-slug，实际 {batch_id!r}"]
+    if not _nonempty_str(origin_id):
+        return ["来源 ID（--note 或 --recall）不能为空"]
+    seen_at = seen_at or batch_id[:10]
+    if not DATE_RE.match(seen_at):
+        return [f"seen_at 必须为 YYYY-MM-DD，实际 {seen_at!r}"]
+    catalog = read_json(bank_root / "catalog.json")
+    entry = next((e for e in catalog["questions"] if e.get("id") == question_id), None)
+    if entry is None:
+        return [f"题目未登记：{question_id}（sighting 只作用于已入库题目）"]
+    question_path = bank_root / entry["file"]
+    question = read_json(question_path)
+    source = question.get("source") if isinstance(question.get("source"), dict) else {}
+    origin_key = "recall_id" if source.get("source_type") == "student_recall" else "note_id"
+
+    review_file = review_path(repo_root, source.get("batch_id", ""), question_id)
+    if not review_file.exists():
+        return [f"缺少独立审核记录：{review_file.relative_to(repo_root)}"]
+    gate = review_errors(read_json(review_file), question_path.read_bytes(), question)
+    if gate:
+        return [f"登记前门禁未过（题目或审核记录已被改动），拒绝 sighting：{gate}"]
+
+    prov = question.setdefault("editorial_provenance", {})
+    occurrences = prov.setdefault("occurrences", [])
+    for occ in occurrences:
+        if isinstance(occ, dict) and occ.get("batch_id") == batch_id \
+                and occ.get(origin_key) == origin_id:
+            return [f"该出现已登记：{batch_id}/{origin_id}"]
+    occurrences.append({
+        "batch_id": batch_id,
+        origin_key: origin_id,
+        "company": company or "unspecified",
+        "role": role or "unspecified",
+        "round": round_ or "unspecified",
+        "seen_at": seen_at,
+    })
+    prov["frequency"] = len(occurrences)
+
+    taxonomy = load_taxonomy(bank_root / "taxonomy.json")
+    errors = validate_question(question, taxonomy)
+    if errors:
+        return errors
+
+    write_json(question_path, question)
+    review = read_json(review_file)
+    review["canonical_sha256"] = sha256_bytes(question_path.read_bytes())
+    review.setdefault("revision_history", []).append({
+        "at": _utc_now(),
+        "note": (f"sighting 登记 {batch_id}/{origin_id}：仅追加"
+                 f" editorial_provenance.occurrences 与派生 frequency，知识内容未改动"),
+    })
+    write_json(review_file, review)
+
+    for i, e in enumerate(catalog["questions"]):
+        if e.get("id") == question_id:
+            catalog["questions"][i] = catalog_entry(question)
+    catalog["generated_at"] = _utc_now()
+    write_json(bank_root / "catalog.json", catalog)
+    regenerate_question(bank_root, question, taxonomy)
+    generate_indexes(bank_root, catalog, taxonomy)
+    return []
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="小红书面经题库管理")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -555,9 +768,19 @@ def main(argv=None):
     group = bank.add_mutually_exclusive_group(required=True)
     group.add_argument("--file", help="相对 question_bank/ 的新题 JSON 路径")
     group.add_argument("--question", help="单题 ID，如 Q001（重新生成）")
+    group.add_argument("--sighting", metavar="QID",
+                       help="为已入库题目登记一次新的出现（教研侧 occurrences）")
     group.add_argument("--check", action="store_true", help="全量只读审计")
     group.add_argument("--all", action="store_true", help="全量重建")
     bank.add_argument("--root", default=str(REPO_ROOT), help="仓库根目录（默认脚本所属仓库）")
+    bank.add_argument("--batch", help="sighting：出现所在批次 ID")
+    bank.add_argument("--note", help="sighting：来源笔记 ID（xhs_note 题目）")
+    bank.add_argument("--recall", help="sighting：学员口述来源 ID（student_recall 题目）")
+    bank.add_argument("--company", default="unspecified", help="sighting：公司（自述）")
+    bank.add_argument("--role", default="unspecified", help="sighting：岗位（自述）")
+    bank.add_argument("--round", dest="round_", default="unspecified", help="sighting：轮次（自述）")
+    bank.add_argument("--seen-at", dest="seen_at", default=None,
+                      help="sighting：出现日期 YYYY-MM-DD（默认取批次 ID 前缀）")
     args = parser.parse_args(argv)
 
     repo_root = Path(args.root)
@@ -585,6 +808,15 @@ def main(argv=None):
                                        question_path.read_bytes(), question)
             if not errors:
                 regenerate_question(bank_root, question, taxonomy)
+    elif args.sighting:
+        if bool(args.note) == bool(args.recall):
+            errors = ["sighting 需要 --note 或 --recall 二选一"]
+        else:
+            errors = register_sighting(
+                repo_root, args.sighting, args.batch or "",
+                args.note or args.recall or "",
+                company=args.company, role=args.role,
+                round_=args.round_, seen_at=args.seen_at)
     elif args.check:
         errors = run_check(repo_root)
     else:

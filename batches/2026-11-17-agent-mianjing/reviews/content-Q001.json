@@ -4,8 +4,16 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer",
   "canonical_path": "question_bank/agent-architecture/low/Q001.json",
-  "canonical_sha256": "33e942e6ee13a194927044b1e2c82aa4ce1fb735a8d0d859407587253ed836c8",
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "canonical_sha256": "807f0f3209592020bf1c69ecb1ef1fe18f2bd2a6f875919fc5d62aa094af9a64",
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。1.0 契约字段齐全；id/version/category/difficulty 与路径一致；tags 4 个且具体（『agent组成』为复合词，非禁用泛词 agent 本身）；question_guide 四键非空；technical_answer 无 summary、2 段+example；frequency≥1；related_questions 为空属 0-4 允许区间。",
     "difficulty": "通过。直问概念辨析与组件清单，符合 low 档『直接解释概念、组成、机制、区别』。",
@@ -17,11 +25,25 @@
     "length": "通过。recommended_answer summary+points 纯汉字约 288 字，在 180-350 区间。"
   },
   "claims_checked": [
-    {"claim": "Workflow=预定义代码路径编排 LLM 与工具；Agent=LLM 动态指挥自身流程与工具使用", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
-    {"claim": "ReAct 式推理-行动交错作为 Agent 组件之一", "evidence": "https://arxiv.org/abs/2210.03629", "result": "confirmed"}
+    {
+      "claim": "Workflow=预定义代码路径编排 LLM 与工具；Agent=LLM 动态指挥自身流程与工具使用",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    },
+    {
+      "claim": "ReAct 式推理-行动交错作为 Agent 组件之一",
+      "evidence": "https://arxiv.org/abs/2210.03629",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T19:43:28+08:00"
 }

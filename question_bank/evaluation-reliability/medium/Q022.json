@@ -1,11 +1,16 @@
 {
   "id": "Q022",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "medium",
   "title": "Agent 的评测集怎么构建与分类？评测成本如何计算？没有用户反馈数据时怎么做抽检？",
-  "tags": ["评测集构建", "场景分层", "抽样抽检", "评测成本"],
+  "tags": [
+    "评测集构建",
+    "场景分层",
+    "抽样抽检",
+    "评测成本"
+  ],
   "question_guide": {
     "background": "评测集是评测体系的地基，追问通常落在集子的来源、分层结构与每次回归的算力成本核算。",
     "pain_point": "随手攒几百条 query 当评测集，分布偏、噪声多、无分层，跑出来的分数既不稳定也不可解释；成本不核算则回归跑不起。",
@@ -59,11 +64,27 @@
     "company": "虾皮",
     "role": "Agent 开发",
     "round": "一面/二面",
-    "frequency": 3,
-    "notes": "合并候选 C383（主源，虾皮一面；Prompt Cache 命中维度属运维细节未展开）、C234（百度：如何从海量线上 Agent 日志构建有限规模的离线评测集）、C116（携程二面：没有用户反馈的数据怎么做抽检）。关联 C098（实验只跑一遍是否公平、波动大）已并入稳定性段。"
+    "frequency": 1,
+    "notes": "合并候选 C383（主源，虾皮一面；Prompt Cache 命中维度属运维细节未展开）、C234（百度：如何从海量线上 Agent 日志构建有限规模的离线评测集）、C116（携程二面：没有用户反馈的数据怎么做抽检）。关联 C098（实验只跑一遍是否公平、波动大）已并入稳定性段。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac865b1000000000b0061c2",
+        "company": "虾皮",
+        "role": "Agent 开发",
+        "round": "一面/二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，以评测驱动迭代的主张）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，以评测驱动迭代的主张）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q021", "Q023"]
+  "related_questions": [
+    "Q021",
+    "Q023"
+  ]
 }

@@ -11,7 +11,7 @@
 
 ## 证据保存
 
-- `notes/<note_id>/note.json`：正文原文、发布时间、点赞数、采集时间、URL。
+- `notes/<note_id>/note.json`：正文原文、发布时间、帖内自述面试时间（`interview_period`，原文记录不推断，与发布时间是两回事）、点赞数、采集时间、URL。
 - `notes/<note_id>/images/`：原图按页面顺序命名 `01.jpg` 起。
 - `notes/<note_id>/image-extract.md`：画面提取的题面，每条注明来源图片（如 `> 来自 02.jpg`）。正文与画面提取分开保存，不合并成一份「原文」。
 - 笔记可能被删除或改权限：URL 只作辅助定位，证据以快照为准。

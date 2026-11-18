@@ -1,11 +1,16 @@
 {
   "id": "Q006",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "medium",
   "title": "Workflow 与 Agent 的本质区别是什么？什么场景应该选 Workflow（固定编排）而不是自主 Agent？",
-  "tags": ["Workflow", "自主决策", "编排选型", "可预测性"],
+  "tags": [
+    "Workflow",
+    "自主决策",
+    "编排选型",
+    "可预测性"
+  ],
   "question_guide": {
     "background": "『为什么选 Workflow 而不是完全自主的 Agent』是企业项目面试的高频追问，考察候选人是否理解自主性是用延迟与不确定性换来的。",
     "pain_point": "为炫技上自主 Agent，导致执行路径不可预测、结果不可复现、成本不可控；而流程固定的业务其实只需要 Workflow。",
@@ -58,11 +63,27 @@
     "company": "携程",
     "role": "AI 应用开发",
     "round": "一面",
-    "frequency": 4,
-    "notes": "合并候选 C190（主源，携程一面）、C026（美团一面：整体流程用 workflow，为什么该场景适合）、C113（携程二面：为什么设计成 workflow+单点Agent）、C357（字节 2-2 三面：从架构角度分析 Tools、Workflow 和 Agent 的本质区别）。"
+    "frequency": 1,
+    "notes": "合并候选 C190（主源，携程一面）、C026（美团一面：整体流程用 workflow，为什么该场景适合）、C113（携程二面：为什么设计成 workflow+单点Agent）、C357（字节 2-2 三面：从架构角度分析 Tools、Workflow 和 Agent 的本质区别）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "69f9f8c5000000003503ac05",
+        "company": "携程",
+        "role": "AI 应用开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，workflows vs agents 定义）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，workflows vs agents 定义）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q001", "Q005"]
+  "related_questions": [
+    "Q001",
+    "Q005"
+  ]
 }

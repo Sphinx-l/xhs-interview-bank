@@ -1,11 +1,16 @@
 {
   "id": "Q029",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-performance",
   "difficulty": "medium",
   "title": "用户中途取消任务、或版本热更新时正在运行的 Agent 怎么处理？",
-  "tags": ["任务取消", "热更新", "检查点", "优雅终止"],
+  "tags": [
+    "任务取消",
+    "热更新",
+    "检查点",
+    "优雅终止"
+  ],
   "question_guide": {
     "background": "取消与热更新考察的是 Agent 运行时的生命周期管理，追问常到『取消到一半的工具调用算不算执行』与『旧版本任务跑不跑完』。",
     "pain_point": "没有协作式取消机制，强制杀进程会留下半成品副作用（发了一半的消息、写了一半的文件）；热更新不打版本标记则新旧任务混杂无法排查。",
@@ -16,8 +21,7 @@
     "summary": "取消用协作式机制：取消信号传给执行循环，在安全检查点（工具调用之间）退出，已完成副作用按幂等记录、半成品不清理错杀；热更新采用任务级版本绑定——在途任务带旧版本跑完或迁移到检查点后重入，新请求走新版本，配合灰度与回滚。",
     "points": [
       "协作式取消：循环每轮开始检查取消标志（或监听取消通道），收到后在工具调用之间的安全点退出并落状态，而不是直接杀线程。",
-      "副作用安全：已执行的工具调用记录在案（幂等键、结果），取消后可向用户展示已完成部分；进行中的调用等待其完成或超时，不留悬挂副作用。"
-      ,
+      "副作用安全：已执行的工具调用记录在案（幂等键、结果），取消后可向用户展示已完成部分；进行中的调用等待其完成或超时，不留悬挂副作用。",
       "取消的原因区分：用户主动停（保留已产出）、超时强停（降级输出）、错误中止（记录现场）——三种的收尾动作不同。",
       "热更新策略：任务发起时绑定版本号（模型/提示/工具集），在途任务默认用原版本跑完；长任务可选『检查点迁移』——在新版本兼容状态下从最近检查点重入。",
       "灰度与回滚：新版本小流量放量，行为回归通过后全量；版本号打到每个 Trace span，出问题可按版本切片定位与回滚。",
@@ -56,11 +60,27 @@
     "company": "字节跳动",
     "role": "Agent Harness",
     "round": "一面",
-    "frequency": 2,
-    "notes": "合并候选 C068（主源，字节 Harness 一面）与 C151（月之暗面二面：human-in-the-loop 用户驳回或超时，任务怎么续跑和兜底——其续跑维度已并入取消原因区分段）。"
+    "frequency": 1,
+    "notes": "合并候选 C068（主源，字节 Harness 一面）与 C151（月之暗面二面：human-in-the-loop 用户驳回或超时，任务怎么续跑和兜底——其续跑维度已并入取消原因区分段）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=2（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adc069a0000000025023c8e",
+        "company": "字节跳动",
+        "role": "Agent Harness",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Graph API overview - Docs by LangChain（checkpointer 持久化、interrupt/resume 与 time travel）", "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"}
+    {
+      "title": "Graph API overview - Docs by LangChain（checkpointer 持久化、interrupt/resume 与 time travel）",
+      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"
+    }
   ],
-  "related_questions": ["Q028", "Q015"]
+  "related_questions": [
+    "Q028",
+    "Q015"
+  ]
 }

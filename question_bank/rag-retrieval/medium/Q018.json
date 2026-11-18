@@ -1,11 +1,16 @@
 {
   "id": "Q018",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "rag-retrieval",
   "difficulty": "medium",
   "title": "为什么 RAG 检索要用 BM25 关键词 + 向量 Dense 的混合方案？只用向量不行吗？两路结果怎么合并？",
-  "tags": ["混合检索", "BM25", "向量检索", "结果融合"],
+  "tags": [
+    "混合检索",
+    "BM25",
+    "向量检索",
+    "结果融合"
+  ],
   "question_guide": {
     "background": "混合检索是 RAG 检索层最常被问的选型题，标准追问是『只用 Dense 不行吗』和『两路分数怎么融合』。",
     "pain_point": "把向量检索当成万能方案，遇到术语、编号、生僻词场景召回崩塌；或者两路分数直接相加，量纲不一致导致融合失效。",
@@ -59,11 +64,27 @@
     "company": "字节跳动（抖音）",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 4,
-    "notes": "合并候选 C287（主源，字节抖音一面图片）、C173（淘天一面：BM25 加向量混合检索两种结果怎么合并、实际提升在哪）、C205（携程一面：为什么要混合检索，向量和关键词分别解决什么）、C231（百度：为什么常将 BM25 与向量检索结合使用）。"
+    "frequency": 1,
+    "notes": "合并候选 C287（主源，字节抖音一面图片）、C173（淘天一面：BM25 加向量混合检索两种结果怎么合并、实际提升在哪）、C205（携程一面：为什么要混合检索，向量和关键词分别解决什么）、C231（百度：为什么常将 BM25 与向量检索结合使用）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6adf62390000000018006e6c",
+        "company": "字节跳动（抖音）",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Reciprocal rank fusion - Elasticsearch Reference（RRF 公式、rank_constant 默认 60、无需调参定位）", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html"}
+    {
+      "title": "Reciprocal rank fusion - Elasticsearch Reference（RRF 公式、rank_constant 默认 60、无需调参定位）",
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html"
+    }
   ],
-  "related_questions": ["Q017", "Q019"]
+  "related_questions": [
+    "Q017",
+    "Q019"
+  ]
 }

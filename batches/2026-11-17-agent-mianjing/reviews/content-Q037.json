@@ -4,7 +4,7 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
   "canonical_path": "question_bank/agent-architecture/high/Q037.json",
-  "canonical_sha256": "06a729cf50ed07680a7565b75462ab84cbfd540366c845d8af505293cf6d9bc3",
+  "canonical_sha256": "9a55de3b030c4148d84239c7d1cea6290c8fb2f7a666e3ce7aabea0040512c9c",
   "review_round": 1,
   "reviewed_sections": [
     "recommended_answer",
@@ -43,7 +43,13 @@
     "非阻塞：recommended_answer 纯汉字 372 字，超 350 目标 22 字（低于 402 硬上限），后续修订时可收窄",
     "非阻塞：candidates.json 中 C310/C107/C155/C328/C350/C419 状态仍为 pending，登记时需同步 admitted+question_id=Q037"
   ],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:55:11+08:00"
 }

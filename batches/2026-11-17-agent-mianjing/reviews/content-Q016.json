@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
   "canonical_path": "question_bank/rag-retrieval/low/Q016.json",
-  "canonical_sha256": "2d3df2418f91570ff02638c9e671ac5146868dd06fa3c3682237cc849c346e45",
+  "canonical_sha256": "aa560d5b217e9ccc6ee21ccbde96529746c80e764299eb6f616cf8e01207bdbc",
   "review_round": 1,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。recommended_answer 合计纯汉字 357 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 5 条覆盖题干三问；question_guide 四键非空；tags 4 个（RAG概念/Embedding/余弦相似度/检索增强）均为具体概念词，RAG/Embedding 属专有名词允许。",
     "difficulty": "通过。直接解释概念与机制（RAG 类比、Embedding、余弦相似度），无选型与追问链，low 定档正确。",
@@ -17,10 +25,20 @@
     "verbatim_fidelity": "通过。question_verbatim『如何向完全不懂技术的人解释 RAG？』与主源候选 C216 逐字一致；extraction=note_text 与候选表一致且原文在 note desc 中逐字找到。"
   },
   "claims_checked": [
-    {"claim": "RAG 是向 LLM 引入新数据的更低成本方式（相对重训/微调），可连接频繁更新的信息源，输出能带来源引用（citations），开发者对信息源有控制权", "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/", "result": "confirmed：technical_answer 第 1 节『RAG 解决的三个问题』逐点对应（①成本、②时效、③可信），非装饰性引用"}
+    {
+      "claim": "RAG 是向 LLM 引入新数据的更低成本方式（相对重训/微调），可连接频繁更新的信息源，输出能带来源引用（citations），开发者对信息源有控制权",
+      "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
+      "result": "confirmed：technical_answer 第 1 节『RAG 解决的三个问题』逐点对应（①成本、②时效、③可信），非装饰性引用"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T21:40:00+08:00"
 }

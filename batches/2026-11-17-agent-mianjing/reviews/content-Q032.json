@@ -4,7 +4,7 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
   "canonical_path": "question_bank/model-adaptation/medium/Q032.json",
-  "canonical_sha256": "982b48fe754442fbcb67715df6bfad779b3900e7d91dbbe9315c0aa377fb2460",
+  "canonical_sha256": "fcd4f649e15b300a8ecd6c56b7c038148a5b32c3352dff6514c6766eb0895b1e",
   "review_round": 2,
   "reviewed_sections": [
     "recommended_answer",
@@ -50,6 +50,11 @@
       "fix": "编写者精简 summary 与第 6 点（404→376 字）；round 2 逐字段复核确认修订仅涉及该两处，其余内容与 round 1 审核版本一致",
       "round1_sha256": "f6865daa735bb60271c3b843c7fd7044e75c1eb0f458f1e3f5436ce1439fa51d",
       "round1_reviewed_at": "2026-11-17T20:43:25+08:00"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
     }
   ],
   "decision": "passed",

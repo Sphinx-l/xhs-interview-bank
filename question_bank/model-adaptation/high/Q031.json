@@ -1,11 +1,16 @@
 {
   "id": "Q031",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "model-adaptation",
   "difficulty": "high",
   "title": "Prompt 已经调到极限了，下一步怎么办？换模型、升参数还是做 SFT？怎么决策？人工调 Prompt 和自动化调优怎么选？",
-  "tags": ["Prompt天花板", "SFT决策", "模型升级", "自动化调优"],
+  "tags": [
+    "Prompt天花板",
+    "SFT决策",
+    "模型升级",
+    "自动化调优"
+  ],
   "question_guide": {
     "background": "这是从工程走向算法运营的决策链题：面试官考察候选人能否用数据而非感觉决定『下一步投在哪』。",
     "pain_point": "常见两个极端：无限调 Prompt（修好一类压坏另一类还不承认到顶），或一言不合就 SFT（数据不够、问题不是模型能力导致，浪费一个月）。",
@@ -59,12 +64,31 @@
     "company": "携程",
     "role": "Agent 开发",
     "round": "二面",
-    "frequency": 3,
-    "notes": "合并候选 C120（主源，携程二面）、C119（携程二面：调 Prompt 出现修好一类 case 另一类变差的跷跷板）、C121（携程二面：Prompt 人工调还是有自动化优化方案）。"
+    "frequency": 1,
+    "notes": "合并候选 C120（主源，携程二面）、C119（携程二面：调 Prompt 出现修好一类 case 另一类变差的跷跷板）、C121（携程二面：Prompt 人工调还是有自动化优化方案）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a0320240000000006023ed4",
+        "company": "携程",
+        "role": "Agent 开发",
+        "round": "二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，『更大并不天然更遵循意图』论断）", "url": "https://arxiv.org/abs/2203.02155"},
-    {"title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 能力可经数据微调提升且保持通用能力）", "url": "https://arxiv.org/abs/2310.12823"}
+    {
+      "title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，『更大并不天然更遵循意图』论断）",
+      "url": "https://arxiv.org/abs/2203.02155"
+    },
+    {
+      "title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 能力可经数据微调提升且保持通用能力）",
+      "url": "https://arxiv.org/abs/2310.12823"
+    }
   ],
-  "related_questions": ["Q032", "Q033"]
+  "related_questions": [
+    "Q032",
+    "Q033"
+  ]
 }

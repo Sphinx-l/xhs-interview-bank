@@ -1,11 +1,16 @@
 {
   "id": "Q024",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "evaluation-reliability",
   "difficulty": "medium",
   "title": "用 LLM 做裁判（LLM-as-judge）评估输出质量时有哪些系统性偏差？如何控制位置、长度、自增强等偏差与评测污染？",
-  "tags": ["LLM-as-judge", "位置偏差", "长度偏差", "评测校准"],
+  "tags": [
+    "LLM-as-judge",
+    "位置偏差",
+    "长度偏差",
+    "评测校准"
+  ],
   "question_guide": {
     "background": "裁判模型是 Agent 评测的主力工具，但对它的偏差没有认知的候选人会把裁判分数当真理，面试官借此考察评测素养。",
     "pain_point": "裁判模型有系统性偏好（偏爱长回答、偏爱自己风格的输出、受选项顺序影响），不校准的裁判分数会系统性误导迭代方向。",
@@ -56,10 +61,26 @@
     "role": "大模型 Agent",
     "round": "三面",
     "frequency": 1,
-    "notes": "主源候选 C308（阿里巴巴三面，题面前半『评测集如何构建』维度已由 Q022 承接，本题聚焦 LLM-as-judge 偏差、污染与离线在线偏差）。"
+    "notes": "主源候选 C308（阿里巴巴三面，题面前半『评测集如何构建』维度已由 Q022 承接，本题聚焦 LLM-as-judge 偏差、污染与离线在线偏差）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=1（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6add53de000000002b01d079",
+        "company": "阿里巴巴",
+        "role": "大模型 Agent",
+        "round": "三面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena（arXiv 2306.05685，位置/冗长/自增强偏差与缓解、约 80% 一致性口径）", "url": "https://arxiv.org/abs/2306.05685"}
+    {
+      "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena（arXiv 2306.05685，位置/冗长/自增强偏差与缓解、约 80% 一致性口径）",
+      "url": "https://arxiv.org/abs/2306.05685"
+    }
   ],
-  "related_questions": ["Q021", "Q022"]
+  "related_questions": [
+    "Q021",
+    "Q022"
+  ]
 }

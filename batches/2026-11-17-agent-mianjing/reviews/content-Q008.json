@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-2",
   "canonical_path": "question_bank/agent-architecture/high/Q008.json",
-  "canonical_sha256": "455d35f3adf2a5657ff84d625b30fb1cd5c8a98c114ce3ac534c39e2990a6e01",
+  "canonical_sha256": "1712a9823a84cb16bfd1a7ae4d7039d228525685f065750da04477ba8a5696b2",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 唯一不通过项已修复）。recommended_answer 的 summary+points 由约 484 压缩至约 307 汉字，落入契约区间；6 条要点保留；其余结构项 round 1 已核合规且未改动。",
     "difficulty": "通过（同 round 1）。主源 note 6accaec1 第 19 题本身即连环追问链（设计→加载→召回→总结→更新），high 定档有原帖逐字证据。",
@@ -17,12 +25,30 @@
     "verbatim_fidelity": "通过。verbatim 未改动。"
   },
   "claims_checked": [
-    {"claim": "hot path 由 Agent 回复前调记忆工具实时写（ChatGPT save_memories 即此形态），透明但增延迟；background 异步不阻塞但存在其他线程读旧记忆的窗口期", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"},
-    {"claim": "Profile 整体更新易丢信息、Collection 窄粒度追加召回率高但需管理增删改与检索", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"}
+    {
+      "claim": "hot path 由 Agent 回复前调记忆工具实时写（ChatGPT save_memories 即此形态），透明但增延迟；background 异步不阻塞但存在其他线程读旧记忆的窗口期",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Profile 整体更新易丢信息、Collection 窄粒度追加召回率高但需管理增删改与检索",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
-    {"round": 1, "decision": "rejected", "issue": "recommended_answer 约 484 汉字超契约上限（本批最长）", "resolution": "压缩至约 307 汉字，五维覆盖与 6 要点保留，评测闭环细节按建议移除于 points 之外"}
+    {
+      "round": 1,
+      "decision": "rejected",
+      "issue": "recommended_answer 约 484 汉字超契约上限（本批最长）",
+      "resolution": "压缩至约 307 汉字，五维覆盖与 6 要点保留，评测闭环细节按建议移除于 points 之外"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
   ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:05:00+08:00"

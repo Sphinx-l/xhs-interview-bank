@@ -1,11 +1,16 @@
 {
   "id": "Q002",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "medium",
   "title": "ReAct 范式的工作流程是怎样的？工程实现中消息格式如何设计，tool_response 用什么角色传回？",
-  "tags": ["ReAct", "消息格式", "工具调用", "Thought-Action-Observation"],
+  "tags": [
+    "ReAct",
+    "消息格式",
+    "工具调用",
+    "Thought-Action-Observation"
+  ],
   "question_guide": {
     "background": "ReAct 是 Agent 面试的基础必考题，但多数候选人只会背 Thought→Action→Observation，面试官往往追问到消息序列与角色设计的工程细节。",
     "pain_point": "不掌握消息格式细节就无法真正实现 ReAct：tool_response 的角色选择错误会导致多轮后模型混淆自己与工具的边界。",
@@ -59,12 +64,30 @@
     "company": "unspecified",
     "role": "Agent 开发",
     "round": "一面",
-    "frequency": 3,
-    "notes": "合并候选 C073（主源，图片）、C322（字节跳动 AI Agent 一面，问 ReAct 工作原理与举例）、C334（字节跳动 2-2 一面，追问消息格式与 tool_response 角色设计）。"
+    "frequency": 1,
+    "notes": "合并候选 C073（主源，图片）、C322（字节跳动 AI Agent 一面，问 ReAct 工作原理与举例）、C334（字节跳动 2-2 一面，追问消息格式与 tool_response 角色设计）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=3（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6ac86853000000001801b00e",
+        "company": "unspecified",
+        "role": "Agent 开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "ReAct: Synergizing Reasoning and Acting in Language Models", "url": "https://arxiv.org/abs/2210.03629"},
-    {"title": "Building effective agents（Anthropic Engineering）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629"
+    },
+    {
+      "title": "Building effective agents（Anthropic Engineering）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q001"]
+  "related_questions": [
+    "Q001"
+  ]
 }

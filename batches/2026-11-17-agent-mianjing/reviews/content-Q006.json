@@ -4,8 +4,16 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer",
   "canonical_path": "question_bank/agent-architecture/medium/Q006.json",
-  "canonical_sha256": "ae47ccdfcdea3b03332526a899d1bf74d7bb4c3ad60dfa71237e67c4a2e36df3",
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "canonical_sha256": "e1cf154ee0889b9c8dc7d054c5fd011d7b377480627e23e837a68f5c25f74887",
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过。字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q001,Q005] 合规。summary+points 纯汉字约 357 字，处于『约 180–350』上沿 2% 以内，视为符合『约』的容差。",
     "difficulty": "通过。架构选型与场景判断题，符合 medium。",
@@ -16,11 +24,25 @@
     "verbatim_fidelity": "通过。verbatim 保留原帖题面（含『workflow』小写等原始写法）未改写。"
   },
   "claims_checked": [
-    {"claim": "Workflows=预定义代码路径编排 LLM 与工具；Agents=LLM 动态指挥自身流程与工具使用", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
-    {"claim": "Anthropic 建议：workflows 为定义良好的任务提供可预测性与一致性；寻找最简单可行方案、仅在需要时增加复杂性", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+    {
+      "claim": "Workflows=预定义代码路径编排 LLM 与工具；Agents=LLM 动态指挥自身流程与工具使用",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Anthropic 建议：workflows 为定义良好的任务提供可预测性与一致性；寻找最简单可行方案、仅在需要时增加复杂性",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
-  "revision_history": [],
+  "revision_history": [
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
+  ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T19:43:28+08:00"
 }

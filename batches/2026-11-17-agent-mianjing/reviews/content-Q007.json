@@ -4,9 +4,17 @@
   "author_agent": "claude-opus-5-5-author",
   "reviewer_agent": "claude-opus-5-5-independent-reviewer-2",
   "canonical_path": "question_bank/agent-architecture/high/Q007.json",
-  "canonical_sha256": "805cbf68e0d9e2ff5a4ff31eae6d2304dd42e8d6c3c226bede6131f93f439c4f",
+  "canonical_sha256": "7b4c6f99e2ec05b290cedb3e0dd04d41a9a4a04c3ff2bac1f9f53dd58fe4b5c9",
   "review_round": 2,
-  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
   "dimensions": {
     "structure_contract": "通过（round 1 唯一不通过项已修复）。recommended_answer 的 summary+points 压缩至约 304 汉字，落入契约『约 180–350』区间；6 条要点保留；其余结构项 round 1 已核合规且未改动。",
     "difficulty": "通过（同 round 1）。主源 note 6adc069a 为系统性 Harness 面试链，第 5 题（分层）与第 6 题（压缩）构成记忆/上下文模块真实相邻追问，题面本身是跨存储/压缩/检索/更新设计题，high 有原帖证据。",
@@ -17,13 +25,35 @@
     "verbatim_fidelity": "通过。verbatim 未改动。"
   },
   "claims_checked": [
-    {"claim": "短期记忆 thread-scoped、作为 Agent 状态经 checkpointer 持久化可恢复；长期记忆跨线程存于 namespace Store 任意线程可召回", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"},
-    {"claim": "完整历史即使装进窗口模型也会被陈旧/离题内容分心、更慢更贵，需主动移除或遗忘过期信息", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"},
-    {"claim": "Graph API 参考条目引用点成立：technical_answer 第一段确有『作为 Agent 状态的一部分持久化到数据库检查点』（State + checkpointer）表述，该文档亦实际包含 State/checkpointer 概念；属辅助参考，主依据仍是 Memory overview", "evidence": "https://docs.langchain.com/oss/python/langgraph/graph-api", "result": "confirmed"}
+    {
+      "claim": "短期记忆 thread-scoped、作为 Agent 状态经 checkpointer 持久化可恢复；长期记忆跨线程存于 namespace Store 任意线程可召回",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    },
+    {
+      "claim": "完整历史即使装进窗口模型也会被陈旧/离题内容分心、更慢更贵，需主动移除或遗忘过期信息",
+      "evidence": "https://docs.langchain.com/oss/python/concepts/memory",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Graph API 参考条目引用点成立：technical_answer 第一段确有『作为 Agent 状态的一部分持久化到数据库检查点』（State + checkpointer）表述，该文档亦实际包含 State/checkpointer 概念；属辅助参考，主依据仍是 Memory overview",
+      "evidence": "https://docs.langchain.com/oss/python/langgraph/graph-api",
+      "result": "confirmed"
+    }
   ],
   "issues": [],
   "revision_history": [
-    {"round": 1, "decision": "rejected", "issue": "recommended_answer 约 401 汉字超契约上限", "resolution": "压缩至约 304 汉字，6 要点与三子问覆盖保留，technical_answer/example 未动"}
+    {
+      "round": 1,
+      "decision": "rejected",
+      "issue": "recommended_answer 约 401 汉字超契约上限",
+      "resolution": "压缩至约 304 汉字，6 要点与三子问覆盖保留，technical_answer/example 未动"
+    },
+    {
+      "at": "2026-11-18",
+      "agent": "merge-migration",
+      "note": "1.0→1.1 机械迁移（version/occurrences/frequency），题目内容未变；SHA 重绑"
+    }
   ],
   "decision": "passed",
   "reviewed_at": "2026-11-17T20:05:00+08:00"

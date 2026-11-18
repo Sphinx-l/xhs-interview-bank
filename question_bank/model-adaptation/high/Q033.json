@@ -1,11 +1,16 @@
 {
   "id": "Q033",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "model-adaptation",
   "difficulty": "high",
   "title": "Agentic 模型的 CPT、SFT、RL 三阶段训练流程分别是什么？为什么 SFT 时要 mask 掉 observation tokens？",
-  "tags": ["Agentic训练", "三阶段流程", "observation mask", "损失掩码"],
+  "tags": [
+    "Agentic训练",
+    "三阶段流程",
+    "observation mask",
+    "损失掩码"
+  ],
   "question_guide": {
     "background": "这是面向做过 Agent 模型训练的候选人的深水题，表面考流程名词，核心考点在 observation mask 的原因。",
     "pain_point": "背得出三阶段名字但说不清 mask 原因——不理解『模型该学的是策略（何时做什么动作），不是复述环境输出』这一训练目标的本质。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "三阶段：CPT 用大量 Agent 轨迹/工具文档做继续预训练灌领域与工具知识；SFT 用高质量示范轨迹做监督微调学行为模式（对应 InstructGPT 的 SFT 阶段）；RL 用奖励信号（人工反馈或任务奖励）优化端到端策略。SFT 时 mask observation 的原因：observation 是环境产生的外部文本，不是模型策略的输出——对它计算损失会教模型『背诵环境』而不是学习『在什么状态下采取什么动作』。",
     "points": [
-      "CPT（继续预训练）：大规模、无严格标注的领域语料（工具文档、历史轨迹、代码），目标补知识与语感，损失算全部 token。"
-      ,
+      "CPT（继续预训练）：大规模、无严格标注的领域语料（工具文档、历史轨迹、代码），目标补知识与语感，损失算全部 token。",
       "SFT（监督微调）：高质量示范轨迹（好任务的完整 Thought-Action-Observation 序列），模型学的是示范行为；与指令对齐的 SFT→RLHF 流程同构。",
       "RL（强化学习）：以任务成功/偏好反馈为奖励，用 PPO 等优化整条轨迹的策略，解决 SFT 只能模仿、无法超越示范的局限。",
       "mask 原理：SFT 损失只应定义在『模型应当生成的 token』上——Thought、Action 与最终回答；observation 由环境返回，模型控制不了它的内容。",
@@ -57,11 +61,31 @@
     "role": "AI Agent",
     "round": "三轮技术面+HR面（2-2）",
     "frequency": 1,
-    "notes": "主源候选 C335（字节 2-2 一面，图片）。"
+    "notes": "主源候选 C335（字节 2-2 一面，图片）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=1（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a03b843000000000803d1a9",
+        "company": "字节跳动",
+        "role": "AI Agent",
+        "round": "三轮技术面+HR面（2-2）",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，示范 SFT + 偏好 RL 两段式流程）", "url": "https://arxiv.org/abs/2203.02155"},
-    {"title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 轨迹指令微调提升 agent 能力）", "url": "https://arxiv.org/abs/2310.12823"}
+    {
+      "title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，示范 SFT + 偏好 RL 两段式流程）",
+      "url": "https://arxiv.org/abs/2203.02155"
+    },
+    {
+      "title": "AgentTuning: Generalizing Agents via Language Models（arXiv 2310.12823，agent 轨迹指令微调提升 agent 能力）",
+      "url": "https://arxiv.org/abs/2310.12823"
+    }
   ],
-  "related_questions": ["Q031", "Q032", "Q035"]
+  "related_questions": [
+    "Q031",
+    "Q032",
+    "Q035"
+  ]
 }

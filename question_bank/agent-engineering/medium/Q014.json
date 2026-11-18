@@ -1,11 +1,16 @@
 {
   "id": "Q014",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-engineering",
   "difficulty": "medium",
   "title": "工具库有上百个工具（或几百个用户自定义 Skill）时，如何让模型快速准确地选中工具？召回率下降怎么解决？",
-  "tags": ["工具检索", "两级加载", "Skill召回", "动态挂载"],
+  "tags": [
+    "工具检索",
+    "两级加载",
+    "Skill召回",
+    "动态挂载"
+  ],
   "question_guide": {
     "background": "工具规模化管理是 Agent 平台化的分水岭题：小 Demo 全量挂载没问题，规模一大立刻崩坏，考察候选人是否做过真实规模的工具系统。",
     "pain_point": "全量注入上百个工具 Schema 会同时挤爆上下文预算和稀释模型注意力，选错率随工具数上升；用户自定义 Skill 泛化后语义重叠加剧，召回准确率进一步下降。",
@@ -58,11 +63,27 @@
     "company": "字节跳动",
     "role": "AI Agent",
     "round": "二面",
-    "frequency": 4,
-    "notes": "合并候选 C346（主源，字节 2-2 二面）、C015（unspecified：工具越来越多、上下文杂乱、选工具容易出错怎么优化）、C141（字节官方：用户定义几百个 Skill 导致召回率下降怎么解决）、C393（虾皮：工具发现怎么评测、如何衡量召回准确性和 Token 节省）。"
+    "frequency": 1,
+    "notes": "合并候选 C346（主源，字节 2-2 二面）、C015（unspecified：工具越来越多、上下文杂乱、选工具容易出错怎么优化）、C141（字节官方：用户定义几百个 Skill 导致召回率下降怎么解决）、C393（虾皮：工具发现怎么评测、如何衡量召回准确性和 Token 节省）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=4（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6a03b843000000000803d1a9",
+        "company": "字节跳动",
+        "role": "AI Agent",
+        "round": "二面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Building effective agents（Anthropic Engineering，使用许多相似工具时差异描述尤为重要的提醒）", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+    {
+      "title": "Building effective agents（Anthropic Engineering，使用许多相似工具时差异描述尤为重要的提醒）",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
   ],
-  "related_questions": ["Q013", "Q010"]
+  "related_questions": [
+    "Q013",
+    "Q010"
+  ]
 }

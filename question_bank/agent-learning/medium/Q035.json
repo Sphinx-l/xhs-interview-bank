@@ -1,11 +1,16 @@
 {
   "id": "Q035",
-  "version": "1.0",
+  "version": "1.1",
   "answer_type": "technical",
   "category_id": "agent-learning",
   "difficulty": "medium",
   "title": "Reward Model 适合解决什么问题？在 Agent 系统中如何使用？",
-  "tags": ["Reward Model", "RLHF", "偏好学习", "任务奖励"],
+  "tags": [
+    "Reward Model",
+    "RLHF",
+    "偏好学习",
+    "任务奖励"
+  ],
   "question_guide": {
     "background": "RM 是从对齐走向 Agent 自我改进的桥梁概念题，考察对『学一个打分器』适用边界的理解。",
     "pain_point": "把 RM 当成万能打分机：不知道它学的是人类偏好近似、可被 reward hacking，也不知道 Agent 场景里任务奖励常常比偏好 RM 更直接。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "Reward Model 通过学习人类对输出的偏好排序获得打分能力，适合解决『好没有唯一标准答案、但人类能比较优劣』的评估与优化问题；经典流程是 InstructGPT 的 SFT→偏好 RM→RL 三段。Agent 场景两种用法：端到端偏好 RM 给整条轨迹打分，或用可机检的任务奖励（测试通过、对账一致）直接当奖励——后者更客观，前者覆盖主观质量。",
     "points": [
-      "原理：收集输出两两比较的人类偏好数据，训练 RM 给输出打分；InstructGPT 的做法就是收集模型输出的人工排序，用于其后的强化学习阶段。"
-      ,
+      "原理：收集输出两两比较的人类偏好数据，训练 RM 给输出打分；InstructGPT 的做法就是收集模型输出的人工排序，用于其后的强化学习阶段。",
       "适合的问题：开放式生成质量（有用性、无害性）、无唯一解的比较型评估、作为 RL 的奖励信号——『人评贵且慢』的场景用它做可扩展近似。",
       "Agent 用法一（任务奖励）：可机检的目标直接当奖励——测试通过率、对账一致、任务完成断言，客观且难作弊。",
       "Agent 用法二（偏好 RM/裁判）：端到端给轨迹或结果打分，覆盖格式、风格等主观维度；可由裁判模型或人工标注偏好训练而来。",
@@ -57,10 +61,26 @@
     "role": "AI 应用开发",
     "round": "一面",
     "frequency": 1,
-    "notes": "主源候选 C215（携程一面）。"
+    "notes": "主源候选 C215（携程一面）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=1（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "69f9f8c5000000003503ac05",
+        "company": "携程",
+        "role": "AI 应用开发",
+        "round": "一面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，示范 SFT→输出排序训练 RM→RL 流程）", "url": "https://arxiv.org/abs/2203.02155"}
+    {
+      "title": "Training language models to follow instructions with human feedback（InstructGPT，arXiv 2203.02155，示范 SFT→输出排序训练 RM→RL 流程）",
+      "url": "https://arxiv.org/abs/2203.02155"
+    }
   ],
-  "related_questions": ["Q033", "Q024"]
+  "related_questions": [
+    "Q033",
+    "Q024"
+  ]
 }

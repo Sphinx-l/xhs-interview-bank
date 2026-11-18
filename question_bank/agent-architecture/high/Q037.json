@@ -1,11 +1,16 @@
 {
   "id": "Q037",
-  "version": "1.0",
- "answer_type": "technical",
+  "version": "1.1",
+  "answer_type": "technical",
   "category_id": "agent-architecture",
   "difficulty": "high",
   "title": "Prompt 注入、工具越权、数据外泄如何在架构层做纵深防御？权限最小化、沙箱与审计如何协同？",
-  "tags": ["Prompt注入", "纵深防御", "权限最小化", "沙箱审计"],
+  "tags": [
+    "Prompt注入",
+    "纵深防御",
+    "权限最小化",
+    "沙箱审计"
+  ],
   "question_guide": {
     "background": "安全是 Agent 对接生产系统的门槛题，考察多层防线的设计而非单点补丁，追问常到 MCP 工具的分层与高危操作防护。",
     "pain_point": "只在提示词里写『不要泄露』挡不住注入；工具一旦有危险权限，被诱导的模型就是最大的攻击面；没有审计则事后无法追责。",
@@ -15,8 +20,7 @@
   "recommended_answer": {
     "summary": "纵深防御按攻击面分层：输入侧隔离不可信内容并做注入检测，模型侧用指令分层与输出过滤，工具侧做权限最小化、白名单、高危操作二次确认与幂等，执行侧沙箱隔离，全程审计留痕；单层都可能被绕过，多层叠加才构成可辩护的安全边界。",
     "points": [
-      "注入防护：外部内容（网页、文档、工具返回）标记为数据而非指令，指令分层（系统/用户/工具结果）；注入检测器拦可疑模式；关键决策不依赖提示约束。"
-      ,
+      "注入防护：外部内容（网页、文档、工具返回）标记为数据而非指令，指令分层（系统/用户/工具结果）；注入检测器拦可疑模式；关键决策不依赖提示约束。",
       "权限最小化：工具按角色配置最小权限集，高危操作（支付、删除、对外发送）单独白名单 + 人工确认 + 幂等键。",
       "沙箱隔离：代码执行与文件操作在受限环境运行（资源限额、网络白名单、文件系统隔离），防模型被诱导执行破坏性命令。",
       "数据外泄防护：出站内容过滤（敏感字段脱敏、目的地白名单），防止注入诱导模型把隐私拼进外发请求。",
@@ -56,11 +60,27 @@
     "company": "阿里巴巴",
     "role": "大模型 Agent",
     "round": "三面",
-    "frequency": 6,
-    "notes": "合并候选 C310（主源，阿里巴巴三面）、C107（网易互娱：安全权限怎么做的、沙箱怎么做的）、C155（月之暗面二面：Prompt 注入怎么防、危险工具调用拦截、敏感数据脱敏）、C328（字节一面：提示注入导致的越权或误操作防范）、C350（字节 2-2 二面：Agent 决策出错导致数据误删如何防范）、C419（米哈游二面：MCP 工具安全边界分层）。"
+    "frequency": 1,
+    "notes": "合并候选 C310（主源，阿里巴巴三面）、C107（网易互娱：安全权限怎么做的、沙箱怎么做的）、C155（月之暗面二面：Prompt 注入怎么防、危险工具调用拦截、敏感数据脱敏）、C328（字节一面：提示注入导致的越权或误操作防范）、C350（字节 2-2 二面：Agent 决策出错导致数据误删如何防范）、C419（米哈游二面：MCP 工具安全边界分层）。；1.0→1.1 机械迁移（2026-11-18 合并）：occurrences 首条为入库来源；原 1.0 frequency=6（合并候选数，热度信号见批次 candidates.json，可用 --sighting 逐条补登）",
+    "occurrences": [
+      {
+        "batch_id": "2026-11-17-agent-mianjing",
+        "note_id": "6add53de000000002b01d079",
+        "company": "阿里巴巴",
+        "role": "大模型 Agent",
+        "round": "三面",
+        "seen_at": "2026-11-17"
+      }
+    ]
   },
   "technical_references": [
-    {"title": "Core architecture - Model Context Protocol（Security considerations：TLS/来源校验、认证授权、消息校验、访问控制与限流）", "url": "https://modelcontextprotocol.io/docs/concepts/architecture"}
+    {
+      "title": "Core architecture - Model Context Protocol（Security considerations：TLS/来源校验、认证授权、消息校验、访问控制与限流）",
+      "url": "https://modelcontextprotocol.io/docs/concepts/architecture"
+    }
   ],
-  "related_questions": ["Q015", "Q011"]
+  "related_questions": [
+    "Q015",
+    "Q011"
+  ]
 }
