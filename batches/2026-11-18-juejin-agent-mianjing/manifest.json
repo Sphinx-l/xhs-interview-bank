@@ -1,0 +1,1871 @@
+[
+ {
+  "post_id": "7663419501435191336",
+  "url": "https://juejin.cn/post/7663419501435191336",
+  "title": "Rinta 4月前 人工智能 Agent面经 本人本科大二，做的是一个面向开源社区的重复 Issue 智能分诊项目。项目",
+  "status": "retained",
+  "reason": "复核通过：Agent/RAG 项目深挖 14 题+通用八股 3 题，追问链完整；本科大二自述（推断实习，性质在 reason 注明）；2026-07 发布",
+  "company": "unspecified",
+  "role": "Agent 应用开发（RAG 项目）",
+  "round": "unspecified",
+  "channel": "实习",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ],
+  "published_at": "2026-07-18"
+ },
+ {
+  "post_id": "6939774328858738696",
+  "url": "https://juejin.cn/post/6939774328858738696",
+  "title": "nuIl 5年前 JavaScript 金三银四的前端社招面经 目前工作快四年，年后投了一波简历，这里整理了一下新鲜出炉",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7686441082470711330",
+  "url": "https://juejin.cn/post/7686441082470711330",
+  "title": "叼馒女友郭芙蓉 2月前 面试 面经 5. 查询改写后有没有遇到过改写后的结果效果也不好的情况？ 面试官追问：怎么判断改写",
+  "status": "retained",
+  "reason": "复核通过：法务 RAG 项目深挖面经，原文含答案（只取题面，答案不入库）；题号自 5 起，疑为系列帖，前序题面不在本篇；2026-09 发布",
+  "company": "unspecified",
+  "role": "大模型应用开发（法务 RAG）",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ],
+  "published_at": "2026-09-18"
+ },
+ {
+  "post_id": "7675566936094785571",
+  "url": "https://juejin.cn/post/7675566936094785571",
+  "title": "用户12072817944 3月前 面试 分享｜米哈游Agent一面凉经：这3个问题我没答上来 公司：米哈游 | 岗位：",
+  "status": "retained",
+  "reason": "复核通过：自述亲历一面凉经（2026-08），3 题深挖；原文含「正确思路」答案（只取题面）；末尾有备考工具软引流（不入库）；提前批推断校招",
+  "company": "米哈游",
+  "role": "Agent 开发（提前批）",
+  "round": "一面",
+  "channel": "校招",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ],
+  "published_at": "2026-08-19"
+ },
+ {
+  "post_id": "7548078758357991474",
+  "url": "https://juejin.cn/post/7548078758357991474",
+  "title": "wwwCJ 1年前 面试 程序员 受够了网上杂乱的“面经”？我做了个开源免费的求职学习网站 受够了网上杂乱的“面经”？我",
+  "status": "excluded_marketing",
+  "reason": "开源求职网站广告引流（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7222931700438237241",
+  "url": "https://juejin.cn/post/7222931700438237241",
+  "title": "用户5028127610343 3年前 JavaScript 前端面经及常见面试题 ## 前端面经 积累经验，积累经验，",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7639868628453425187",
+  "url": "https://juejin.cn/post/7639868628453425187",
+  "title": "卷帘依旧 6月前 面试 字节前端一面面经 1.自我介绍 2.说项目亮点 3.AI相关的了解吗 4.agent怎么跑起来的",
+  "status": "excluded_non_target",
+  "reason": "复核排除：字节前端一面，按硬规则不采前端岗；含 Agent 题 6 条（agent 设计/skill 与 MCP 区别/封装 skill 边界），若后续放宽前端+AI 边界可回捞",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ],
+  "published_at": "2026-05-15"
+ },
+ {
+  "post_id": "7123088980731494408",
+  "url": "https://juejin.cn/post/7123088980731494408",
+  "title": "菠萝包1 4年前 后端 面经 1、面经 https://juejin.cn/post/70350889539044638",
+  "status": "excluded_no_content",
+  "reason": "面经外链汇总帖，无题面（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7537513437399318555",
+  "url": "https://juejin.cn/post/7537513437399318555",
+  "title": "帅夫帅夫 1年前 前端 面试 烤面筋烤面经一 前言 自我介绍 在今天的有回面试中，有个问题我觉得不怎么好回答。\"你说是学",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7571657746346950710",
+  "url": "https://juejin.cn/post/7571657746346950710",
+  "title": "啥也不行就是菜 1年前 前端 面试 【前端面经】字节前端社招面经分享（已offer） 字节前端社招完整面经，涵盖三轮技术",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844903936172933133",
+  "url": "https://juejin.cn/post/6844903936172933133",
+  "title": "橙生北国 7年前 面试 GrowingIO面经 楼主下午去面了growingIO，刚出门就开门红，把地铁坐反了【嗷呜一声",
+  "status": "excluded_non_target",
+  "reason": "GrowingIO 数据分析岗 7 年前老帖（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6904994458303987720",
+  "url": "https://juejin.cn/post/6904994458303987720",
+  "title": "编码小孩 5年前 面试 前端实习面经 不到20分钟的电话面，面完后就被录了，感觉流程不是很正规，所以感觉公司太小了。 关",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7104646119145897998",
+  "url": "https://juejin.cn/post/7104646119145897998",
+  "title": "前端狗哥 4年前 面试 字节面经 静下心来总结一下最近的面试，为了吸引人，故意写了字节面经，其实也不光面字节。 面试总结",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903956167000078",
+  "url": "https://juejin.cn/post/6844903956167000078",
+  "title": "ccsuhust 7年前 Java java面经 各位在牛客上应该还能搜到一篇“四跨考生的面经”，是的，那就是我牛逼的研",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7018366984593096740",
+  "url": "https://juejin.cn/post/7018366984593096740",
+  "title": "前端酱紫 5年前 面试 前端经典面经 前端经典面经 HTTP/HTML/浏览器 说一下http 和https 参考回答：",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7341288345782353961",
+  "url": "https://juejin.cn/post/7341288345782353961",
+  "title": "鱼小柔 2年前 面试 5年前端面经 面经 阿里 蚂蚁 字节 5年 前端。八股 项目。每一家面试风格都不一样，但基本上除了",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7571258854900842539",
+  "url": "https://juejin.cn/post/7571258854900842539",
+  "title": "LLM大模型 1年前 人工智能 大模型应用开发面经 （5年经验） 大模型应用开发面经 （5年经验） 时间范围：近半年 实",
+  "status": "retained",
+  "reason": "复核通过：5 年经验社招真实复盘，按主题分组题面（LLM基础/Lib/Prompt/RAG/Workflow/Agent/系统设计/八股）；文末教程引流尾巴不入库；2025-11 发布",
+  "company": "unspecified（自述面过阿里/腾讯/美团/字节/快手等 20+ 家，题面未按公司归属）",
+  "role": "大模型应用开发",
+  "round": "unspecified",
+  "channel": "社招",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_llm_mianjing"
+  ],
+  "published_at": "2025-11-11"
+ },
+ {
+  "post_id": "7291480878118027316",
+  "url": "https://juejin.cn/post/7291480878118027316",
+  "title": "耗子6起来 3年前 前端 面试 2025面经 输入URL回车后经历哪些过程 缓存检查：如果浏览器有缓存则不会走下一步； ",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7203907150728724517",
+  "url": "https://juejin.cn/post/7203907150728724517",
+  "title": "溪饱鱼 3年前 前端 面试 普通面经（上） 闲聊 先介绍一下背景和闲聊一下，base重庆，非大厂（能力不够）面试，决定跑",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7682634449857544219",
+  "url": "https://juejin.cn/post/7682634449857544219",
+  "title": "用户973469099978 2月前 面试 拼多多AI Agent面经分享（纯干货） 今年找工作的同学应该都已经发现了，",
+  "status": "retained",
+  "reason": "转载帖：黑马营销号（播妞）整理自牛客用户「牛牛在面试记录」，牛客原帖不在既有批次（批次二拼多多篇为算法实习岗、题面不同）；题面完整保留（一面18题+二面18题），招聘新闻与课程广告段落不入库；牛客原帖待补采",
+  "company": "拼多多",
+  "role": "AI Agent 开发",
+  "round": "一面+二面",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ],
+  "published_at": "2026-09-07"
+ },
+ {
+  "post_id": "7651766499724476457",
+  "url": "https://juejin.cn/post/7651766499724476457",
+  "title": "AI机器人就是我 5月前 人工智能 我做简历网站时才发现：校招和面经不是流量内容，而是 AI 的上下文 校招列表不是为了",
+  "status": "excluded_meta",
+  "reason": "校招/面经流量内容方法论杂谈（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7008844599816880159",
+  "url": "https://juejin.cn/post/7008844599816880159",
+  "title": "前端时代周刊 5年前 面试 美团四轮面试面经 base北京,美团前端面试四轮面试总结,包括每轮的面试题,和部解答参考,希",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844903455295815688",
+  "url": "https://juejin.cn/post/6844903455295815688",
+  "title": "CzhCN1 9年前 前端 我的前端面经 2016 年秋季校招前端面试经验 219",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6909652236507283470",
+  "url": "https://juejin.cn/post/6909652236507283470",
+  "title": "老庄农人 5年前 JavaScript 字节前端面经 最后两道简单的编程题写的不好，最后一道算法时间复杂度太高了。 应该",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6942361250496151589",
+  "url": "https://juejin.cn/post/6942361250496151589",
+  "title": "爱写代码的何同学 5年前 面试 社招快手技术3面面经 。。。。 。。。。 5",
+  "status": "excluded_no_content",
+  "reason": "正文无题面（仅省略号）（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6862855292577644552",
+  "url": "https://juejin.cn/post/6862855292577644552",
+  "title": "TianTianUp 6年前 面试 「面经」你可能需要的三轮网易面经 最近一个星期面了几家公司，最后收获了心仪的网易of",
+  "status": "excluded_non_target",
+  "reason": "网易 6 年前老帖，非大模型方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6867330563943071758",
+  "url": "https://juejin.cn/post/6867330563943071758",
+  "title": "往西汪 6年前 面试 「面经」你可能需要的字节跳动三轮面经 七月收获了字节的意向书，今日得空把面经整理出来分享给大家，也",
+  "status": "excluded_non_target",
+  "reason": "字节 6 年前老帖，非大模型方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7233298696300953655",
+  "url": "https://juejin.cn/post/7233298696300953655",
+  "title": "Whe 3年前 面试 360前端面经 360前端面经 360一面：4:45-5:30 自我介绍+项目介绍 问了一大堆微前",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6942363554540421156",
+  "url": "https://juejin.cn/post/6942363554540421156",
+  "title": "爱写代码的何同学 5年前 面试 社招美团技术3面面经 。。。。。。等 6",
+  "status": "excluded_no_content",
+  "reason": "正文无题面（仅省略号）（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing",
+   "kw_llm_mianjing",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7371340419342008360",
+  "url": "https://juejin.cn/post/7371340419342008360",
+  "title": "慢慢robber 2年前 前端 面试 前端求职面经02（5月面经总结） 前端侧开求职面经02 这个笔记主要记录了最近的一",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6850037270754361352",
+  "url": "https://juejin.cn/post/6850037270754361352",
+  "title": "程序员山月 6年前 前端框架 面试 一道腾讯的面试题：如何避免 CDN 为 PC 端缓存移动端页面 如果 PC 端和移动",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6995804565350285342",
+  "url": "https://juejin.cn/post/6995804565350285342",
+  "title": "九分石人 5年前 面试 同花顺一面面经 面经 写面经，攒人品 自我介绍 jvm 堆内存溢出 怎么快速的堆内存溢出 溢出怎",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7011409078786195464",
+  "url": "https://juejin.cn/post/7011409078786195464",
+  "title": "前端时代周刊 5年前 面试 爱奇艺前端二面面经 这篇爱奇艺的面经同样来自一朋友的总结,先介绍下他的背景,目前有6年的前端",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7207444169358786618",
+  "url": "https://juejin.cn/post/7207444169358786618",
+  "title": "溪饱鱼 3年前 前端 面试 劝退面经（下） 开局闲聊 老规矩，先闲聊一下，本来都已经特别不想写这个系列了，但想着把做事还",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903978401169415",
+  "url": "https://juejin.cn/post/6844903978401169415",
+  "title": "Marshtomp 7年前 面试 秋招前端面经 回流： 当渲染的一部分元素更改自己的宽高等，导致重新构建布局，就产生了回",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6937247704414158878",
+  "url": "https://juejin.cn/post/6937247704414158878",
+  "title": "冰露农夫 5年前 前端 面经 南京润众（做学校实验室的）面试官先介绍了一下这个公司主要的赛道，市场，前景，现在取得的成就",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903685634392072",
+  "url": "https://juejin.cn/post/6844903685634392072",
+  "title": "程序员黄小斜 8年前 百度 数据库 百度研发面经 百度今年的提前批有点奇怪，好像都不走流程，牛客上好几个百度内推的帖子，",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7030427342367359007",
+  "url": "https://juejin.cn/post/7030427342367359007",
+  "title": "魔镜魔镜_谁是世界上最漂亮的小仙女 5年前 前端 前端面经汇总 1. CSS 1.1 实现响应式布局的几种方式 百分比布",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6970920956810231845",
+  "url": "https://juejin.cn/post/6970920956810231845",
+  "title": "顺凡 5年前 面试 三个月面经的分享 软件专业大二，找的实习工作，3月1号开始投递简历，携程二面凉、好未来题题拍二面凉、",
+  "status": "excluded_non_target",
+  "reason": "5 年前实习杂谈，非大模型方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903839347245064",
+  "url": "https://juejin.cn/post/6844903839347245064",
+  "title": "JavaDoop 7年前 Java 【阿里面经分享】蚂蚁金服研发面经+阿里中间件研发面经+面试题 之前面了阿里中间件的提",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_mianjing"
+  ]
+ },
+ {
+  "post_id": "7546495958554755098",
+  "url": "https://juejin.cn/post/7546495958554755098",
+  "title": "居然JuRan 1年前 人工智能 阿里云多模态大模型岗三面面经 阿里云智能多模态大模型岗三面面经（详细问题+感受） 最近",
+  "status": "excluded",
+  "reason": "算法岗面经（多模态大模型岗，CLIP/Qwen-VL/RLHF/InfoNCE 等），按 2026-11-18 用户口径仅采 Agent 应用开发岗，范围排除；详情快照保留于 _tabbit/details_a.json 作证据",
+  "company": "阿里巴巴（阿里云智能）",
+  "role": "多模态大模型（算法）",
+  "round": "三面（三轮技术面）",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ],
+  "published_at": "2025-09-06"
+ },
+ {
+  "post_id": "7526268411145404416",
+  "url": "https://juejin.cn/post/7526268411145404416",
+  "title": "莼菜 1年前 人工智能 大模型面经（1） 文本生成的几大预训练任务： 文本生成模型的预训练通常依赖于一系列精心设计的任务",
+  "status": "excluded_no_interview_content",
+  "reason": "复核排除：预训练任务（MLM/CLM/NSP 等）知识笔记，无面试题面与面试来源叙事",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7595232643464134690",
+  "url": "https://juejin.cn/post/7595232643464134690",
+  "title": "居然JuRan 10月前 人工智能 面字节豆包大模型岗，三轮技术面都问了啥？ 算法面经｜字节豆包大模型方向，三轮技术面复",
+  "status": "excluded",
+  "reason": "算法岗面经（字节豆包大模型方向，KV Cache/GQA/RoPE/PPO-DPO/微调 Qwen2 等），按 2026-11-18 用户口径仅采 Agent 应用开发岗，范围排除；详情快照保留于 _tabbit/details_b.json 作证据",
+  "company": "字节跳动（豆包）",
+  "role": "大模型方向（算法）",
+  "round": "三轮技术面",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ],
+  "published_at": "2026-01-15"
+ },
+ {
+  "post_id": "6844903991441113095",
+  "url": "https://juejin.cn/post/6844903991441113095",
+  "title": "黄小斜学Java 7年前 Java Java工程师研发面经大合集 百度研发面经整合版软件研发工程师基础研发工程师百度智能",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7092240931641884709",
+  "url": "https://juejin.cn/post/7092240931641884709",
+  "title": "每天进步一丢丢 4年前 面试 前端 牛客字节面经总结 牛客字节面经总结 HTML，CSS 盒模型有哪些？有哪些使用场景？",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903493359108104",
+  "url": "https://juejin.cn/post/6844903493359108104",
+  "title": "已注销 9年前 百度 前端 百度大搜和度秘面经 百度内推投了俩部门,前前后后总计面了六轮,来写写面经,攒攒人品.大搜是十",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7217019513946669111",
+  "url": "https://juejin.cn/post/7217019513946669111",
+  "title": "迷悟 3年前 前端 面试 最近3年优质前端面经大收集（不定时收录） 最近在刷面试题，收集一些优质的前端面经，这两年的面经",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing",
+   "kw_llm_shezhao",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7369897767181565952",
+  "url": "https://juejin.cn/post/7369897767181565952",
+  "title": "invalid_username 2年前 前端 前端面经 厦门卡伦特 #面经#上来 是个产品部头头 1.常规的面试： 谈",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903991441096712",
+  "url": "https://juejin.cn/post/6844903991441096712",
+  "title": "Java技术江湖 7年前 Java 我的Java秋招面经大合集 这个国庆，大家过的怎么样啊，是到处去玩，还是继续勤勤恳恳",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7492640608206569482",
+  "url": "https://juejin.cn/post/7492640608206569482",
+  "title": "AI大模型爱好者 1年前 人工智能 跑了100多场面试总结的大模型面经 都知道现在大模型岗位香饽饽，但想挤进去，难！是真",
+  "status": "excluded_marketing",
+  "reason": "营销卖课/引流/工具介绍/方法论，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7491954287607824434",
+  "url": "https://juejin.cn/post/7491954287607824434",
+  "title": "狂炫一碗大米饭 1年前 前端 面试 快刷每日面经😋 前言 看今年行情前端似乎有点回暖了，各位友友趁着春招好好在提升一下，",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903968225656839",
+  "url": "https://juejin.cn/post/6844903968225656839",
+  "title": "Java技术江湖 7年前 Java 我的Java秋招面经大合集 阿里面经 阿里中间件研发面经蚂蚁金服研发面经岗位是研发工",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7485296558465826835",
+  "url": "https://juejin.cn/post/7485296558465826835",
+  "title": "王中阳讲AI 1年前 后端 Go 金三银四真实面经分享 从今天开始，不定期分享组织内部成员在金三银四期间的真实面经以及详",
+  "status": "excluded_non_target",
+  "reason": "复核排除：Go 八股（Goroutine/TCP/ETCD/docker），无 Agent/大模型题面；「组织内部成员面经」无公司归属，文末加微信引流",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "6844903970377302030",
+  "url": "https://juejin.cn/post/6844903970377302030",
+  "title": "Java技术江湖 7年前 Java 我的Java秋招面经大合集 这个国庆，大家过的怎么样啊，是到处去玩，还是继续勤勤恳恳",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7232856799170445372",
+  "url": "https://juejin.cn/post/7232856799170445372",
+  "title": "阳树阳树 3年前 前端 面试 2023春招/暑期美团面经大总结 2023春招/暑期美团面经大总结 1. 你对 SPA 的",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7173681999767404580",
+  "url": "https://juejin.cn/post/7173681999767404580",
+  "title": "WangNotFound 3年前 前端 面经 1、讲一下盒模型，普通盒模型和怪异盒模型有什么区别？ 标准的盒子模型的大小",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_mianjing"
+  ]
+ },
+ {
+  "post_id": "7660187713657274414",
+  "url": "https://juejin.cn/post/7660187713657274414",
+  "title": "智泊AI 4月前 LLM 转行大模型应用开发！普通人零基础上岸真实路线！ 去年这个时候，如果有人拦住通勤路上、低头赶路的",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7704235293701914678",
+  "url": "https://juejin.cn/post/7704235293701914678",
+  "title": "Rain的Java大神之路 13天前 面试 Java 国家数据集团校招、社招都开了：总部雄安，这些技术岗值得认真看看 国",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7062568504561500173",
+  "url": "https://juejin.cn/post/7062568504561500173",
+  "title": "3分钟秒懂大数据 4年前 后端 58同城大数据开发社招2、3面(附答案) 大家好，我是土哥。 前两天为大家分享了 58 ",
+  "status": "excluded_non_target",
+  "reason": "58 同城大数据开发，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7707479569980653603",
+  "url": "https://juejin.cn/post/7707479569980653603",
+  "title": "小小疯狐狸 4天前 AI编程 我拆了拆大模型AI招聘市场的真实薪资结构 从应届博士到资深研究员，大模型公司的薪资区间到底",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904164040900616",
+  "url": "https://juejin.cn/post/6844904164040900616",
+  "title": "Java圈子 6年前 Java 阿里头条快手百度美团等大厂JAVA社招面经分享（纯干货） 本篇文章所述的重点包括如下内容",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7071836929150582798",
+  "url": "https://juejin.cn/post/7071836929150582798",
+  "title": "OpenPPL 4年前 面试 2022 招聘 | 商汤 AI 大装置 HPC 部门 自动驾驶与车载系统、机器学习平台与模",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904161348157453",
+  "url": "https://juejin.cn/post/6844904161348157453",
+  "title": "阿拉伯神牛 6年前 Java Java社招（阿里头条快手百度美团等大厂）面经分享【纯干货】 按照惯例，我先来个自我介绍吧",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7634732507104559150",
+  "url": "https://juejin.cn/post/7634732507104559150",
+  "title": "用户708071106605 6月前 面试 AI Agent 社招面试题自动采集器：从搜索到生成答案，全流程拆解 AI ",
+  "status": "excluded_marketing",
+  "reason": "营销卖课/引流/工具介绍/方法论，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7486842883061923878",
+  "url": "https://juejin.cn/post/7486842883061923878",
+  "title": "JavaGuide 1年前 后端 Java 社招 Java 中厂面试记录，难度有点大！ 个人情况：社招一年半 面试公司：",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7537711335893401652",
+  "url": "https://juejin.cn/post/7537711335893401652",
+  "title": "喵喵队开大会 1年前 招聘 【快手社招】Java/测试开发/大模型 快手社会招聘，主要是快手电商的支付业务，欢迎各位在看",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7380299713308868617",
+  "url": "https://juejin.cn/post/7380299713308868617",
+  "title": "JavaGuide 2年前 后端 Java 社招后端中厂面试，全程被吊打！ 这是一位读者参加武汉招银云创社招的面试记录，",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7614786758170394674",
+  "url": "https://juejin.cn/post/7614786758170394674",
+  "title": "小林coding 8月前 前端 后端 专为程序员打造的简历模版来啦！覆盖前端、后端、测开、大模型等专业简历 大家好，我是",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7361805210640449548",
+  "url": "https://juejin.cn/post/7361805210640449548",
+  "title": "程序猿阿三 2年前 算法 【大模型应用篇5】应对裁员潮,突发奇想,打造“收割offer”智能体....... 前段时间飞",
+  "status": "excluded_marketing",
+  "reason": "智能体教程文，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7650394930301779995",
+  "url": "https://juejin.cn/post/7650394930301779995",
+  "title": "郭东东 5月前 招聘 AI编程 用数据工程与策略，推动模型持续进化｜字节跳动招聘全栈研发工程师 - AI 数据与安全 大",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7691154454523920418",
+  "url": "https://juejin.cn/post/7691154454523920418",
+  "title": "Andy_SHEIN内推 1月前 求职 [深圳9.30岗位更新] SHEIN 内推：算法/大模型/后端/数据/安全/测试",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7414732427301224482",
+  "url": "https://juejin.cn/post/7414732427301224482",
+  "title": "Knockkk 2年前 前端 面试 三年前端，从校招到社招，从小厂到大厂的一些感受 小厂VS.大厂 小厂与大厂工作有什么",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7691154454524149794",
+  "url": "https://juejin.cn/post/7691154454524149794",
+  "title": "霍格沃兹_测试 1月前 人工智能 测试 2026年理想汽车职级薪资：测试开发能拿多少？附社招面试题 新能源汽车越来越智能",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7404780384544882703",
+  "url": "https://juejin.cn/post/7404780384544882703",
+  "title": "wendux 2年前 前端 后端 字节生服急缺前后端-内推（北上成杭） 字节跳到生服招聘内推，前后端都缺，校招、实习、社",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7691160156302032896",
+  "url": "https://juejin.cn/post/7691160156302032896",
+  "title": "霍格沃兹_测试 1月前 测试 人工智能 2026年携程职级薪资：2—8级年包多少？附测试开发社招面试题 准备跳槽携程，很",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844903490502787085",
+  "url": "https://juejin.cn/post/6844903490502787085",
+  "title": "微醺岁月 9年前 JavaScript 面试 面试分享：一年经验初探阿里巴巴前端社招 最近，试了一把阿里社招面试，分享一",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7157274296241373198",
+  "url": "https://juejin.cn/post/7157274296241373198",
+  "title": "Dartagnan 4年前 招聘 【社招大量HC】中信银行大数据中心 诚招数据挖掘工程师、数据治理岗、算法工程师、数据产",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7543846138358956032",
+  "url": "https://juejin.cn/post/7543846138358956032",
+  "title": "大模型教程 1年前 LLM Agent 不要傻呵呵等金九银十了（附大模型面试题） 最近在和一些同学交流中发现，无论是社招",
+  "status": "excluded_marketing",
+  "reason": "大模型教程号引流文，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7691126299994898472",
+  "url": "https://juejin.cn/post/7691126299994898472",
+  "title": "霍格沃兹_测试 1月前 测试 2026年美团职级薪资：测试开发L5—L10能拿多少？附AI测试社招面试题 如果你是做测试",
+  "status": "excluded_marketing",
+  "reason": "复核排除：培训号薪资分析+备考建议，题目为基于美团公开技术博客的教学整理，无真实面试来源；霍格沃兹系列（美团/携程/理想 3 篇）同模式定性",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ],
+  "published_at": "2026-09-30"
+ },
+ {
+  "post_id": "7159560106462412814",
+  "url": "https://juejin.cn/post/7159560106462412814",
+  "title": "用户1580844860941 4年前 招聘 华为 15 到 18 级的研发族社招工作岗位内推 华为 15 到 18 级",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7252198258133909561",
+  "url": "https://juejin.cn/post/7252198258133909561",
+  "title": "JavaGuide 3年前 后端 上海三年半社招，PDD 、字节及证券面经 个人情况 坐标上海，19 年 985 硕毕业",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao",
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6901582646887841799",
+  "url": "https://juejin.cn/post/6901582646887841799",
+  "title": "九章算法 5年前 Google 像 Google、Facebook、微软这样的超级大公司招聘，会很看重学历吗？ 相对于国",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7079235598417920030",
+  "url": "https://juejin.cn/post/7079235598417920030",
+  "title": "来杯98年的奶茶 4年前 Java Java应届生，应该学到哪种程度 Java应届生，要学到什么程度呢？先说一下Java",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7411124991884787762",
+  "url": "https://juejin.cn/post/7411124991884787762",
+  "title": "wendux 2年前 前端 招聘 字节内推-校招实习（北上成杭） 25年毕业同学看过来！抖音生活服务内推直达，公司福利好",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7415197931253940278",
+  "url": "https://juejin.cn/post/7415197931253940278",
+  "title": "阿里云大数据AI技术 2年前 人工智能 LLM 【Paper Reading】结合 NanoFlow 研究，优化大语言模",
+  "status": "excluded_marketing",
+  "reason": "营销卖课/引流/工具介绍/方法论，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844903504872488968",
+  "url": "https://juejin.cn/post/6844903504872488968",
+  "title": "Chris8991 9年前 面试 前端 面试分享：一年经验初探阿里巴巴前端社招 一般阿里社招都是招3-5年的P6+高级工",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7699871906405335082",
+  "url": "https://juejin.cn/post/7699871906405335082",
+  "title": "王花財 25天前 人工智能 AI 招聘哪家靠谱？面向高并发招工场景的 AI 原生 ATS 技术选型与落地实践 在企业 H",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7245489105659412539",
+  "url": "https://juejin.cn/post/7245489105659412539",
+  "title": "突头小恐龙 3年前 面试 程序员 带你彻底搞懂校招社招，助你大学不迷茫！ 一、校招篇 适用对象： 未毕业的专科、本科、研",
+  "status": "excluded_marketing",
+  "reason": "营销卖课/引流/工具介绍/方法论，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7090478288396632095",
+  "url": "https://juejin.cn/post/7090478288396632095",
+  "title": "刘大拿说校招 4年前 JavaScript 【java校招你不知道的那些事儿】校招和社招的区别是什么？为什么不参加社招 ",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7547330342723239982",
+  "url": "https://juejin.cn/post/7547330342723239982",
+  "title": "用户73977418198 1年前 招聘 瓴岳科技内推（社招&校招 🎯 瓴岳科技内推通道开启啦！ 点击下方链接即可快速投",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7371358861523533851",
+  "url": "https://juejin.cn/post/7371358861523533851",
+  "title": "花海blog 2年前 面试 探秘Android客户端开发面试：社招考点大揭秘 前言 在Android客户端开发的职业道路",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7623800460329254927",
+  "url": "https://juejin.cn/post/7623800460329254927",
+  "title": "MrFan111 7月前 面试 微派内推 🎮 微派网络内推 | 社招&校招同步开放！MTF3KRU 助你直通面试！ 武汉",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844903470516928520",
+  "url": "https://juejin.cn/post/6844903470516928520",
+  "title": "rapospectre 9年前 面试 后端 2017 后端面试经历分享 0.背景 博主本人 2015 年毕业于郫县某 9",
+  "status": "excluded_non_target",
+  "reason": "2017 后端面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7674145872716136448",
+  "url": "https://juejin.cn/post/7674145872716136448",
+  "title": "Andy_SHEIN内推 3月前 招聘 [深圳/上海/南京] SHEIN 数据工程岗合集（数据开发/数仓开发/大数据平台",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_llm_shezhao"
+  ]
+ },
+ {
+  "post_id": "7369909173939093513",
+  "url": "https://juejin.cn/post/7369909173939093513",
+  "title": "窗边的anini 2年前 前端 面试 【前端面经 | 面试复盘】2024 社招还算有金三银四吗？ 基本情况 关键词：前端",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7008373107530563592",
+  "url": "https://juejin.cn/post/7008373107530563592",
+  "title": "用户5653801933025 5年前 面试 阿里社招两年前端面经 阿里社招两年前端面经 面试流程：简历筛 -> 一面技",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7371445601554530355",
+  "url": "https://juejin.cn/post/7371445601554530355",
+  "title": "窗边的anini 2年前 前端 面试 【前端面经】滴滴 面试 项目中有遇到哪些难点吗？怎么解决的？ 项目中的自定义 ho",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6847902217211478029",
+  "url": "https://juejin.cn/post/6847902217211478029",
+  "title": "互联网宇航员 6年前 面试 纯干货！字节跳动 100 篇精选面经集锦（建议收藏分享） 作为字节Top10内推人，有越来越",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6953780078262091783",
+  "url": "https://juejin.cn/post/6953780078262091783",
+  "title": "yosgi 5年前 JavaScript 上海携程前端社招面经 上海携程前端社招面经 电面 ： 自我介绍 react 的",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7007991848308310024",
+  "url": "https://juejin.cn/post/7007991848308310024",
+  "title": "鱼酱 5年前 前端 面试 阿里社招两年前端面经 认真复习认真总结，认真对待每一场面试，把每一场面试都当成一次学习的机会，",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7366175769603309587",
+  "url": "https://juejin.cn/post/7366175769603309587",
+  "title": "张XX 2年前 面试 JavaScript 前端社招面经 一面会考一些前端基本知识，二面主要结合项目进行深入的提问。# ",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7155290019232481311",
+  "url": "https://juejin.cn/post/7155290019232481311",
+  "title": "前端时代周刊 4年前 前端 面试 【最新面经】海归硕士的社招经历 大家好，我是雷布斯，咱们今天就来学习下，一位3年工作经",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7387674472684126259",
+  "url": "https://juejin.cn/post/7387674472684126259",
+  "title": "窗边的anini 2年前 面试 前端 【前端面经】MiniMax 面试 MiniMax 公司官网：https://www",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7002231668886994952",
+  "url": "https://juejin.cn/post/7002231668886994952",
+  "title": "我叫小七 5年前 面试 2年经验社招微信5面面经 新鲜的微信面经来啦..........................",
+  "status": "excluded_non_target",
+  "reason": "5 年前微信 5 面老帖，无大模型方向信息（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7369485528709742629",
+  "url": "https://juejin.cn/post/7369485528709742629",
+  "title": "窗边的anini 2年前 前端 面试 【前端面经】蚂蚁集团 面试 一面 编码题 非递归实现二叉树中序遍历 leetcod",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7342766597243846691",
+  "url": "https://juejin.cn/post/7342766597243846691",
+  "title": "花海blog 2年前 程序员 Android双非社招面经分享 最近一段时间面试了几家互联网公司，陆续通过了阿里、头条、美",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7369761632275955722",
+  "url": "https://juejin.cn/post/7369761632275955722",
+  "title": "窗边的anini 2年前 面试 前端 【前端面经】美图Meitu 面试 基本情况介绍： 社招三年 一面 做的主要是什么项",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7351726029324042267",
+  "url": "https://juejin.cn/post/7351726029324042267",
+  "title": "窗边的anini 2年前 前端 面试 【前端面经】字节、钉钉、饿了么 面试 最近面的几个大厂面经分享，给自己攒一波人品，",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6955396615481851912",
+  "url": "https://juejin.cn/post/6955396615481851912",
+  "title": "虚拟大师 5年前 程序员 C大师_前端工程师各大公司面试更新表_v20200801 ​多益社招&网易外包web前端社招面",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6872336413829169159",
+  "url": "https://juejin.cn/post/6872336413829169159",
+  "title": "豆汁 6年前 面试 【Java岗】9月华为校招+阿里巴巴社招完整面经 面试只是对个人技术及应变能力的一次考验。只有解决了",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7011039042565308452",
+  "url": "https://juejin.cn/post/7011039042565308452",
+  "title": "mtonhuang 5年前 前端 面试 微信前端社招算法面经 楼主于数个月前面了wxg，前前后后3、4面，几乎每一面都有",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7426307140866048037",
+  "url": "https://juejin.cn/post/7426307140866048037",
+  "title": "maverick_z 2年前 后端 4年服务端社招面经 最近9月份出去面试了一波互联网公司，面试前准备了差不多两个星期，",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904147091718152",
+  "url": "https://juejin.cn/post/6844904147091718152",
+  "title": "Cooyue柯同学 6年前 面试 美团前端面经一面 博主现在读大三，前端小白一只，正在准备春招，人生第一次投档，是投了腾",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7018427747617751076",
+  "url": "https://juejin.cn/post/7018427747617751076",
+  "title": "前端面试题宝典 5年前 前端 面试 社招字节跳动商业化前端面试面经 本文是小伙伴对字节跳动商业化前端面试的总结,希望这篇",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7680074044788883502",
+  "url": "https://juejin.cn/post/7680074044788883502",
+  "title": "啊瑾 2月前 前端 面试 2026 宇宙厂 前端社招面经（凉） 本人最近的社招面试经历，第一次在大厂的面试中面了这么多轮",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904096772669448",
+  "url": "https://juejin.cn/post/6844904096772669448",
+  "title": "停止幻想重新来过 6年前 面经 本文主要收集前端面试题和面试经验，希望帮助大家在面试中能游刃有余持续更新中……目录简历面",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7056966218837655589",
+  "url": "https://juejin.cn/post/7056966218837655589",
+  "title": "鄙人薛某 4年前 面试 后端 大厂面试：一个四年多经验程序员的BAT面经（字节、阿里、腾讯） 上次写了篇欢聚时代的面经，",
+  "status": "excluded_marketing",
+  "reason": "营销卖课/引流/工具介绍/方法论，无真实面试来源（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6974260760448860174",
+  "url": "https://juejin.cn/post/6974260760448860174",
+  "title": "用嘴写代码 5年前 Java 网易Java社招面经34题，助你“大展拳脚”！ 我记得之前有网友投稿过一篇网易的，忘记了是",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7473014291734822938",
+  "url": "https://juejin.cn/post/7473014291734822938",
+  "title": "上班苦姐 1年前 前端 面试 百度社招面经（凉凉版） 百度社招面试、前端八股文、100元发10个随机金额的红包、分词算法",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7388635438741389321",
+  "url": "https://juejin.cn/post/7388635438741389321",
+  "title": "云雨雪 2年前 后端 面试 意难平的滴滴支付一二三轮5年社招面经 为什么叫不一样面经呢？因为就像Java生态一样，太广了",
+  "status": "excluded_non_target",
+  "reason": "Java/后端/客户端岗面经，非本方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904130239037454",
+  "url": "https://juejin.cn/post/6844904130239037454",
+  "title": "掘金酱 6年前 面试 前端 【新鲜面经】技术面试并不难，掘友经验带上岸 | 掘金技术征文展（第二弹） 你好呀，我是掘金酱",
+  "status": "excluded_non_target",
+  "reason": "前端岗面经，非 Agent/大模型开发方向（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "6844904102627917831",
+  "url": "https://juejin.cn/post/6844904102627917831",
+  "title": "HollisChuang 6年前 招聘 【附面经】阿里内推，简历直达主管，社招社招都有~！ 我是如何通过校招拿到京东的O",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ },
+ {
+  "post_id": "7002233276861513758",
+  "url": "https://juejin.cn/post/7002233276861513758",
+  "title": "我能熬又能学 5年前 面试 2021百度前端社招面经 写在前面: 我是一个3年经验的前端开发工程师，在魔术师卡颂朋友圈里",
+  "status": "excluded_recruitment",
+  "reason": "招聘/内推/薪资资讯，非面经（按标题排除，未读正文）",
+  "company": "unspecified",
+  "role": "unspecified",
+  "round": "unspecified",
+  "channel": "未标注",
+  "question_ids": [],
+  "keywords": [
+   "kw_agent_shezhao"
+  ]
+ }
+]

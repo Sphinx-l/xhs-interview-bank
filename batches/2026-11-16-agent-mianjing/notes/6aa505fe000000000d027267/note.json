@@ -1,0 +1,25 @@
+{
+  "note_id": "6aa505fe000000000d027267",
+  "url": "https://www.xiaohongshu.com/explore/6aa505fe000000000d027267",
+  "title": "Agent面试连环追问，你能坚持到第几关",
+  "author": "J同学qej",
+  "desc": "Agent 自动化评估真正难的，是解释：这个分数到底测了什么、为什么可信，最终答对但中间越权调用工具时，系统又能不能发现。\n\t\n我结合公开面经和技术资料，把自动化评估方法串成了 13 道连环追问。\n\t\n1️⃣ 从确定性验证和 LLM Judge 怎么分工，到一个可执行的 Rubric 怎样写清评分锚点、Essential、Important 与 Veto；\n2️⃣ 从长度偏差、位置偏差和同源偏见，追到人工金标怎么校准 Judge，单评委、多评委和多源评判又该怎么选；\n3️⃣ 再从 Reward Hacking 与 Goodhart’s Law，追到为什么失败归因要找首个错误，而不是盯着最后一个报错；\n4️⃣ 最后落到 old_string mismatch 的逐层定位、端到端与 trajectory-prefix 回归、多模态 Judge，以及 Elo 和 Bradley–Terry 的边界。\n\t\n整理过程中最大的感受是：自动化不等于可信。能查真实终态的地方，就不能只看 Agent 自己怎么说；模型 Judge 也不是标准答案，它的版本、提示词、展示顺序和参考样本都可能让结论漂移。\n\t\n所以一套真正可用的评估系统，不该只输出排行榜，而要能回答：为什么得这个分、首个错误在哪一层、修复后能不能稳定复现。\n\t\n如果面试官从 LLM-as-a-Judge 一路追到 Bradley–Terry，这 13 关你能答到第几关？\n\t\n希望能帮到大家，持续学习！\n#Agent[话题]# #Agent开发[话题]# #Agent评测[话题]# #LLMJudge[话题]# #Rubric[话题]# #失败归因[话题]# #大模型[话题]# #面试题[话题]# #面经[话题]# #学习[话题]# #打卡[话题]#",
+  "published_at": "2026-09-12T15:57:50+08:00",
+  "likes": "61",
+  "type": "normal",
+  "tag_list": [
+    "Agent",
+    "Agent开发",
+    "Agent评测",
+    "LLMJudge",
+    "Rubric",
+    "失败归因",
+    "大模型",
+    "面试题",
+    "面经",
+    "学习",
+    "打卡"
+  ],
+  "image_count": 6,
+  "collected_at": "2026-11-18T20:54:32+08:00"
+}

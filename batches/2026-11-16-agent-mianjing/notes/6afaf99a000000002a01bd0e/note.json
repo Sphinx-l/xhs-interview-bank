@@ -1,0 +1,24 @@
+{
+  "note_id": "6afaf99a000000002a01bd0e",
+  "url": "https://www.xiaohongshu.com/explore/6afaf99a000000002a01bd0e",
+  "title": "虾皮-后端Agent工程师面经2",
+  "author": "offer来来来",
+  "desc": "实习面经\n\t\n项目\n负责什么，什么角色，做出什么贡献？（粗糙提问）\n\t\n手撕1\n模拟大数据的 MapReduce 工作方式，写两个函数，一个 map，一个 reduce，进行 word counting，统计每个单词的出现频次。\n\t\n按照文章的段落数量（段以一个或者多个换行符分割），启动相应数量的 thread 去调用 map 函数去计算每段中 word count。\n\t\n然后通过 reduce 函数汇总，最后输出。\n\t\n例如，输入如下英文文字：\nThis is a short test line.\n\t\nThis is a long test line , It is designed for the MapReduce problem. and MapReduce should go 3 times in this line, so here goes another MapReduce.\n\t\nThis is a test line too designed for MapReduce.\n由于该段文字有三个段落，因此可以启动三个线程，每个线程各自调用 map 统计一个段落。最后将统计数据发送到 reduce 函数中汇总。\n\t\n比如，上述文章中，单词“MapReduce”在第一段出现 0 次，第二代出现 3 次，第三段出现 1 次，那么“MapReduce”一共出现了 4 次。\n\t\n最后汇总后，应输出：\nMapReduce:4\n依次类推\nThis:3\nthis:1\na:3\n....\n注：可以将这些字符串写死在代码内，不用输入。\n\t\n手撕2\n平方根，牛顿二分法，2位小数，python做\n\t\n#24h新鲜面经[话题]# #后端开发[话题]# #面经[话题]# #前端面试[话题]# #面试求职[话题]# #面试辅导[话题]# #程序员[话题]# #agent[话题]# #大模型[话题]# #大模型面试[话题]#",
+  "published_at": "2026-11-16T20:39:54+08:00",
+  "likes": "16",
+  "type": "normal",
+  "tag_list": [
+    "24h新鲜面经",
+    "后端开发",
+    "面经",
+    "前端面试",
+    "面试求职",
+    "面试辅导",
+    "程序员",
+    "agent",
+    "大模型",
+    "大模型面试"
+  ],
+  "image_count": 1,
+  "collected_at": "2026-11-18T20:51:50+08:00"
+}

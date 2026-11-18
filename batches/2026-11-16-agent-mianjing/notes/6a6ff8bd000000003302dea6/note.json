@@ -1,0 +1,24 @@
+{
+  "note_id": "6a6ff8bd000000003302dea6",
+  "url": "https://www.xiaohongshu.com/explore/6a6ff8bd000000003302dea6",
+  "title": "追觅科技 AI Agent 全栈三面",
+  "author": "程序员峰哥",
+  "desc": "面试感受：\n\t\n三面下来确实不水，不是背八股能混过去的。一面就直接往项目里戳，Python Java 两边都要能切换，光会调 LangChain 高层 API 必被问穿。二面 LangGraph 状态机和 harness 那块面试官明显自己踩过坑，答浅了直接冷笑。三面已经开始考你敢不敢拍板做减法，不是看你知不知道 MCP 是啥。算法题不算卷，但都要边写边讲复杂度，卡壳就追问边界。整体偏生产落地，追觅这岗位不像在招模型研究员，是在招能把 Agent 塞进业务系统还扛得住线上的那种人。难是真难，但问得干净，不绕弯子。\n\t\n#大模型[话题]# #java[话题]# #agent开发[话题]# #面经[话题]# #面试求职[话题]# #面试题[话题]# #后端开发[话题]# #aiagent[话题]# #ai智能体[话题]# #howto入门codex[话题]#",
+  "published_at": "2026-08-03T10:11:09+08:00",
+  "likes": "643",
+  "type": "normal",
+  "tag_list": [
+    "大模型",
+    "java",
+    "agent开发",
+    "面经",
+    "面试求职",
+    "面试题",
+    "后端开发",
+    "aiagent",
+    "ai智能体",
+    "howto入门codex"
+  ],
+  "image_count": 8,
+  "collected_at": "2026-11-18T20:44:37+08:00"
+}

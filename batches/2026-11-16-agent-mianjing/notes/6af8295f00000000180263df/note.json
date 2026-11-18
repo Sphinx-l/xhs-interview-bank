@@ -1,0 +1,18 @@
+{
+  "note_id": "6af8295f00000000180263df",
+  "url": "https://www.xiaohongshu.com/explore/6af8295f00000000180263df",
+  "title": "AI Agent 入门一面面经 基础题",
+  "author": "抹茶",
+  "desc": "希望可以帮到你，free\n大模型八股文到底考什么?\n1.基础架构\nTransformer自注意力原理、为什么比RNN适合长序列;RoPEvs绝对位置编码;MHA/MQA/ GQA区别，为什么现在都用GQA\n2.训练微调\n预训练SFTRLHF全流程;LoRA为什么A高斯 B全0;QLoRA的NF4量化;灾难性遗忘怎么解\n3.强化学习对齐\nPPO vs DPO vs GRPO核心差异;GRPO为什么不需要Critic;Reward Hacking怎么防;KL散度作用\n4.推理工程\nKV Cache原理与显存计算;Flash Attention怎么降显存;vLLM的PagedAttention;解码策略对比\n5.应用前沿\nRAG全链路:切片向量化检索重排生成;Agent架构与工具调用;MoE怎么扩参数不增成本;DeepSeek/R1核心创新\n6.大厂面试特点:百度偏基础+代码，腾讯重工程落地，阿里深挖RL和推理优化。手撕高频: Attention、 RoPE、 Tokenizer.\n#零基础学大模型[话题]# #AI[话题]# #agent开发[话题]# #大模型面试[话题]#",
+  "published_at": "2026-11-14T17:26:55+08:00",
+  "likes": "10",
+  "type": "normal",
+  "tag_list": [
+    "零基础学大模型",
+    "AI",
+    "agent开发",
+    "大模型面试"
+  ],
+  "image_count": 11,
+  "collected_at": "2026-11-18T20:44:37+08:00"
+}

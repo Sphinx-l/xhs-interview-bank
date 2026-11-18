@@ -1,0 +1,44 @@
+{
+ "6a6027de": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6a6027de000000000903594a\", waiting un"
+ },
+ "6ad6b3b2": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ad6b3b20000000031007a0e\", waiting un"
+ },
+ "6adc0286": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6adc0286000000003101c4df\", waiting un"
+ },
+ "6adf6d34": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6adf6d34000000001201820c\", waiting un"
+ },
+ "6adff2d4": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6adff2d4000000002802d464\", waiting un"
+ },
+ "6ae1ad31": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ae1ad31000000001f0150df\", waiting un"
+ },
+ "6ae2e7be": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ae2e7be000000001d00fc08\", waiting un"
+ },
+ "6ae5608a": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ae5608a00000000180249fc\", waiting un"
+ },
+ "6ae700ff": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ae700ff000000001a022f02\", waiting un"
+ },
+ "6ae990ce": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6ae990ce000000000303867c\", waiting un"
+ },
+ "6aeb2f0f": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6aeb2f0f0000000019000a47\", waiting un"
+ },
+ "6aeb4d5e": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6aeb4d5e00000000030148b4\", waiting un"
+ },
+ "6af5686e": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6af5686e000000002b02866a\", waiting un"
+ },
+ "6afc1c66": {
+  "error": "Error: page.goto: Protocol error (Page.navigate): Navigation URL is not allowed\nCall log:\n\u001b[2m  - navigating to \"6afc1c6600000000250089bd\", waiting un"
+ }
+}

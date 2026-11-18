@@ -1,0 +1,13 @@
+{
+  "note_id": "6a918ac70000000021027cb0",
+  "url": "https://www.xiaohongshu.com/explore/6a918ac70000000021027cb0",
+  "title": "字节agent开发(抖音开发)一面面经",
+  "author": "熊掌与鱼🐟",
+  "desc": "一面大概 60min 左右\n前面简单自我介绍，然后基本就开始围绕项目追问\n1. 先介绍一下你做的这个 Agent 项目，主要解决什么问题？\n2. 用户输入一个 Query 以后，你整个系统的执行链路是什么？\n3. 用户 Query 进来以后，最先进入哪个 Agent？\n4. 最后又是哪个 Agent 负责把结果返回给用户？\n5. 中间如果涉及多个 Agent，是怎么决定应该路由到哪个 Agent 的？\n6. 这个路由是规则做的，还是让大模型自己判断\n7. 如果用户一个 Query 里面同时包含多个任务，你们是怎么拆分的\n8. 任务拆分以后是串行执行还是并行执行？\n9. Plan Agent 和 Execute Agent 分别负责什么？\n10. 是不是所有任务都会先经过 Plan Agent？\n11. 如果只是一个非常简单的任务，还重新生成完整 Plan，会不会反而降低效率？\n12. 简单任务为什么不能直接用 ReAct 完成？\n13. Multi-Agent 和 Single-Agent 最大的区别是什么？\n14. 多 Agent 相比单 Agent 的优势在哪里？\n15. 多 Agent 会带来哪些额外问题？\n16. 为什么不能用一个 Agent + 多个 Skill 来替代 Multi-Agent？\n17. Skill 和 Agent 在你这里分别承担什么职责？\n18. Agent 之间有没有做上下文隔离？\n19. 如果做了上下文隔离，Agent 之间又是怎么进行通信的？\n20. Agent A 能不能直接看到 Agent B 的完整历史上下文？\n21. Agent 之间传递的是完整对话，还是结构化的中间结果？\n22. 为什么不直接把所有上下文都塞给每个 Agent？\n23. 多 Agent 协作的时候，怎么避免上下文越来越长？\n24. 如果一个 Agent 执行失败，系统怎么处理？\n25. 如果 Agent 一直重复调用同一个工具，怎么判断它进入死循环？\n26. Agent Loop 一般什么时候结束？\n27. 模型说自己“任务完成了”，系统就直接相信吗？还是会做结果校验？\n28. 如果模型选错工具了，你们系统怎么兜底？\n29. 工具调用超时或者返回异常以后，是直接终止还是继续让 Agent 重试？\n30. 如果换一个底层大模型，你们整个 Agent 架构需要改多少？\n31. 你这个项目里的 RAG 是怎么做的？从文档进入系统开始完整讲一下\n32. 原始文档是怎么切 Chunk 的？Chunk Size 和overlap多少？怎么确定？\n33. 用户 Query 进来以后，在检索之前有没有做 Query Rewrite？\n34. Query Rewrite 如果把用户原始意图改错了怎么办？\n35. 为什么你们检索要用 BM25 + Dense Retrieval，只用 Dense 不行吗？\n这里面RAG其实追得比较细，直接说我们用了向量数据库，然后topk召回，再rerank这种其实是不太行",
+  "published_at": "2026-08-28T21:19:03+08:00",
+  "likes": "1520",
+  "type": "normal",
+  "tag_list": [],
+  "image_count": 6,
+  "collected_at": "2026-11-18T20:35:09+08:00"
+}

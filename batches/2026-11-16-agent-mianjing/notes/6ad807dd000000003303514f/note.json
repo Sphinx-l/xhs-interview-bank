@@ -1,0 +1,24 @@
+{
+  "note_id": "6ad807dd000000003303514f",
+  "url": "https://www.xiaohongshu.com/explore/6ad807dd000000003303514f",
+  "title": "10.20 快手 agent harness 二面",
+  "author": "程序员峰哥",
+  "desc": "1、自我介绍\n\t\n2、你们项目里 Agent 的任务状态存在哪，中断后怎么恢复\n\t\n3、多 Agent 协作时，Planner、Executor、Verifier 各自负责什么\n\t\n4、多 Agent 之间怎么通信，共享状态和私有状态怎么划分\n\t\n5、多个 Agent 拿到不同时间的数据怎么办，怎么避免状态不一致\n\t\n6、Agent 的 Trace 要记哪些字段，Replay 为什么冻结工具结果而不是重新调用\n\t\n7、Agent 评测体系怎么搭，离线评测、线上观测、人工抽检分别看什么指标\n\t\n8、RAG 幻觉怎么降，召回质量、排序质量、最终答案质量怎么分别评测\n\t\n9、Spring AI 或 LangChain 里 Tool、Memory、Chain、Graph 分别解决什么问题\n\t\n10、MCP 和 Function Calling 是什么关系，生产级 MCP Server 要做哪些安全治理\n\t\n11、Skill 机制是什么，工具/技能很多时怎么路由，为什么要延迟加载\n\t\n12、线程池核心参数和任务提交流程，Agent 并发执行子任务时线程池怎么配\n\t\n13、分布式令牌桶限流怎么实现，多实例下怎么保证不超放\n\t\n14、百万级商品知识库动态更新场景怎么设计，增量更新和向量库同步怎么做\n\t\n15、手撕算法：二叉树的层序遍历，并要求按层输出结果\n\t\n#agent开发[话题]# #aiagent[话题]# #harness[话题]# #java[话题]# #大模型[话题]# #面试题[话题]# #24h新鲜面经[话题]# #秋招每周复盘[话题]# #秋招每日一投[话题]# #秋招邪修版[话题]#",
+  "published_at": "2026-10-21T08:31:25+08:00",
+  "likes": "74",
+  "type": "normal",
+  "tag_list": [
+    "agent开发",
+    "aiagent",
+    "harness",
+    "java",
+    "大模型",
+    "面试题",
+    "24h新鲜面经",
+    "秋招每周复盘",
+    "秋招每日一投",
+    "秋招邪修版"
+  ],
+  "image_count": 3,
+  "collected_at": "2026-11-18T20:50:25+08:00"
+}

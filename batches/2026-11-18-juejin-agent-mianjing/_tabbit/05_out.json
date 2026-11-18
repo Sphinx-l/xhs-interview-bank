@@ -1,0 +1,2 @@
+TABBIT_PLAYWRIGHT_INSTANCE=00877CE42CF9FFCC
+{"result":{"byteLength":39267,"elapsedMs":18844,"nextAction":"If a few facts answer the next decision, rerun a bounded extraction such as tabbit.observe({maxChars: 6000}); otherwise read the bounded resource slice.","requestId":"details-b-05","resourceId":"result-15628f23-2e42-4d3d-92d0-7b9bd6686e6f"},"status":"succeeded","transition":{"closedPages":[],"documentGeneration":33,"openedPages":[],"pageCount":1,"targetEpoch":2,"url":"https://juejin.cn/post/7691126299994898472","urlChanged":true}}

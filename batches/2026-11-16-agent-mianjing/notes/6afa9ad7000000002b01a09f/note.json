@@ -1,0 +1,22 @@
+{
+  "note_id": "6afa9ad7000000002b01a09f",
+  "url": "https://www.xiaohongshu.com/explore/6afa9ad7000000002b01a09f",
+  "title": "小红书redstar 最全面经",
+  "author": "偷吃茉莉",
+  "desc": "📌写在前面：\n之前博主的面经写业务理解，比较抽象\n现在对于面试中的实际技术点做一个分享\n求三连🙏\n面试岗位：redstar 社区治理\n主要方向：Agent / 后训练\n\t\n☘️一面\n面试难度：🌟🌟🌟🌟\n考察知识点：\n▪️SFT 数据构造、Loss Mask 设计\n▪️PPO / GRPO / DPO 核心区别\n▪️GRPO 优势估计及 KL Penalty\n▪️Reward Model 训练及 Reward Hacking\n▪️OPD 原理及 Teacher-Student 训练\n▪️On-policy / Off-policy 的区别\n▪️Agentic RL 中 Reward 如何设计？\n\t\n☘️二面\n面试难度：🌟🌟🌟🌟🌟\n考察知识点：\n▪️ReAct / Plan-and-Execute 架构区别\n▪️Agent 和 Workflow 如何选择？\n▪️Tool Calling 失败如何恢复？\n▪️Agent 长链路错误累积如何解决？\n▪️Memory / Context 管理策略\n▪️如何构建 Agent 轨迹评测体系？\n\t\n☘️三面\n面试难度：🌟🌟🌟🌟🌟🌟\n考察知识点：\n▪️为什么业务场景需要 Agent？\n▪️Agent 相比传统 Pipeline 的核心收益\n▪️如何优化 Agent 的规划与决策能力？\n▪️如何构造高质量训练数据？\n▪️如何判断 Agent 的错误来自模型还是工具？\n▪️Agent 任务成功率提升但线上收益不明显怎么办？\n\t\n☘️四面\n面试难度：🌟🌟🌟🌟\n考察知识点：\n▪️哪些场景适合 Agent，哪些不适合？\n▪️Agent 如何平衡效果、延迟与成本？\n▪️如何设计线上 A/B 和消融实验？\n▪️如何证明业务收益来自 Agent？\n▪️如果 Agent 效果提升但成本翻倍，是否上线？\n\t\n☘️五面\n面试难度：🌟🌟🌟\n考察知识点：\n▪️项目最大的业务价值是什么？\n▪️为什么选择当前技术方案？\n▪️如何定义 Agent 项目的核心指标？\n▪️如何评估项目投入产出比？\n▪️如何判断 Agent 技术的长期业务价值？\n\t\n📌面试总结：\n整体来看面试流程还是很丝滑，因为方向的绝对对口，聊起来完全没有困难。\n需要私聊的关注后发私信，看到都会回。\n#Agent[话题]# #大模型面试[话题]# #算法面经[话题]# #后训练[话题]# #大厂面试[话题]#\n#redstar[话题]# #小红书[话题]##字节跳动[话题]#",
+  "published_at": "2026-11-16T13:55:35+08:00",
+  "likes": "22",
+  "type": "normal",
+  "tag_list": [
+    "Agent",
+    "大模型面试",
+    "算法面经",
+    "后训练",
+    "大厂面试",
+    "redstar",
+    "小红书",
+    "字节跳动"
+  ],
+  "image_count": 1,
+  "collected_at": "2026-11-18T20:49:09+08:00"
+}

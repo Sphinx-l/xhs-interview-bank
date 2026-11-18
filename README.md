@@ -4,10 +4,15 @@
 
 ## 面经入口（按公司）
 
+- 批次零 [2026-11-16-agent-mianjing](batches/2026-11-16-agent-mianjing/README.md)（小红书·试点）：67 卡片 / 48 篇题源（Agent 应用开发岗）/ 1,108 条题面 → [公司索引](batches/2026-11-16-agent-mianjing/mianjing/README.md)（字节系/阿里系/腾讯/美团等）
 - 批次一 [2026-11-17-agent-mianjing](batches/2026-11-17-agent-mianjing/README.md)（小红书）：23 篇面经 → [公司索引](batches/2026-11-17-agent-mianjing/mianjing/README.md)
-- 批次二 [2026-11-17-llm-mianjing](batches/2026-11-17-llm-mianjing/README.md)（小红书）：974 张卡片 / 617 篇复核 / **160 篇题源**（正文题面 76 + 图片题面 84 待画面提取）/ 928 条裸题 → [公司索引](batches/2026-11-17-llm-mianjing/mianjing/README.md)（28 家公司 66 篇已出，图片型与待补采陆续补齐）
-- 批次三 [2026-11-18-niuke-agent-mianjing](batches/2026-11-18-niuke-agent-mianjing/README.md)（牛客）：68 张卡片 / 57 篇复核 / **48 篇题源** / 1599 行题目 → [公司索引](batches/2026-11-18-niuke-agent-mianjing/mianjing/README.md)（30 家公司）
-- 批次四 [2026-11-18-niuke-shezhao](batches/2026-11-18-niuke-shezhao/README.md)（牛客·定向社招）：**10 篇社招题源** / 338 行题目 → [公司索引](batches/2026-11-18-niuke-shezhao/mianjing/README.md)（蚂蚁/抖音/淘天/快手/深信服/懂车帝等 10 家）
+- 批次二 [2026-11-17-llm-mianjing](batches/2026-11-17-llm-mianjing/README.md)（小红书）：974 张卡片 / 617 篇复核 / **138 篇题源**（图片型 84 篇待画面提取）→ [公司索引](batches/2026-11-17-llm-mianjing/mianjing/README.md)（**45 篇已出**，岗位审核后仅留 Agent 应用开发岗；图片型陆续补齐）
+- 批次三 [2026-11-18-niuke-agent-mianjing](batches/2026-11-18-niuke-agent-mianjing/README.md)（牛客）：68 张卡片 / 57 篇复核 / **32 篇题源（Agent 应用开发岗）** / 1,256 行题目 → [公司索引](batches/2026-11-18-niuke-agent-mianjing/mianjing/README.md)
+- 全库目录：[docs/2026-11-18-mianjing-catalog.md](docs/2026-11-18-mianjing-catalog.md)（按公司 × 岗位 × 渠道，161 篇）
+- 批次四 [2026-11-18-niuke-shezhao](batches/2026-11-18-niuke-shezhao/README.md)（牛客·定向社招）：**8 篇社招题源（Agent 应用开发岗）** / 261 行题目 → [公司索引](batches/2026-11-18-niuke-shezhao/mianjing/README.md)（蚂蚁/淘天/快手/深信服/懂车帝等）
+- 批次七 [2026-11-18-niuke-xiaozhao](batches/2026-11-18-niuke-xiaozhao/README.md)（牛客·定向校招）：**7 篇校招题源 / 131 行题目** → [公司索引](batches/2026-11-18-niuke-xiaozhao/mianjing/README.md)（字节×2/小红书×2/蚂蚁/虾皮/百度；1 篇与批次二跨源判重）
+- 批次六 [2026-11-18-xhs-agent-round2](batches/2026-11-18-xhs-agent-round2/README.md)（小红书·社招定向二轮）：**风控暂停**——29 卡冻结/14 篇候选就绪，详情待用户解除搜索限流后续采
+- 批次五 [2026-11-18-juejin-agent-mianjing](batches/2026-11-18-juejin-agent-mianjing/README.md)（掘金）：123 篇冻结 / 11 篇复核 / **5 篇题源（Agent 应用开发岗）/ 133 条主题面** → [公司索引](batches/2026-11-18-juejin-agent-mianjing/mianjing/README.md)（拼多多/米哈游等；2 篇算法岗按口径撤回）
 
 > 2026-11-18 起渠道维度（社招/校招/实习）为必录字段，**采集优先级：社招 > 校招 > 实习**。
 

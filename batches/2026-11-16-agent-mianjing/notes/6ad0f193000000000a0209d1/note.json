@@ -1,0 +1,13 @@
+{
+  "note_id": "6ad0f193000000000a0209d1",
+  "url": "https://www.xiaohongshu.com/explore/6ad0f193000000000a0209d1",
+  "title": "腾讯算法岗一面（上）Agent RL三问",
+  "author": "hi王汉三",
+  "desc": "整理了小红书“不太会当老板”发的腾讯算法岗（Agentic RL 方向）一面、二面的面经题，答案是我自己整理的。内容比较多，分成四篇，这篇是一面的前三道：\n\t\n1. 智能体强化学习（Agentic RL）与传统大模型 RL 的核心差异\n2. 长时序任务下 Agent RL 训练失稳、容易崩模型的底层原因\n3. PPO 与 GRPO 在信用分配机制上的核心区别\n\t\n每道题先用一句话点出核心，再把背后的道理展开讲清楚；关键的地方配了公式，公式下面逐个解释了每个符号的含义。\n· Q1：用轨迹概率的公式说明为什么环境返回的 token 训练时要 mask 掉，再用策略梯度公式说明几十轮共用一个分数为什么让信用分配变难\n· Q2：GRPO 的优势为什么会被几万个 token 稀释；低概率 token 的梯度为什么大将近 10 倍；崩的时候的两种表现和解决思路\n· Q3：PPO 怎么靠 critic 逐 token 打分，GRPO 没有 critic 又怎么靠大量采样的对比把关键步骤\"统计\"出来\n\t\n一面下篇是 Clip 与 KL、GRPO 的变体（DAPO / GSPO / DSPO）、DAPO 的 token 级 loss；二面分两篇，讲 GAE、上下文压缩、Reward Hacking、DSPO 和 DeepSeek-V4。\n\t\n有写得不对的地方欢迎评论区指出～",
+  "published_at": "2026-10-15T23:30:27+08:00",
+  "likes": "245",
+  "type": "normal",
+  "tag_list": [],
+  "image_count": 13,
+  "collected_at": "2026-11-18T20:43:00+08:00"
+}
