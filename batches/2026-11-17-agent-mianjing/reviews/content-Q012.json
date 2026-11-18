@@ -1,0 +1,28 @@
+{
+  "question_id": "Q012",
+  "note_id": "6ac865b1000000000b0061c2",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-3",
+  "canonical_path": "question_bank/agent-engineering/low/Q012.json",
+  "canonical_sha256": "863e1bcddf0cdb5958c474819ff5e5e8185fbb8dd073e39b5bfc78c041d5133d",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过（round 1 唯一不通过项已修复）。technical_references 中错配的 MCP architecture 条目已删除，现仅保留 Building effective agents 一条，且与正文『工具描述工程（写清楚用途、边界、示例、单位、取值约束）能显著提升调用准确率』的论断有实际支撑关系（Appendix 2）。recommended_answer 380 纯汉字（上限 +8.6%，容差内），其余结构项 round 1 已核合规。",
+    "difficulty": "通过（同 round 1）。直问概念、双侧分工与机制，low 成立。",
+    "student_view": "通过（round 2 复扫）。无公司名与教研侧字样。",
+    "technical_accuracy": "通过（同 round 1）。tool_calls 结构、arguments 二次解析校验、tool_call_id 对应、strict 模式、『模型只产生意图』表述均正确；M×N→M+N 仅作为结论性表述出现，不再声称引自 architecture 页。",
+    "answer_responsiveness": "通过。三问（原理、双侧分工、MCP 之前做法）覆盖完整。",
+    "provenance_merge": "通过（同 round 1）。C408/C180 存在，verbatim 逐字一致，company/role/round 与候选表及 note.json 一致，frequency=2 正确。",
+    "verbatim_fidelity": "通过。question_verbatim 未改写。"
+  },
+  "claims_checked": [
+    {"claim": "工具描述应像写给初级工程师的 docstring，含示例用法、边界情况、输入格式要求、与其他工具的明确区分（支撑第 2 节描述工程论断）", "evidence": "https://www.anthropic.com/engineering/building-effective-agents（Appendix 2）", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {"round": 1, "decision": "rejected", "issue": "technical_references[0]（MCP architecture 页，标注『MCP 出现前的集成问题』）与正文论断无实际支撑：正文未使用该页内容，正文实际的 M×N 论断又不在该页", "resolution": "删除该引用条目，technical_references 仅保留与正文有实际支撑关系的 Building effective agents"}
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:05:00+08:00"
+}

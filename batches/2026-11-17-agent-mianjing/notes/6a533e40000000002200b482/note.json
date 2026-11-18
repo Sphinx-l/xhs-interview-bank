@@ -1,0 +1,18 @@
+{
+ "note_id": "6a533e40000000002200b482",
+ "url": "https://www.xiaohongshu.com/explore/6a533e4000000002200b482?xsec_token=ABHr4JPCr443qNUfetMNM8DxVG9P_VT9lcasCT5D2dVxg=&xsec_source=pc_search",
+ "title": "聊聊大厂Agent开发岗拷打什么",
+ "author": "卑微打工仔",
+ "published_at": null,
+ "date_raw": "编辑于 10-24 浙江",
+ "likes": "330",
+ "status": "rejected",
+ "status_reason": "方法论+引流帖（导向项目/话术资料），近期面试题仅列5个方向性短问，不作为题源",
+ "company": "unspecified",
+ "role": "Agent 开发",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "主包看agent面经发现考点其实就几个，上下文工程，memory分层，tool设计，mcp，skill，harness工程，自进化，skill的理解。再者就是项目深挖追问，连带一些一些场景题，有可能基于项目，有的全新，开放性多一些。这里统一梳理下。\n\t\n方向一：Agent 设计细节\n上下文治理、Memory 短期长期怎么分、多 Agent 架构取舍——这类题几乎必问。大多数人答到做了摘要压缩就没了，我建议大家讲成一套状态管理方案。Globex 拆了四层：\n- 热上下文：当前 query、约束、工具返回，严控 token，直接进 prompt。\n- 结构化任务状态：budget、failed_tools 等，用状态字段代替塞到上下文。\n- 可更新工作记忆：用户偏好、已确认约束、商品 shortlist，增量更新，不每轮从头总结。\n- 冷数据归档：完整工具返回、Trace，默认不进 prompt，需要时按 thread_id 回查。\n\t\n方向二：真实落地场景题\n这类一般是开放题，比如平台售后条款几万字、商品详情十几屏，全塞上下文 token 直接满。面试官想看的是你的 trade-off：滑动窗口简单但容易忘早期约束，只做摘要省 token 但会漂还会破坏 Cache，全量结构会让工程变复杂。Globex 是折中方案：高价值结构化，中价值摘要化，低价值归档追溯。\n\t\n方向三：前沿热点\n今年 Harness 工程和自我进化比较热。很多同学答\"给 Agent 加保护机制\"，显得有点空。能讲到具体设计就行：LoopDetector 滑动窗口检测死循环、单工具返回超 token 截断、异常转字符串让主 loop 自愈。\n\t\n近期的面试题\n群u分享的几个面经，几乎都在问这几个方向，不奇怪，能让agent效果变好高效的方式就是梳理好Context：\n- 跨境购物 Agent 架构？对比过哪些方案？\n- 上下文膨胀怎么解决？\n- 跨平台商品信息格式不同，怎么归一化？\n- 工具重复调用、无效返回处理？\n- 你怎么理解 Harness？\n\t\n其实面试官是默认你会调模型写 prompt 的，在意的是 Agent 的工程实践经验。上下文治理、Memory 设计、防失控、可观测、评测闭环。只做一两个在面试官眼里就是 Demo。泡整理了 Agent 项目和 AI 八股，代码文档和面试话术都有，后续继续更新面经。\n\t\n#agent #agent项目#harness #校招 #暑期实习 #秋招 #agent面经 #ai面经 #日常实习  #互联网大厂",
+ "images": [],
+ "image_extract": false
+}

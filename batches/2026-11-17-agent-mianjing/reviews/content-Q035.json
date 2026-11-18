@@ -1,0 +1,49 @@
+{
+  "question_id": "Q035",
+  "note_id": "69f9f8c5000000003503ac05",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
+  "canonical_path": "question_bank/agent-learning/medium/Q035.json",
+  "canonical_sha256": "483154bc2d4d3644ae1d07f2a28d8965496296837d8197789de5cdc81606f7b3",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 纯汉字 373 字，低于 402 硬上限但超 350 目标 23 字，非阻塞；points 6 条、question_guide 四键非空、technical_answer 2 段+example 齐全、tags 4 个具体技术词（Reward Model/RLHF/偏好学习/任务奖励）。",
+    "difficulty": "通过。『RM 适合解决什么问题』为适用边界判断题（哪些问题该用 RM、Agent 场景任务奖励 vs 偏好 RM 的选择），medium 合理。",
+    "student_view": "通过。学员侧字段无公司名（携程仅入 editorial_provenance）与禁用旁白字样。",
+    "technical_accuracy": "通过。InstructGPT 引用有可定位支撑句：summary（『经典流程是 InstructGPT 的 SFT→偏好 RM→RL 三段』）、points 第 1 条（『收集模型输出的人工排序，用于其后的强化学习阶段』）与第 1 节（『先用标注者示范做 SFT，再收集模型输出的排序数据训练 RM，最后以 RM 为奖励用 RL 优化』及『1.3B 的 InstructGPT 在人类评估中胜过未对齐的大模型』），与 arXiv 2203.02155 的三步法及 1.3B InstructGPT 输出优于 175B GPT-3 的人类评估结论一致。reward hacking、RM 分布漂移失真、KL 约束、奖励混合等守护机制表述技术正确。",
+    "answer_responsiveness": "通过。题面两问（RM 适合什么问题/Agent 系统怎么用）由 summary+points 1-2、points 3-4、points 5-6 覆盖；example 演示奖励混合与反作弊校准。",
+    "provenance_merge": "通过。frequency=1 与 notes 候选数一致（仅主源 C215）；C215 未被 Q001-Q034 及本批其他题使用；company=携程、role=AI 应用开发、round=一面 与 notes/69f9f8c5000000003503ac05/note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim『reward model适合解决什么问题』与主源候选 C215 及 note.json desc 逐字一致；extraction=note_text 一致。",
+    "source_integrity": "通过。source.note_id 为 24 字符『69f9f8c5000000003503ac05』，与候选及 notes 目录逐字一致，来源链闭合。非阻塞观察：candidates.json 中 C215 状态仍为 pending，登记时需同步。",
+    "category_check": "通过。category_id=agent-learning，taxonomy.json 已注册该分类；题目考查奖励学习/自我改进机制，归入 agent-learning 而非 model-adaptation 合理（训练流程题 Q033 在 model-adaptation、RM 适用边界题在 agent-learning，划分一致）。",
+    "dedup": "通过。题库无 Reward Model 主题既有题；与 Q033 互为 related_questions（三阶段训练 vs RM 适用边界），Q024 关联 LLM-as-judge 偏差治理，边界清晰无重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "InstructGPT 流程为标注者示范 SFT→模型输出人工排序训练 RM→RL，且 1.3B InstructGPT 人类评估胜过未对齐大模型",
+      "evidence": "https://arxiv.org/abs/2203.02155",
+      "result": "confirmed：与论文三步法及 1.3B vs 175GPT-3 人类偏好实验一致"
+    },
+    {
+      "claim": "Agent 任务奖励（测试通过、对账断言）可机检、偏好 RM 覆盖主观维度，reward hacking 与 KL 约束为标准失效与守护机制",
+      "evidence": "题库审核知识核查（RLHF/Agent RL 工程共识）",
+      "result": "confirmed：表述准确"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 373 字，超 350 目标 23 字（低于 402 硬上限）",
+    "非阻塞：candidates.json 中 C215 状态仍为 pending，登记时需同步 admitted+question_id=Q035"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:43:25+08:00"
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "Q017",
+  "note_id": "6ac86853000000001801b00e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
+  "canonical_path": "question_bank/rag-retrieval/high/Q017.json",
+  "canonical_sha256": "d54cf7418967097ce418deb8360afaa49d5e10a909d77e7b3425ae1471c7b707",
+  "review_round": 1,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 合计纯汉字 357 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 6 条覆盖题干全部子环节；question_guide 四键非空；tags 4 个（RAG全链路/Query改写/召回重排/上下文注入）具体。",
+    "difficulty": "通过。high 有真实依据：主源 C076 verbatim 本身即跨模块全链路设计+优化点题（Query 改写/切分/Embedding/检索/Rerank/Context 注入六环节），合并候选 C065（链路怎么设计）、C204、C283（完整讲一下）同为系统性链路题，属跨模块设计而非补写升档。",
+    "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
+    "technical_accuracy": "通过。离线链路（解析/清洗/结构切分带 overlap/元数据随块入库/BM25 同步建索引/按块 diff 增量更新）与在线链路（指代消解/原 query 与改写并行召回/混合召回/Rerank 精排取 3-10/引用回溯）均为正确且严谨的工程论断；『TopK 过大噪声稀释生成质量』『分层归因先测检索再测生成』『优化优先级：解析切分>混合召回与元数据过滤>重排>换大模型』为合理经验表述且已标注为经验排序；无虚构项目或业绩数字。",
+    "answer_responsiveness": "通过。题面问完整流程+各环节怎么做+优化过哪些点，points 1-2 答两条链路逐环输入输出，points 3-5 答切分/召回/注入优化，point 6 答评测归因；technical_answer 第 3 节专答优化优先级与误区，example 给制度问答全链路演示。",
+    "provenance_merge": "通过（附备注）。frequency=4 与 notes 列出的合并候选数（C076 主源+C065+C204+C283）一致；四条候选均真实存在且无跨题重复使用；company=unspecified、role=Agent 开发、round=一面 与主源 note.json 一致。备注：C285/C286 标注为『关联已并入答案』未计入 frequency——二者是同帖相邻追问、非同题面重复，不计入合并候选数成立，建议后续如拆独立题时回溯此备注。",
+    "verbatim_fidelity": "通过。question_verbatim 与主源候选 C076 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
+  },
+  "claims_checked": [
+    {"claim": "RAG 需要数据准备（文档组织/更新外部数据源）且输出应带来源引用、生成后需校验", "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/", "result": "confirmed：AWS 页数据准备与 citations 主题支撑离线链路段（解析→清洗→切分→入库）及『生成并做引用与事实校验』『引用回溯』表述，引用条目标题已注明『数据准备与来源引用』范围，非装饰性引用"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:45:00+08:00"
+}

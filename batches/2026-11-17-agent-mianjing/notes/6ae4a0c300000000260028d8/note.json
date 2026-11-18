@@ -1,0 +1,18 @@
+{
+ "note_id": "6ae4a0c300000000260028d8",
+ "url": "https://www.xiaohongshu.com/explore/6ae4a0c30000000260028d8?xsec_token=ABxmJUuWFun7ciNJm6YIN-bsQTj0Hp-4u3ts1ijkbbm9E=&xsec_source=pc_search",
+ "title": "米哈游Agent开发二面10.30",
+ "author": "会敲代码的鱼",
+ "published_at": null,
+ "date_raw": "编辑于 2天前 湖南",
+ "likes": "1293",
+ "status": "retained",
+ "status_reason": "米哈游Agent开发二面13题，题面完整",
+ "company": "米哈游",
+ "role": "Agent 开发",
+ "round": "二面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1. 为《星穹铁道》模拟宇宙设计 AI 祝福组合 Agent，规划、校验、生成、兜底如何分层？\n2. 智能 NPC 多 Agent 后端，对话、行动、角色联动如何划分职责与共享状态？\n3. LLM 超时或挂掉时，NPC 如何无缝降级到规则/行为树且不让玩家感知变傻？\n4. 长期记忆准入：哪句话该写入事实、哪句只算会话约束？冲突如何消解？\n5. 游戏 Agent 中哪些状态必须外置持久化，哪些只留在上下文？跨会话如何恢复任务？\n6. 多 Agent 共享世界状态时，如何防止一个 Agent 的幻觉被另一个当作事实传播？\n7. 线上成功率下降但离线评测无变化，按什么顺序排查模型、检索、工具、编排？\n8. Agent 任务完成率仅 70%，如何归因并建立 Badcase 闭环？无显式反馈怎么抽检？\n9. MCP 工具安全边界：认证、授权、白名单、参数 Schema、不可信输出分别放哪层？\n10. 高风险工具调用（发道具、改玩家数据）如何设计确认、幂等、回滚与审计？\n11. 选一个米哈游产品，指出 Agent 在研发管线或玩家体验侧真正可落地的切入点。\n12. 从零搭建米哈游 Agent 平台，第一版优先做哪三个能力、放弃什么？6 个月如何演进？\n13. 算法题：Agent 工具调用循环检测与预算熔断\n#大模型 #大模型面试 #Agent开发 #Agent面试 #面经 #互联网大厂 #米哈游 #面试求职",
+ "images": [],
+ "image_extract": false
+}

@@ -1,0 +1,43 @@
+{
+ "question_id": "Q021",
+ "note_id": "69f9f8c5000000003503ac05",
+ "author_agent": "claude-opus-5-5-author",
+ "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
+ "canonical_path": "question_bank/evaluation-reliability/high/Q021.json",
+ "canonical_sha256": "8982b375373afbaa30e49787e0f541e0bb26cd33cbc819a2567cd4bcb0340f20",
+ "review_round": 1,
+ "reviewed_sections": [
+  "recommended_answer",
+  "technical_answer",
+  "example",
+  "question_guide",
+  "source",
+  "editorial_provenance",
+  "technical_references"
+ ],
+ "dimensions": {
+  "structure_contract": "通过。recommended_answer 合计纯汉字 340 字，在 180-350 区间内；points 6 条覆盖三层指标/埋点/离线在线/无反馈四组子问；question_guide 四键非空；tags 4 个（Agent评测/指标体系/任务成功率/线上指标）均为具体概念，无泛词。",
+  "difficulty": "通过。主源 C201 本身是跨模块设计题（评测体系=指标+埋点+离线在线+反馈闭环），且合并候选 C156/C326/C352 在不同公司真实构成系统性追问链（指标→埋点→无反馈），high 定档有据。",
+  "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样；正文出现的 Anthropic 为技术文献出处，与前二十题（Q001/Q005/Q006 等）已确立的惯例一致。",
+  "technical_accuracy": "通过。三层指标（任务/过程/资源）划分、过程层指标承担归因职能、Trace 埋点三原则（结构化/可串联/低损耗）、离线回归+线上监控双闭环、无反馈三兜底（隐式信号/定比抽检/裁判初筛）均为准确且自洽的工程表述；引用主张在第 1 节有支撑句『对 agentic 系统要度量性能并基于度量迭代』，与 Building effective agents 原文一致，非装饰性引用。",
+  "answer_responsiveness": "通过。题面四问（体系设计/除准确率外的指标/埋点收集/人工标注还是线上指标）由 points 1-3、4、5、6 逐一回答；example 以报告生成 Agent 演示三层指标落地与无反馈抽检，observation 收束到位。",
+  "provenance_merge": "通过。frequency=5 与 notes 合并候选数（C201 主源+C156+C162+C326+C352）一致；五条候选在 candidates.json 均真实存在且未被 Q001-Q020 使用，也无本批跨题重复；company=携程、role=AI 应用开发、round=一面 与主源 note.json 一致。",
+  "verbatim_fidelity": "通过。question_verbatim『Agent评测体系怎么设计』与主源候选 C201 逐字一致；extraction=note_text 与候选表一致。"
+ },
+ "claims_checked": [
+  {
+   "claim": "对 agentic 系统应度量性能并基于评测迭代，评测是系统工程的一等组成",
+   "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+   "result": "confirmed：technical_answer 第 1 节末句为该主张的支撑句（『度量性能并基于度量迭代，把评测当作系统的一等公民』），非装饰性引用"
+  },
+  {
+   "claim": "过程层指标（工具选错率/参数错误率/检索命中率/循环率）是归因入口、任务层是验收出口",
+   "evidence": "工程通识+Building effective agents 评测主张",
+   "result": "confirmed：第 1 节表述自洽无事实错误"
+  }
+ ],
+ "issues": [],
+ "revision_history": [],
+ "decision": "passed",
+ "reviewed_at": "2026-11-17T23:20:00+08:00"
+}

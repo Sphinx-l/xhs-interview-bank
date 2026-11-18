@@ -1,0 +1,27 @@
+{
+ "note_id": "6ac865b1000000000b0061c2",
+ "url": "https://www.xiaohongshu.com/explore/6ac865b1000000000b0061c2?xsec_token=ABW5_clKgK-wSTwyqnbk-IikqG1DDfWAl41INz7jy9g3o=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "虾皮Agent开发一二面面经",
+ "author": "熊掌与鱼🐟08-28",
+ "published_at": null,
+ "date_raw": "编辑于 10-09",
+ "likes": "525",
+ "status": "retained",
+ "status_reason": "虾皮Agent开发一面二面34题（图片），画面提取完成",
+ "company": "虾皮",
+ "role": "Agent 开发",
+ "round": "一面/二面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "虾皮 Agent 开发一面、二面的问题整理，共 34 题。\n\t\n一面：RAG 与评测、长期记忆、Coding Agent。\n二面：需求澄清与技术设计、Agent 评测、RAG 与上下文、现场 Skill 设计。\n\t\n#虾皮面经 #面经 #Agent #AI应用开发 #秋招有路子",
+ "images": [
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
+  "06.webp",
+  "07.webp",
+  "08.webp"
+ ],
+ "image_extract": true
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "Q016",
+  "note_id": "6ad82cec0000000033011965",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
+  "canonical_path": "question_bank/rag-retrieval/low/Q016.json",
+  "canonical_sha256": "2d3df2418f91570ff02638c9e671ac5146868dd06fa3c3682237cc849c346e45",
+  "review_round": 1,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 合计纯汉字 357 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 5 条覆盖题干三问；question_guide 四键非空；tags 4 个（RAG概念/Embedding/余弦相似度/检索增强）均为具体概念词，RAG/Embedding 属专有名词允许。",
+    "difficulty": "通过。直接解释概念与机制（RAG 类比、Embedding、余弦相似度），无选型与追问链，low 定档正确。",
+    "student_view": "通过。title/tags/question_guide/recommended_answer/technical_answer/example 扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
+    "technical_accuracy": "通过。开卷考试类比准确；Embedding 固定维度向量、语义相近则距离相近表述正确；余弦相似度取值 [-1,1]、只看方向不看模长、消除文本长度影响的解释正确；『向量检索弱在精确术语/编号匹配，生产常配合关键词混合召回』边界表述正确；技术事实与 AWS RAG 页一致。",
+    "answer_responsiveness": "通过。题面三问（向不懂技术的人解释 RAG、什么是 Embedding 及为何向量化、余弦相似度的作用）分别由 points 1、2+3、4 覆盖，point 5 串三者链路；example 用退货场景具象化三概念分工，可理解性好。",
+    "provenance_merge": "通过。frequency=3 与 notes 合并候选数一致（C216 主源+C219+C218）；三条候选在 candidates.json 中均真实存在且同帖（note 6ad82cec0000000033011965）；company=携程、role=Agent 开发、round=一面 与 note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim『如何向完全不懂技术的人解释 RAG？』与主源候选 C216 逐字一致；extraction=note_text 与候选表一致且原文在 note desc 中逐字找到。"
+  },
+  "claims_checked": [
+    {"claim": "RAG 是向 LLM 引入新数据的更低成本方式（相对重训/微调），可连接频繁更新的信息源，输出能带来源引用（citations），开发者对信息源有控制权", "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/", "result": "confirmed：technical_answer 第 1 节『RAG 解决的三个问题』逐点对应（①成本、②时效、③可信），非装饰性引用"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:40:00+08:00"
+}

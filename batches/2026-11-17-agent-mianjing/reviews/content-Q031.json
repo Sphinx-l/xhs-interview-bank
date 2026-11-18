@@ -1,0 +1,61 @@
+{
+  "question_id": "Q031",
+  "note_id": "6a0320240000000006023ed4",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
+  "canonical_path": "question_bank/model-adaptation/high/Q031.json",
+  "canonical_sha256": "d0f63f00088d41e8a8a833fe62fa4f52b8ba2f7b2b9e9a2c8aab3b7bd3ded164",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（round 1 退回点已修复）。recommended_answer 纯汉字实测 375 字（编写者称约 330，实测 375），低于 402 硬上限、超 350 目标 25 字，非阻塞（与 Q029/Q030 通过档位一致）；points 6 条、question_guide 四键非空、technical_answer 3 段+example 齐全、tags 4 个具体技术词。",
+    "difficulty": "通过（round 1 结论维持）。原帖 11-13 题真实系统性追问链（跷跷板→到顶升级决策→人工 vs 自动化），high 有据。",
+    "student_view": "通过（round 1 退回点已修复）。学员侧字段无公司名与『面经/博主/发帖人/原帖/教研』字样；points 第 2 条英文『inherently』已改为『天然』，与第 2 节正文一致。",
+    "technical_accuracy": "通过（round 1 退回点已修复）。两条引用均有可定位支撑句：InstructGPT 由 points 第 2 条与第 2 节支撑（与 arXiv 2203.02155 论断一致）；AgentTuning 由 points 第 4 条新增句『AgentTuning 类工作验证了 agent 轨迹微调的可行路径』支撑，与 arXiv 2310.12823 主张一致，装饰性引用问题消除。",
+    "answer_responsiveness": "通过（round 1 结论维持）。题面三问由 summary 判据+升级三档、points 1-2、points 6 覆盖；压缩未损失子问覆盖。",
+    "provenance_merge": "通过（round 1 结论维持）。frequency=3 与 notes 候选数一致（C120 主源+C119+C121）；三候选未被 Q001-Q030 及本批其他题使用；company=携程、role=Agent 开发、round=二面 与 notes/6a0320240000000006023ed4/note.json 一致。",
+    "verbatim_fidelity": "通过（round 1 结论维持）。question_verbatim 与主源候选 C120 及 note.json desc 第 12 题逐字一致；extraction=note_text 一致；修订未动 source 字段。",
+    "source_integrity": "通过（round 1 结论维持）。note_id 24 字符与候选及 notes 目录一致，来源链闭合；本轮修订仅动 recommended_answer 三处，其余字段与 round 1 审核版本一致，无夹带改动。",
+    "dedup": "通过（round 1 结论维持）。无既有同主题题；与 Q032/Q033 经 related_questions 关联，边界清晰。"
+  },
+  "claims_checked": [
+    {
+      "claim": "recommended_answer 纯汉字字数回到 402 硬上限内（round 1 退回点）",
+      "evidence": "对 summary+points 以 [\\u4e00-\\u9fff] 正则实测",
+      "result": "confirmed：实测 375 字，低于硬上限"
+    },
+    {
+      "claim": "AgentTuning 引用在学员侧正文有支撑句（round 1 退回点）",
+      "evidence": "题目 JSON points 第 4 条 + arXiv 2310.12823",
+      "result": "confirmed：新增『AgentTuning 类工作验证了 agent 轨迹微调的可行路径』，与论文结论一致"
+    },
+    {
+      "claim": "学员侧不再出现英文『inherently』（round 1 非阻塞提示）",
+      "evidence": "学员侧字段全文检索",
+      "result": "confirmed：已改为『天然』"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 375 字，超 350 目标 25 字（低于 402 硬上限）"
+  ],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reason": "recommended_answer 纯汉字 421 字超 402 硬上限；AgentTuning 引用为装饰性引用（学员侧正文无支撑句）",
+      "fix": "编写者压缩 summary 与 points 第 2/6 条（421→375 字），points 第 4 条补 AgentTuning 支撑句，『inherently』改『天然』；round 2 逐字段复核确认修订仅涉及上述三处，source/provenance/technical_answer 未动",
+      "round1_sha256": "a36528ee62b94c56f04c66dd659845a2e2a038af2c4b34860ac04e49f30ea148",
+      "round1_reviewed_at": "2026-11-17T20:43:25+08:00"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:47:00+08:00"
+}

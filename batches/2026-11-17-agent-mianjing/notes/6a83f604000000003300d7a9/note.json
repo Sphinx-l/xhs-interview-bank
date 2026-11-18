@@ -1,0 +1,18 @@
+{
+ "note_id": "6a83f604000000003300d7a9",
+ "url": "https://www.xiaohongshu.com/explore/6a83f604000000003300d7a9?xsec_token=AB54apgNxQBKEKsQLlox4FiezgjhkQtIjvZmQWqBiLH1k=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "米哈游AI大模型开发2h45min面试复盘",
+ "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+ "published_at": null,
+ "date_raw": "08-18",
+ "likes": "398",
+ "status": "rejected",
+ "status_reason": "面试复盘总结（侧重点与经验），无逐条题面",
+ "company": "米哈游",
+ "role": "AI 大模型开发",
+ "round": "三轮+HR",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "整体侧重基础落地→架构设计→业务深度+综合素质逐层递进，无无效面试，每一轮考察侧重点完全差异化：\n- 技术一面：基础技术核验、项目深挖、RAG/Agent落地、常规工程优化（侧重“会不会做”）\n- 技术二面：系统架构设计、大模型进阶原理、高并发高可用、游戏AI复杂场景解题（侧重“能不能设计”）\n- 技术三面+HR终面：团队匹配、业务认知、项目底层思考、抗压与复盘、薪资意愿、职业规划（侧重“适不适合团队”）\n上岸关键经验\n- 拒绝纯理论背诵，所有技术点必须绑定游戏业务场景+线上问题+量化结果；\n- 米哈游极度看重落地能力和复盘思维，不怕有短板，怕不会复盘、不会迭代；\n- 游戏AI核心是“体验优先”，所有技术方案都要围绕人设稳定、剧情合规、玩家体验、服务稳定展开；\n- 面试追问极多，项目细节、参数、坑点、优化链路必须烂熟于心，杜绝模板化回答。\n#米哈游面试 #AI大模型应用开发 #游戏AI面试 #大厂面试面经 #人工智能面试 #RAG #Agent开发 #AI开发  #AI大模型",
+ "images": [],
+ "image_extract": false
+}

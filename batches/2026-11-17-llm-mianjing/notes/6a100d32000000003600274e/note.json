@@ -1,0 +1,14 @@
+{
+ "note_id": "6a100d32000000003600274e",
+ "title": "27届Agent岗小厂面经",
+ "desc": "请讲一下你第一个项目中 RAG 的问答流程：\n[种草R]从用户提问到最终答案生成，中间经过哪些步骤？\n[种草R]你刚才说用户提出问题后会做预处理和改写，这个 “问题改写” 是用什么工具做的？具体怎么改写？\n[种草R]预处理过程中，问题改写和关键词提取都是用大语言模型完成的吗？\n[种草R]预处理完成之后进入检索阶段，请详细说一下你是怎么检索的。\n[种草R]你的文档是怎么切分的？\n[种草R]文档切分时，每个 chunk 的大小是怎么定义的？\n[种草R]你刚才说按照 token 切分，一般是按多少 token 作为一个 chunk？\n[种草R]embedding 用的是哪个工具或模型？\n[种草R]你说目前用了 embedding、BGE-reranker，它们分别是什么？是怎么选择的？\n[种草R]重排之后取 Top K，目前 Top K 取多少？\n[种草R]你们使用 BM25 和向量检索这种双路混合检索，它们分别解决什么问题？\n[种草R]为什么不能只用 BM25 或只用向量检索？\n[种草R]你简历里提到优化长文档 token 预算管理，并支持 30 轮以上多轮对话不丢失记忆，这是怎么实现的？\n[种草R]如果把所有历史消息都注入 prompt，会不会导致上下文超出模型限制？\n[种草R]这里说的追溯 / 存储，是落到磁盘、本地文件，还是数据库？\n[种草R]历史对话压缩之后，后续什么时候会再次用到？\n是否可以把历史对话压缩成 summary，再把历史对话向量化存入向量库，需要时再召回？否则压缩之后是不是可能一直用不到？\n[种草R]关于 rerank 的准确率评估，你们是怎么做的？\nrerank 的作用是什么？\n[种草R]rerank 模型和 embedding 模型有什么区别？\n[种草R]rerank 通常是精排模型，而 embedding 一般用于粗召，对吗？你是怎么理解这两者分工的？\n[种草R]LangGraph 和 LangChain 一般怎么选择？什么时候适合用 LangGraph，什么时候适合用LangChain？\n[种草R]将传统的 workflow /tool calling 改成图状态机，一般怎么做？\n[种草R]Agent 在整个过程中有没有容易失控的场景？你会怎么限制 Agent 的行为，避免它失控？\n#互联网大厂 #面经 #计算机 #agent #春招 #面试日常 #面试求职 #大厂 #校招 #offer",
+ "author": "作业本编程日记",
+ "date": "05-22",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a100d32000000003600274e?xsec_token=ABcfDbRSVQzpT29UCvnCRAh9Q5S3StV25TlA1fWQbcIN4=&xsec_source="
+}

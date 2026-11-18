@@ -1,0 +1,57 @@
+{
+  "question_id": "Q032",
+  "note_id": "69f9f8c5000000003503ac05",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
+  "canonical_path": "question_bank/model-adaptation/medium/Q032.json",
+  "canonical_sha256": "982b48fe754442fbcb67715df6bfad779b3900e7d91dbbe9315c0aa377fb2460",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（round 1 退回点已修复）。recommended_answer 纯汉字实测 376 字（编写者称约 380，实测吻合），低于 402 硬上限、超 350 目标 26 字，非阻塞（与 Q029/Q030 通过档位一致）；points 6 条、question_guide 四键非空、technical_answer 2 段+example 齐全、tags 4 个具体技术词。",
+    "difficulty": "通过（round 1 结论维持）。SFT 失效边界判断题，medium 合理。",
+    "student_view": "通过（round 1 结论维持）。学员侧字段无公司名（携程仅入 editorial_provenance）与禁用旁白字样。",
+    "technical_accuracy": "通过（round 1 结论维持）。AgentTuning 引用支撑句保留（points 第 2 条与第 1 节），三类失败模式、行为克隆定位、分层评测诊断表述技术正确；精简未引入新事实主张。",
+    "answer_responsiveness": "通过（round 1 结论维持）。题面两问由 summary 三分类、points 1-5、points 6 清单覆盖；精简未损失子问覆盖。",
+    "provenance_merge": "通过（round 1 结论维持）。frequency=1 与 notes 候选数一致（仅主源 C214）；C214 未被其他题使用；company/role/round 与 notes/69f9f8c5000000003503ac05/note.json 一致。",
+    "verbatim_fidelity": "通过（round 1 结论维持）。question_verbatim 与主源候选 C214 逐字一致；extraction=note_text 一致；修订未动 source 字段。",
+    "source_integrity": "通过（round 1 结论维持）。note_id 24 字符与候选及 notes 目录一致，来源链闭合；本轮修订仅动 summary 与第 6 点，其余字段与 round 1 审核版本一致，无夹带改动。非阻塞：candidates.json 中 C214 状态仍为 pending，登记时同步 admitted+question_id=Q032。",
+    "dedup": "通过（round 1 结论维持）。无既有同主题题；与 Q031/Q033 互为 related_questions，边界清晰。"
+  },
+  "claims_checked": [
+    {
+      "claim": "recommended_answer 纯汉字字数回到 402 硬上限内（round 1 退回点）",
+      "evidence": "对 summary+points 以 [\\u4e00-\\u9fff] 正则实测",
+      "result": "confirmed：实测 376 字，低于硬上限"
+    },
+    {
+      "claim": "AgentTuning 引用支撑句在修订中保留",
+      "evidence": "题目 JSON points 第 2 条 + arXiv 2310.12823",
+      "result": "confirmed：points 第 2 条与第 1 节支撑句未受精简影响"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 376 字，超 350 目标 26 字（低于 402 硬上限）",
+    "非阻塞：candidates.json 中 C214 状态仍为 pending，登记时需同步 admitted+question_id=Q032"
+  ],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reason": "recommended_answer 纯汉字 404 字超 402 硬上限 2 字",
+      "fix": "编写者精简 summary 与第 6 点（404→376 字）；round 2 逐字段复核确认修订仅涉及该两处，其余内容与 round 1 审核版本一致",
+      "round1_sha256": "f6865daa735bb60271c3b843c7fd7044e75c1eb0f458f1e3f5436ce1439fa51d",
+      "round1_reviewed_at": "2026-11-17T20:43:25+08:00"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:47:00+08:00"
+}

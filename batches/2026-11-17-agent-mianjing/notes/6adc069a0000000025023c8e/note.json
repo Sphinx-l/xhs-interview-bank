@@ -1,0 +1,18 @@
+{
+ "note_id": "6adc069a0000000025023c8e",
+ "url": "https://www.xiaohongshu.com/explore/6adc069a0000000025023c8e?xsec_token=ABNzIvUuXsT49kTEQprnGgsGWsJjHI7zzGqvKG-bUxFtQ=&xsec_source=pc_search",
+ "title": "10.23 字节跳动 Agent Harness一面",
+ "author": "小周的IT日记",
+ "published_at": null,
+ "date_raw": "10-24 广东",
+ "likes": "311",
+ "status": "retained",
+ "status_reason": "字节Agent Harness一面15题，工程向题面完整",
+ "company": "字节跳动",
+ "role": "Agent Harness",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1、自我介绍\n\t\n2、项目介绍，重点讲里面 Agent 相关的落地\n\t\n3、你怎么理解 Agent Harness，和直接用大模型 API 有什么区别\n\t\n4、Agent Loop 的核心流程怎么设计，什么时候停、怎么防死循环\n\t\n5、Harness 里状态怎么管理，短期上下文和长期记忆怎么分层\n\t\n6、上下文超长怎么压缩，滑动窗口和摘要各适合什么场景\n\t\n7、工具调用失败、超时、参数非法怎么容错和重试\n\t\n8、LLM 返回的 tool call 格式不合法怎么处理\n\t\n9、ReAct 和 Plan-Execute 的区别，分别适合什么任务\n\t\n10、多工具很多时怎么选工具，Skill 和 MCP 的边界是什么\n\t\n11、RAG 链路怎么设计，切分、召回、重排、兜底怎么做的\n\t\n12、Agent 效果怎么评测，bad case 怎么定位和回流\n\t\n13、长任务从 5 分钟变 20 分钟，怎么排查延迟\n\t\n14、用户中途取消任务、版本热更新时正在跑的 Agent 怎么处理\n\t\n15、手撕算法：实现一个带过期时间的 LRU Cache\n\t\n面试感受：\n\t\n整体偏工程落地，不整虚的。Harness 不是背概念，得真懂运行时、状态、工具、沙箱那一套。问法很字节，一个知识点追到你能不能扛住生产问题。算法不难但讲究边界，别飘，把容错和可观测性讲明白就很加分。\n\t\n#aiagent #大模型 #golang #java #ai应用开发 #面经 #24h新鲜面经 #后端开发 #面试题 #互联网大厂",
+ "images": [],
+ "image_extract": false
+}

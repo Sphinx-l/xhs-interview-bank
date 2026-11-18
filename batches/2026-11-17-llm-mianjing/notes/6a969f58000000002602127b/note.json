@@ -1,0 +1,14 @@
+{
+ "note_id": "6a969f58000000002602127b",
+ "title": "# 美团 Agent 开发一面 9.1（有答案）",
+ "desc": "- RAG 的完整流程是如何实现的？文档切分、检索召回和生成分别如何设计？\n- RAG 场景中如何选择文本切分策略？不同切分方式会带来什么影响？\n- 多个 Agent 协同工作时，如何进行任务分配和结果整合？\n- 多 Agent 并行执行时，如何管理任务状态并汇总最终结果？\n- Agent 运行过程中如何管理上下文？如何避免上下文过长导致效果下降？\n- Agent 系统中的路由机制如何设计？如何判断请求应该交给哪个 Agent？\n- Context Compression 是什么？Agent 场景为什么需要上下文优化？\n- 并发和异步编程有什么区别？实际开发中分别适用于哪些场景？\n- 如何实现异步任务处理？常见的异步方案有哪些？\n- Agent 开发中常见的工程化问题有哪些？如何解决任务调度、工具调用和状态管理问题？\n\t\n#面经 #秋招有路子 #秋招 #美团 #开发 #agent开发 #agent #美团面试 #美团面经  #大厂",
+ "author": "每天学一点面经",
+ "date": "编辑于 09-05",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a969f58000000002602127b?xsec_token=ABrDJHMms-z0KfN042baKkqzCdpcNR0X76tX5sHgscVDQ=&xsec_source="
+}

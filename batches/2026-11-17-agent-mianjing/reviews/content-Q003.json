@@ -1,0 +1,37 @@
+{
+  "question_id": "Q003",
+  "note_id": "6adc069a0000000025023c8e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer",
+  "canonical_path": "question_bank/agent-architecture/medium/Q003.json",
+  "canonical_sha256": "3d1a4790e85963ba7b8a7699e1bd716300e89e0fa092384342fa595722bddd18",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q002,Q004] 合规。summary+points 纯汉字约 345 字，在区间内。",
+    "difficulty": "通过。范式选型与权衡判断，符合 medium。",
+    "student_view": "通过（round 1 问题已修复）。technical_answer.sections[2].body 原『字节系面经中常见追问……』已改写为『面试常见追问……』，公司名与『面经』字样已去除；全文字段扫描无博主/发帖人/原帖/面经/公司名残留，且未引入新的泄漏。",
+    "technical_accuracy": "通过。ReAct/Plan-Execute 机制描述、失败模式与路由混合方案无技术错误、无过度绝对化；修订仅涉及一句旁白措辞，未触及技术论断。",
+    "answer_responsiveness": "通过。三个子问（区别、适用任务、简单任务为何不先完整 Plan）均有对应 points。",
+    "provenance_merge": "通过。C063/C228/C313/C264 均存在；verbatim 与主源 C063 逐字一致且本次未改动；company=字节跳动、role=Agent Harness、round=一面 与 note.json 一致；frequency=4 正确。",
+    "verbatim_fidelity": "通过。verbatim 保留原帖题面未改写。",
+    "length": "通过。summary+points 纯汉字约 345 字，在区间内。"
+  },
+  "claims_checked": [
+    {"claim": "ReAct 逐步决策、计划隐含在推理轨迹中（Yao et al., 2022）", "evidence": "https://arxiv.org/abs/2210.03629", "result": "confirmed"},
+    {"claim": "Anthropic 建议从简单模式起步、按需增加复杂度（与本题混合路由结论一致）", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reviewed_at": "2026-11-17T19:43:28+08:00",
+      "issue": "technical_answer.sections[2].body 出现『字节系面经』——公司名与面经原帖信息泄漏进学员侧正文，须改写。",
+      "resolution": "编写者已将该句改写为『面试常见追问……』，round 2 复核确认泄漏已消除、其余内容未变。"
+    }
+  ],
+  "notes": "round 2 复审通过。修订仅改动一处旁白措辞，其余字段与 round 1 审核版本一致。",
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T19:49:39+08:00"
+}

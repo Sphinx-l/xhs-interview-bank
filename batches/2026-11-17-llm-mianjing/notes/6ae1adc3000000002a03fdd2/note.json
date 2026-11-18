@@ -1,0 +1,14 @@
+{
+ "note_id": "6ae1adc3000000002a03fdd2",
+ "title": "Agent技术一面",
+ "desc": "1. 自我介绍\n2. ﻿﻿﻿Java里 HashMap 底层原理，JDK7与 JDK8差异，并发场景下有什么问题，怎么解决？\n3. ﻿﻿讲下JVM 内存区域，GC的触发时机，你线上排查过哪些0OM 场景？\n4. ﻿﻿﻿MySQL 索引失效场景，联合索引最左匹配原则，怎么优化慢 SQL？\n5. ﻿﻿﻿Redis 的持久化 RDB 和AOF 区别，集群模式以及脑裂问题如何规避？\n6. ﻿﻿﻿什么是 CAP、BASE 理论，业务中如何做最终一致性？\n7. ﻿﻿﻿什么是 Agent 的 ReAct 模式，和普通 RAG最大区别是什么？\n8. ﻿﻿LangGraph中记忆持久化怎么实现，Checkpoint 原理是什么？\n9. ﻿﻿﻿RAG 里分块策略有哪些，不同文档类型（PDF/Markdown）你会怎么选择？\n10. ﻿﻿﻿﻿Agent 工具自定义开发流程，如何做工具入参校验？\n11.\n12. ﻿﻿﻿﻿大模型 token 超限有哪些解决方案，分别有什么优缺点？\n13. ﻿﻿﻿﻿向量嵌入模型怎么选型，评估向量召回质量用什么方式？\n14. ﻿﻿﻿﻿设计一个 Agent 任务调度系统，任务中断后如何恢复执行？\n15. ﻿﻿﻿﻿项目中，如何隔离 LLM 调用故障，避免拖垮整个后端服务？\n16. ﻿﻿﻿怎么评估大模型回答的幻觉，有哪些自动化评估方案？\n17. ﻿﻿﻿﻿分布式锁有哪些实现方案，Redis 分布式锁会有什么缺陷？\n18. ﻿﻿﻿﻿消息队列如何保证消息不丢失、不重复消费，幂等怎么实现？\n19. ﻿﻿﻿﻿多个 Agent 协作（多 Agent）有哪些架构模式，适合什么业务场景？\n20. ﻿﻿﻿﻿接入第三方大模型 API，如何做超时、重试、熔断策略？\n21. ﻿﻿﻿如果让你从零设计知识库问答 Agent，整体技术选型思路？\n#24h新鲜面经 #面试经验howto #大模型 #agent #程序员 #面经 #大模型面试 #agent开发",
+ "author": "小周的IT日记",
+ "date": "10-28 广东",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6ae1adc3000000002a03fdd2?xsec_token=ABupTH9CfRGJRbMIh2md5MZH9P4XvXEZwJU2lV_kD2btY=&xsec_source="
+}

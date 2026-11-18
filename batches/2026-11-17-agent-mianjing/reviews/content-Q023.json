@@ -1,0 +1,45 @@
+{
+ "question_id": "Q023",
+ "note_id": "6adc069a0000000025023c8e",
+ "author_agent": "claude-opus-5-5-author",
+ "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
+ "canonical_path": "question_bank/evaluation-reliability/high/Q023.json",
+ "canonical_sha256": "9d2b6f4ad9b5eb15607976dc8f4117423c7c6d141aca9ba32cc376479ad3aee4",
+ "review_round": 2,
+ "reviewed_sections": [
+  "recommended_answer",
+  "technical_answer",
+  "example",
+  "question_guide",
+  "source",
+  "editorial_provenance",
+  "technical_references"
+ ],
+ "dimensions": {
+  "structure_contract": "通过。recommended_answer 未变，合计纯汉字 340 字，在 180-350 区间内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
+  "difficulty": "通过（round 1 结论维持）。六条合并候选构成真实系统性追问链，high 定档有据。",
+  "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
+  "technical_accuracy": "通过。round 1 内容结论维持；新增支撑句（第 1 节末『Anthropic 同样强调 Agent 应在每一步从环境获得 ground truth（工具结果、执行反馈）来评估自身进展——Trace 与决策日志就是把这种逐步 ground truth 固化为可回放证据的机制』）与 Building effective agents 的 ground truth 主张一致，且与本题归因主题勾连自然。",
+  "answer_responsiveness": "通过。题面三问覆盖关系未变；第 3 节删去线上线下不一致排查句后，闭环沉淀主线不受影响，反而消除了与 Q025 的内容重叠。",
+  "provenance_merge": "通过。frequency=6 与合并候选数（C066 主源+C117+C157+C203+C382+C418）一致；round 1 指出的 C417 跨题分工问题已修复——本题正文不再使用 C417 内容，notes 明确声明『C417 由 Q025 承接，本题不使用』，现 C417 仅在 Q025 计数；company=字节跳动、role=Agent Harness、round=一面 与主源 note.json 一致。",
+  "verbatim_fidelity": "通过。question_verbatim 与主源候选 C066 逐字一致；extraction=note_text 一致。"
+ },
+ "claims_checked": [
+  {
+   "claim": "technical_references 的 Building effective agents 条目（agents 需从环境逐步获得 ground truth 评估进展）",
+   "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+   "result": "confirmed：第 1 节末新增支撑句明确引述该主张并将其与 Trace/决策日志的归因机制勾连，装饰性引用问题已修复"
+  }
+ ],
+ "issues": [],
+ "revision_history": [
+  {
+   "round": 1,
+   "date": "2026-11-17",
+   "issue": "①technical_references 装饰性引用；②C417 内容跨 Q023/Q025 双重使用且仅 Q025 计数",
+   "resolution": "编写者新增 ground truth 支撑句、删除第三段 C417 相关句并在 notes 声明由 Q025 承接，round 2 复核两项均通过"
+  }
+ ],
+ "decision": "passed",
+ "reviewed_at": "2026-11-17T23:55:00+08:00"
+}

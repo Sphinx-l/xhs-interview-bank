@@ -1,0 +1,14 @@
+{
+ "note_id": "69ef38e4000000001e00c726",
+ "title": "腾讯一面凉经（ai应用研发）",
+ "desc": "第二场面试迎来了梦寐以求的鹅厂[萌萌哒R]\n分享一下面经～\n1. 自我介绍\n2. 基于什么框架开发的agent项目,怎么做的选型?\n3. 有考虑过基于cloude code这样的ai coding去驱动agent的架构吗?你了解的agent有哪些架构?\n4. 说说ReAct和Plan-Execute架构的核心区别?\n5. Plan-Execute架构的核心的优势是什么?\n6. 如果说Plan-Execute更优,那么如何做评测比较优势?\n7. 如何界定问题属于一轮对话还是多轮对话?多轮对话怎么做bench,怎么用科学客观的手段去评测?\n8. 如果评测的周期比较长,如何快速的迭代你的agent架构?\n9. 怎么去优化的RAG?如何分析RAG的效果,然后形成一个闭环让数据飞轮持续的往更好的方向发展?\n10. 如何客观评价你的rewrite到底是好还是坏?\n11. 细节的讲一下建构的评测集的格式?一条记录都包含哪些内容?\n12. 调整topK后的具体结果如何打分?怎么构建你的评测指标?\n13. 指标中一个提高一个下降怎么办?rerank调整后如何评价调整效果如何？\n14. query对应的标准答案个数不一样,如何去平衡这个问题对最后结果的影响?\n15. 在最后的topK中的排序有没有关注过?\n16. 到底是取top3还是top5（示例）是怎么判断的？\n17. 具体的一次RAG召回应该定什么指标以进行评测？\n18. RAG过程中出现的幻觉是如何解决的？\n19. 做过什么样的努力使transformer生成过程中自然产生的幻觉变小？\n20. Ai coding：一个前端流式输出的显示问题\n全程大约四十五分钟，面试官的提问方式很舒服，会有引导（也答不出来[石化R]）\n#面经 #人工智能 #大模型应用 #大模型 #后端开发 #agent #AI应用开发 #面试 #校招 #ai开发",
+ "author": "抖哥编程日记",
+ "date": "04-27",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/69ef38e4000000001e00c726?xsec_token=ABXj7x15ZSNA8h1HKtBiVDetGkD3m1SNZ6_Vkv4R5Q07A=&xsec_source="
+}

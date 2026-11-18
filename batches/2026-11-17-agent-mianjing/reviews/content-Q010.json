@@ -1,0 +1,28 @@
+{
+  "question_id": "Q010",
+  "note_id": "6add53de000000002b01d079",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-2",
+  "canonical_path": "question_bank/agent-architecture/high/Q010.json",
+  "canonical_sha256": "daa25df43b826710c1bc0d3517586f304f40880fa5ea494523ba2583ca3033fe",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过（round 1 两项不通过均已修复）。其一，recommended_answer 由约 457 压缩至约 326 汉字，落入契约区间，6 要点保留。其二，technical_references 中无正文支撑的 Graph API 条目已删除，现仅剩 Memory overview 一条（该条的『长上下文分心』动机引用与答案内容对应）。其余结构项 round 1 已核合规且未改动。",
+    "difficulty": "通过（同 round 1）。主源 note 6add53de 第 4 题本身即跨模块（系统提示/工具 Schema/记忆/轨迹/中间产物）全局预算设计题，high 有原帖逐字证据。",
+    "student_view": "通过。学员侧字段扫描无来源信息泄漏（round 2 复扫确认）。",
+    "technical_accuracy": "通过。分区预算调度、工具 Schema 两级加载、轨迹滚动压缩与大产物外置、三层损失量化（探针/回归/成本）、阶段化动态重分配与降级顺序均为合理工程方法论且以建议口吻表述；128K 示例配额数字自洽；压缩后无新错误。",
+    "answer_responsiveness": "通过。压缩后两子问覆盖完整：全局分配（point 1-4、point 6）、压缩损失量化（point 5 + technical 第二段三层度量 + example 校验步骤）。",
+    "provenance_merge": "通过（同 round 1）。C303/C361 均存在，verbatim 与主源逐字一致，company/role/round 与 note.json 一致，frequency=2 正确。",
+    "verbatim_fidelity": "通过。verbatim 未改动。"
+  },
+  "claims_checked": [
+    {"claim": "长对话中完整历史即使装进窗口也降低有效性（被陈旧/离题内容分心、更慢更贵），需消息管理——本题预算分配的动机引用", "evidence": "https://docs.langchain.com/oss/python/concepts/memory", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {"round": 1, "decision": "rejected", "issue": "① recommended_answer 约 457 汉字超契约上限；② Graph API 参考条目在学员侧内容中无对应引用点", "resolution": "① 压缩至约 326 汉字，分配/量化/动态降级覆盖保留；② 删除 Graph API 条目，technical_references 仅保留 Memory overview"}
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:05:00+08:00"
+}

@@ -1,0 +1,14 @@
+{
+ "note_id": "6a93bf120000000020038ca8",
+ "title": "阿里国际 - 社招 - Agent开发一面面经",
+ "desc": "如果你正在准备 Agent 平台或大模型应用开发岗位，这篇阿里国际社招一面面经很值得参考。面试官不会只问 Agent 项目怎么搭，还会继续追问状态管理、异常处理、性能优化和成本控制，看你是否真正做过一套能上线运行的 Agent 系统。\n\t\n面试核心覆盖 ReAct 与 plan-execute-replan 的选型、状态与上下文管理、死循环检测、工具注册、多模型路由及 SSE 流式输出。同时深入追问 Agent 的成本与延迟优化，包括减少模型往返、并行工具调用、语义缓存、模型分级和高吞吐推理。\n\t\nRAG 方向则涉及 chunking 策略、父子分块，以及百万级向量检索中 HNSW、IVF、PQ 的取舍。此外还有 Redis 大 key、缓存穿透等后端基本功，能看出岗位既要求理解 Agent，也看重完整的工程落地能力。\n\t\n文章按真实问题整理，并提供可直接用于面试表达的参考答案、常见追问和技术选型依据。尤其适合想系统梳理 Agent 架构、RAG 检索和性能优化知识的开发者。\n\t\n本篇面经来自一位此前购买过知识库的读者投稿，感谢读者分享一线面试经历！[派对R]\n\t\n#Agent #大模型应用 #LLM #大模型面试 #大模型面经 #秋招有路子",
+ "author": "Ryan聊大模型",
+ "date": "编辑于 09-01",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a93bf120000000020038ca8?xsec_token=ABy9Z9k4iYmxVK0QF0PvAQL3GPuVwDW6r452w_-2skoCU=&xsec_source="
+}

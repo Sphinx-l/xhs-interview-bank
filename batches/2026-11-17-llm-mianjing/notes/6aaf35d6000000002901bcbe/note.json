@@ -1,0 +1,14 @@
+{
+ "note_id": "6aaf35d6000000002901bcbe",
+ "title": "吉利汽车ai agent技术面一轮过",
+ "desc": "面试感受：\n这面真不水，不是背八股那种。面试官明显是自己踩过 Agent 坑的人，问到 harness、codex、图+向量混合检索就知道了，不是来听你吹 LangChain 的。答得出来就是能打，答不出来马上往深里刨。不考算法反而更累，因为全在考你有没有真把 Agent 跑进生产。整体下来我觉得自己项目讲得还行，RAG 和意图识别没虚，多 Agent 状态隔离也接住了；图数据库那块被追了两层，算是有点狠。但一轮过就说明对方要的是能落地的 Java + Agent 工程仔，不是调 API 的。\n\t\n#大模型 #面经 #aiagent开发 #后端开发 #面试求职 #24h新鲜面经 #秋招每周复盘 #秋招邪修版 #java #华为手撕",
+ "author": "程序员峰哥",
+ "date": "编辑于 09-30",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6aaf35d6000000002901bcbe?xsec_token=ABUgiWdktyijcwJg6t3-KSgOvgR8O6SNndRvjwzSniA-4=&xsec_source="
+}

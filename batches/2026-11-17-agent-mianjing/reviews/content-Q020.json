@@ -1,0 +1,26 @@
+{
+  "question_id": "Q020",
+  "note_id": "6adf62390000000018006e6c",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-4",
+  "canonical_path": "question_bank/rag-retrieval/medium/Q020.json",
+  "canonical_sha256": "56c110a66a5dc00aa04d3b6c561e623067b057e15f29759b724214bdc609ada3",
+  "review_round": 1,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 合计纯汉字 360 字，略高于 350 原始上限但在 15% 容差（约 402）内；points 6 条覆盖四问；question_guide 四键非空；tags 4 个（Chunk切分/重叠窗口/递归切分/结构化切分）具体，无泛词。",
+    "difficulty": "通过。策略选型与取舍判断（size/overlap 怎么定、为什么不能固定长度、结构化/递归好在哪），medium 定档正确。",
+    "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样。",
+    "technical_accuracy": "通过。Pinecone 对 chunking 的定义与『足够大含意义、足够小高性能低延迟』取舍目标、size 需考虑内容性质与 Embedding 模型及其 token 限制——引用与原文一致且正文实际使用（第 1 节展开为三约束）；overlap 10-20%、FAQ 100-256/条款 256-512 等数值标注为经验区间而非硬性事实；固定切分三失败场景（表格截断/条款条件分家/代词与先行词分块）与递归字符切分按分隔符优先级逐层降级的描述均正确。",
+    "answer_responsiveness": "通过。题面四问（为什么切/size 与 overlap 如何定/为何不能只固定长度/递归结构化好在哪）由 points 1、2+3、4、5+6 逐一回答；example 用混合内容产品手册演示分层切分与评测验证，observation 点出工程纪律收尾。",
+    "provenance_merge": "通过。frequency=5 与 notes 合并候选数（C284 主源+C209+C220+C230+C246）一致；五条候选均真实存在且无跨题重复使用；company=字节跳动（抖音）、role=Agent 开发、round=一面 与主源 note.json 一致；C246（手动干预切片）按 notes 说明并入第 3 节进阶手段，处理有据。",
+    "verbatim_fidelity": "通过。question_verbatim『原始文档是怎么切Chunk的？Chunk Size和overlap多少？怎么确定？』与主源候选 C284 逐字一致；extraction=image_reading 与候选表一致，题面在 note 的 image-extract.md 中核实存在。"
+  },
+  "claims_checked": [
+    {"claim": "chunking 是把大文本拆成较小片段的预处理，目标是『足够大以包含有意义信息』与『足够小以支撑高性能低延迟』之间平衡；chunk size 需考虑内容性质与 Embedding 模型及其 token 限制", "evidence": "https://www.pinecone.io/learn/chunking-strategies/", "result": "confirmed：technical_answer 第 1 节开头即引用该定义并展开为三约束决定块大小，非装饰性引用"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T22:00:00+08:00"
+}

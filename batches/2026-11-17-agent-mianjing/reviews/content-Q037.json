@@ -1,0 +1,49 @@
+{
+  "question_id": "Q037",
+  "note_id": "6add53de000000002b01d079",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
+  "canonical_path": "question_bank/agent-architecture/high/Q037.json",
+  "canonical_sha256": "06a729cf50ed07680a7565b75462ab84cbfd540366c845d8af505293cf6d9bc3",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 实测纯汉字 372 字，低于 402 硬上限但超 350 目标 22 字，非阻塞（与第 7 批 373 字通过先例一致）；summary 1 句 + points 6 条；question_guide 四键非空；technical_answer 2 段 + example 齐全；tags 4 个具体技术词（Prompt注入/纵深防御/权限最小化/沙箱审计），无禁用泛词。",
+    "difficulty": "通过。主源 C310 本身即跨模块设计题（注入/越权/外泄三攻击面 + 权限-沙箱-审计协同，阿里三面），且六个合并候选构成真实系统性追问链（含 MCP 工具安全分层 C419），满足 high 档『系统性追问链或跨模块设计题』条件。",
+    "student_view": "通过。学员侧字段无公司名与『面经/博主/发帖人/原帖/教研』字样；阿里巴巴/网易互娱/月之暗面/字节/米哈游仅出现在 editorial_provenance.notes。",
+    "technical_accuracy": "通过。纵深防御分层（输入隔离/注入检测/输出过滤/权限最小化/白名单+人工确认+幂等键/沙箱限额/审计留痕）与间接注入经工具返回传入的表述技术正确。MCP 引用有可定位支撑句：recommended_answer point 6 与 technical_answer 第 2 节『传输层 TLS 与来源校验、会话层认证授权、消息层严格校验输入与消息大小限制、资源层访问控制与限流』，与 modelcontextprotocol.io/docs/concepts/architecture 安全节内容逐项对应，分层归属无错置。",
+    "answer_responsiveness": "通过。title 三攻击面 + 协同两问均覆盖：注入（points 1、第 1 节）、越权（points 2、第 2 节权限段）、外泄（points 4、第 2 节末段）、三件套协同（summary + points 5 + 第 2 节『各管一段』与冗余防御原则）；example 演示层级失效时下一层兜底。",
+    "provenance_merge": "通过。frequency=6 与 notes 候选数一致（C310/C107/C155/C328/C350/C419）；各候选的 company/round 与 candidates.json 及所属 note.json 核对无误；六候选均未被 Q001-Q035 及本批其他题使用（全库 grep 唯一）。",
+    "verbatim_fidelity": "通过。question_verbatim『Prompt Injection、工具越权、数据外泄如何在架构层做纵深防御？权限最小化、沙箱和审计如何协同？』与主源候选 C310 逐字一致，且在 notes/6add53de000000002b01d079/note.json desc 第 11 条原文核实。",
+    "source_integrity": "通过。note_id『6add53de000000002b01d079』24 字符、与 notes 目录一致；extraction=note_text 与候选及 note.json（image_extract=false，正文含该题）一致。",
+    "category_check": "通过。category_id=agent-architecture，taxonomy.json 已注册；Agent 安防架构分层属架构设计范畴，与 agent-engineering 的单点工程实现题划分一致。",
+    "dedup": "通过。题库无注入/越权/纵深防御主题既有题；Q015（工具调用失败容错）与 Q011（MCP 协议概念）各为相邻边界，核心问题不同，不构成 >70% 重复；related_questions 指向 Q015/Q011 合理。"
+  },
+  "claims_checked": [
+    {
+      "claim": "MCP 官方架构文档安全节包含 TLS/来源校验、认证授权、输入校验与消息大小限制、访问控制/资源保护/限流，各归传输/会话/消息/资源层",
+      "evidence": "https://modelcontextprotocol.io/docs/concepts/architecture",
+      "result": "confirmed：题目第 2 节分层表述与该文档 Security considerations 逐项对应"
+    },
+    {
+      "claim": "提示注入的根源是不可信文本与指令同通道，防护需数据分区标记、检测层扫描、且关键行为不依赖提示自律而依赖工具层权限与确认（含间接注入经工具返回）",
+      "evidence": "题库审核知识核查（OWASP LLM Top 10 / Agent 安全工程共识）",
+      "result": "confirmed：机制表述准确，example 的多层失效兜底演示正确"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 372 字，超 350 目标 22 字（低于 402 硬上限），后续修订时可收窄",
+    "非阻塞：candidates.json 中 C310/C107/C155/C328/C350/C419 状态仍为 pending，登记时需同步 admitted+question_id=Q037"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:55:11+08:00"
+}

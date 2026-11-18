@@ -1,0 +1,14 @@
+{
+ "note_id": "6af5e4b50000000026010641",
+ "title": "华为面经（线上版）",
+ "desc": "二编：\n114524成立\n不过没收到1145的短信只收到了邮件\n华清池开泡\n———————————————————————\n面经攒人品\n华为 AI Infra / 训推系统\n\t\n一面｜技术深挖 + 手撕代码\n\t\n1. 模型推理优化项目\n\t\n介绍模型部署和推理优化流程\n为什么选择 FP8，而不是 INT8/INT4？\nFP8 的 Weight、Activation 如何量化？\nScale 的计算方式、数据类型和粒度？\n动态量化和静态量化的区别？\n如何评估量化精度损失？\nFlashAttention、SageAttention 如何选择？\n如何衡量优化效果？\n（ps问了很多量化的问题但实际没有完全答出来）\n\t\n2. 手撕\n\t\nSoftmax\n\t\n3. 机考复盘\n\t\n机考沿用实习机考成绩，问了一下还记不记得然后完整讲了一遍\n\t\n大模型 Pipeline Parallelism\n二分答案 + 贪心，分析正确性和复杂度\n\t\n二面｜项目落地 + 性能优化\n\t\n1. 推理项目\n\t\n技术方案为什么这样选择？\nAttention Backend 如何 Benchmark？\nFP8 量化的优势和局限？\n推理性能瓶颈如何定位？\n优化前后的性能如何验证？\n\t\n2.算子\n\t\n自动评测系统如何设计？\n与官方实现的性能差距来自哪里？\nTiling、Shared Memory、流水线如何优化？\n\t\n3. 手撕\n\t\nLeetCode 74：搜索二维矩阵\n\t\n三面｜主管面\n\t\n主要围绕自己选的有挑战性项目展开：\n\t\n1. 选择一个投入最多的项目，介绍过程和关键技术点。\n2. 算子优化需要了解硬件细节，如何获取这些信息？有没有和硬件工程师交流？\n3. 如果从软件开发者角度给硬件系统提建议，会提什么？\n4. 项目完成后，有没有遗憾或者值得继续深入的地方？\n5. 遇到过特别大的困难吗？当时怎么解决？\n6. 对图灵团队和训推系统岗位有什么了解？\n7. 什么样的 Offer 会让你放弃目前的机会，选择华为？\n\t\n时间线11.12\n一面9:30\n二面13:50\n三面14:50\n\t\n求入华清池\n\t\n#华为面经 #AIInfra #秋招 #大模型推理 #GPU #校招面试",
+ "author": "杰尼的酒窝",
+ "date": "编辑于 4天前 广东",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6af5e4b50000000026010641?xsec_token=ABMyel0EWzyUKlnXBtRcMa4e4Hn51neehEJ1UMDpUCQLo=&xsec_source="
+}

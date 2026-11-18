@@ -1,0 +1,18 @@
+{
+ "note_id": "6a9ce4d50000000026018d6c",
+ "url": "https://www.xiaohongshu.com/explore/6a9ce4d50000000026018d6c?xsec_token=ABDSceezR6x1r9hbJEBXrIjaM51zeo1NzbIb5KGCm0wjY=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "百度agent面经9.6(有答案)",
+ "author": "27败犬大李GOAT（延毕版）07-13",
+ "published_at": null,
+ "date_raw": "09-06",
+ "likes": "248",
+ "status": "retained",
+ "status_reason": "百度Agent面经15题（带答案），题面完整",
+ "company": "百度",
+ "role": "Agent 开发",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "Tool 的参数 Schema 应该如何设计，才能降低模型生成错误参数的概率？\nAgent 调用工具失败后，重试机制通常应该如何设计？\n如何防止 Agent 在工具调用过程中陷入重复调用或死循环？\nAgent 的上下文窗口即将溢出时，通常如何进行上下文压缩？\nAgent 的长期 Memory 应该在什么条件下写入？\nReAct 和 Plan-Execute 分别更适合什么类型的任务？\nMCP 相比直接使用 Function Calling 主要解决了什么问题？\nRAG 中递归字符切分相比固定长度切分有什么优势？\nRAG 中为什么常将 BM25 与向量检索结合使用？\nRAG 召回结果不理想时，通常应该优先排查哪些环节？\nRerank 后的 TopK 通常应该如何确定？\n如何从海量线上 Agent 日志中构建有限规模的离线评测集？\nPython 中 CPU 密集型任务为什么通常更适合使用多进程而不是多线程？\nRedis 出现热点 Key 时通常有哪些解决方案？\nMySQL 中覆盖索引为什么能够减少回表操作？\n#互联网大厂 #面经 #面试题 #秋招有路子 #秋招 #校招 #百度 #秋招面试 #校招面试",
+ "images": [],
+ "image_extract": false
+}

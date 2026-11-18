@@ -1,0 +1,27 @@
+{
+  "question_id": "Q001",
+  "note_id": "6ac86853000000001801b00e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer",
+  "canonical_path": "question_bank/agent-architecture/low/Q001.json",
+  "canonical_sha256": "33e942e6ee13a194927044b1e2c82aa4ce1fb735a8d0d859407587253ed836c8",
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。1.0 契约字段齐全；id/version/category/difficulty 与路径一致；tags 4 个且具体（『agent组成』为复合词，非禁用泛词 agent 本身）；question_guide 四键非空；technical_answer 无 summary、2 段+example；frequency≥1；related_questions 为空属 0-4 允许区间。",
+    "difficulty": "通过。直问概念辨析与组件清单，符合 low 档『直接解释概念、组成、机制、区别』。",
+    "student_view": "通过。学员侧字段无博主/发帖人/原帖/面经/公司名等旁白。",
+    "technical_accuracy": "通过。Workflow/Agent 定义引用与 Anthropic 原文一致，且明确说明边界是谱系而非开关，未过度绝对化。",
+    "answer_responsiveness": "通过。两个子问（本质区别、核心组件）均有对应 points，组件按模型/工具/循环/状态四层展开。",
+    "provenance_merge": "通过。C072、C318 均真实存在；question_verbatim 与 C072 逐字一致；note.json 的 company=unspecified/role=Agent 开发/round=一面 与 editorial_provenance 一致；frequency=2 与合并候选数一致。注：notes 中称 C072 为『某厂一面』，实际 company=unspecified，属教研侧措辞瑕疵，不影响学员内容，不构成退回理由。",
+    "verbatim_fidelity": "通过。原帖题面无错别字，verbatim 未做改写。",
+    "length": "通过。recommended_answer summary+points 纯汉字约 288 字，在 180-350 区间。"
+  },
+  "claims_checked": [
+    {"claim": "Workflow=预定义代码路径编排 LLM 与工具；Agent=LLM 动态指挥自身流程与工具使用", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
+    {"claim": "ReAct 式推理-行动交错作为 Agent 组件之一", "evidence": "https://arxiv.org/abs/2210.03629", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T19:43:28+08:00"
+}

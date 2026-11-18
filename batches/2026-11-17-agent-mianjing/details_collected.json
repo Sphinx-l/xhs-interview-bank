@@ -1,0 +1,390 @@
+[
+ {
+  "note_id": "69ca03aa0000000022027305",
+  "title": "快手Agent研发一面面经",
+  "author": "27败犬大李GOAT（延毕版）07-13",
+  "date": "03-30",
+  "desc": "二面没过 意料之中（只面了30多分钟，并且没有算法题）\n\t\n#京东 #京东面试  #面经 #实习 #大厂 #ai #agent面经 #二面  #校招 #实习面经",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/69ca03aa0000000022027305?xsec_token=ABo12qC7hvLB797LzIVYgu2HRXdWdW1ocUGmD8CL_SDRw=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a61d78d0000000014007682",
+  "title": "快手Agent研发一面面经",
+  "author": "27败犬大李GOAT（延毕版）07-13",
+  "date": "07-23",
+  "desc": "美团AI Agent开发 二面面经。#ai  #大模型  #面经  #agent  #面试技巧 #AIAgent #Agent开发 #大模型面试分享 #感受",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a61d78d0000000014007682?xsec_token=ABKNqvbbqYoJYIqSPQce-FRkMjua5v51zzQnNZJCv3dBk=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ae07d4b00000000340253bf",
+  "title": "快手Agent研发一面面经",
+  "author": "27败犬大李GOAT（延毕版）07-13",
+  "date": "编辑于 6天前 广东",
+  "desc": "1、自我介绍\n2、挑一个你熟的 Agent 项目，讲清楚从用户输入到最终输出的全链路，每一环的输入输出是什么\n3、Harness 里agent loop怎么设计，终止条件除max_turns 还控哪些？\n4、模型返回 tool_call 后，你们怎么做参数校验、权限校验、沙箱执行和结果回灌\n5、Agent 陷入死循环或重复调用同一工具，怎么检测和处理（状态指纹/去重/回退）\n6、长上下文超限时，短期记忆怎么压缩，摘要丢失关键信息怎么补，跨块关联怎么保证\n7、多 Agent 协作时，任务怎么拆分、状态怎么共享、结果冲突怎么仲裁\n8、多个 Agent 并发改同一个文件/资源，怎么防冲突，锁粒度怎么定\n9、Agent 执行到一半服务重启，checkpoint 存什么、放哪、怎么恢复现场\n10、human-in-the-loop 场景，用户驳回或超时，任务怎么续跑和兜底\n11、工具返回数据过大怎么截断/摘要，工具失败怎么重试、熔断、保证幂等\n12、Function Calling 和 MCP 分别解决什么问题，工具太多时怎么检索和按需加载\n13、RAG 在 Agent 里什么时机触发检索，query 改写和 rerank 怎么接\n14、Prompt 注入怎么防，危险工具调用怎么拦截，敏感数据怎么脱敏\n15、Agent 线上怎么评测：任务成功率、工具选错率、参数错误率、成本、耗时怎么埋点\n16、badcase 怎么归因到模型/prompt/检索/工具，怎么回流成回归集\n17、流式输出下，工具调用事件怎么往前端正向推送，断线重连怎么恢复\n18、手撕算法：给一个扁平 JSON 列表（带 parent_id），恢复成树形结构并返回根节点列表\n\t\n🎯面试感受：\n二面不像一面问“知不知道”是盯你简历里Agent那一段往工程缝捅。上下文压缩、checkpoint、并发改文件、死循环防护，全是生产环境真坑，答表面方案直接被追三层。面试官不装，懂就懂不会就别绕。整体偏硬核，聊透挺爽，能感觉团队真在跑长任务 Agent，不是玩具\n#agent #面经 #大模型 #大模型面试 #互联网大厂 #秋招 #ai智能体 #后端开发 #程序员",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ae07d4b00000000340253bf?xsec_token=ABRltLWp6LJchCicFVFam-A5JEt4cQHu7Jx_AUujWE1o4=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a9ce4d50000000026018d6c",
+  "title": "快手Agent研发一面面经",
+  "author": "27败犬大李GOAT（延毕版）07-13",
+  "date": "09-06",
+  "desc": "Tool 的参数 Schema 应该如何设计，才能降低模型生成错误参数的概率？\nAgent 调用工具失败后，重试机制通常应该如何设计？\n如何防止 Agent 在工具调用过程中陷入重复调用或死循环？\nAgent 的上下文窗口即将溢出时，通常如何进行上下文压缩？\nAgent 的长期 Memory 应该在什么条件下写入？\nReAct 和 Plan-Execute 分别更适合什么类型的任务？\nMCP 相比直接使用 Function Calling 主要解决了什么问题？\nRAG 中递归字符切分相比固定长度切分有什么优势？\nRAG 中为什么常将 BM25 与向量检索结合使用？\nRAG 召回结果不理想时，通常应该优先排查哪些环节？\nRerank 后的 TopK 通常应该如何确定？\n如何从海量线上 Agent 日志中构建有限规模的离线评测集？\nPython 中 CPU 密集型任务为什么通常更适合使用多进程而不是多线程？\nRedis 出现热点 Key 时通常有哪些解决方案？\nMySQL 中覆盖索引为什么能够减少回表操作？\n#互联网大厂 #面经 #面试题 #秋招有路子 #秋招 #校招 #百度 #秋招面试 #校招面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a9ce4d50000000026018d6c?xsec_token=ABDSceezR6x1r9hbJEBXrIjaM51zeo1NzbIb5KGCm0wjY=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ad82cec0000000033011965",
+  "title": "全网最全字节agent工程师面试题",
+  "author": "京道昏07-14",
+  "date": "10-21 上海",
+  "desc": "1.如何向完全不懂技术的人解释 RAG？​\n2. RAG 检索出了很多文档，但最终回答质量仍然很差，如何逐层排查？​\n3. 什么是余弦相似度？它在 RAG 中起什么作用？​                                                           4. 什么是 Embedding？为什么文本需要向量化？​                                                          5. 文档为什么要切片？chunk size 和 overlap 如何确定？​\n6. Top-K 过大会对生成质量产生什么影响？​\n7. 为什么初筛召回后还需要 Rerank？\n#面经 #携程 #大厂面试 #agent #大模型",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ad82cec0000000033011965?xsec_token=ABBMuerVnzAPJw6QgBmZAYrYCLOP8kLHaUR6PLPB2mmHU=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "69fc777f00000000350259d7",
+  "title": "全网最全字节agent工程师面试题",
+  "author": "京道昏07-14",
+  "date": "05-09",
+  "desc": "一面是两个面试官，分别考察了我项目上面的Agent和RAG\n整轮面试耗时大约30min\n无手撕\n#大厂面经 #大厂面试 #京东面试 #Agent #Agent面试 #Ai应用开发 #LLM",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/69fc777f00000000350259d7?xsec_token=AB_qYOOtnAp3FtRp0HpbhH71u4l9X7ra7uDJOKIv7Gyo0=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ab2acbc000000001b020e45",
+  "title": "字节一二面凉经",
+  "author": "想去鹅厂看企鹅09-15",
+  "date": "编辑于 5天前 江苏",
+  "desc": "二编，后面转投了 AI 技术应用，泡池子中--\n\t\n一面 1h\n面试官非常温柔且客气，面试体验最好的一次。\n首先就是常规自我介绍，然后问项目。中间会穿插一些八股，比如大模型原理，和传统 NLP 的区别，top k，top p 的优劣，注意力机制，temperature，然后会根据回答来进行一些补充。\n手撕是 hot 100 合并两个有序链表，在 vs code 写，但是因为忘记怎么定义链表，所以没有编译，面试官说可能会有点影响。\n\t\n二面 40min\n压力比一面大，而且项目问的比一面细致。同样问了大模型相关，RNN，BM25，语义相似度匹配，RAG（回答完说还挺好）\n然后让我打开力扣，选了 hot100 的数组中第 k 个最大元素。写完之后问了时间复杂度怎么算，答的依旧有瑕疵。\n\t\n三面 30min\n自我介绍完，问了研究生课题，遇到了什么困难怎么解决，有没有团队经验，当前有没有面其他家，如果其他公司也发了 offer 会选择华为吗，职业规划，优缺点分析。最后说会有 hr 联系\n\t\n请问各位佬  华为的 Agent 技术会问些什么\n听说会问很多底层原理啥的[完啦R]#秋招每日一投 #面经 #华为agent#华为ai",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ab2acbc000000001b020e45?xsec_token=AByXJbJppKbxtHkUkDDapuwXAOS7ybXreGoNgt2MIFItI=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "69a002ca000000001a01dd93",
+  "title": "字节一二面凉经",
+  "author": "想去鹅厂看企鹅09-15",
+  "date": "编辑于 02-26",
+  "desc": "1. 介绍一下项目一，oauth2.1为什么要接入进mcp中\n2. 项目一中遇到最困难的点是什么\n3. 做重构的时候是如何使用ai的\n4. RAG项目二中MySQL和ES数据一致性是怎么做的\n5. embedding模型是如何选型的\n6. 手动干预切片是怎么实现的\n7. 讲解召回重排的策略\n8. 如何实现多租户隔离\n9. sse流式输出在用户关闭浏览器的时候就断开了，如何保证中断后还能保持之前输出\n10. 是否了解k8s\n11. 对agent的看法\n12. 讲一下agent中有哪些模式\n#面经 #大模型",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/69a002ca000000001a01dd93?xsec_token=ABV5YTwUb-O_J8v13qEb2J-DetW5C43Sf6eTt7Y9W33CI=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a93a7bb000000000502834f",
+  "title": "转行做agent，真的建议先把这些做一遍。",
+  "author": "阿东玩AI05-11",
+  "date": "08-30",
+  "desc": "全程用时半小时\n先做了一个性格测评\n然后开始面试\n1、自我介绍（2min）\n2、职业规划，哪几点原因吸引你应聘这个职位，对小鹏了解多少 (2min)\n\t\n接下来根据简历提问，每个题大概16秒的思考时间，回答时间5min，可以说到四分钟左右，说少了会提醒多说一点\n3、多次尝试却反复受挫的经历，当时你是如何面对挫败感的？后续做了哪些调整？\n4、在经历了这段反复尝试和调整的过程之后，你对自己的能力或者对科研中的成功与失败有了哪些新的认识？这是否改变了你对科研工作的态度或方法？\n5、举例说明你在课程学习或课外实践中主动学习或运用新技能的经历，运用了哪些学习策略，最终帮助你解决了哪些实际问题？\n6、在这个过程中，你总结出了哪些关键的心得和经验？这些心得对你后续的学习和生活产生了哪些具体的影响？\n7、你曾主动争取一个有难度、有挑战的任务，当时基于什么考虑接手这样任务？说说你采取的关键行动步骤，以及任务最终完成情况。\n8、在这个过程中，你有没有主动采纳同学伙伴、导师或相关方的多元视角和建议？这些视角和建议对你解决装置搭建和光源校准的挑战具体带来了哪些帮助？\n#27届秋招 #秋招 #小鹏汽车AI面 #小鹏集团 #面试 #ai面试 #秋招测评 #面经 #面试求职 #秋招笔试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a93a7bb000000000502834f?xsec_token=ABy9Z9k4iYmxVK0QF0PvAQL6ajheNloti2WcS5pTgr9jc=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6adb2a31000000003102c6d3",
+  "title": "Tesla研发工程师面试复盘｜8轮拿下offer",
+  "author": "徒步走向星辰大海02-26",
+  "date": "10-23 上海",
+  "desc": "#QCon上海 #agent开发",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6adb2a31000000003102c6d3?xsec_token=AB0_7HHvFNJsmNPiuRURavQlEGJIuoFdtWiJFCAkj0UtI=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "69c39f58000000001f006849",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "03-25",
+  "desc": "1. 你们用的 Agent 框架是什么？ReAct 还是 Plan-and-Execute？\n\t\n我：我们主要用 ReAct，就是边想边干的那种。模型每走一步看一眼结果再决定下一步，灵活度高，用户中途改需求也能跟上。Plan-and-Execute 我们也试过，先出计划再执行，省 token，但一旦中间出岔子就不好处理。所以实际是混着用：大体上先有个计划，执行细节里遇到异常再切到 ReAct 模式局部调整。\n\t\n2. 怎么让模型老老实实调用工具，不瞎编参数？\n\t\n我：两个办法。一是用模型自带的 function calling，它返回的就是结构化数据，直接解析，最稳。二是如果模型不支持，我就把工具定义写得特别清楚，参数类型、必填项、例子都给足，然后在 Prompt 里硬性要求输出 JSON，再加一层正则解析和格式校验，不对就让它重试，最多两次。关键参数我还会在后端设默认值兜底，不能全指望模型。\n\t\n3. Agent 的记忆怎么搞？长期短期分别怎么存？\n\t\n我：短期就是当前会话的消息记录，加上一些状态变量，比如已经走到哪一步了、中间结果是什么，直接存 Redis。长期记忆的话，我会把聊完的会话压缩成摘要，或者抽取出用户偏好、常用信息，丢到向量库里，下次遇到相关话题再查出来塞回上下文。重点是要控制长度，太长就压缩，别把窗口撑爆。\n\t\n4. 多智能体怎么协作？比如一个写代码一个审查\n\t\n我：我会给每个 Agent 定死角色，比如程序员只负责写代码，审查员只负责挑毛病，System Prompt 里把职责和输出格式都限定好。协作方式一般就是顺序链，程序员写完直接丢给审查员。为了避免乱套，消息用 JSON 串起来，带上任务 ID 方便追踪。遇到意见冲突，我会加个仲裁者，或者关键步骤让人工介入。\n\t\n5. 工具调用失败、超时了怎么办？\n\t\n我：我把所有工具调用封装成统一函数，捕获异常后返回一个结构化的错误信息，比如“Error: 超时”，然后把这个错误喂回给模型，让它自己决定是重试、换工具，还是告诉用户出问题了。重试次数限制两次，整体执行超时也设一个，比如 30 秒，到点就中断。关键工具我还会准备备用 API，主挂了就降级。\n……（文字有限，👆看图）。\n\t\n#Agent #Agent面试 #人工智能 #智能体 #面试技巧 #面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/69c39f58000000001f006849?xsec_token=ABeXRuqY2qa5iRp4Zr98DykrFRgrjOwuPrKjkMEH_RuSw=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a60ba03000000000f017ac2",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "07-22",
+  "desc": "1.请解释Agent的核心架构，它与单纯调用大模型API相比，解决了哪些问题？\n2.Function Calling中，如何设计工具描述和参数Schema来提升大模型的调用准确率？\n3.多步任务中Agent陷入循环或偏离目标时，如何设计有效的终止条件与反思机制？\n4.设计一个支持长期记忆和上下文压缩的Agent记忆模块，核心组件与技术选型有哪些？\n5.请描述ReAct模式的工作原理，并举例说明它如何结合推理与行动。\n6.多Agent协作场景下，Agent之间的通信、任务分配和状态同步如何实现？\n7.Agent调用外部API出现超时或返回异常格式时，如何设计稳健的重试和降级策略？\n8.如何将RAG与Agent结合？当检索结果有噪声时，如何避免干扰Agent的推理与决策？\n9.评估Agent系统的性能，你会关注哪些关键指标？如何收集和监控这些指标？\n10.使用LangChain等框架开发Agent时，遇到过哪些架构或性能局限？你是如何绕过的？\n11.Agent需要操作数据库或文件系统，如何防止提示注入导致的越权或误操作？\n12.为控制延迟和成本，Agent在调用大模型时有哪些优化策略？（如缓存、压缩、模型路由等）\n13.给出一段Agent循环调用工具的伪代码，分析可能导致token快速耗尽或死循环的问题点，并给出改进思路。\n#大模型面试 #Agent #互联网大厂实习 #大模型开发 #大模型 #面经 #字节跳动 #AI面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a60ba03000000000f017ac2?xsec_token=ABk95bsCHV0Ub3x_3yjQG7vKvTj7OB8SlJ8W-Y1tmixow=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a7838eb00000000250014aa",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "编辑于 08-16",
+  "desc": "面字节 AI Agent 之前，我天真地以为背背八股就能过。\n结果一面面试官：来，设计一个 Agent。我当场卡壳。\n后来我把库里 30 篇字节 AI Agent 面经（AI 应用 / 算法 / Agent 开发 / AI 全栈）全扒了，按被问次数排了序，发现来来回回就这几类：\n▫️ Agent 怎么拆任务 / 管记忆 / 调工具\n▫️ RAG 怎么嵌向量、重排、生成\n▫️ 训练和效果评估怎么量化\n最常被问的 8 类题、字节真实被问题干，我都整理好了，包括完整的 30 篇高频考点盘点 + 参考面经清单。\n准备字节 AI Agent 岗的，建议先照着这几类过一遍，别像我一样被开放题干碎。\n#字节跳动 #Agent面试 #大模型 #面试技巧 #人工智能就业 #求职辅导 #互联网大厂 #面经",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a7838eb00000000250014aa?xsec_token=ABGMpCL8nADHqfCTwAcbGCFgJeGMLEz4Z0735movQstPY=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a718d3f0000000006006a9f",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "08-04",
+  "desc": "去年从后端转Agent开发的时候，我一直觉得，只要会LangChain、RAG，能搭几个Agent项目，找工作应该不难。\n后来真正开始面试才发现，大厂根本不会因为你会几个框架就给Offer。\n他们更关心的是：项目是不是你做的？为什么这么设计？线上出了问题怎么处理？能不能真正把Agent落地。\n真正入职以后，我发现字节Agent开发要求没有网上说得那么玄，但也绝不是会搭Demo就够了。\n.\n1️⃣第一，必须具备完整的AI工程能力。\n企业不会问你某个框架API怎么用，而是会问：\"为什么这里要用Agent？\"\"为什么不用传统流程？\"\"Tool为什么这样设计？\"\n你至少要能独立完成一个Agent项目，从Prompt设计、Tool开发、RAG搭建、Memory管理，到部署上线，都知道为什么这么做。如果只是照着教程跑Demo，项目一深问，很快就会露馅。\n.\n2️⃣第二，RAG一定要做到企业项目深度。\n会搭知识库只是入门。\n真正面试更关注的是：文档为什么这样切分？Embedding为什么这么选？为什么需要Rerank？知识更新后怎么做到实时生效？召回效果不好如何优化？向量库异常有没有降级方案？\n很多人简历写着\"做过RAG\"，结果一问索引更新、缓存设计、混合检索，就回答不上来。\n.\n3️⃣第三，真正拉开差距的是工程化能力。\n很多人以为Agent开发每天都在调Prompt，其实真正工作以后，讨论最多的是模型超时怎么办、Tool调用失败怎么办、Memory越来越长怎么办、Token成本怎么控制、日志监控怎么做。\nAgent本质上还是一个复杂的后端系统，只不过把数据库换成了向量库，把业务接口换成了大模型。所以后端工程能力，反而是最大的优势。\n.\n4️⃣第四，要有产品思维。\n写代码只是第一步，更重要的是理解业务。\n为什么这里必须用Agent？规则引擎能不能解决？上线以后到底提升了多少效率？AI带来的收益是否覆盖调用成本？\n这些问题，在评审和面试里都会被反复追问。\n.\n📌最后一点，也是我最大的感受。\n字节几乎不会关心你学过多少课程，他们更关心你有没有真正做过项目。\n为什么这么设计？遇到最大的线上问题是什么？如何定位？如何优化？这些回答，才是真正决定Offer的关键。所以如果准备冲大厂Agent开发，别再只刷教程、追框架，而是尽快做几个完整的企业级项目，把工程能力补起来。\n#RAG #大模型 #agent #大厂 #多模态人工智能",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a718d3f0000000006006a9f?xsec_token=ABAVwtEOX4ud0mOSLxXCMucBO8FuOmT2VKQCLPCF1EioU=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a83f604000000003300d7a9",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "08-18",
+  "desc": "整体侧重基础落地→架构设计→业务深度+综合素质逐层递进，无无效面试，每一轮考察侧重点完全差异化：\n- 技术一面：基础技术核验、项目深挖、RAG/Agent落地、常规工程优化（侧重“会不会做”）\n- 技术二面：系统架构设计、大模型进阶原理、高并发高可用、游戏AI复杂场景解题（侧重“能不能设计”）\n- 技术三面+HR终面：团队匹配、业务认知、项目底层思考、抗压与复盘、薪资意愿、职业规划（侧重“适不适合团队”）\n上岸关键经验\n- 拒绝纯理论背诵，所有技术点必须绑定游戏业务场景+线上问题+量化结果；\n- 米哈游极度看重落地能力和复盘思维，不怕有短板，怕不会复盘、不会迭代；\n- 游戏AI核心是“体验优先”，所有技术方案都要围绕人设稳定、剧情合规、玩家体验、服务稳定展开；\n- 面试追问极多，项目细节、参数、坑点、优化链路必须烂熟于心，杜绝模板化回答。\n#米哈游面试 #AI大模型应用开发 #游戏AI面试 #大厂面试面经 #人工智能面试 #RAG #Agent开发 #AI开发  #AI大模型",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a83f604000000003300d7a9?xsec_token=AB54apgNxQBKEKsQLlox4FiezgjhkQtIjvZmQWqBiLH1k=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a5dcc36000000000f03c53c",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "07-20",
+  "desc": "岗位核心考察点：大模型应用落地能力、RAG/Agent实战、Prompt工程、场景化产品思维、工程问题排查、讯飞星火生态认知，不侧重纯算法推导，偏重业务落地与实操问题。\n个人背景：计算机相关专业，拥有大模型RAG应用、智能Agent开发校园/实习项目，无重度算法论文经历，偏工程应用落地方向。\n二、面试整体流程概览\n1. 技术一面：基础八股+项目深挖+Prompt实操+场景简答，侧重个人项目真实性与基础能力核验\n2. 技术二面：架构设计+工程难点+RAG/Agent深度提问+问题排查，侧重落地能力与技术权衡思维\n3. 综合三面：业务场景建模+端云适配问题+职业规划+岗位匹配度，侧重产品落地思维与企业文化适配\n4. 通用环节：每轮结尾均包含反问环节\n#科大讯飞面试 #大模型面试 #AI应用开发 #面试面经 #AI大模型应用开发 #AI大模型 #大模型开发 #Agent #AI开发 #大模型应用开发",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a5dcc36000000000f03c53c?xsec_token=ABF_A0Vf731Z9KakO10-jL0LFnPH2C-13DL555R-X4Gwc=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a5312150000000017009d93",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "07-12",
+  "desc": "这次面试比较难，而且题没做出来，大概率是挂了。不过勤能补拙，加油！\n#面经 #虾皮 #agent",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a5312150000000017009d93?xsec_token=ABHr4JPCr443qNUfetMNM8D7PqGgDwdMlZTiOzp_KyA7Y=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6add53de000000002b01d079",
+  "title": "Agent 智能体面试高频考点速记 | 篇目二",
+  "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+  "date": "编辑于 10-25 湖南",
+  "desc": "1.如何形式化定义 Agent 执行引擎的状态机，并保证崩溃恢复后工具调用幂等、事务边界清晰、补偿可重放？\n2.Planner 输出不可靠时，如何设计 Executor 的防御性校验、局部重规划和失败隔离？如何证明不会放大错误？\n3.工具返回超时、部分成功、脏数据或对抗性结果时，如何做结果验证、置信度校准和一致性补偿？\n4.上下文预算有限时，系统提示、工具 Schema、记忆、轨迹、中间结果如何做全局最优分配？压缩损失如何量化？\n5.长程任务中如何在线检测目标漂移、子目标遗漏和过早终止？如何做目标保持与信用分配？\n6.多 Agent 通信如何设计协议、共识、冲突消解、死锁检测与避免？何时应退化为单 Agent 工作流？\n7.记忆系统如何做写入质量控制、冲突消解、时效性建模和跨租户隔离？遗忘权如何工程化落地？\n8.如何设计 Agent 可观测性体系，使 Trace、Span、工具链和决策日志能支持根因定位与因果归因？\n9.Agent 评测集如何构建？如何控制 LLM-as-judge 的位置/长度/风格偏差、评测污染和离线在线偏差？\n10.模型、Prompt、工具 Schema 变更时，如何做行为回归、兼容性管理、灰度发布和可回滚审计？\n11.Prompt Injection、工具越权、数据外泄如何在架构层做纵深防御？权限最小化、沙箱和审计如何协同？\n12.从 0 到 1 设计 Agent 平台：核心抽象、MVP 边界、多租户隔离、SLA、指标体系和 6 个月路线图如何取舍？\n13.实现 Agent 记忆缓存（LRU + TTL）\n#Agent面试 #大模型 #大模型面试 #大模型开发 #Agent开发 #阿里巴巴 #互联网大厂 #AI求职 #面经 #秋招每周复盘",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6add53de000000002b01d079?xsec_token=AB_cZnpuvEaQ4rctolBJEMLTVrSrrgsJ0y6tHgXXy6m8k=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a6c66b300000000330314e3",
+  "title": "面字节AI Agent，30篇就这几类",
+  "author": "卑微打工仔08-16",
+  "date": "07-31",
+  "desc": "快手Agent研发一面。#求职 #就业 #agent  #大模型应用  #人工智能  #ai  #面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a6c66b300000000330314e3?xsec_token=ABLCX4UNA2ly4pXrGxSMTyBIhlc4faF0cdnc0Je2lJ2Kk=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a825ca70000000025009903",
+  "title": "阿里云agent开发一面分享",
+  "author": "收藏家06-04",
+  "date": "08-17",
+  "desc": "整体侧重大模型工程落地、RAG与Agent架构设计、线上稳定性、业务场景优化，不侧重纯算法论文推导，极度看重实战项目能力和工程落地思维。\n#AI大模型 #大模型应用开发 #大模型 #大模型面试 #AI大模型开发 #面试辅导 #面试求职 #蚂蚁集团",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a825ca70000000025009903?xsec_token=ABSFKI7Oz7725uI_1QMXiTO12tE6ICEXS8BaY-tWyc0os=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6aa1235b0000000012025edf",
+  "title": "阿里云agent开发一面分享",
+  "author": "收藏家06-04",
+  "date": "09-09",
+  "desc": "#面试经验howto #24h新鲜面经 #大模型 #小米#ai#agent#大厂面试#面经",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6aa1235b0000000012025edf?xsec_token=ABwuXacLfgqpDdz3yy-04HKEpi2oZdkJemezaJkN8iwg8=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a44dd5b000000001700bd67",
+  "author": "会敲代码的鱼",
+  "date": "07-01",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a44dd5b000000001700bd67?xsec_token=ABcd79iURanM76ws2-VlGqThIzZjHtz5ciYGTEU9jze28=&xsec_source=pc_search",
+  "desc": "感谢大家的反馈，我自己设计的这个面向校招/实习的Agent项目目前已经有19篇面经了。\n面向27秋招来说，这个数量已经特别多了～\n\t\n甘同学分享的面经基本都围着 code agent 问：主循环、工具、审批、subagent、上下文、记忆、恢复、评测，一路追到项目是不是真的能控制、能复盘。\n\t\n这种面试节奏我觉得反而是舒服的：说明项目让面试官有东西可以问。\n\t\n我做 Pico 这个 code agent 项目的时候，想补的就是这块：不是再做一个聊天助手，而是做一个能在面试里继续聊下去的工程项目。\n\t\n我觉得 Agent 项目最该提前准备4个问题：Agent Loop怎么跑，Tool安全怎么做，上下文怎么管，长任务怎么恢复。\n\t\n能把这 4个问题讲清楚，面试官就不太容易把你拉回八股。\n\t\n整理好的面经答案、项目代码和面试话术我放在下面了，想对着准备的可以自取。\n#agent项目 #agent开发 #字节 #codeagent #简历项目 #agent #Agent项目",
+  "images": []
+ },
+ {
+  "note_id": "6af580f4000000002303c0c4",
+  "author": "困困",
+  "date": "编辑于 4天前 湖南",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6af580f4000000002303c0c4?xsec_token=ABMyel0EWzyUKlnXBtRcMa4Se63Xao87mr-7EVgge-AvU=&xsec_source=pc_search",
+  "desc": "个人背景：计算机科班出身，深耕 AI Agent 落地开发一年多。踩过不少项目坑后才明白，Agent 开发远不是调接口、写提示词就能交付。\n\t\n企业真正需要的，是能独立搭建整套系统的开发者，掌握任务规划、工具编排、状态治理、异常兜底，完成从开发到上线全链路交付。\n\t\n首先要夯实底层基础。Python 重点吃透异步、装饰器、数据结构、异常处理与 FastAPI；大模型侧理解 Token 机制、上下文窗口、Prompt 工程、Function Calling、结构化输出、幻觉抑制；后端掌握 Redis、MySQL、Docker、API 设计，熟悉并发、日志与调度。每个知识点手写 Demo，跑通并理解边界才算掌握。\n\t\n其次吃透 Agent 核心能力。熟练 ReAct、Plan-and-Execute 范式，打通任务拆解、规划、执行、反思校验闭环；做好工具 Schema 定义、参数校验、路由分发、超时重试与失败兜底；掌握 LangGraph 的 State、Node、Edge、Checkpointer，分清 Workflow 和 Agent 适用场景；搭建短期、长期记忆体系，通过上下文压缩解决多轮信息丢失问题；理解 Supervisor、Planner、Executor 多角色分工，管好任务分发与异常。\n\t\n实战优先落地三个有复杂度项目：客服 Agent、办公 Agent、多 Agent 调度系统，不只追求跑通，重点处理报错、死循环等异常。\n\t\n工程上掌握 FastAPI、Docker、Redis、SSE 流式输出，做好熔断、重试、幂等、断点恢复，搭建 Trace、日志可观测体系。\n\t\n自建测试集，跟踪任务完成率、工具调用准确率、Token 成本等指标，持续沉淀 Bad Case 迭代优化。推荐学习 LangGraph、OpenAI Agents SDK、MCP，用 LangSmith、Langfuse 调试。\n\t\nAgent 开发拼的不是框架熟练度，而是让 Agent 稳定把事做对，故障可自动恢复，这才是岗位核心能力。\n#oc #AI大模型 #agent #大模型应用开发 #程序员 #ai应用 #程序员的出路 #计算机专业",
+  "images": []
+ },
+ {
+  "note_id": "6a03b843000000000803d1a9",
+  "author": "星星海",
+  "date": "编辑于 09-30",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a03b843000000000803d1a9?xsec_token=AB6aVJjj_I-Z7Sic1xZ6zZPhKqP-AKbrAKkoMCFR6EEEs=&xsec_source=pc_search",
+  "desc": "面试感受\n面完了，字节的面试官确实专业，问的问题都很深入，不是那种背八股文就能过的。一面基础打得牢，二面项目挖得深，三面系统设计视野要广。每个问题都直击工程落地的痛点，没点实战经验还真扛不住。不过准备充分的话，2-2应该问题不大。\n\t\n#互联网大厂 #面经 #面试求职 #大模型 #ai智能体 #面试题 #java",
+  "images": []
+ },
+ {
+  "note_id": "6aa7a4a90000000011037be7",
+  "author": "码上agent",
+  "date": "09-14",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6aa7a4a90000000011037be7?xsec_token=ABPJwYNJ1jQTmeyiMF0ewaaguuu0TLH9e-IOQOPW7SXVI=&xsec_source=pc_search",
+  "desc": "#一面真实挂人核心原因：\n1. 只会调包，讲不清底层Agent循环原理，无法手写最小demo\n2. RAG只会背诵概念，说不清文档解析、分块、召回的真实踩坑经历\n3. 没有线上稳定性、高并发、成本优化相关落地思路\n4. 项目描述缺少量化指标，只讲功能，扛不住连环深挖\n#24h新鲜面经 #面试经验howto #agent开发 #agent面经 #大模型开发 #面经 #大厂面经 #校招",
+  "images": []
+ },
+ {
+  "note_id": "6adc069a0000000025023c8e",
+  "author": "小周的IT日记",
+  "date": "10-24 广东",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6adc069a0000000025023c8e?xsec_token=ABNzIvUuXsT49kTEQprnGgsGWsJjHI7zzGqvKG-bUxFtQ=&xsec_source=pc_search",
+  "desc": "1、自我介绍\n\t\n2、项目介绍，重点讲里面 Agent 相关的落地\n\t\n3、你怎么理解 Agent Harness，和直接用大模型 API 有什么区别\n\t\n4、Agent Loop 的核心流程怎么设计，什么时候停、怎么防死循环\n\t\n5、Harness 里状态怎么管理，短期上下文和长期记忆怎么分层\n\t\n6、上下文超长怎么压缩，滑动窗口和摘要各适合什么场景\n\t\n7、工具调用失败、超时、参数非法怎么容错和重试\n\t\n8、LLM 返回的 tool call 格式不合法怎么处理\n\t\n9、ReAct 和 Plan-Execute 的区别，分别适合什么任务\n\t\n10、多工具很多时怎么选工具，Skill 和 MCP 的边界是什么\n\t\n11、RAG 链路怎么设计，切分、召回、重排、兜底怎么做的\n\t\n12、Agent 效果怎么评测，bad case 怎么定位和回流\n\t\n13、长任务从 5 分钟变 20 分钟，怎么排查延迟\n\t\n14、用户中途取消任务、版本热更新时正在跑的 Agent 怎么处理\n\t\n15、手撕算法：实现一个带过期时间的 LRU Cache\n\t\n面试感受：\n\t\n整体偏工程落地，不整虚的。Harness 不是背概念，得真懂运行时、状态、工具、沙箱那一套。问法很字节，一个知识点追到你能不能扛住生产问题。算法不难但讲究边界，别飘，把容错和可观测性讲明白就很加分。\n\t\n#aiagent #大模型 #golang #java #ai应用开发 #面经 #24h新鲜面经 #后端开发 #面试题 #互联网大厂",
+  "images": []
+ },
+ {
+  "note_id": "6a533e40000000002200b482",
+  "author": "卑微打工仔",
+  "date": "编辑于 10-24 浙江",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a533e4000000002200b482?xsec_token=ABHr4JPCr443qNUfetMNM8DxVG9P_VT9lcasCT5D2dVxg=&xsec_source=pc_search",
+  "desc": "主包看agent面经发现考点其实就几个，上下文工程，memory分层，tool设计，mcp，skill，harness工程，自进化，skill的理解。再者就是项目深挖追问，连带一些一些场景题，有可能基于项目，有的全新，开放性多一些。这里统一梳理下。\n\t\n方向一：Agent 设计细节\n上下文治理、Memory 短期长期怎么分、多 Agent 架构取舍——这类题几乎必问。大多数人答到做了摘要压缩就没了，我建议大家讲成一套状态管理方案。Globex 拆了四层：\n- 热上下文：当前 query、约束、工具返回，严控 token，直接进 prompt。\n- 结构化任务状态：budget、failed_tools 等，用状态字段代替塞到上下文。\n- 可更新工作记忆：用户偏好、已确认约束、商品 shortlist，增量更新，不每轮从头总结。\n- 冷数据归档：完整工具返回、Trace，默认不进 prompt，需要时按 thread_id 回查。\n\t\n方向二：真实落地场景题\n这类一般是开放题，比如平台售后条款几万字、商品详情十几屏，全塞上下文 token 直接满。面试官想看的是你的 trade-off：滑动窗口简单但容易忘早期约束，只做摘要省 token 但会漂还会破坏 Cache，全量结构会让工程变复杂。Globex 是折中方案：高价值结构化，中价值摘要化，低价值归档追溯。\n\t\n方向三：前沿热点\n今年 Harness 工程和自我进化比较热。很多同学答\"给 Agent 加保护机制\"，显得有点空。能讲到具体设计就行：LoopDetector 滑动窗口检测死循环、单工具返回超 token 截断、异常转字符串让主 loop 自愈。\n\t\n近期的面试题\n群u分享的几个面经，几乎都在问这几个方向，不奇怪，能让agent效果变好高效的方式就是梳理好Context：\n- 跨境购物 Agent 架构？对比过哪些方案？\n- 上下文膨胀怎么解决？\n- 跨平台商品信息格式不同，怎么归一化？\n- 工具重复调用、无效返回处理？\n- 你怎么理解 Harness？\n\t\n其实面试官是默认你会调模型写 prompt 的，在意的是 Agent 的工程实践经验。上下文治理、Memory 设计、防失控、可观测、评测闭环。只做一两个在面试官眼里就是 Demo。泡整理了 Agent 项目和 AI 八股，代码文档和面试话术都有，后续继续更新面经。\n\t\n#agent #agent项目#harness #校招 #暑期实习 #秋招 #agent面经 #ai面经 #日常实习  #互联网大厂",
+  "images": []
+ },
+ {
+  "note_id": "6ab267aa0000000034019310",
+  "author": "卑微打工仔",
+  "date": "编辑于 09-26",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ab267aa0000000034019310?xsec_token=AByXJbJppKbxtHkUkDDapuwZdo9qwEey_yPunC2iILI30=&xsec_source=pc_search",
+  "desc": "这几天搭建了一套自动收集面经的流水线，一共收集了五六百篇了，包含了各种公司的算法开发等。目前私信问的最多的是字节跳动开发岗相关的，然后也有不少同学私信我，问我Agent到底怎么入门。现在你看了这篇帖子，知道高频考点是什么，你再对着考点去看项目，这样学起来最快。所以我就把开发岗的热门考点全都梳理了一下。\n\t\n只选择2026年的面经，包含了今年的暑期实习跟秋招。然后除掉了那些明显AI编造面经的，包括一些转载的、非个人真实面经的，我都剔除了，这也花了不少时间。现在很多人都在用AI编造面经起号。\n最后整理出119篇，再按「大方向→细分考点」做成这7张图。\n\t\n这批样本里，AI知识的6个方向\n① Prompt与AI开发：50篇，42.0%\n② 工具调用与协议：44篇，37.0%\n③ RAG检索链路：43篇，36.1%\n④ 架构与多Agent：43篇，36.1%\n⑤ 评测与可靠性：42篇，35.3%\n⑥ 记忆与上下文：41篇，34.5%\n下一篇会讲后端开发的热点考点。\n#秋招有路子 #字节跳动 #AI开发 #互联网大厂\n#字节跳动面试  #AIAgent  #面经  #程序员面试",
+  "images": []
+ },
+ {
+  "note_id": "6ae4a0c300000000260028d8",
+  "author": "会敲代码的鱼",
+  "date": "编辑于 2天前 湖南",
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ae4a0c30000000260028d8?xsec_token=ABxmJUuWFun7ciNJm6YIN-bsQTj0Hp-4u3ts1ijkbbm9E=&xsec_source=pc_search",
+  "desc": "1. 为《星穹铁道》模拟宇宙设计 AI 祝福组合 Agent，规划、校验、生成、兜底如何分层？\n2. 智能 NPC 多 Agent 后端，对话、行动、角色联动如何划分职责与共享状态？\n3. LLM 超时或挂掉时，NPC 如何无缝降级到规则/行为树且不让玩家感知变傻？\n4. 长期记忆准入：哪句话该写入事实、哪句只算会话约束？冲突如何消解？\n5. 游戏 Agent 中哪些状态必须外置持久化，哪些只留在上下文？跨会话如何恢复任务？\n6. 多 Agent 共享世界状态时，如何防止一个 Agent 的幻觉被另一个当作事实传播？\n7. 线上成功率下降但离线评测无变化，按什么顺序排查模型、检索、工具、编排？\n8. Agent 任务完成率仅 70%，如何归因并建立 Badcase 闭环？无显式反馈怎么抽检？\n9. MCP 工具安全边界：认证、授权、白名单、参数 Schema、不可信输出分别放哪层？\n10. 高风险工具调用（发道具、改玩家数据）如何设计确认、幂等、回滚与审计？\n11. 选一个米哈游产品，指出 Agent 在研发管线或玩家体验侧真正可落地的切入点。\n12. 从零搭建米哈游 Agent 平台，第一版优先做哪三个能力、放弃什么？6 个月如何演进？\n13. 算法题：Agent 工具调用循环检测与预算熔断\n#大模型 #大模型面试 #Agent开发 #Agent面试 #面经 #互联网大厂 #米哈游 #面试求职",
+  "images": []
+ },
+ {
+  "note_id": "6aa3b16e000000001001d751",
+  "title": "字节agent开发(抖音开发)一面面经",
+  "author": "熊掌与鱼🐟08-28",
+  "date": "编辑于 10-14",
+  "desc": "回复一下大家问的最多的面试问题，叠甲（面试的公司不是大厂，所以找大厂的友友们可以移步啦）。现在Agent面试，大多问题都是围绕的项目落地，还是挺考验实操经验的。被问到没准备到问题很正常，大家按照自己的真实情况问答就行了。我找到这份工作也是找了两周左右，面试了六七家公司，综合下我遇到的问题分享给大家。\n-\n1.自我介绍（最新项目）\n2.langgraph的节点如何传输数据?LangGraph靠共享State数据，是怎么做到的?\n3.并行边+多节点操作一个state的结果会汇总到一个节点，state如何汇总?\n4.使用deepagent、langgraph、dify完成一个问数智能体如何设计方案，三种技术有什么区别?\n5.langchain管道符是如何实现上一个管道的输出作为下一个管道输入的?\n6.文档不拆分的embedding和拆分后的embedding结果有什么不一样?\n7.一个文档做向量化和一个文档的一个块做向量化产生的结果维度是否一样?\n8.讲讲mcp?mcp的实现方式有哪些?mcp设计解决了什么场景?\n9.介绍一下mcp的协议，streamnable格式?\n10.讲一下要用一个mcp，是如何与大模型结合，并且如何调用?\n11.langgraph如何自定义中间件，中间件如何绑定到langgraph?\n12.langgraph如何挂载tools，底层如何实现?langgraph的中间件如何实现的?\n13.介绍一个python中的await，用法?断点打到await所在的一行，await后面的代码会不会执行?\n14. 长上下文压缩，你了解哪些实现思路？\n15. 当工具越来越多，上下文信息杂乱，Agent选工具容易出错，可以怎么优化？\n16. 之前做过哪些Agent落地项目？\n顺序比较乱，大家可以自己整理一下。\n#Agent #Agent面试#AI#面经#面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6aa3b16e000000001001d751?xsec_token=ABbUGvuDqBb7AIrhjJiyza57i7PzfTBNMMtSbufnJvoTc=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6acc4c530000000015011b68",
+  "title": "字节agent开发(抖音开发)一面面经",
+  "author": "熊掌与鱼🐟08-28",
+  "date": "编辑于 10-16",
+  "desc": "⌛️1h10min\n1. 可以详细介绍一下项目：项目场景、设计方案、开发内容？\n2. 选取一个真实问题单，完整描述从Agent接收输入，走完全流程，到产出最终结果的整条链路？\n3. 测试报告/测试用例设计，如何判断符合本次新需求改动？新功能无历史问题单，怎么设计测试用例？\n4. 需求文档、技术方案为什么没有作为输入信息纳入系统？\n5. 最终产出的报告只是文本，是否会执行真实测试？哪些环节需要人工确认？\n6. 问题单信息如何持续积累、迭代更新？测试执行失败后的结果如何回流到问题单系统？\n7. 提到将测试用例设计耗时从1小时压缩到3分钟，耗时瓶颈在哪，哪些环节快、哪些慢？\n8. 项目使用Python+FastAPI，数据库层如何接入？数据库表是否由你设计？\n9. 两个QA同时输入相同查询，Agent给出的报告是否一致？\n10. 整体Agent流程使用workflow，为什么该场景适合workflow？Agent执行流程有哪些形式，相互差异是什么？\n11. 外部环境、参数变化，会不会导致相同测试任务执行结果不一样？如何处理？\n12. Agent项目2，对比项目1，在Agent设计层面有什么差异？\n13. 你主要负责哪些模块、哪些具体开发工作？\n14. 项目里封装了CLI工具，介绍下CLI的实际开发内容？\n15. 为什么要把skill/工具执行流程封装成CLI，这种方案有什么好处？\n16. 用户输入不完整的信息，系统如何校验、补全参数并继续执行？哪些参数必须用户确认？\n17. 残缺信息无法唯一确定资源，系统如何选择？\n18. 讲讲你对skill的理解，skill只包含流程说明，还是包含完整设计？\n19. 项目3整体架构、模块分层？\n20. 该项目存储层如何设计？\n21. Skill、MCP、Function Calling、Workflow、SubAgent，分别解决什么问题，你在项目中如何组合使用？\n22. 介绍下AICoding笔试题，拿到题目后如何解读、实现？\n23. Agent开发中，知识维护、记忆模块（短期/长期记忆）你是怎么考虑设计的？\n24. Redis在Java开发中的作用、适用场景，底层原理考量？\n25. 你通过哪些渠道学习AI、Java相关知识，如何跟进技术发展？\n26. 岗位base，城市方面有没有特殊需求？\n#面经 #秋招 #秋招有路子",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6acc4c530000000015011b68?xsec_token=ABdlKOC4b46YXGp_3NQe7L-uml3tma_w-4aclBbfvuqss=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ac865b1000000000b0061c2",
+  "title": "字节agent开发(抖音开发)一面面经",
+  "author": "熊掌与鱼🐟08-28",
+  "date": "编辑于 10-09",
+  "desc": "虾皮 Agent 开发一面、二面的问题整理，共 34 题。\n\t\n一面：RAG 与评测、长期记忆、Coding Agent。\n二面：需求澄清与技术设计、Agent 评测、RAG 与上下文、现场 Skill 设计。\n\t\n#虾皮面经 #面经 #Agent #AI应用开发 #秋招有路子",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ac865b1000000000b0061c2?xsec_token=ABW5_clKgK-wSTwyqnbk-IikqG1DDfWAl41INz7jy9g3o=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6adf62390000000018006e6c",
+  "title": "阿里社招agent研发一面（已过）",
+  "author": "北大第一小趴菜11-08",
+  "date": "10-26 广东",
+  "desc": "面试围绕字节Agent项目展开，详细探讨了系统架构、多Agent协作、RAG技术及后端实现细节。问题深入且涵盖业务核心，涉及系统设计、性能优化及技术实现，整体难度适中，面试官知识面广且经验丰富。\n#24h新鲜面经 #大模型 #前端面试 #面经 #互联网大厂 #人工智能 #面试求职",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6adf62390000000018006e6c?xsec_token=ABT3RcjwtJEhGEm5A7rt50pg3DQyq6GeyVxnZi5swgVak=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6accaec100000000020130e4",
+  "title": "阿里社招agent研发一面（已过）",
+  "author": "北大第一小趴菜11-08",
+  "date": "编辑于 10-12",
+  "desc": "1介绍一下你的两个项目\n2两个项目都上线商用了吗\n3做了多久，用ai开发的吗，怎么用ai开发的\n4项目中意图识别和查询改写怎么做的，只用了提示词吗？\n5项目中子查询怎么做的，对比多跳等困难问题怎么解决的，有专门测试这一部分的提升吗\n6查询改写用的本地微调模型，还是api？对于一些特有数据集，大模型在查询改写和分配子查询的过程中，其实是不知道自己不知道什么的，如何解决这一个问题（不会）\n7全链路可插拔怎么做的，为什么这么设计，有什么好处\n8.全链路可视化怎么做的，如何可视化，jsonl日志过多如何排查\n9索引链路怎么做的，为什么要分两层结构，为什么要分两路结构，\n10一些pdf表格图片如何处理\n11对比实验如何设计的，数据集多大，数据集组织形式\n12实验检索效果的指标有哪些，是多少\n13实验生成效果的指标有哪些，是多少，如何测评的生成效果\n14实验只把数据集跑了一遍吗，这样你的方法对比常规流程是不是波动大，不公平\n15 如何权衡你方法的代价和效果提升\n16讲一下你的agentloop流程\n17上下文压缩怎么做的，只用了提示词吗，如何保证压缩过程中toolcall和toolresult在一起，不被切断，\n18上下文压缩主要在压什么，应该保留哪些信息，如何保留，如何让长任务不丢失\n19了解过主流agent的一些上下文管理方法吗，cc codex pi等等\n19记忆如何设计的，长期记忆怎么设计的，怎么加载，怎么召回，怎么总结，怎么更新，了解过主流的agent记忆管理方法吗，cc codex pi\n20多agent怎么共享上下文 怎么共享记忆 怎么通信 冲突怎么办\n21多agent并发，改同一个文件怎么办，git worktree也冲突怎么办，git worktree如果交给主agent合并，实际上对主agent没有限制，主agent合并错了怎么办（不会了）\n22安全权限怎么做的，沙箱怎么做的\n23我们有十几t级别不同格式代码文案等等，并且会不断更新，并且新版本要关联到旧版本，各种文件之间有各种关系（举了很多例子，给我讲了下他们目前在做的事情），你如何设计rag知识库，会遇到哪些问题，怎么维护（不会了）#24h新鲜面经 #互联网大厂 #收到offer #面试经验howto",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6accaec100000000020130e4?xsec_token=ABdlKOC4b46YXGp_3NQe7L-lU-3PDuW0SCR4vbSq3Mtyc=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a1c1e5c000000003501dd46",
+  "title": "阿里社招agent研发一面（已过）",
+  "author": "北大第一小趴菜11-08",
+  "date": "编辑于 06-05",
+  "desc": "二面主要问的都是工程实际相关的问题，第一次被拷打麻了。#算法 #互联网大厂 #实习 #面试",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a1c1e5c000000003501dd46?xsec_token=ABfr-PwIgAQzs0_yeNMPS-q25fku0_bFuywQpsdUe97tI=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6991c26a000000001a02f9a0",
+  "title": "阿里社招agent研发一面（已过）",
+  "author": "北大第一小趴菜11-08",
+  "date": "编辑于 03-01",
+  "desc": "👋 大家好，我是 Agent 搬砖日记\n从 23 年开始做 Agent 到现在，见证了这个赛道从 Demo 满天飞到如今深水区落地的全过程。 最近和 阿里淘天某核心业务线 的技术负责人聊了一轮。整体感觉是：大厂现在对 Agent 的考察，已经完全脱离了“调包侠”阶段，非常看重工程化落地能力和模型迭代闭环\n\t\n今天复盘一下这一面中比较有质量的几个探讨点（隐去了具体项目细节，只聊技术逻辑）：\n\t\n一、 RAG 架构：不仅要准，还要快\nQ：关于 RAG 中的 Chunking 策略与向量库选型逻辑？\n✅ 我的应对思路：\n分块策略： 我强调了不能迷信固定的 Token 长度。在实战中，我们更多采用“语义感知切分”，配合一定的 Overlap 来保证上下文连贯性\n选型逻辑： 重点聊了 Milvus 在大规模数据下的表现。不仅仅是看 Recall ，更看重 QPS 和 稳定性。特别是在混合检索场景下，如何平衡倒排索引和向量索引的权重，是落地的关键\n\t\n二、 传统工程相关：高并发下的系统稳定性\nQ：高并发、分布式场景下的数据一致性问题？\n✅ 我的应对思路： Agent 本质上还是一个服务端应用。我结合之前的后端架构经验，聊了 延时双删、Binlog 异步订阅、服务间 ACK 等方案。 这里我想表达的是： Agent 的不稳定性已经够高了（模型幻觉），如果工程架构（数据库、缓存、工具调用）再出问题，那用户体验就是灾难级的\n\t\n📝 写在最后：这轮面试验证了我的判断：26 年的 Agent 研发，后端工程能力是底座，模型认知和业务理解是天花板。 只有把这两者结合，才能接得住大厂的流量\n\t\n👉 下期预告：刚聊完 Minimax ，纯情感陪伴类 APP 在 26 年还有多少技术红利？下篇聊聊我的看法（关注我，一个从后端转型Agent研发的打工仔）\n\t\n#面经 #互联网大厂  #ai #阿里 #agent",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6991c26a000000001a02f9a0?xsec_token=ABs3awPYa_f9XIbMXDNB3PIodj9R17KVMLJuSQGLI4v5E=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a0320240000000006023ed4",
+  "title": "字节AI Agent一面凉经",
+  "author": "五公里跑的啥10-09",
+  "date": "05-13",
+  "desc": "一、项目架构与Agent设计\n1. 你的Agent是基于什么架构设计的？\n2. 用的是LangGraph吗？整体架构是什么样？\n3. 是master agent+sub agent，还是workflow形式？\n4. 挑一个你做得最好的Multi-Agent项目详细讲一下。\n5. 为什么要设计成workflow+单点Agent的形式？\n6. 首次生成和多轮补充时，链路怎么路由？\n\t\n二、评测体系与Badcase闭环\n7. 整个Agent效果怎么评测？靠人工标注还是线上指标？\n8. 没有用户反馈的数据怎么做抽检？\n9. Badcase拿到后，怎么定位是哪个Agent的问题？\n10. Multi-Agent体系下，你怎么定位需要SFT的Agent？\n11. Prompt调优时，有没有遇到修好一类case、另一类case变差的情况？\n12. 如果Prompt已经调到极限了，下一步会怎么做？换模型、升参数还是做SFT？\n13. 你们调Prompt是人工调，还是有自动化优化方案？\n\t\n三、团队分工与个人职责\n14. 这个项目团队有多少人？算法、后端、前端、业务分别怎么分工？\n15. 你负责的后端、算法、AI工程边界分别是什么？\n\t\n四、推理优化与工程落地\n16. 工程侧会不会做推理优化？主要从哪些方向做？\n17. 你们做过哪些推理加速手段？\n18. 有没有用continuous batching、KV Cache这类方案？\n19. vLLM这类推理框架你们怎么用？效果提升主要体现在哪？\n20. 你们线上高峰时的推理吞吐大概是什么量级？\n\t\n五、语音Agent与时延问题\n21. 这个项目是纯文本输入输出吗？\n22. 有没有做过语音Agent，ASR/TTS怎么选型？\n23. 如果让你选ASR模型，你会重点看哪些维度？\n24. 整个workflow从query到报告生成，整体耗时大概多少？\n25. 首字时延和完整生成时延分别是多少？\n26. 对客报告生成里，有没有做内容审核或质量复核？\n\t\n六、求职动机与协作方式\n27. 为什么想从现在的工作出来？\n28. 作为项目负责人怎么推进协作？\n29. 日常怎么开standup、怎么定里程碑、怎么处理block？\n30. 你对下一份工作的诉求是什么？\n\t\n#面经 #携程 #携程面经 #大厂面经 #Agent #大模型 #互联网大厂",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a0320240000000006023ed4?xsec_token=AB6aVJjj_I-Z7Sic1xZ6zZPnO4UMIY2zXtUZKWFEMrGgM=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a9685940000000026016b87",
+  "title": "字节AI Agent一面凉经",
+  "author": "五公里跑的啥10-09",
+  "date": "编辑于 09-02",
+  "desc": "这是招聘君【一次看透一个岗】的第三期内容\n⬇️\nAI Agent工程师\n\t\n“没有Agent相关经历可以投递吗？”\n“简历怎么准备？面试会考什么？”\n......\n一篇内容全部帮你搞定😉\n（图片中的面试“原题”，同学们可以先尝试作答，再对照解题思路，检验自己的判断和表达是否还有优化空间。）\n\t\n下期内容你还想要看什么呢？评论区留言吧🌹\n\t\n#字节跳动#字节跳动招聘#AI Agent#大模型#秋招#27届",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a9685940000000026016b87?xsec_token=ABrDJHMms-z0KfN042baKkq4mX05smqTbQ7uJe7kJ2K1g=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6adf46d4000000001401bf7c",
+  "title": "字节AI Agent一面凉经",
+  "author": "五公里跑的啥10-09",
+  "date": "10-26 广东",
+  "desc": "1、自我介绍\n\t\n2、挑一个你最熟的 Agent 项目，讲清楚从用户输入到最终输出的全链路，每一环的输入输出是什么\n\t\n3、Harness 里 agent loop 怎么设计，终止条件除了 max_turns 还控哪些（token/耗时/预算/重复动作）\n\t\n4、模型返回 tool_call 后，你们怎么做参数校验、权限校验、沙箱执行和结果回灌\n\t\n5、Agent 陷入死循环或重复调用同一个工具，怎么检测和处理（状态指纹/去重/回退）\n\t\n6、长上下文超限时，短期记忆怎么压缩，摘要丢失关键信息怎么补，跨块关联怎么保证\n\t\n7、多 Agent 协作时，任务怎么拆分、状态怎么共享、结果冲突怎么仲裁\n\t\n8、多个 Agent 并发改同一个文件/资源，怎么防冲突，锁粒度怎么定\n\t\n9、Agent 执行到一半服务重启，checkpoint 存什么、放哪、怎么恢复现场\n\t\n10、human-in-the-loop 场景，用户驳回或超时，任务怎么续跑和兜底\n\t\n11、工具返回数据过大怎么截断/摘要，工具失败怎么重试、熔断、保证幂等\n\t\n12、Function Calling 和 MCP 分别解决什么问题，工具太多时怎么检索和按需加载\n\t\n13、RAG 在 Agent 里什么时机触发检索，query 改写和 rerank 怎么接\n\t\n14、Prompt 注入怎么防，危险工具调用怎么拦截，敏感数据怎么脱敏\n\t\n15、Agent 线上怎么评测：任务成功率、工具选错率、参数错误率、成本、耗时怎么埋点\n\t\n16、badcase 怎么归因到模型/prompt/检索/工具，怎么回流成回归集\n\t\n17、流式输出下，工具调用事件怎么往前端正向推送，断线重连怎么恢复\n\t\n18、手撕算法：给一个扁平 JSON 列表（带 parent_id），恢复成树形结构并返回根节点列表\n\t\n面试感受：\n\t\n二面不像一面那样问你“知不知道”，是盯着你简历里 Agent 那一段往工程缝里捅。上下文压缩、checkpoint、并发改文件、死循环防护，全是生产环境真坑，答表面方案直接被追三层。面试官不装，懂就懂，不会就别绕。整体偏硬核，但聊透了挺爽，能感觉到团队是真在跑长任务 Agent，不是玩具 demo。\n\t\n#aiagent #harness #大模型 #java #JAVA转AI大模型 #24h新鲜面经 #面经 #leecode #面试求职 #智谱大模型",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6adf46d4000000001401bf7c?xsec_token=ABT3RcjwtJEhGEm5A7rt50pr2n-Js1HbV1iyUVBVV_tAA=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a61be15000000000f00b322",
+  "title": "字节AI Agent一面凉经",
+  "author": "五公里跑的啥10-09",
+  "date": "07-23",
+  "desc": "是我还能回忆起来的，遇到几次记忆也比较深刻~\n今天中午午休的时候整理的！顺序没管是想起来一条写一条的不是按照难度顺序\n好多宝宝催更我今天终于发啦[完啦R][完啦R][完啦R][完啦R]\n之后如果还能整理一下的话会补充~\n#agent开发 #程序员转行 #程序员日记 #ai大模型 #大模型 #aiagent #程序员 #前端开发 #后端开发",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a61be15000000000f00b322?xsec_token=ABKNqvbbqYoJYIqSPQce-FRge5XVcQKqIXHXzzFIUaRpg=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6a677c95000000001302f0fb",
+  "title": "携程Agent开发二面 35min",
+  "author": "程序员尺哥05-13",
+  "date": "07-27",
+  "desc": "#howto入门codex #人工智能 #大模型 #大厂 #互联网大厂 #算法 #人工智障与人工智能 #管培生 #AI学习 #后端开发",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6a677c95000000001302f0fb?xsec_token=ABBs5YDCigaGjUJ9cb-I3F3hqdgxsW-4tgv4jRQD24kQ0=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "69f9f8c5000000003503ac05",
+  "title": "携程Agent开发二面 35min",
+  "author": "程序员尺哥05-13",
+  "date": "05-08",
+  "desc": "这轮感觉不是单纯考八股 更像在看你对项目设计有没有自己的思考👇\n\t\n介绍一下Agent项目，整体架构怎么设计？\n为什么选择workflow，而不是完全自主决策的Agent？\nworkflow里哪些节点需要ReAct能力？\n长链路Agent为什么能接受十几分钟耗时？\n不同业务场景下，延迟和效果怎么取舍？\nAgent之间怎么编排？框架选型怎么考虑？\nmemory为什么要分短期、长期、summary？\n长期memory存什么？什么时候加载？\nmemory是模型自己选，还是规则触发更合理？\n多轮对话里，指代不清怎么处理？\nquery改写放在哪个环节最合适？\nquery改写带来的额外延迟怎么控制？\nAgent评测体系怎么设计？\n用户行为能不能作为效果评估信号？\nbadcase怎么回流到评测集和后续迭代？\n\t\nRAG从文档入库到线上检索，完整链路怎么做？\n为什么要混合检索？向量和关键词分别解决什么问题？\nTopK怎么定？召回多一点一定更好吗？\n什么场景下规则链路比大模型更合适？\n复杂PDF解析最难的点是什么？\nchunk切分为什么不能只用固定长度？\nmetadata除了存字段，还能怎么参与召回？\n文档版本、有效期、更新机制怎么设计？\n离线文档和实时接口分别适合什么场景？\n生成后校验层解决什么问题？\n为什么有些场景SFT效果不好？\nreward model适合解决什么问题？\n\t\n反问时面试官重点介绍了：\n智能客服 超级导购 统一知识库 MCP工具集\n\t\n整体感觉：\n携程这轮比较看重“设计合理性”\n很多问题不是问你有没有做 而是问你为什么这么做\n面试官会顺着你的项目细节往下追 看这些设计能不能迁移到他们自己的业务里\n如果项目只是堆技术名词 但讲不清取舍，很容易露怯\n#面经 #携程面试 #大厂面试 #agent开发",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/69f9f8c5000000003503ac05?xsec_token=ABMevvyXadQR-z8iW7H3jAzIJm7MOO4t98tr05JE6WUTs=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ac86853000000001801b00e",
+  "title": "阿里Agent二面真实分享",
+  "author": "努力学习LLM应用开发中05-24",
+  "date": "10-09",
+  "desc": "#小红书春日特派员 某厂Agent一面面经\n记得当时面完最大的感受就是这岗确实偏难，问得很细，尤其 Harness 和 LangGraph 状态机那块，不会让你背八股直接让你画架构讲 Trade‑off\n面下来还挺累的\n#agent #面经 #面试题 #计算机",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ac86853000000001801b00e?xsec_token=ABW5_clKgK-wSTwyqnbk-Iit572Y0FA2H4le2dvTd9mUw=&xsec_source=pc_search&source=web_explore_feed"
+ },
+ {
+  "note_id": "6ad377350000000015002eea",
+  "title": "阿里Agent二面真实分享",
+  "author": "努力学习LLM应用开发中05-24",
+  "date": "编辑于 11-03 四川",
+  "desc": "成都线下一站式面试, Ai技术应用，被八股轰炸晕了，我以为只会对简历项目提问并进行八股延伸，没想到全问训练推理，我只是个臭做agent的加点前后端的菜鸡，只能疯狂赔笑虽然入池了但面评可能很危险\n\t\n一面40min左右:\n没有让我自我介绍，上来就是Attention、Kvcache，prifill，decode，旋转位置编码，了解哪些推理框架等等llm八股（主播已麻，并没有准备这些，根本答不上来几个）随即问agent相关八股，问hook。此时心态小蹦，万幸终于给手撕了，出了一到非hot100：01字符串的分割方案数，每个分割子串必须只有一个1。差不多撕出来了，但遗漏了边界条件面试官提醒并补充。反问问面试官训推做的比较多吗，面试官说这是llm基础，还说今天的面试全部结束了，我当时觉得一面果然挂了，没想到放了一马\n\t\n二面40min左右：\n自我介绍后又开始问训练推理相关问题，kvcache，transformer，推理框架，模型部署效果评测，并对简历项目的评测提问。然后开始问算法，问我快排思想，给了一个序列让我手写一轮快排的结果，问快排稳定性。然后问怎么求序列出现频率最大的数，我开始说哈希表桶排序，被面试官说空间复杂度太高，我想了一下说暴力遍历，他叫我优化时间复杂度，想了一会儿说排序被面试官肯定，然后说了思路。然后开始手撕三数之和，秒了过后面试官开始发力了，问了我代码问题后开始问如果元素可以重复使用我怎么处理，我说这样答案不就是无穷个了吗，他说确实，然后又灵机一动，问我要求一个最优的三元组，使两数之差绝对值最小，想了一下说直接对刚才算法求出来的答案序列遍历一下就可以了，面试官肯定了思路终于没有进一步发问。最后面试结束没有让反问，直接给我提建议说让我多学模型底层架构和原理，主播以为又寄了\n\t\n三面30min左右：\n就是常规保洁八大问了，企业文化等等#面经 #面试 #面试日常 #校招\n\t\n11.3 接口人打微信电话保温，让我总结论文竞赛荣誉等发给他",
+  "images": [],
+  "modalUrl": "https://www.xiaohongshu.com/explore/6ad377350000000015002eea?xsec_token=ABMBeO7yRCsNAwfpqlJ-FDZPa_OJ1MyBZUDi08afDzKdc=&xsec_source=pc_search&source=web_explore_feed"
+ }
+]

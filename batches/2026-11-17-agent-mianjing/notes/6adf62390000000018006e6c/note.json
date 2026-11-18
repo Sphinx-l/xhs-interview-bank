@@ -1,0 +1,25 @@
+{
+ "note_id": "6adf62390000000018006e6c",
+ "url": "https://www.xiaohongshu.com/explore/6adf62390000000018006e6c?xsec_token=ABT3RcjwtJEhGEm5A7rt50pg3DQyq6GeyVxnZi5swgVak=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "字节Agent开发(抖音开发)一面面经",
+ "author": "北大第一小趴菜11-08",
+ "published_at": null,
+ "date_raw": "10-26 广东",
+ "likes": "421",
+ "status": "retained",
+ "status_reason": "字节抖音Agent开发一面47题（图片：项目35+后端10+手撕2），画面提取完成",
+ "company": "字节跳动（抖音）",
+ "role": "Agent 开发",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "面试围绕字节Agent项目展开，详细探讨了系统架构、多Agent协作、RAG技术及后端实现细节。问题深入且涵盖业务核心，涉及系统设计、性能优化及技术实现，整体难度适中，面试官知识面广且经验丰富。\n#24h新鲜面经 #大模型 #前端面试 #面经 #互联网大厂 #人工智能 #面试求职",
+ "images": [
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
+  "06.webp"
+ ],
+ "image_extract": true
+}

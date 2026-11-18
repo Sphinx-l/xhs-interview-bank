@@ -1,0 +1,27 @@
+{
+  "question_id": "Q002",
+  "note_id": "6ac86853000000001801b00e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer",
+  "canonical_path": "question_bank/agent-architecture/medium/Q002.json",
+  "canonical_sha256": "afcd29385e2b7677e5b3452be7073ebabcb0739e3a5b2fa1bc9301cf4e15f695",
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q001] 不含自身不重复。",
+    "difficulty": "通过。题面含消息格式设计与 tool_response 角色选型等工程判断，符合 medium『选型、边界判断』，非纯概念直问。",
+    "student_view": "通过。无来源侧旁白。",
+    "technical_accuracy": "通过。OpenAI Chat Completions 的 role=tool 消息须携带 tool_call_id、Anthropic Messages API 以 tool_result 内容块放入下一条 user 消息，均与两家协议一致；ReAct 论文以纯文本 Thought/Action/Observation 交错实现的描述正确；间接提示注入风险表述未过度绝对化。",
+    "answer_responsiveness": "通过。工作流程循环、消息序列工程表示、tool_response 角色及原因三个子问全部覆盖，并补充 FC 与文本协议取舍。",
+    "provenance_merge": "通过。C073/C322/C334 均存在；verbatim 与主源 C073 逐字一致；company=unspecified、role=Agent 开发、round=一面 与 note.json 一致；frequency=3 正确；C334 的追问维度确已并入题面与答案。",
+    "verbatim_fidelity": "通过。原帖题面保留原文，未改写。",
+    "length": "通过。summary+points 纯汉字约 298 字，在区间内。"
+  },
+  "claims_checked": [
+    {"claim": "ReAct 交错生成推理轨迹与动作、观察回灌继续推理（Yao et al., 2022）", "evidence": "https://arxiv.org/abs/2210.03629", "result": "confirmed"},
+    {"claim": "OpenAI 协议 tool 消息携带 tool_call_id；Anthropic 用 tool_result 内容块放入下一条 user 消息", "evidence": "OpenAI Chat Completions 与 Anthropic Messages API 官方文档", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T19:43:28+08:00"
+}

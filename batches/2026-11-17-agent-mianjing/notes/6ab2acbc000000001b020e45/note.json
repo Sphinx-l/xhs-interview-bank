@@ -1,0 +1,18 @@
+{
+ "note_id": "6ab2acbc000000001b020e45",
+ "url": "https://www.xiaohongshu.com/explore/6ab2acbc000000001b020e45?xsec_token=AByXJbJppKbxtHkUkDDapuwXAOS7ybXreGoNgt2MIFItI=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "",
+ "author": "想去鹅厂看企鹅09-15",
+ "published_at": null,
+ "date_raw": "编辑于 5天前 江苏",
+ "likes": "58",
+ "status": "rejected",
+ "status_reason": "面试流程叙述为主，仅两道通用算法手撕，Agent题面缺失",
+ "company": "华为",
+ "role": "AI 技术应用",
+ "round": "三轮",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "二编，后面转投了 AI 技术应用，泡池子中--\n\t\n一面 1h\n面试官非常温柔且客气，面试体验最好的一次。\n首先就是常规自我介绍，然后问项目。中间会穿插一些八股，比如大模型原理，和传统 NLP 的区别，top k，top p 的优劣，注意力机制，temperature，然后会根据回答来进行一些补充。\n手撕是 hot 100 合并两个有序链表，在 vs code 写，但是因为忘记怎么定义链表，所以没有编译，面试官说可能会有点影响。\n\t\n二面 40min\n压力比一面大，而且项目问的比一面细致。同样问了大模型相关，RNN，BM25，语义相似度匹配，RAG（回答完说还挺好）\n然后让我打开力扣，选了 hot100 的数组中第 k 个最大元素。写完之后问了时间复杂度怎么算，答的依旧有瑕疵。\n\t\n三面 30min\n自我介绍完，问了研究生课题，遇到了什么困难怎么解决，有没有团队经验，当前有没有面其他家，如果其他公司也发了 offer 会选择华为吗，职业规划，优缺点分析。最后说会有 hr 联系\n\t\n请问各位佬  华为的 Agent 技术会问些什么\n听说会问很多底层原理啥的[完啦R]#秋招每日一投 #面经 #华为agent#华为ai",
+ "images": [],
+ "image_extract": false
+}

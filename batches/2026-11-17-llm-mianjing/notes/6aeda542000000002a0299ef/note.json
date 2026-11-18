@@ -1,0 +1,14 @@
+{
+ "note_id": "6aeda542000000002a0299ef",
+ "title": "字节AI应用岗面经(已oc)",
+ "desc": "一面技术：\n1. 自我介绍，介绍第一段实习。\n2. 项目是否上线？最大的困难是什么？\n3. 报名异步化流程是怎样的？\n4. Redis Lua 为什么能保证原子性？\n5. 什么是缓存穿透、击穿和雪崩？\n6. Kafka 如何保证可靠性和高性能？\n7. Kafka 消息重复消费怎么处理？\n8. Caffeine 和 Redis 两级缓存如何保证一致性？\n9. HashMap 底层结构和扩容机制。\n10. @Transactional为什么会失效？\n11. MySQL MVCC 和事务隔离级别。\n12. 平时如何使用 Codex？结合项目举例。\n13. 手撕：DFS，判断二叉树是否存在目标路径和\n\t\n二面技术\n1. 自我介绍，重点介绍多 Agent 项目。\n2. 项目整体架构和一次请求的完整流程。\n3. 为什么采用事件驱动的 Agent Runtime？\n4. 多 Agent 如何协作？任务状态如何管理？\n5. Agent 执行失败、超时如何处理？\n6. MCP 异步任务队列如何设计？\n7. Skill 动态加载如何保证安全？\n8. RAG 中 HitRate 和 MRR 有什么区别？\n9. 上下文压缩和 Redis、MySQL 如何配合？\n10. 10 万人抢 1000 个名额，系统如何设计？\n11. 如何保证报名接口幂等？\n12. Kafka 消息丢失、重复消费怎么处理？\n13. 如果数据达到千万级，MySQL 如何优化？\n14. SSE 和 WebSocket 有什么区别？\n15. 手撕：LRU Cache，要求 get 和 put为 O(1)。\n\t\n#面经 #面试题 #agent #大模型面试  #面试求职 #大模型 #校招 #人工智能就业 #面试经验how",
+ "author": "IT阿宇",
+ "date": "11-06 广东",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6aeda542000000002a0299ef?xsec_token=ABaCSm8YmIWB-oQxR26ZQWfWZ1PY5RRV7yzmfsXIudqBU=&xsec_source="
+}

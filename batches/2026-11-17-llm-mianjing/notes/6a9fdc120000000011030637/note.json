@@ -1,0 +1,14 @@
+{
+ "note_id": "6a9fdc120000000011030637",
+ "title": "字节Agent二面面经",
+ "desc": "⏰90min\n连环追问，从Agent架构、Prompt优化，到Badcase定位、工程细节，重点考察AI应用真实落地能力。\n记录一下这波高强度面经：\n架构与 Agent 设计\n1. 你们用的 Agent 框架是什么？ReAct 还是 Plan-and-Execute？\n2. 你之前做的 Agent 项目用的是什么架构？LangGraph 还是自研？整体是 master+sub Agent 还是 workflow 形式？为什么这么选型？\n3. 项目中是单 Agent 还是多 Agent 架构？各个子 Agent 的核心任务和分工是什么？\n4. 多智能体怎么协作？比如一个写代码一个审查\n5. 首次生成和多轮补充的链路路由是怎么区分和实现的？\n6. Agent 的记忆怎么搞？长期短期分别怎么存？\n7. Agent 的 skills 功能原理是什么？你是怎么设计和实现 skills 体系的？\nPrompt 与上下文工程\n8. 你是怎么构建提示词模板的？在上下文工程方面有哪些实践经验？比如有没有做过 to do list 这类优化，为什么它能让模型更聚焦？\n9. 项目中有没有做过查询改写？多维度的查询改写具体是什么？当改写需要用户补充信息时，你是怎么设计交互和技术实现的？\n10. 并行化意图识别是什么？为什么要做并行化？你是如何实现的？\n11. 怎么让模型老老实实调用工具，不瞎编参数？\n评测与 Badcase 定位\n12. 怎么评估 agent 效果好不好？\n13. Agent 系统的整体效果怎么评估？在没有用户反馈的情况下，如何进行有效的抽检？\n14. 当出现 Badcase 时，你怎么快速定位到具体是哪个 Agent 环节出了问题？如何判断应该对哪个 Agent 做 SFT 优化？\n15. Prompt 调优过程中，经常会遇到 \"修好一类、坏了另一类\" 的问题，你是怎么解决的？\n16. 工具调用失败、超时了怎么办？\n17. 开发 agent 时踩过哪些坑？\n\t\n#互联网大厂 #agent #面试 #ai #经验贴 #题目 #转行 #24h新鲜面经 #面经 #字节",
+ "author": "小鱼在Coding",
+ "date": "09-08",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a9fdc120000000011030637?xsec_token=AB2f2LPXtJLSY5Wzh32Wah_JhUbJ-pqY9jTp7FfWNBuc8=&xsec_source="
+}

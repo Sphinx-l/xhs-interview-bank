@@ -1,0 +1,18 @@
+{
+ "note_id": "69f9f8c5000000003503ac05",
+ "url": "https://www.xiaohongshu.com/explore/69f9f8c5000000003503ac05?xsec_token=ABMevvyXadQR-z8iW7H3jAzIJm7MOO4t98tr05JE6WUTs=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "携程AI应用开发一面面经",
+ "author": "程序员尺哥05-13",
+ "published_at": null,
+ "date_raw": "05-08",
+ "likes": "390",
+ "status": "retained",
+ "status_reason": "携程AI应用开发一面22题，题面完整",
+ "company": "携程",
+ "role": "AI 应用开发",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "这轮感觉不是单纯考八股 更像在看你对项目设计有没有自己的思考👇\n\t\n介绍一下Agent项目，整体架构怎么设计？\n为什么选择workflow，而不是完全自主决策的Agent？\nworkflow里哪些节点需要ReAct能力？\n长链路Agent为什么能接受十几分钟耗时？\n不同业务场景下，延迟和效果怎么取舍？\nAgent之间怎么编排？框架选型怎么考虑？\nmemory为什么要分短期、长期、summary？\n长期memory存什么？什么时候加载？\nmemory是模型自己选，还是规则触发更合理？\n多轮对话里，指代不清怎么处理？\nquery改写放在哪个环节最合适？\nquery改写带来的额外延迟怎么控制？\nAgent评测体系怎么设计？\n用户行为能不能作为效果评估信号？\nbadcase怎么回流到评测集和后续迭代？\n\t\nRAG从文档入库到线上检索，完整链路怎么做？\n为什么要混合检索？向量和关键词分别解决什么问题？\nTopK怎么定？召回多一点一定更好吗？\n什么场景下规则链路比大模型更合适？\n复杂PDF解析最难的点是什么？\nchunk切分为什么不能只用固定长度？\nmetadata除了存字段，还能怎么参与召回？\n文档版本、有效期、更新机制怎么设计？\n离线文档和实时接口分别适合什么场景？\n生成后校验层解决什么问题？\n为什么有些场景SFT效果不好？\nreward model适合解决什么问题？\n\t\n反问时面试官重点介绍了：\n智能客服 超级导购 统一知识库 MCP工具集\n\t\n整体感觉：\n携程这轮比较看重“设计合理性”\n很多问题不是问你有没有做 而是问你为什么这么做\n面试官会顺着你的项目细节往下追 看这些设计能不能迁移到他们自己的业务里\n如果项目只是堆技术名词 但讲不清取舍，很容易露怯\n#面经 #携程面试 #大厂面试 #agent开发",
+ "images": [],
+ "image_extract": false
+}

@@ -1,0 +1,14 @@
+{
+ "note_id": "69384734000000001e022ec0",
+ "title": "字节大模型实习算法岗一二面经",
+ "desc": "一面：\n[一R]项目深挖\n[二R]attention计算公式，为什么除以dk\n[三R]ppo，dpo，dapo，grpo，gspo\n[四R]力扣：最长有效括号\n总结：感觉一面面试官很友善，问的问题也都是基础八股\n\t\n二面：\n[一R]力扣：搜索旋转排序数组\n[二R]ppo损失函数，解释，各部分是什么，ratio、advantage怎么理解，大模型advantage怎么计算，returns是什么\n[三R]Adam\n[四R]mha、mqa、gqa、mla\n[五R]交叉熵损失手撕\n[六R]位置编码有哪些，rope\n[七R]mse损失，gae损失，大模型里面怎么算\n[八R]大模型里面的ppo，returns是什么\n[九R]vit位置编码、二维位置编码、相对位置编码、多模态位置编码\n总结：明显感觉二面上难度了，考了很多手撕，但只要求写清楚怎么计算不用完全写出来原代码\n#互联网大厂实习 #互联网大厂 #找实习 #面经 #人工智能就业 #算法 #小红书校园日记#大厂实习 #大模型 #大厂",
+ "author": "veux",
+ "date": "2025-12-09",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/69384734000000001e022ec0?xsec_token=ABP3NYPhVZ3uKLibg0iCP86M2iYYCBW-iD6_cKUJiF19M=&xsec_source="
+}

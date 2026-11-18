@@ -1,0 +1,16 @@
+{
+ "note_id": "68c195f2000000001d038baf",
+ "title": "腾讯浑元大模型二面面经",
+ "desc": "1．自我介绍，过实习和论文\n2．知道哪些强化学习算法，除了 PPO和 DPO 这些呢\n3. 知道 LoRA 的原理吗， A 和 B 两个矩阵怎么初始化，有了解过其他的初始化方法吗\n4．除了 DeepSpeed ，还用过其他的什么优化方法吗\n5．ZeRO -1, ZeRO -2,ZeRO -3三个模式的区别\n6．讲一下 RLHF 的流程，之前有用 RLHF 做过模型对齐吗\n7．当时你用 DeepSpeed ZeRO -3来微调Qwen2-72B，每一张卡占用的显存大概是多少，估算一下为什么是占这么多的显存\n8. 在微调 Qwen 的时候，数据是怎么构造的\n9.代码：无重复字符的最长子串\n全套大模型学习路线，大厂大模型面经已经整理好！[哇R][哇R]\n#互联网大厂 #大模型面试 #人工智能就业",
+ "author": "大模型师兄",
+ "date": "2025-09-10",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611181127/da606851d7c5bf81ddde5906186c2a46/1040g00831m8nno2lmc005n2qfhsm794qpf1gg88!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [],
+ "img_count": 1,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/68c195f2000000001d038baf?xsec_token=ABzF745GY56vWZHaJSJgtoPluHfjJiGl0EhBWExv4L2HI=&xsec_source="
+}

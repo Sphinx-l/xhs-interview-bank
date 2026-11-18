@@ -1,0 +1,27 @@
+{
+ "note_id": "6a8048c10000000022010ec6",
+ "title": "快手大模型一面8.14",
+ "desc": "1.ZeRO-3 如何将优化器状态、梯度和参数分片到多卡？其通信开销主要集中在哪些操作？\n2.激活检查点（activation checkpointing）如何用重计算换显存？在哪些层设置检查点收益最高？\n3.投机采样（speculative decoding）中，草稿模型和验证模型如何协作实现无损加速？为什么能保证输出分布一致？\n4.PagedAttention 如何通过分页管理解决 KV Cache 内存碎片？相比连续分配，它带来了哪些额外开销？\n5.MoE 训练中，专家负载不均衡如何影响收敛？常见辅助损失函数如何设计？\n6.NTK-aware RoPE 缩放和 YaRN 在长上下文外推上分别解决了什么问题？YaRN 的温度因子如何作用？\n7.GQA 相比 MHA 在推理显存和速度上有什么优势？如何从 MHA 转换到 GQA？\n8.根据 Chinchilla 定律，给定算力预算如何选择模型参数量和训练 token 数？该定律在数据重复训练时有何局限？\n9.视频-语言大模型中，如何对长视频进行高效时间建模？常见的视频 token 化方法及其计算复杂度？\n10.将大模型用于推荐系统时，如何把用户行为序列和物品特征编码为文本？生成式推荐相比传统排序有何优势？\n11.RLHF 中奖励模型过优化（reward hacking）如何发生？从训练和推理角度有哪些缓解方法？\n12.构建大模型评测集时，如何检测和避免数据污染？LLM-as-a-Judge 存在哪些常见偏差？\n13.在快手直播等实时场景下，部署大模型进行内容审核或摘要时，如何权衡延迟、成本和效果？可采用哪些工程优化？\n14手撕题目：实现支持 KV Cache 的增量式多头自注意力层\n#大模型 #互联网大厂 #快手 #互联网大厂实习 #大模型应用 #大模型面试 #大模型微调 #大模型训练 #大模型开发#面经",
+ "author": "知识分享官01p",
+ "date": "08-15",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611180003/164f398850dd00dcc3f7de9e75efac64/notes_pre_post/1040g3k8323sv0kav74dg5p1qbeel1ivekmo2lqg!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180003/58cce20f80925eb66204dbd743530b48/notes_pre_post/1040g3k8323sv0kav74d05p1qbeel1ive5csqdqo!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180003/7766f675fa1f50bda9b99382dbd62da1/notes_pre_post/1040g3k8323sv0kav74a05p1qbeel1ive17vp1mo!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180003/9d856148a1b14904e6a91c2dd43390d0/notes_pre_post/1040g3k8323sv0kav74b05p1qbeel1ivepqetj90!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180003/f315e60b45f03fdd400e4bc78cb68415/notes_pre_post/1040g3k8323sv0kav74bg5p1qbeel1ivev8078i0!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [
+  "给大家整理了份大模型全系列面试笔记，是根据真实面试过程整理 所以被问率挺高，可以说你硬背就行，感兴趣可以看看商品介绍，喜欢可拍[向右R]大模型核心面试题库",
+  "这确定是大模型岗位？？？",
+  "infra怎么不算大模型嘞",
+  "这么恐怖[石化R]",
+  "我说白了我白说了，基模组有几个人能不看资料全部回答上来的？",
+  "众所周知，基模组是搞数据的，infra是搞算法的（x"
+ ],
+ "img_count": 5,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a8048c10000000022010ec6?xsec_token=ABNO2zd8w_NLz9KiP2p06iedsdKdwQoxHMkzuZbOW3vys=&xsec_source="
+}

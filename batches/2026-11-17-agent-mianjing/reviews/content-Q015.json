@@ -1,0 +1,29 @@
+{
+  "question_id": "Q015",
+  "note_id": "6adc069a0000000025023c8e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-3",
+  "canonical_path": "question_bank/agent-engineering/high/Q015.json",
+  "canonical_sha256": "48cbda03024fd6691e507678f16cc42a4e7a698455b23eccdba27dec895d830c",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过（round 1 两项不通过均已修复）。其一，technical_answer 第二段新增图编排引擎（LangGraph）『节点为重试边界、重试使节点从头执行、节点内副作用需幂等（幂等键、upsert、先读后写）』论断，Graph API 引用条目自此与正文有实际支撑关系。其二，recommended_answer 由 431 压缩至 343 纯汉字，落入契约区间，6 要点覆盖不变。其余结构项 round 1 已核合规。",
+    "difficulty": "通过（同 round 1）。六条跨帖候选（C061/C078/C152/C302/C324/C347）构成系统性追问链，high 有原帖证据。",
+    "student_view": "通过（round 2 复扫）。无公司名与教研侧字样；新增的 LangGraph 为具体框架专有名词，允许。",
+    "technical_accuracy": "通过。round 1 已核的错误四分类、退避+抖动+总预算、幂等键稳定生成与重试透传、先查后试/人工对账、滑动窗口熔断、降级链标置信度、支付四层兜底、saga 同构均正确且未在压缩中失真；新增 LangGraph 论断与该官方文档表述一致（节点为 checkpoint 与重试边界、重执行从头跑、副作用需幂等——idempotency keys/upserts/read-before-write），且与本题幂等键设计形成正确的逻辑衔接（同一原则在工具层的落地）。",
+    "answer_responsiveness": "通过。题面四问（容错分类、重试设计、幂等、支付兜底）覆盖完整。",
+    "provenance_merge": "通过（同 round 1）。六条候选存在，verbatim 逐字一致，company/role/round 与候选表及 note.json 一致，frequency=6 正确。",
+    "verbatim_fidelity": "通过。question_verbatim 未改写。"
+  },
+  "claims_checked": [
+    {"claim": "agents 执行中需从环境 ground truth（如工具调用结果）评估进展", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
+    {"claim": "LangGraph：节点是 checkpoint 与重试边界，重试/重执行使节点从头跑，节点内副作用需幂等（幂等键、upsert、先读后写）——round 2 已核实正文第二段实际使用该论断", "evidence": "https://docs.langchain.com/oss/python/langgraph/graph-api", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {"round": 1, "decision": "rejected", "issue": "① Graph API 引用条目无正文支撑（LangGraph/节点/checkpoint 仅出现在引用条目）；② recommended_answer 431 纯汉字超上限约 23.1%", "resolution": "① technical_answer 第二段新增节点重试边界/副作用幂等论断，引用条目获得正文支撑；② 压缩至 343 汉字"}
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:05:00+08:00"
+}

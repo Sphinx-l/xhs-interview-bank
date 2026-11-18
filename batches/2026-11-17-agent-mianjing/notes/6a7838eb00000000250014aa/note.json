@@ -1,0 +1,18 @@
+{
+ "note_id": "6a7838eb00000000250014aa",
+ "url": "https://www.xiaohongshu.com/explore/6a7838eb00000000250014aa?xsec_token=ABGMpCL8nADHqfCTwAcbGCFgJeGMLEz4Z0735movQstPY=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "面字节AI Agent，30篇就这几类",
+ "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+ "published_at": null,
+ "date_raw": "编辑于 08-16",
+ "likes": "356",
+ "status": "rejected",
+ "status_reason": "引流帖（整理合集导流领取），非本人面经",
+ "company": "字节跳动",
+ "role": "unspecified",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "面字节 AI Agent 之前，我天真地以为背背八股就能过。\n结果一面面试官：来，设计一个 Agent。我当场卡壳。\n后来我把库里 30 篇字节 AI Agent 面经（AI 应用 / 算法 / Agent 开发 / AI 全栈）全扒了，按被问次数排了序，发现来来回回就这几类：\n▫️ Agent 怎么拆任务 / 管记忆 / 调工具\n▫️ RAG 怎么嵌向量、重排、生成\n▫️ 训练和效果评估怎么量化\n最常被问的 8 类题、字节真实被问题干，我都整理好了，包括完整的 30 篇高频考点盘点 + 参考面经清单。\n准备字节 AI Agent 岗的，建议先照着这几类过一遍，别像我一样被开放题干碎。\n#字节跳动 #Agent面试 #大模型 #面试技巧 #人工智能就业 #求职辅导 #互联网大厂 #面经",
+ "images": [],
+ "image_extract": false
+}

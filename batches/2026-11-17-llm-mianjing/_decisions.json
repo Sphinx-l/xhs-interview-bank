@@ -1,0 +1,2470 @@
+{
+ "6a5219ab000000001502420c": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a918ac70000000021027cb0": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69fed8db000000002003bfcb": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aedecd3000000002a029488": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6acd9a8a0000000018004cdf": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69c28d88000000001e00dd7f": {
+  "status": "excluded",
+  "reason": "公司列表叙事，无题面"
+ },
+ "6aba6179000000001a0289fe": {
+  "status": "retained_img",
+  "reason": "正文为简介，题面应在图片/评论区"
+ },
+ "6ad330d0000000001500a9e3": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afc14f0000000002b012983": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a2a6ec80000000022024e20": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aaf504c0000000026016f55": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aed5042000000002b0341be": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6adebc1200000000150068b1": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a6b3a670000000024027ccc": {
+  "status": "retained",
+  "reason": "正文为一面考点罗列（真实面经归纳）"
+ },
+ "6969f583000000000e00d389": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af02a7f000000000e00f063": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afc113a000000002b011bb5": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ae7f6eb000000000f027019": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab251070000000037038720": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "69ad9f42000000001d013cc0": {
+  "status": "fetch_failed",
+  "reason": "正文仅元信息（时长/内容范围），题面未取到"
+ },
+ "6a523f32000000001c02604f": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af40d6c000000002b03e2e4": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69aa9ff2000000002202da35": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a7163af0000000021020f2f": {
+  "status": "retained_img",
+  "reason": "正文为目录，题面在 6 张图片中"
+ },
+ "6a8c500800000000380008ef": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a6d8ccb0000000022014daa": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af6dba600000000260128e3": {
+  "status": "excluded",
+  "reason": "教学号模板问答文（题①+解题框架），非真实面经"
+ },
+ "6afbcb78000000002a02f82d": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "697b385900000000220380f0": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6accb7520000000018015a3d": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab4dc53000000001a028123": {
+  "status": "fetch_failed",
+  "reason": "正文为目录，题面未取到"
+ },
+ "6afc67ae000000002a03bac8": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a88198b000000003b017ddc": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6aa29b6b00000000260143b3": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ad1e54e000000000a0272db": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a146b780000000036003028": {
+  "status": "excluded",
+  "reason": "叙事无题面"
+ },
+ "6a42a28d0000000006034493": {
+  "status": "fetch_failed",
+  "reason": "正文为叙事，题面声称在后续更新未取到"
+ },
+ "6a74857a0000000025017dba": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af6b9f9000000002b011598": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69bcbc5c000000001a02ae76": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6adf62390000000018006e6c": {
+  "status": "fetch_failed",
+  "reason": "正文仅总结句，题面未取到"
+ },
+ "69fb51300000000038023c35": {
+  "status": "excluded",
+  "reason": "教学号按考频整理的合集，非逐题真实面经"
+ },
+ "6a93bf120000000020038ca8": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6acf401a000000001c02c80e": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6abb5bc7000000001b02e684": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af6d787000000002a03b88d": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "69a41f2e000000001b01ef39": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afbcade000000002c00f017": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69fe9c7a0000000023005bd0": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ae40e5c0000000023013bbd": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a8048c10000000022010ec6": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a86c491000000002500e284": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a8b99240000000029024439": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a85750f000000002202f2f9": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aa1235b0000000012025edf": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69fe17b9000000003502c138": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ac74e93000000001a023669": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a4b75c9000000001c02615c": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a559bcc000000002100998f": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a9ff137000000000b00ec5a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a969f58000000002602127b": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a4dcb3d0000000015027b09": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a8813600000000014026c52": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a648d33000000001f01f7fb": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a4f756c000000001503d250": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab32e6d000000001b02f768": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aad0f810000000012034499": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6accbe0d00000000140304cc": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a8ed21d000000000a00887c": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a4d12af000000002100b495": {
+  "status": "retained_img",
+  "reason": "手撕题面在 7 张图片中"
+ },
+ "68a5855b000000001b022960": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a68238c0000000011017666": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a7c129c00000000080101a4": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a564d44000000001003c2fc": {
+  "status": "fetch_failed",
+  "reason": "正文为目录，题面未取到"
+ },
+ "6a69c1e2000000000f009c72": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a671dd5000000000a039359": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afbeeca000000000902337f": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afc150f000000001b01fa71": {
+  "status": "fetch_failed",
+  "reason": "正文仅简介，题面未取到（无图）"
+ },
+ "6aae3a49000000001203fc34": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aae6544000000000d0272ea": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a2fb1980000000022014dc8": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6adee47e000000001800b9f7": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69c276480000000023013e94": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a2ccc850000000017008102": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a8fd532000000001f001dcf": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "69a6a4c7000000001a02c8fa": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a5dced5000000000a038516": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a4cd1c70000000015024260": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ad1d343000000001a033bfe": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a91276d000000000a00aceb": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "69f0245d0000000022028c3c": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6acd91b300000000180181e6": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a291e0500000000080249cf": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ae0ac590000000035031b5b": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a54d016000000001702e6d6": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a61c373000000001d020db3": {
+  "status": "excluded",
+  "reason": "AI 产品岗（非技术范围）"
+ },
+ "694e26e9000000001e0148fa": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6adf0527000000001703abf0": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a8ba357000000000b024292": {
+  "status": "excluded",
+  "reason": "考核形式介绍，无技术题面"
+ },
+ "6a166ae0000000003701ef66": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a7b3b2c0000000033034012": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "694a44f5000000001902456a": {
+  "status": "excluded",
+  "reason": "后端系统设计（非大模型方向）"
+ },
+ "6a2fca3c000000001c02541b": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a9fae610000000029015e5a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af3fa9d0000000026025f31": {
+  "status": "excluded",
+  "reason": "考点清单式总结（教学号），非逐题题面"
+ },
+ "6a03b843000000000803d1a9": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af7d718000000001c032a1f": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af686cf000000001603c639": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aaf35d6000000002901bcbe": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a5855b9000000001303e3d2": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aa7a4a90000000011037be7": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af9302e0000000018024045": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afc5e15000000002a00f180": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a60ba03000000000f017ac2": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6afabbf600000000250126c6": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ae07d4b00000000340253bf": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6acb5c2d000000000100905a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aec45820000000003022c60": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab8838f000000001203a7fc": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69c75985000000002003905a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aeaf19c000000001e014b65": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a86a727000000002b024f9a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "68478ad500000000220295e1": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a2b6eb9000000002200ba85": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af91f32000000002a0182db": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a7d1d06000000003300a427": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6af1fe8e000000003402163b": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab267aa0000000034019310": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a60fd02000000000100c6dd": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a374ad90000000008027091": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a55e32a000000000803dcec": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8eb163000000000b026be9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69cf381c0000000020039fd5": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ad8947d000000002c019722": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a1ce8690000000008025023": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a03006b000000000803f780": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69ef38e4000000001e00c726": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a3e1c3200000000160265e3": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a7dc3af000000003301a767": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a37b4dd000000001c026ff0": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a75b2220000000033032f9c": {
+  "status": "duplicate_repost",
+  "reason": "与 6a7dc3af 同题面转载，题源合并"
+ },
+ "6a03f7f6000000003701faca": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a90015b00000000210325ae": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a700e9d000000002803315f": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a1ce290000000003700d696": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69eaebb2000000001f00368d": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a81d7550000000005023d47": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a894d510000000033011d16": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a7704fc0000000022031a89": {
+  "status": "duplicate_repost",
+  "reason": "与 6a7dc3af 同题面转载，题源合并"
+ },
+ "6a190b400000000036033d37": {
+  "status": "fetch_failed",
+  "reason": "正文仅一句概述，题面未取到"
+ },
+ "6a793bb1000000002c00008c": {
+  "status": "fetch_failed",
+  "reason": "正文仅总结段，题面未取到"
+ },
+ "6a58558100000000010029aa": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a2cd556000000001702f6df": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a75b23e0000000033012d33": {
+  "status": "duplicate_repost",
+  "reason": "与 6a7dc3af 同题面转载，题源合并"
+ },
+ "6a320425000000001c02571a": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a6af2ff000000000100c411": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69bb6bac0000000023013bf3": {
+  "status": "excluded",
+  "reason": "AI 生成模板题：与携程帖 Q1-Q12 完全同文，教学号批量产出"
+ },
+ "6a8fb6aa00000000200378d3": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aab67980000000012025c47": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a3e53fb000000001503d33f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69a84b4e000000001d026718": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a575a65000000002201995d": {
+  "status": "excluded",
+  "reason": "标题党引流（正文卖资料）"
+ },
+ "6acce3c600000000150031a0": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a797c4d0000000024026c83": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6a100d32000000003600274e": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a7540e000000000330108a8": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a323ec1000000001603e851": {
+  "status": "excluded",
+  "reason": "AI 生成模板题：与淘天帖完全同文，「整理12道可直接对标练习」"
+ },
+ "6981c02a000000001a0310aa": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "69b01eb9000000002203a64d": {
+  "status": "excluded",
+  "reason": "备考比重建议文，非逐题题面"
+ },
+ "68c195f2000000001d038baf": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a9e36ad0000000025034c44": {
+  "status": "fetch_failed",
+  "reason": "正文仅总结段，题面未取到"
+ },
+ "6ae471c000000000060327a6": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a8babb90000000033011f1d": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a21390c00000000360334c5": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6832c19500000000120044bd": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6aeb4ce300000000030041af": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ab0fac2000000003602a36d": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ac5ce3b00000000150050a4": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "689dde33000000001d012660": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a915ecf000000002102dcfd": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6971fcc9000000001a02b5f2": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6aa122ae000000002502df09": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "689d3772000000001d016a4e": {
+  "status": "excluded",
+  "reason": "非 AI 岗"
+ },
+ "6a66b7b7000000001303f9eb": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "68aef21e000000001b03e79e": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "68842bfd000000000b02ef31": {
+  "status": "excluded",
+  "reason": "非 AI 岗社招"
+ },
+ "6adf2d58000000001603f9fb": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "69384734000000001e022ec0": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6aeab111000000001a0331d6": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a720d28000000002701f647": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6932a5e0000000001e00577e": {
+  "status": "excluded",
+  "reason": "无题面"
+ },
+ "69fee34100000000380235b4": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6acbe5d9000000001301a8b4": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6ad073e0000000001803b7f5": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "678f14a000000000290151d0": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ab55be20000000018007aa1": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "69db6240000000001a022787": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "69afd0f00000000015032ccc": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a802d99000000003300f8ae": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6afbc819000000002903fcac": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6afaaf16000000001601aa38": {
+  "status": "excluded",
+  "reason": "考点清单式总结（教学号），非逐题题面"
+ },
+ "6af5e4b50000000026010641": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afc2b1d000000002b026199": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afb3296000000002c00c465": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afaaf94000000001f017970": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afb1139000000002501e437": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afc58010000000024032baa": {
+  "status": "excluded",
+  "reason": "资料参考顺序+方法论，无题面"
+ },
+ "6afba384000000001802828e": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afbd7c5000000002b03dffe": {
+  "status": "fetch_failed",
+  "reason": "正文为考核要点总结，逐题题面未取到"
+ },
+ "6af962cb000000002b027765": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af821e5000000002b026135": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afbcbaa000000002b01dcc6": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6af92eb6000000002a02b2f5": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afa83e1000000002a01075f": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afc3713000000001603e7c4": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6afaf7df0000000016030534": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af9348d000000002a00e89b": {
+  "status": "excluded",
+  "reason": "方法论杂谈"
+ },
+ "6afa8fd9000000002203b6ec": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afaf3bb000000001802f7fa": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6afc1923000000002b0306fe": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afc4e4e000000001603f5f8": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc06b8000000002501d073": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbaa74000000002a01a7ed": {
+  "status": "excluded",
+  "reason": "Java 八股岗（非 Agent/大模型方向）"
+ },
+ "6afc0adb0000000009021d06": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6ae1adc3000000002a03fdd2": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af1a6ba0000000034003bb9": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a9fdc120000000011030637": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a697900000000001303eaad": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ab1d6bd000000003b012484": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a041cdb00000000360314dd": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6af43e00000000002303d323": {
+  "status": "excluded",
+  "reason": "Java 后端（非方向）"
+ },
+ "6ad724dd0000000026015318": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aeda542000000002a0299ef": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a523ec7000000000f007c2c": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6aa910cc000000001001c60d": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6ab2296a00000000350237b1": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af164830000000035017d31": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "676513e6000000000b0231a4": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ab4d01c0000000015016530": {
+  "status": "excluded",
+  "reason": "前端岗"
+ },
+ "6a6481c3000000000e0365e2": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a3f5d2a00000000210171d6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6944c82d000000001f0073d9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a550573000000001702f356": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69dcc09e000000001a030c6a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac88a8f000000001303d562": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aeb2fb30000000016010a27": {
+  "status": "fetch_failed",
+  "reason": "声称已补面经但正文/图片均未取到"
+ },
+ "6aa500da000000002802cbad": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6af6b1bc000000001803ae02": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "67b213fe000000002602c091": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6adab78a0000000024037933": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a50bde0000000000800324b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6acf3afd0000000015015346": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a058b33000000003700cc71": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a7eb6b5000000002402610d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc34f6000000002a02c590": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a87c1ac000000001d01f6fd": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a7730e80000000035015ed1": {
+  "status": "excluded",
+  "reason": "单考点科普（教学号）"
+ },
+ "6adc7449000000002a0318a8": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a9fdcf5000000002902fec1": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbd9c6000000002b01be35": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afb9525000000002a024fa4": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "69ca8be0000000002200f27c": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "69dad4ed0000000022028fe8": {
+  "status": "excluded",
+  "reason": "泛经验杂谈"
+ },
+ "6ab4cf2a000000001c01dc2d": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a7477af0000000025003262": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6a7451ec0000000035014fd6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6931b61d000000001d03f742": {
+  "status": "excluded",
+  "reason": "软素质方法论"
+ },
+ "69f70d29000000003502e6de": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6afc2104000000002303dc01": {
+  "status": "excluded",
+  "reason": "AI 产品转岗复盘（非技术范围）"
+ },
+ "6aa1315c000000002802c13f": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afabcc50000000023012509": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac8a913000000001402c09b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a5dcc36000000000f03c53c": {
+  "status": "fetch_failed",
+  "reason": "正文仅流程概览，题面未取到（无图）"
+ },
+ "6a83f604000000003300d7a9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc4862000000001f017dea": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc507b000000002b03f7e6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a6dbfbc000000002c0029bb": {
+  "status": "excluded",
+  "reason": "手撕题归类合集"
+ },
+ "6a472cb30000000021017f1c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac8d49f0000000015016257": {
+  "status": "excluded",
+  "reason": "方法论杂谈"
+ },
+ "6acc46ac0000000015003b4d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af5a76e000000002b0191d5": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a742987000000002500f6c2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae053e4000000000e02c7c0": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8bffd300000000280251f5": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afb07ab00000000180391e3": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a7085b70000000005031cec": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a60d708000000000301ff6b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a9bc67f0000000011032051": {
+  "status": "excluded",
+  "reason": "高频真题整理合集（教学号）"
+ },
+ "6a70590a0000000028000eff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad0d18b000000000a01f40f": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6aa93b73000000002600853f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a85a05900000000280090ea": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a266c330000000021019644": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6ac1addd0000000018039011": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af6bc420000000026012054": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a698e85000000001002a1db": {
+  "status": "fetch_failed",
+  "reason": "正文仅考察点概览，题面未取到（无图）"
+ },
+ "6a79652c0000000005032ae6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a880733000000002c00279f": {
+  "status": "excluded",
+  "reason": "营销题库"
+ },
+ "69afeb93000000001b017fab": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afabd34000000002a01a6df": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa8b63000000001802aaf7": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab87005000000001403a734": {
+  "status": "excluded",
+  "reason": "方法论杂谈"
+ },
+ "6877712f0000000012016886": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a1537180000000037034a98": {
+  "status": "excluded",
+  "reason": "前端岗"
+ },
+ "6ab33bfc000000001b032e1c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aec0dd1000000001803a4c3": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab283e600000000350249fe": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "69f1a41d00000000370352dd": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc631b0000000009020403": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69e0c4e0000000001b0231e4": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af4336f0000000024033e0f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a565aef000000002103e157": {
+  "status": "excluded",
+  "reason": "杂谈叙事，无题面"
+ },
+ "6afa7c04000000002a029e92": {
+  "status": "excluded",
+  "reason": "八股合集（教学号）"
+ },
+ "6afac928000000002b02a7d0": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6940c645000000001b022af3": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6868e84d000000000b01e76f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad9a45c000000002b00eaf6": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a463507000000000803caeb": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6afbaefb000000002b001286": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6870d7e7000000002203075f": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6af6c15a000000002b012fb6": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "686ce0ee0000000022030989": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6ae04a870000000018038c77": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af2bf48000000002b00497e": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a4fc4cb00000000110046ae": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a8801430000000035016762": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6a7d7acc00000000270215c2": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6afae70c0000000023010439": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac267590000000015001d2a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aaa877a000000002802ba5e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aa27715000000002902ca37": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af6e9230000000023013af0": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a704aa7000000000503057d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a608ae1000000000f0173c0": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a5b421b0000000011013971": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a8aea2500000000230107b0": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6a6330e7000000000f031ca6": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "697aed66000000000e03e9b2": {
+  "status": "excluded",
+  "reason": "备考强度方法论"
+ },
+ "6a4f0fb1000000000f006509": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af87219000000002a038d7f": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a5f19750000000011011c53": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a7599fa0000000026035ce8": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6a8be4370000000029024f00": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aec38950000000016031b45": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a6732ce000000001c01362e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae99a9e000000001503d1c0": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "69c39f58000000001f006849": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af6c2ad0000000026024cf3": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6ab1125d0000000031000e91": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6ae1bd65000000002a01f229": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbc6c30000000018038b6c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af7da04000000002b003f81": {
+  "status": "excluded",
+  "reason": "营销题库（考点合集）"
+ },
+ "6afad95a000000001603cb2d": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "69eb44500000000019032405": {
+  "status": "excluded",
+  "reason": "方法论"
+ },
+ "6af09d1100000000150244d5": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa843d000000002a010853": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc6bce000000002a00ff18": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6999de77000000001a03096d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbfbb1000000002b01b875": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6abe540d000000001b01cf37": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a0bcd060000000038021d7c": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6adc80b4000000003102e0db": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a86cf970000000025005d90": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "690b006f0000000005011d87": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6af524e4000000002501c744": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6adeff030000000018017298": {
+  "status": "excluded",
+  "reason": "方法论（教学号）"
+ },
+ "68613d1100000000170353ff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc4f99000000002a02ebfa": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae99024000000000e02d163": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6afb98940000000009023526": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a9cdc7700000000120014a6": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "69dcfd06000000001a0234d2": {
+  "status": "excluded",
+  "reason": "教学号合集/汇总帖"
+ },
+ "695e0454000000001a025d83": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69ec1d190000000038036906": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aec2e96000000001402a1f0": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6a042dd900000000380366c0": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ac84de5000000000b005aa2": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a3f242d000000001702d2d8": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af9c8f5000000002b030382": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc6bd0000000002b0278c9": {
+  "status": "excluded",
+  "reason": "上岸攻略（营销）"
+ },
+ "6afc6e97000000002a038e73": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aad0e760000000027015db8": {
+  "status": "excluded",
+  "reason": "方法论"
+ },
+ "6af7d215000000002b028a62": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc28b600000000180245a2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af73601000000001c030f3a": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6a1ac5900000000035026578": {
+  "status": "excluded",
+  "reason": "八股总结合集"
+ },
+ "6a81f34900000000290322a4": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a9122c4000000000402a9c2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a1d666d0000000007025e92": {
+  "status": "excluded",
+  "reason": "八股整理合集，正文无题面"
+ },
+ "6af6e5fb000000002a0289e1": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6867d4e700000000120227ac": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ad9e6250000000033032ae1": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6af27bf1000000002602411d": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6ac63c7b000000001303d6d0": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6aa26b11000000002802e664": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69a6f6e8000000002602e7e5": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6ad5e0b70000000028003d73": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a9a5f3a00000000120247a9": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a6a0841000000000100e20c": {
+  "status": "excluded",
+  "reason": "项目推广帖"
+ },
+ "6acee97000000000180136ba": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6aec47b80000000002034f0d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6abc6a57000000000100a110": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad38518000000001303ef07": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aab51e30000000026016970": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "694f59f1000000001e021990": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "69dcb829000000001d01e564": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6af0040b000000001603c5da": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aad00e400000000250353ff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6867c0b600000000230048ff": {
+  "status": "excluded",
+  "reason": "CV/ML八股合集，非本库方向"
+ },
+ "6ae43a300000000023013da8": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab8be3d000000001203bd3a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab79f0800000000150096bc": {
+  "status": "excluded",
+  "reason": "八股整理（教学号）"
+ },
+ "6a89778200000000250061ad": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69377b67000000001f00d355": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8825b20000000028022124": {
+  "status": "excluded",
+  "reason": "备考内容清单（教学号）"
+ },
+ "69b21e57000000000b036a96": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac8b6a1000000001b02263a": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6ab8fa7f000000000a02330f": {
+  "status": "excluded",
+  "reason": "合集详解版（营销）"
+ },
+ "6aaa1551000000002601fbfa": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a3aac1e0000000022016dc3": {
+  "status": "excluded",
+  "reason": "项目推广帖"
+ },
+ "6ab776e5000000001803b818": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a98ebfb0000000026038505": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6accae4f000000001b0237e1": {
+  "status": "excluded",
+  "reason": "图书推广"
+ },
+ "6a1d1f910000000038037c6e": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6acccf32000000001c00f2b3": {
+  "status": "excluded",
+  "reason": "面经统计帖（卖资料）"
+ },
+ "6a487ede000000001c0276a6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af685ae000000002a0244ab": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ab3d34b000000001303d9d4": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6adef85f0000000018004237": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "68693d2700000000120232e1": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad380fd0000000018004c69": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69aea7ff00000000150222d3": {
+  "status": "excluded",
+  "reason": "传统软件测试八股"
+ },
+ "6ad4aee00000000027015353": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a82827000000000220328f0": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6ae9706c0000000016006607": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab9e04b000000001c00dc19": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a9a84990000000028036d3c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aec8725000000001503ea3f": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6ae14f72000000003401e404": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6ae461ad000000000602cd60": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a715c3f00000000250160e1": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad1a1470000000018011fdf": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8d1314000000002202e39a": {
+  "status": "excluded",
+  "reason": "反问环节方法论"
+ },
+ "6aa91e660000000011032fc1": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a3cfe6a000000000f02a935": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a33accd0000000017029433": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69cba43a0000000023005011": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a17b8190000000036002f66": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6acf4ed3000000001b0236ff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a891e6d000000002202f28b": {
+  "status": "excluded",
+  "reason": "营销题库"
+ },
+ "6a979ee70000000029012ef2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8bc15b0000000008012c72": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6998196b000000000a0329fe": {
+  "status": "excluded",
+  "reason": "备考方法论"
+ },
+ "6a7af89a000000002403c798": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "68f751e80000000003011d9d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab3a81b0000000015003fb6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69ce72ec000000001b0006a7": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6adad693000000003300ea2a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "689d832c000000001c011bca": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "69a2b7eb000000001a02371b": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6abfc036000000001c01e720": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "68b94000000000001d0247e2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69bdfe5c0000000022003c39": {
+  "status": "excluded",
+  "reason": "教学号合集"
+ },
+ "6af033bd000000000d00d28a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "678a0b37000000000a004d1f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc0928000000002501e007": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc6d79000000002c00c763": {
+  "status": "excluded",
+  "reason": "上岸攻略（营销）"
+ },
+ "696f5965000000000b0134b4": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "696f5b9a000000000b010120": {
+  "status": "excluded",
+  "reason": "泛标题弱信号"
+ },
+ "6a60d57a000000001b01ea09": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6afc1afb0000000026013f19": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a7be2160000000032023258": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6a86fbd3000000002702f335": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69ae08ab000000000e03d890": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a391da7000000002100b9f7": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbdbef000000002a0106de": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad6ea20000000000c0090b0": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbf041000000002a02901c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69219582000000001b020630": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a96da360000000027015e73": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aad68fc0000000028038568": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6abe2468000000000100b2b6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6895bc560000000025015d96": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "66a766fe000000000600d86d": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "68ea28ae0000000007031b75": {
+  "status": "excluded",
+  "reason": "泛杂谈无题面"
+ },
+ "6a754c1d00000000080138f1": {
+  "status": "excluded",
+  "reason": "心得方法论"
+ },
+ "6811d345000000002100a0f9": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6ad227db000000001b02d6b2": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6932ac570000000019024520": {
+  "status": "excluded",
+  "reason": "备考方法论"
+ },
+ "6aa0dba70000000025036d5a": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "69fc19b10000000035024ba9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af3e0860000000016033d04": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69c517d000000000220030d7": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6ae1928d00000000230137c0": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "68aff7aa000000001c00e10b": {
+  "status": "excluded",
+  "reason": "单概念科普"
+ },
+ "6ad85cb2000000002c014878": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab55ba100000000180079ff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aad68c3000000001203d0d2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae00875000000000901ca2a": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ad03a5c000000001400c800": {
+  "status": "excluded",
+  "reason": "合集无具体公司/轮次来源"
+ },
+ "698c54bb000000000a02e474": {
+  "status": "excluded",
+  "reason": "备考方法论"
+ },
+ "6af57feb000000001802a5fd": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a47a648000000001101b47e": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6a4fd89a000000002100aa38": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "694c0e4c000000001e03347e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a8ac0a70000000016009eec": {
+  "status": "excluded",
+  "reason": "反问环节方法论"
+ },
+ "6888e057000000002500ff6c": {
+  "status": "excluded",
+  "reason": "手撕教学合集"
+ },
+ "6a79d8840000000006007d2e": {
+  "status": "excluded",
+  "reason": "单考点科普（无面试来源）"
+ },
+ "6a2e73ec0000000006023e61": {
+  "status": "excluded",
+  "reason": "手撕教学"
+ },
+ "6afc1b66000000001601ba03": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa7c23000000001b01dfc4": {
+  "status": "excluded",
+  "reason": "备考方法论"
+ },
+ "6afb1cfd0000000025011f4c": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6af81bb3000000002b03db91": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6af98a290000000026010e49": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af987af000000002b01b163": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af98ca3000000001b01ec36": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afc46850000000009021625": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6af95328000000001802f569": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afbe96c000000002b03674f": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6af7fe89000000002b0000bb": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afbd89c000000001f014e30": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afafd6b000000002a018a32": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afa6d64000000001f0159bd": {
+  "status": "retained",
+  "reason": "正文含真实题面（fastAPI/SSE/skill/MCP）"
+ },
+ "6af6defb000000002501c375": {
+  "status": "excluded",
+  "reason": "招聘信息"
+ },
+ "6afbe7a3000000002303d77e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afaf54c000000002a02ed8f": {
+  "status": "excluded",
+  "reason": "OPD 题目+参考答案（教学号）"
+ },
+ "6afc2ab100000000240312af": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6afbfe35000000001802a81f": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afc2b33000000002b03f8cf": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa949500000000250118eb": {
+  "status": "excluded",
+  "reason": "弱信号不明岗位"
+ },
+ "6afbf41d000000002a02d195": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afa9575000000001c032886": {
+  "status": "excluded",
+  "reason": "一句话概述无题面"
+ },
+ "6afa748e000000001c033e54": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afc4264000000002b02a5f5": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afc15d30000000025012929": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa9154000000002b01ec92": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afc689e0000000024032025": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afb2fbe000000002b02ab33": {
+  "status": "excluded",
+  "reason": "开奖讨论杂谈"
+ },
+ "6afbb059000000002b025438": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbfb73000000002501c9c8": {
+  "status": "excluded",
+  "reason": "HR 视角非技术"
+ },
+ "6afbb1de000000002b0306f7": {
+  "status": "excluded",
+  "reason": "教学号系列帖，引流可下载"
+ },
+ "6afaf7fb000000002b006079": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afc465f0000000018028cc3": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6afbdc82000000001803833c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af9e9f1000000001601ad03": {
+  "status": "excluded",
+  "reason": "产品新闻"
+ },
+ "6afb021c000000002b01b839": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afa52da000000001802ffc9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aa2a954000000002502ef67": {
+  "status": "out_of_scope_video",
+  "reason": "视频笔记"
+ },
+ "6afc07cb000000002a01ce53": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbf5f2000000002b0195db": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af7eabc000000002a03b06d": {
+  "status": "excluded",
+  "reason": "营销标题党三问"
+ },
+ "6afbd96a000000002a029953": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6afbc493000000002b004c6b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc2d48000000002a011cd9": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afbb25c000000002a03a6ef": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbb2a4000000001c0316a2": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc4215000000002203b30d": {
+  "status": "excluded",
+  "reason": "资料清单+备考建议，无题面"
+ },
+ "6afc4140000000002203b055": {
+  "status": "retained",
+  "reason": "正文含真实题面"
+ },
+ "6afc10f8000000001802a0cc": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa6f530000000025009ffa": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afab2c8000000002602573e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af9dc97000000001802f491": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af9d785000000001901ff94": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afa749b000000001603c2da": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6af81aae0000000016032f99": {
+  "status": "excluded",
+  "reason": "营销卖课/AI 生成合集（无真实面试来源）"
+ },
+ "6afc14bf0000000018039341": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6afaa72c000000001c032538": {
+  "status": "fetch_failed",
+  "reason": "正文与图片均未取到（标题为真实面经，留待补采）"
+ },
+ "6afc1f3f0000000023012120": {
+  "status": "excluded",
+  "reason": "杂谈"
+ },
+ "6af85bc2000000002b03a94f": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6aa987a2000000002503588c": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "69cba3860000000023004c9c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "694153d0000000001b03005e": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a40cb300000000008002e77": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "66c2efef000000001d01874c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "66389abe000000001e030c93": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "665edc7600000000150089ee": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a58d48c000000000a03b2b5": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6a6848ae000000000f014e27": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69c64d43000000002301379f": {
+  "status": "excluded",
+  "reason": "学习路线"
+ },
+ "6ae057440000000003003351": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ae163660000000027015fb4": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "69f30b20000000001f0032f4": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "668f83160000000025006a8a": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad37cde0000000012036ab9": {
+  "status": "excluded",
+  "reason": "非 Agent/大模型技术方向"
+ },
+ "6ae828ac000000001b01c9c4": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad1dc22000000000a020ff4": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aa3b04500000000280366d8": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "697779a3000000000a02f9c2": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aec5152000000001b01d138": {
+  "status": "retained_img",
+  "reason": "题面在图片，待画面提取"
+ },
+ "6ae6b7b2000000001201f86e": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aeb220800000000030087ce": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69c5f7ec000000002200c475": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6ad830a8000000002d0063ce": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6aeed0ab0000000015008711": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae6ae93000000001500a0c7": {
+  "status": "excluded",
+  "reason": "产品/运营等非技术岗（范围规则）"
+ },
+ "6889e466000000002500d15b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac84bd7000000000a01c59b": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae06470000000001703cf24": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69e034c9000000001b021da7": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a6c661c000000002c004f13": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69a02c71000000002801fa86": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ac8d28c000000001b03149d": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "688b7578000000002302c822": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab3a28f0000000018005775": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6aa912170000000028032a48": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6964afcc000000000a032d5c": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a226930000000002200a6ec": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afbe6fa000000002b0180e9": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6af711c1000000002903e181": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afaa346000000001f014c6f": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6afc3faf000000002a02a1e6": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ae61e8100000000250194e7": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ad97b7b000000002c01da97": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a7ec90b0000000029031bff": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6ab491cd00000000150080ad": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "6a5a2d020000000011014799": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ },
+ "69d4cdea000000002200f984": {
+  "status": "excluded",
+  "reason": "无有效内容且面经信号弱"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "note_id": "6af580f4000000002303c0c4",
+ "url": "https://www.xiaohongshu.com/explore/6af580f4000000002303c0c4?xsec_token=ABMyel0EWzyUKlnXBtRcMa4Se63Xao87mr-7EVgge-AvU=&xsec_source=pc_search",
+ "title": "",
+ "author": "困困",
+ "published_at": null,
+ "date_raw": "编辑于 4天前 湖南",
+ "likes": "10",
+ "status": "rejected",
+ "status_reason": "无标题帖，学习路线/能力清单推广，非面经题面",
+ "company": "unspecified",
+ "role": "Agent 开发",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "个人背景：计算机科班出身，深耕 AI Agent 落地开发一年多。踩过不少项目坑后才明白，Agent 开发远不是调接口、写提示词就能交付。\n\t\n企业真正需要的，是能独立搭建整套系统的开发者，掌握任务规划、工具编排、状态治理、异常兜底，完成从开发到上线全链路交付。\n\t\n首先要夯实底层基础。Python 重点吃透异步、装饰器、数据结构、异常处理与 FastAPI；大模型侧理解 Token 机制、上下文窗口、Prompt 工程、Function Calling、结构化输出、幻觉抑制；后端掌握 Redis、MySQL、Docker、API 设计，熟悉并发、日志与调度。每个知识点手写 Demo，跑通并理解边界才算掌握。\n\t\n其次吃透 Agent 核心能力。熟练 ReAct、Plan-and-Execute 范式，打通任务拆解、规划、执行、反思校验闭环；做好工具 Schema 定义、参数校验、路由分发、超时重试与失败兜底；掌握 LangGraph 的 State、Node、Edge、Checkpointer，分清 Workflow 和 Agent 适用场景；搭建短期、长期记忆体系，通过上下文压缩解决多轮信息丢失问题；理解 Supervisor、Planner、Executor 多角色分工，管好任务分发与异常。\n\t\n实战优先落地三个有复杂度项目：客服 Agent、办公 Agent、多 Agent 调度系统，不只追求跑通，重点处理报错、死循环等异常。\n\t\n工程上掌握 FastAPI、Docker、Redis、SSE 流式输出，做好熔断、重试、幂等、断点恢复，搭建 Trace、日志可观测体系。\n\t\n自建测试集，跟踪任务完成率、工具调用准确率、Token 成本等指标，持续沉淀 Bad Case 迭代优化。推荐学习 LangGraph、OpenAI Agents SDK、MCP，用 LangSmith、Langfuse 调试。\n\t\nAgent 开发拼的不是框架熟练度，而是让 Agent 稳定把事做对，故障可自动恢复，这才是岗位核心能力。\n#oc #AI大模型 #agent #大模型应用开发 #程序员 #ai应用 #程序员的出路 #计算机专业",
+ "images": [],
+ "image_extract": false
+}

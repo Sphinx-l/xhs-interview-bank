@@ -1,0 +1,14 @@
+{
+ "note_id": "6af1a6ba0000000034003bb9",
+ "title": "月之暗面Agent三面面经",
+ "desc": "面试公司:月之暗面\n面试岗位:Agent Harness\n面试难度:⭐️⭐️⭐️\n1、自我介绍\n2、复盘你最熟的Agent项目:现在重做，架构上砍什么、留 什么、补什么\n3、harness当平台能力设计:单租户与平台化多租户，隔 离、配额、审计怎么落地\n4、多Agent成本=Agent数×轮次×上下文，怎么从第一 天把预算护栏做进编排层\n5、长任务跑飞的典型信号有哪些，线上怎么自动降级或熔断\n6、Agent的状态该存哪些字段,checkpoint怎么设计才能 可回放、可审计、可人工接管\n7、多Agent共享状态:消息传递还是共享存储，写冲突和 staleread怎么处理\n8、场景题:Agent自动改代码仓库并提交PR,从权限、沙 箱、审批、回滚讲完整链路\n9、Prompt注入和检索投毒在Agent场景为什么特别难防，纵 深防御分几层\n10、工具越权调用怎么收敛，高危操作(删数据、发消息、转 账)怎么接human-in-the-loop 11、Agent可观测性:trace、span、token、工具输入输出、 thinkinghistory怎么落盘方便归因 12、评测体系怎么搭:门禁层、端到端完成率、工具层、检索 层、成本延迟横切层各看什么指标\n13、LLM-as-judge有哪些偏见，怎么用人工标注校准, badcase怎么回流成回归集\n14、模型升级或prompt大改时行为悄悄变差，灰度发布和自 动回滚怎么设计\n15、RAG在Agent里不是独立模块，检索时机、引用溯源、上 下文污染怎么和主循环解耦 16、从零设计月之暗面内部Agent执行引擎，画核心模块和边 界(调度、状态机、工具网关、护栏、评测)\n17、怎么看\"harness和模型是一体\":同模型换不同 harness,效果和成本能差几倍，为什么\n18、最近在学什么Agent infra相关新东西，举一个从论文或 源码里抠到的底层细节\n19、跨团队推Agent落地时算法、后端、产品目标不一致，怎 么定优先级和验收标准\n20、手撕算法:任务依赖拓扑排序，有环返回空并说明哪条依 赖成环\n#面试经验howto #大模型 #面经 #面试技巧  #agent #24h新鲜面经 #大模型面试 #程序员 #互联网大厂",
+ "author": "小周的IT日记",
+ "date": "11-09 广东",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6af1a6ba0000000034003bb9?xsec_token=AB97T9IJPuo_vUMfUG-tVfpx2FgLmBd3Apiz-fmXZngtg=&xsec_source="
+}

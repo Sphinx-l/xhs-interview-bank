@@ -1,0 +1,26 @@
+{
+  "question_id": "Q006",
+  "note_id": "69f9f8c5000000003503ac05",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer",
+  "canonical_path": "question_bank/agent-architecture/medium/Q006.json",
+  "canonical_sha256": "ae47ccdfcdea3b03332526a899d1bf74d7bb4c3ad60dfa71237e67c4a2e36df3",
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过。字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q001,Q005] 合规。summary+points 纯汉字约 357 字，处于『约 180–350』上沿 2% 以内，视为符合『约』的容差。",
+    "difficulty": "通过。架构选型与场景判断题，符合 medium。",
+    "student_view": "通过。无来源侧旁白、无公司名泄漏；末段『描述自己的项目时……』为答题建议，不涉原帖信息。",
+    "technical_accuracy": "通过。Workflows/Agents 二分法定义与 Anthropic 原文一致；『能用最简单方案就不加复杂度、从 Workflow 起步、仅在可度量收益时升级自主性』与原文 finding the simplest solution possible / add complexity only when it demonstrably improves outcomes 一致；『Workflow 只有 LLM 生成环节的有限随机性』表述准确未绝对化。",
+    "answer_responsiveness": "通过。两个子问（本质区别、何时选 Workflow）覆盖完整，并补充选 Agent 判据与混合形态，回应 C113 的 workflow+单点 Agent 追问。",
+    "provenance_merge": "通过。C190/C026/C113/C357 均存在；verbatim 与主源 C190 逐字一致；company=携程、role=AI 应用开发、round=一面 与 note.json 一致；frequency=4 正确。",
+    "verbatim_fidelity": "通过。verbatim 保留原帖题面（含『workflow』小写等原始写法）未改写。"
+  },
+  "claims_checked": [
+    {"claim": "Workflows=预定义代码路径编排 LLM 与工具；Agents=LLM 动态指挥自身流程与工具使用", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
+    {"claim": "Anthropic 建议：workflows 为定义良好的任务提供可预测性与一致性；寻找最简单可行方案、仅在需要时增加复杂性", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T19:43:28+08:00"
+}

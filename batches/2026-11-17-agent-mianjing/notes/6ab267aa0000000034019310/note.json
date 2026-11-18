@@ -1,0 +1,18 @@
+{
+ "note_id": "6ab267aa0000000034019310",
+ "url": "https://www.xiaohongshu.com/explore/6ab267aa0000000034019310?xsec_token=AByXJbJppKbxtHkUkDDapuwZdo9qwEey_yPunC2iILI30=&xsec_source=pc_search",
+ "title": "从119篇面经梳理出字节Agent高频考点",
+ "author": "卑微打工仔",
+ "published_at": null,
+ "date_raw": "编辑于 09-26",
+ "likes": "305",
+ "status": "rejected",
+ "status_reason": "119篇面经统计分析帖，无逐条题面",
+ "company": "字节跳动",
+ "role": "unspecified",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "这几天搭建了一套自动收集面经的流水线，一共收集了五六百篇了，包含了各种公司的算法开发等。目前私信问的最多的是字节跳动开发岗相关的，然后也有不少同学私信我，问我Agent到底怎么入门。现在你看了这篇帖子，知道高频考点是什么，你再对着考点去看项目，这样学起来最快。所以我就把开发岗的热门考点全都梳理了一下。\n\t\n只选择2026年的面经，包含了今年的暑期实习跟秋招。然后除掉了那些明显AI编造面经的，包括一些转载的、非个人真实面经的，我都剔除了，这也花了不少时间。现在很多人都在用AI编造面经起号。\n最后整理出119篇，再按「大方向→细分考点」做成这7张图。\n\t\n这批样本里，AI知识的6个方向\n① Prompt与AI开发：50篇，42.0%\n② 工具调用与协议：44篇，37.0%\n③ RAG检索链路：43篇，36.1%\n④ 架构与多Agent：43篇，36.1%\n⑤ 评测与可靠性：42篇，35.3%\n⑥ 记忆与上下文：41篇，34.5%\n下一篇会讲后端开发的热点考点。\n#秋招有路子 #字节跳动 #AI开发 #互联网大厂\n#字节跳动面试  #AIAgent  #面经  #程序员面试",
+ "images": [],
+ "image_extract": false
+}

@@ -1,0 +1,22 @@
+{
+ "note_id": "6a4d12af000000002100b495",
+ "title": "具身面经⑤手撕代码合集",
+ "desc": "这两批面试到这篇基本就整理完了。\n\t\n回头看，去年面试时有VLA经验或做过仿真的，项目这块就能过；但今年大部分公司都要求真机经验了，没有真机部署经历会比较吃亏😮‍💨\n\t\n手撕这块主要就是力扣hot100和一些常见算法的手撕。\n\t\n这篇把两批手撕题整理出来了，分成深度学习模块、强化学习模块、力扣代表题三块。重点是算法模块手撕。力扣那块其实占比不大，刷Hot100就够。具身岗的手撕，算法模块占比越来越高。建议这些模块自己动手默写一遍。\n\t\n这一系列面经到这篇就更新完了。后面会分享一些读过的好paper、具身行业的观察，感兴趣的可以蹲一下～\n\t\n#具身智能  #强化学习  #面经  #秋招 #手撕代码 #VLA",
+ "author": "萝卜小智",
+ "date": "07-07",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611180005/b2ceb052a79754b3549d5a395e46b060/spectrum/1040g34o322aueim06s705p8481c5n9fr2stl440!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/643b9cea992d0c0d8d7e827da40d2fc9/spectrum/1040g34o322aueim06s7g5p8481c5n9frro06veg!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/ecd7f3386ff831864d42bcca37ab1aaf/spectrum/1040g34o322aueim06s805p8481c5n9fr30bd2dg!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/54f48423f1ad4134fcb5804e961e9c59/spectrum/1040g34o322aueim06s8g5p8481c5n9frvr8i420!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/5108afb0613d6f3080eb0e2d3d2f58ee/spectrum/1040g34o322aueim06s905p8481c5n9fr35vsbuo!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/149804bade2316a648c9f05a5f625da4/spectrum/1040g34o322aueim06s9g5p8481c5n9fr57jv4c0!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180005/72a268bf245efc5c9edd0877a24bb0d0/spectrum/1040g34o322aueim06sa05p8481c5n9frk5rqi3g!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [],
+ "img_count": 7,
+ "review_status": "retained_img",
+ "review_reason": "手撕题面在 7 张图片中",
+ "url": "https://www.xiaohongshu.com/search_result/6a4d12af000000002100b495?xsec_token=ABycfOiHBnsotczckKayxTHdeQiBs-SsOpffipcaGM1r0=&xsec_source="
+}

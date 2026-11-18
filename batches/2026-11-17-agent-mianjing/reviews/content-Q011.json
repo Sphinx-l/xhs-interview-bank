@@ -1,0 +1,29 @@
+{
+  "question_id": "Q011",
+  "note_id": "6aa3b16e000000001001d751",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-3",
+  "canonical_path": "question_bank/agent-engineering/medium/Q011.json",
+  "canonical_sha256": "cb5d05ad1ee9c4f2111deb06f1e5a15497d9dfac7934cb39d430d1bdde6ad537",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过（round 1 三项不通过均已修复）。其一，recommended_answer 压缩至 274 纯汉字，落入 180-350 区间，6 要点保留且题面三问覆盖不变。其二，frequency 5→6，notes 列出 C008/C009/C181/C229/C153/C360 六条合并候选，与 frequency 相等（C181 标注淘天一面与候选表一致）。其三，M×N→M+N 论断在 point 5 与 technical_answer 中均标注『工程视角通识性结论，非协议文档原文』，architecture 引用条目标注收窄为该页真实内容（Host/Client/Server、JSON-RPC、传输、initialize 生命周期）。其余结构项 round 1 已核合规且未改动。",
+    "difficulty": "通过（同 round 1）。MCP 与 FC 层次关系与生态位判断属边界判断型，medium 成立。",
+    "student_view": "通过。round 2 复扫学员侧字段，无公司名（百度/月之暗面/字节/淘天等）与『面经/博主/发帖人/原帖/教研』字样；新增的『工程视角通识』标注为知识来源口径说明，非教研旁白。",
+    "technical_accuracy": "通过（同 round 1）。三方架构、JSON-RPC 2.0 四类消息、initialize→initialized、stdio + Streamable HTTP（POST + 可选 SSE）、TLS/鉴权、progress token 等逐条与 MCP 官方架构文档一致；M×N 论断改标通识后不再声称协议文档原文，消除了出处错配。",
+    "answer_responsiveness": "通过。题面三问（原理、传输、与 FC 关系/解决什么问题）覆盖完整，压缩未丢维度。",
+    "provenance_merge": "通过。六条候选均真实存在；主源 verbatim 未改动（round 2 复核逐字一致）；company/role/round 与候选表及 note.json 一致；frequency=6 与合并候选数相等。",
+    "verbatim_fidelity": "通过。question_verbatim 未改写。"
+  },
+  "claims_checked": [
+    {"claim": "Host 为发起连接的 LLM 应用，Client 在 Host 内与 Server 1:1，Server 提供 tools/resources/prompts；JSON-RPC 2.0；request/result/error/notification；initialize→initialized；stdio + Streamable HTTP（POST + 可选 SSE）", "evidence": "https://modelcontextprotocol.io/docs/concepts/architecture", "result": "confirmed"},
+    {"claim": "Building effective agents 将 MCP 列为增强 LLM 的工具接入方式之一", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {"round": 1, "decision": "rejected", "issue": "① recommended_answer 415 纯汉字超上限约 18.6%；② C181 内容已写入短板点但未计入 frequency=5；③ M×N→M+N 论断所引 architecture 页无此表述", "resolution": "① 压缩至 274 汉字；② frequency=6 并将 C181 列入合并候选；③ 论断标注为工程通识而非协议文档原文，引用条目标注收窄至该页真实内容"}
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:05:00+08:00"
+}

@@ -1,0 +1,18 @@
+{
+ "note_id": "6aa7a4a90000000011037be7",
+ "url": "https://www.xiaohongshu.com/explore/6aa7a4a90000000011037be7?xsec_token=ABPJwYNJ1jQTmeyiMF0ewaaguuu0TLH9e-IOQOPW7SXVI=&xsec_source=pc_search",
+ "title": "携程 AI Agent开发一面｜45-50min 纯技术面",
+ "author": "码上agent",
+ "published_at": null,
+ "date_raw": "09-14",
+ "likes": "219",
+ "status": "rejected",
+ "status_reason": "挂人原因总结帖（备考建议），无逐条题面",
+ "company": "携程",
+ "role": "AI Agent 开发",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "#一面真实挂人核心原因：\n1. 只会调包，讲不清底层Agent循环原理，无法手写最小demo\n2. RAG只会背诵概念，说不清文档解析、分块、召回的真实踩坑经历\n3. 没有线上稳定性、高并发、成本优化相关落地思路\n4. 项目描述缺少量化指标，只讲功能，扛不住连环深挖\n#24h新鲜面经 #面试经验howto #agent开发 #agent面经 #大模型开发 #面经 #大厂面经 #校招",
+ "images": [],
+ "image_extract": false
+}

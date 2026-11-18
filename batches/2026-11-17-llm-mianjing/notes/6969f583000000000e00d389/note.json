@@ -1,0 +1,14 @@
+{
+ "note_id": "6969f583000000000e00d389",
+ "title": "字节大模型一面凉经",
+ "desc": "#互联网大厂 #大模型 #面经\n1. 自我介绍\n2. 项目拷打\n3. 标准RAG有什么问题？\n4. 了解Agent吗？把RAG做成Agent有什么好处\n5. 说一下LoRA的原理；LoRA完推理的时候要挂着Adaptor吗？\n6. 手撕代码：torch写SFT的loss计算代码（注意shift right）\n\t\n面试官对技术了解很深入，问得都是技术细节，感觉比我自己更了解我的项目[哭惹R][哭惹R][哭惹R]",
+ "author": "Triiimble",
+ "date": "01-16",
+ "imgs": [],
+ "video": false,
+ "interaction": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6969f583000000000e00d389?xsec_token=ABCCKi85gQzf78NR3W_sZF4pMO0ly0u-bGa1wUiqGALyc=&xsec_source="
+}

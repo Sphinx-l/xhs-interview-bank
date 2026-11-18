@@ -1,0 +1,18 @@
+{
+ "note_id": "6ae07d4b00000000340253bf",
+ "url": "https://www.xiaohongshu.com/explore/6ae07d4b00000000340253bf?xsec_token=ABRltLWp6LJchCicFVFam-A5JEt4cQHu7Jx_AUujWE1o4=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "10.26 月之暗面Agent Harness二面面经",
+ "author": "27败犬大李GOAT（延毕版）07-13",
+ "published_at": null,
+ "date_raw": "编辑于 6天前 广东",
+ "likes": "401",
+ "status": "duplicate",
+ "status_reason": "与6adf46d4同一二面面经（转载重复），题面合并至6adf46d4",
+ "company": "月之暗面",
+ "role": "Agent Harness",
+ "round": "二面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1、自我介绍\n2、挑一个你熟的 Agent 项目，讲清楚从用户输入到最终输出的全链路，每一环的输入输出是什么\n3、Harness 里agent loop怎么设计，终止条件除max_turns 还控哪些？\n4、模型返回 tool_call 后，你们怎么做参数校验、权限校验、沙箱执行和结果回灌\n5、Agent 陷入死循环或重复调用同一工具，怎么检测和处理（状态指纹/去重/回退）\n6、长上下文超限时，短期记忆怎么压缩，摘要丢失关键信息怎么补，跨块关联怎么保证\n7、多 Agent 协作时，任务怎么拆分、状态怎么共享、结果冲突怎么仲裁\n8、多个 Agent 并发改同一个文件/资源，怎么防冲突，锁粒度怎么定\n9、Agent 执行到一半服务重启，checkpoint 存什么、放哪、怎么恢复现场\n10、human-in-the-loop 场景，用户驳回或超时，任务怎么续跑和兜底\n11、工具返回数据过大怎么截断/摘要，工具失败怎么重试、熔断、保证幂等\n12、Function Calling 和 MCP 分别解决什么问题，工具太多时怎么检索和按需加载\n13、RAG 在 Agent 里什么时机触发检索，query 改写和 rerank 怎么接\n14、Prompt 注入怎么防，危险工具调用怎么拦截，敏感数据怎么脱敏\n15、Agent 线上怎么评测：任务成功率、工具选错率、参数错误率、成本、耗时怎么埋点\n16、badcase 怎么归因到模型/prompt/检索/工具，怎么回流成回归集\n17、流式输出下，工具调用事件怎么往前端正向推送，断线重连怎么恢复\n18、手撕算法：给一个扁平 JSON 列表（带 parent_id），恢复成树形结构并返回根节点列表\n\t\n🎯面试感受：\n二面不像一面问“知不知道”是盯你简历里Agent那一段往工程缝捅。上下文压缩、checkpoint、并发改文件、死循环防护，全是生产环境真坑，答表面方案直接被追三层。面试官不装，懂就懂不会就别绕。整体偏硬核，聊透挺爽，能感觉团队真在跑长任务 Agent，不是玩具\n#agent #面经 #大模型 #大模型面试 #互联网大厂 #秋招 #ai智能体 #后端开发 #程序员",
+ "images": [],
+ "image_extract": false
+}

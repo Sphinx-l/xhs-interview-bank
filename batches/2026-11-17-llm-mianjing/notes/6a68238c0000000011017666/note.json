@@ -1,0 +1,14 @@
+{
+ "note_id": "6a68238c0000000011017666",
+ "title": "大模型面经8｜腾讯｜校招",
+ "desc": "📖面经题\n1. 分别介绍下 Qwen2.5 和 DeepSeek-R1\n2. 为何大家都开始探索 MoE 架构？MoE 相比 Dense 有什么好处？\n3.  用 LoRA 微调过 Qwen，是否全量微调过？LoRA原理和优缺点\n4.  DeepSpeed 的ZeRO1、ZeRO2、ZeRO3 三个模式的区别是什么\n5.  微调 Qwen2 - 72B 时，每一张卡占用显存大概是多少？\n6. 训练中除了 DeepSpeed，还用过哪些优化方法？\n7. 知道 LoRA 的原理吗？A 和 B 两个矩阵怎么初始化？\n8. 讲一下大模型训练和推理的流程，SFT 和 RLHF 的作用分别是什么？\n9. 目前主流的强化学习算法有哪几个？写出损失函数的表达式\n10. 在做对齐时，为什么 SFT 之后还要做 RLHF？只用 SFT 可以吗？\n11. 知道哪些强化学习算法？除了 PPO 和 DPO，\nDeepSeek 用的 GRPO 相比于 GPT 的 PPO 做了哪些改进？\n12. 微调 Qwen 时，数据是怎么构造的？有用到什么数据清洗方法？\n\t\n👋手撕题\n1. 搜索插入位置（LC 35）\n#算法 #大厂 #面经 #大模型面试 #大厂算法 #秋招 #互联网大厂 #字节跳动 #算法实习 #大模型学习",
+ "author": "面试喵",
+ "date": "07-28",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a68238c0000000011017666?xsec_token=AB88JiGJMK9-k69EdFydZrPWVd-7U6nWZaODRSLNdRmk4=&xsec_source="
+}

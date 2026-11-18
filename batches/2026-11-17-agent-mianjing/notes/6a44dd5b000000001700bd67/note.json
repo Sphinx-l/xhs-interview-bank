@@ -1,0 +1,18 @@
+{
+ "note_id": "6a44dd5b000000001700bd67",
+ "url": "https://www.xiaohongshu.com/explore/6a44dd5b000000001700bd67?xsec_token=ABcd79iURanM76ws2-VlGqThIzZjHtz5ciYGTEU9jze28=&xsec_source=pc_search",
+ "title": "字节Agent开发面经分享",
+ "author": "会敲代码的鱼",
+ "published_at": null,
+ "date_raw": "07-01",
+ "likes": "286",
+ "status": "rejected",
+ "status_reason": "项目推广引流帖（导向自取资料），非题面",
+ "company": "字节跳动",
+ "role": "Agent 开发",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "感谢大家的反馈，我自己设计的这个面向校招/实习的Agent项目目前已经有19篇面经了。\n面向27秋招来说，这个数量已经特别多了～\n\t\n甘同学分享的面经基本都围着 code agent 问：主循环、工具、审批、subagent、上下文、记忆、恢复、评测，一路追到项目是不是真的能控制、能复盘。\n\t\n这种面试节奏我觉得反而是舒服的：说明项目让面试官有东西可以问。\n\t\n我做 Pico 这个 code agent 项目的时候，想补的就是这块：不是再做一个聊天助手，而是做一个能在面试里继续聊下去的工程项目。\n\t\n我觉得 Agent 项目最该提前准备4个问题：Agent Loop怎么跑，Tool安全怎么做，上下文怎么管，长任务怎么恢复。\n\t\n能把这 4个问题讲清楚，面试官就不太容易把你拉回八股。\n\t\n整理好的面经答案、项目代码和面试话术我放在下面了，想对着准备的可以自取。\n#agent项目 #agent开发 #字节 #codeagent #简历项目 #agent #Agent项目",
+ "images": [],
+ "image_extract": false
+}

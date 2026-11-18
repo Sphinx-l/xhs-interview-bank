@@ -1,0 +1,14 @@
+{
+ "note_id": "6a88198b000000003b017ddc",
+ "title": "网易 Agent 开发（游戏/互娱方向）二面面经",
+ "desc": "面试时长约 50 分钟，整体侧重项目深挖、系统设计与工程稳定性。流程：自我介绍→Agent 项目深度拆解→大模型与 RAG 原理问答→系统场景设计题→后端工程基础→反问环节。\n面试官会深挖架构选型、工具调用校验、记忆分层设计，重点询问线上故障排查、异常熔断、召回优化等落地细节，也会对比 LangChain、LlamaIndex 适用场景。相比一面，更看重架构取舍、边界处理能力，建议提前梳理项目完整链路与优化指标。\n#agent开发 #agent面经 #网易 #网易面试 #秋招 #程序员面试 #大模型面试 #howto用好AI",
+ "author": "勇哥的程序员日记",
+ "date": "08-21",
+ "imgs": [],
+ "video": false,
+ "interaction": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a88198b000000003b017ddc?xsec_token=ABqfFBEKy76tJPImFzCeXapYNOWlgGXUrc2y3bt18tGH0=&xsec_source="
+}

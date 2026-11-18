@@ -1,0 +1,672 @@
+----- line 582 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c5dbfec5d87337146b045af00710b9b2/spectrum/1040g34o320r4senfmq005qfle6jg8t00epijldo!nd_dft_wlteh_webp_3","prompt":"这是一张小红书笔记图片（面经帖子第1张）。请逐字转写图片中的全部文字内容：保留原有编号、标点、错别字，不要总结、不要改写、不要补全。如果某处辨认不清，用〔不清〕标注。如果图片基本没有文字（如纯封面图），只回答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 584 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/9d101ddefdd02985b156ac98e452e502/spectrum/1040g34o320r4senfmq0g5qfle6jg8t008l23088!nd_dft_wlteh_webp_3","prompt":"这是一张小红书笔记图片（面经帖子第2张）。请逐字转写图片中的全部文字内容：保留原有编号、标点、错别字，不要总结、不要改写、不要补全。如果某处辨认不清，用〔不清〕标注。如果图片基本没有文字，只回答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 587 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"全文3580字｜阅读需11分钟\\n\\n腾讯Agent二面凉经带答案（较难）\\n\\n带个人隐私的相关内容与问题被省去，稍作了整理，答案是经过复盘优化的，不是现场回答，已被拷打\\n\\n1.自我介绍\\n\\n2.讲一下两个项目\"", "type": "text"}]
+                                                
+
+----- line 589 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"3.项目一，项目中的元素定位 Agent是什么，用途解释一下\\n\\n元素定位是指找到页面上想要操作的那个 UI 组件（比如\\\"登录按钮\\\"、\\\"用户名输入框\\\"、\\\"购物车图标\\\"）。它一个具备智能理解能力的组件，不再使用固定的选择器，而是：理解意图，观察当前页面，推理决策，动态输出定位方式。在项目中，我把当前页面的 DOM 结构简化一下，提取出所有可交互元素（按钮、输入框这些），连同它们的文本、角色、属性一起传给 LLM。同时我会告诉 LLM 用户想点的是“登录按钮”。LLM 会分析页面上哪个元素最符合这个描述，然后返回一个定位策略，比如...
+                                                
+
+----- line 592 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/79731656504d002571bee95e6c2bff71/spectrum/1040g34o320r4senfmq105qfle6jg8t00fji5aqg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 594 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c3bdd23bdf14c79b26fc42626dc68c33/spectrum/1040g34o320r4senfmq1g5qfle6jg8t00q1tcklg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 596 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/0a60177e06e6544e7e4dbc8a9189fb5e/spectrum/1040g34o320r4senfmq205qfle6jg8t00pp4ulog!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 598 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/bf0649e0d40ae1b2958336db43ae17d7/spectrum/1040g34o320r4senfmq2g5qfle6jg8t00djacid8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 601 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"丢失。把 Agent 的执行过程设计成可持久化的状态机，每个步骤—比如“意图解析”“工具选择”“工具执行”“结果融合”——都是一个独立的状态，中间结果落盘。这样一旦某个工具超时或 LLM 返回异常，系统可以基于最后一个有效状态进行重试、回退或降级，而不是从头开始。\\n\\n02 第二，并发能力层面，Agent 本质上是 IO 密集型任务，瓶颈不在 CPU 而在网络和外部服务。可以采用异步非阻塞的运行时模型，让单个线程可以调度大量 Agent 实例，在等待 LLM 或工具响应时主动让出执行权。但单纯提高并发会引发另一个问题：下游服务（如 LLM API、数据库、搜索引...
+                                                
+
+----- line 603 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"Summary 节点在Agent项目或者整个报告生成的链路中，作用是什么？\\n\\nSummary 节点的首要作用是认知降维。它将多个子任务返回的、可能存在冗余甚至矛盾的原始数据，提炼成结构化的核心论据，避免后续节点发生‘上下文爆炸’。其次，它解决了多源异构数据的对齐问题。无论上游调用的是代码解释器、搜索引擎还是数据库，Summary 都能将其封装成下游决策节点可直接理解的统一语言。而在在长链路任务中，Summary 扮演了工作记忆的角色。它把已经完成的计算步骤‘封存’为一段精炼的事实陈述，从而释放 Agent 的短期记忆负载，去处理下一阶段的新任务。\\n\\n6...
+                                                
+
+----- line 605 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"03 第三，可靠性与并发的交集，即如何在高并发下保证可靠性。这里的关键是隔离和优先级。不同任务的可靠性要求不同，将 Agent 系统划分为多个独立的执行池，比如关键路径 Agent 使用独立的资源配额和更保守的重试策略，对共享资源（如 LLM 推理槽位）要实现公平调度与优先级抢占，保证高可靠性任务在高并发场景下不会被低优先级任务阻塞。\\n\\n7.这两个项目，你用了多少AI coding，你是怎么问Ai的，是直接提问，还是先写需求文档？\\n\\n8.你怎么理解MCP，Prompt，CLI，Skill，Harness这些概念，以及他们之间的关系？\\n\\nMCP是...
+                                                
+
+----- line 607 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"了解动态容错吗？\\n\\n项目中涉及了简单的容错机制，动态容错是让智能体在真实、不确定环境中保持鲁棒性的核心能力，包含三个关键环节：\\n\\n01 实时感知与检测。Agent需要能通过多维度的监控，比如传感器信号、任务执行状态、外部反馈等，快速发现异常。这种检测不依赖于预设的阈值，而是结合当前上下文判断是否偏离预期。\\n\\n02 动态决策与调整。与传统静态冗余不同，动态容错会根据故障类型和剩余能力，自主选择策略。比如是切换备用模块、在线重新规划路径，还是执行安全降级、保留核心功能。这通常需要结合强化学习或基于模型的推理。\\n\\n03 学习与演进。好的机制不...
+                                                
+
+----- line 610 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c5dbfec5d87337146b045af00710b9b2/spectrum/1040g34o320r4senfmq005qfle6jg8t00epijldo!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 613 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"全文3580字｜阅读需11分钟\\n\\n腾讯Agent二面\\n凉经带答案\\n(较难)\\n\\n带个人隐私的相关内容与问题被省去，稍作了整理，答案是经过复盘优化的，不是现场回答，已被拷打\\n\\n1.自我介绍\\n\\n2.讲一下两个项目\"", "type": "text"}]
+                                                
+
+----- line 623 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/8faa7b906bfc450041559316e44f1c77/spectrum/1040g34o320r4senfmq305qfle6jg8t00idesktg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 625 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/83e8c9d53be950d44d2a0d042645ee16/spectrum/1040g34o320r4senfmq3g5qfle6jg8t00v8icve8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 627 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/80394fcc5dea768536fb70cb4ae2200a/spectrum/1040g34o320r4senfmq405qfle6jg8t008ma6m88!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 629 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/be2d7d340ad3cdd76445f060a956fb83/spectrum/1040g34o320r4senfmq4g5qfle6jg8t00mfptgs8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 631 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c95fbb00138b92bce125edcc9536db3e/spectrum/1040g34o320r4senfmq505qfle6jg8t004oa7nfg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 634 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"03 题库与评分标准：面试不能完全无约束，我会预设每一道题的考察点（比如考察逻辑、技术深度、沟通能力等）和参考答案要点，评分Agent据此做结构化判断，而不是让LLM完全自由发挥。\\n\\n04 追问的边界控制：追问不能无限发散，需要设定最大追问深度和方向约束，比如只能针对当前问题的某一方面追问，不能跳到完全不相关的领域。\\n\\n9.你认为你设计的这个产品有什么缺点吗？\\n\\n10.你觉得这个产品需要重点保证哪些核心指标或功能？\\n\\n11.你这个产品，怎么避免每一步出现重新规划，导致路径震荡？\\n\\n路径震荡的本质是：Agent在每一步都基于当前的...
+                                                
+
+----- line 636 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"成最终报告。它们通过共享状态协作，并预设每道题的考察点和评分标准来约束LLM的自由度，同时设置超时和追问上限来保证鲁棒性。核心思路是让每个Agent专注一件事，再通过协调机制串联成一个完整的面试流程。它本质是一个多轮对话＋动态决策＋最终评估的系统。此外加入公司内部面试的知识库，作为面试题目以及场景数据的来源。\\n\\n关键技术点如下：\\n\\n01　状态管理：面试是多轮对话，每个Agent都需要知道历史上下文。我会用一个共享的状态对象或消息总线来记录对话历史、当前题号、每轮评分等。\\n\\n02　超时与异常处理：候选人可能长时间不说话或者答非所问。我会设置超时机...
+                                                
+
+----- line 638 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"Skill我个人理解它是更高层的封装。一个 Skill 往往包含多个步骤、多个工具调用的组合，甚至包含一些 prompt 模板和业务逻辑。比如“发送邮件”是一个工具（通过 MCP 暴露），但“撰写一封得体的会议纪要邮件并发送”就是一个 Skill，它可能包含：调用 LLM 生成内容 → 调用邮件工具发送 → 调用日历工具更新状态。Skill 是面向任务的、可复用的能力单元。\\n\\nPrompt是直接输入给 LLM 的文本指令。但它和前面的概念会交叉：一个 Skill 内部会包含多个 Prompt，比如规划用的 Prompt、工具选择用的 Prompt、结果总结用的...
+                                                
+
+----- line 640 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"层次。顶层计划在任务开始时生成，包含粗粒度的步骤序列，并在没有遇到重大障碍前保持冻结。底层执行只负责当前步骤内的工具调用和参数调整，不推翻顶层计划。只有当某一步持续失败，或返回信息与顶层假设严重冲突时，才触发有条件的重新规划。\\n\\n决策记忆与约束。路径振荡往往是因为Agent忘记了之前为什么做某个决定。我会在状态中显式记录上一次决策的理由，以及已经尝试过并失败的路径。这些记录作为硬约束输入到下一次规划中，防止Agent反复在几条路径之间来回切换。\\n\\n惯性机制与阈值控制。引入置信度变化阈值，只有新信息对当前计划的置信度影响超过预设阈值时，才允许重规划。同时...
+                                                
+
+----- line 642 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"可执行能力，通过 MCP 包装后，Agent 就能理解和调用它。\\n\\nHarness，我理解它是Agent 的框架环境。比如你写好了一个 Agent，它包含各种 Skills、Prompt、Tool 配置，但你需要在一种可控的环境里去跑它、评估它的表现、调试它的行为。在Agent场景里，Harness可以批量运行Agent并收集执行轨迹，用内置或自定义的指标做自动化打分，也可以接入LLM-as-Judge做更灵活的定性评估。它能帮助开发者系统化地做回归测试和A/B对比，在迭代Agent时快速判断新版本有没有退化。\\n\\n它们的关系是：Harness 评测 A...
+                                                
+
+----- line 656 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/ea36aeaf1b992eb9ae8356ae99ab3843/notes_pre_post/1040g3k03234o5cbena6g5opt8v7m5baph35p6ng!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c07e05fbd4c8fff3bdd6fa48eb50d49f/notes_pre_post/1040g3k83234o5cf1najg5opt8v7m5bapos1fk40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d9751b92c362746093fa83aa80353997/notes_pre_post/1040g3k83234o5cf1nak05opt8v7m5bapopkoub8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/89ca41c34b07ae8a43171641f528cb1a/notes_pre_post/1040g3k83234o5cf1nal05opt8v7m5bap91bka30!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+----- line 657 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/ea36aeaf1b992eb9ae8356ae99ab3843/notes_pre_post/1040g3k03234o5cbena6g5opt8v7m5baph35p6ng!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 659 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c07e05fbd4c8fff3bdd6fa48eb50d49f/notes_pre_post/1040g3k83234o5cf1najg5opt8v7m5bapos1fk40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 661 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d9751b92c362746093fa83aa80353997/notes_pre_post/1040g3k83234o5cf1nak05opt8v7m5bapopkoub8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 663 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/89ca41c34b07ae8a43171641f528cb1a/notes_pre_post/1040g3k83234o5cf1nal05opt8v7m5bap91bka30!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 666 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"四、State 和 Checkpoint 怎么搞的？多个 agent 一块跑，状态不会互相覆盖吗？\\n\\nLangGraph 基于 Pregel BSP 模型，同一 super-step 内可以并行跑多个节点，不会互相覆盖是因为所有节点读同一份 state 快照，更新先缓存，super-step 结束时靠 reducer 合并写入。\\n\\nCheckpoint 用 SqliteSaver 或 PostgresSaver 持久化，每个 super-step 后自动存快照，出错了回滚到上一个检查点。\\n\\n同一 thread 下节点不是强制串行的——add_p...
+                                                
+
+----- line 668 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"淘天AI Agent一面\\n\\n1. 多阶段RAG，BM25 加向量混合检索——两种结果怎么合并的？实际提升在哪？\\n\\n2. PDF 扫描件、OCR、表格结构化这些，踩过坑没？\\n\\n3. 识别准确率能做到多少？\\n\\n4. State 和 Checkpoint 怎么搞的？多个 agent 一块跑，状态不会互相覆盖吗？\\n\\n5. State 全局管理怎么做的？\\n\\n6. Choice 接口包成 MCP 工具，标准接口怎么设计？兼容性有问题吗？\\n\\n7. 现场举一个你项目里的 MCP 工具例子，入参出参怎么定义的\\n\\n8. 没有...
+                                                
+
+----- line 670 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"六、Choice 接口包成 MCP 工具，标准接口怎么设计？兼容性有问题吗？\\n\\nMCP 工具定义三要素：name、description、inputSchema，标准化就在这里。\\n\\nname 是工具唯一标识，description 写清楚工具干什么、什么时候该调用，inputSchema 用 JSON Schema 定义每个参数的类型、是否必填、默认值。\\n\\n兼容性问题的关键是不同大模型厂商的 function call 格式不一致。OpenAI 用 tools 数组加 tool_choice 字段，Anthropic 用 tool_use 块。...
+                                                
+
+----- line 672 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"# 一、多阶段RAG，BM25 加向量混合检索——两种结果怎么合并的？实际提升在哪？\\n\\n用 **RRF（倒数排名融合）** 把两路结果按排名加权合并，不是直接加分数。\\n\\n两路各自排 Top N，每篇文档的 RRF 分数是 1 除以（排名加 k），k 取 60，两路分数加和排序。BM25 抓关键词（错误码、API 名），向量抓语义（同义词、换说法），互补。\\n\\n提升在两个环节：召回率比单路高 10%-15%，口语化提问尤其明显；上下文更全，幻觉减少。\\n\\n# 二、PDF 扫描件、OCR、表格结构化这些，踩过坑没？\\n\\n**扫描件质量和表...
+                                                
+
+----- line 673 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/10d1f274094d316cd68df4745b826680/notes_pre_post/1040g3k83234o5cf1nam05opt8v7m5bap9161lco!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 676 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"八、没有 MCP 之前，大模型调工具是怎么个流程？\\n\\n模型输出 function call JSON → 业务代码解析 → 调函数 → 结果拼回 prompt → 再调模型。\\n\\n核心痛点：每家厂商的 function call 格式不一样。OpenAI 是 tool_calls 数组，Anthropic 是 content block 里的 tool_use 类型。每次换模型，解析代码和拼结果的逻辑全部要改。MCP 把这个流程统一了，工具定义和调用协议跟模型无关。\\n\\n九、MCP 有什么坑或者短板？\\n\\n部署复杂、传输受限、认证不统一、流式...
+                                                
+
+----- line 677 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/16181c8cf9582e13367fffc937e7f1c2/notes_pre_post/1040g3k83234o5cf1namg5opt8v7m5bap8hses60!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 680 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"十一、你项目是多 Agent 主子架构吗？\\n\\n是的，主管分派模式，一个 Supervisor 管调度，下面几个专职 Agent 各管一摊。\\n\\n| 角色 | 干什么 |\\n| --- | --- |\\n| 主管 Agent | 拆解用户任务、分派给对应的专职 Agent、检查结果、不满意打回重做 |\\n| 搜索 Agent | 负责 RAG 检索和联网查资料 |\\n| 代码 Agent | 负责写代码、跑沙箱、调试 |\\n| 分析 Agent | 负责数据分析和报告生成 |\\n\\n我项目里约束同级 Agent 不直接通信，所有交互通过 Su...
+                                                
+
+----- line 681 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/382cb9350a52cddad04224924db45b81/notes_pre_post/1040g3k83234o5cf1nao05opt8v7m5bap9jf3slg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 684 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"| 十四、子任务挂了，比如数据抓回来空的，工作流怎么重试或降级？\\n\\n**LangGraph 的条件边实现失败路由，重试靠循环边，降级靠 fallback 节点。**\\n\\n节点执行完后检查返回状态。正常走 next 边，失败了走 retry 边。retry 边指回自己，带一个重试计数器。重试策略是指数退避，最多重试 3 次。超过上限走降级边，指向一个 fallback 节点。\\n\\n降级逻辑分三档：有缓存优先读缓存返回，没缓存给一个预设的默认值或兜底回复，关键业务任务转人工审核队列，同时告警通知。\\n\\n整个流程编在图里，不是散落在代码各处的 if...
+                                                
+
+----- line 685 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d02bd19963b0e006de9f50679a844589/notes_pre_post/1040g3k83234o5cf1nang5opt8v7m5bapsq09r2o!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 688 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"十六、为什么选 LangGraph 不直接用 LangChain？\\n\\nLangChain 是线性的链，Agent 工作流是循环的图，需求不匹配。\\n\\n| 特性 | LangChain | LangGraph |\\n|------|-----------|-----------|\\n| 编排方式 | Chain 链式，A→B→C 定死 | 有向图，节点加边，循环和分支都行 |\\n| 流程控制 | 线性执行，做条件分支很费劲 | 条件边按函数返回值路由，天然支持循环 |\\n| 状态管理 | 链间手动传参 | 内置共享 state，每步自动读写 |\\...
+                                                
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/ea36aeaf1b992eb9ae8356ae99ab3843/notes_pre_post/1040g3k03234o5cbena6g5opt8v7m5baph35p6ng!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c07e05fbd4c8fff3bdd6fa48eb50d49f/notes_pre_post/1040g3k83234o5cf1najg5opt8v7m5bapos1fk40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d9751b92c362746093fa83aa80353997/notes_pre_post/1040g3k83234o5cf1nak05opt8v7m5bapopkoub8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/89ca41c34b07ae8a43171641f528cb1a/notes_pre_post/1040g3k83234o5cf1nal05opt8v7m5bap91bka30!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/ea36aeaf1b992eb9ae8356ae99ab3843/notes_pre_post/1040g3k03234o5cbena6g5opt8v7m5baph35p6ng!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/c07e05fbd4c8fff3bdd6fa48eb50d49f/notes_pre_post/1040g3k83234o5cf1najg5opt8v7m5bapos1fk40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d9751b92c362746093fa83aa80353997/notes_pre_post/1040g3k83234o5cf1nak05opt8v7m5bapopkoub8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/89ca41c34b07ae8a43171641f528cb1a/notes_pre_post/1040g3k83234o5cf1nal05opt8v7m5bap91bka30!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"四、State 和 Checkpoint 怎么搞的？多个 agent 一块跑，状态不会互相覆盖吗？\\n\\nLangGraph 基于 Pregel BSP 模型，同一 super-step 内可以并行跑多个节点，不会互相覆盖是因为所有节点读同一份 state 快照，更新先缓存，super-step 结束时靠 reducer 合并写入。\\n\\nCheckpoint 用 SqliteSaver 或 PostgresSaver 持久化，每个 super-step 后自动存快照，出错了回滚到上一个检查点。\\n\\n同一 thread 下节点不是强制串行的——add_p...
+                                                
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"淘天AI Agent一面\\n\\n1. 多阶段RAG，BM25 加向量混合检索——两种结果怎么合并的？实际提升在哪？\\n\\n2. PDF 扫描件、OCR、表格结构化这些，踩过坑没？\\n\\n3. 识别准确率能做到多少？\\n\\n4. State 和 Checkpoint 怎么搞的？多个 agent 一块跑，状态不会互相覆盖吗？\\n\\n5. State 全局管理怎么做的？\\n\\n6. Choice 接口包成 MCP 工具，标准接口怎么设计？兼容性有问题吗？\\n\\n7. 现场举一个你项目里的 MCP 工具例子，入参出参怎么定义的\\n\\n8. 没有...
+                                                
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"六、Choice 接口包成 MCP 工具，标准接口怎么设计？兼容性有问题吗？\\n\\nMCP 工具定义三要素：name、description、inputSchema，标准化就在这里。\\n\\nname 是工具唯一标识，description 写清楚工具干什么、什么时候该调用，inputSchema 用 JSON Schema 定义每个参数的类型、是否必填、默认值。\\n\\n兼容性问题的关键是不同大模型厂商的 function call 格式不一致。OpenAI 用 tools 数组加 tool_choice 字段，Anthropic 用 tool_use 块。...
+                                                
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"# 一、多阶段RAG，BM25 加向量混合检索——两种结果怎么合并的？实际提升在哪？\\n\\n用 **RRF（倒数排名融合）** 把两路结果按排名加权合并，不是直接加分数。\\n\\n两路各自排 Top N，每篇文档的 RRF 分数是 1 除以（排名加 k），k 取 60，两路分数加和排序。BM25 抓关键词（错误码、API 名），向量抓语义（同义词、换说法），互补。\\n\\n提升在两个环节：召回率比单路高 10%-15%，口语化提问尤其明显；上下文更全，幻觉减少。\\n\\n# 二、PDF 扫描件、OCR、表格结构化这些，踩过坑没？\\n\\n**扫描件质量和表...
+                                                
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/10d1f274094d316cd68df4745b826680/notes_pre_post/1040g3k83234o5cf1nam05opt8v7m5bap9161lco!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"八、没有 MCP 之前，大模型调工具是怎么个流程？\\n\\n模型输出 function call JSON → 业务代码解析 → 调函数 → 结果拼回 prompt → 再调模型。\\n\\n核心痛点：每家厂商的 function call 格式不一样。OpenAI 是 tool_calls 数组，Anthropic 是 content block 里的 tool_use 类型。每次换模型，解析代码和拼结果的逻辑全部要改。MCP 把这个流程统一了，工具定义和调用协议跟模型无关。\\n\\n九、MCP 有什么坑或者短板？\\n\\n部署复杂、传输受限、认证不统一、流式...
+                                                
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/16181c8cf9582e13367fffc937e7f1c2/notes_pre_post/1040g3k83234o5cf1namg5opt8v7m5bap8hses60!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"十一、你项目是多 Agent 主子架构吗？\\n\\n是的，主管分派模式，一个 Supervisor 管调度，下面几个专职 Agent 各管一摊。\\n\\n| 角色 | 干什么 |\\n| --- | --- |\\n| 主管 Agent | 拆解用户任务、分派给对应的专职 Agent、检查结果、不满意打回重做 |\\n| 搜索 Agent | 负责 RAG 检索和联网查资料 |\\n| 代码 Agent | 负责写代码、跑沙箱、调试 |\\n| 分析 Agent | 负责数据分析和报告生成 |\\n\\n我项目里约束同级 Agent 不直接通信，所有交互通过 Su...
+                                                
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/382cb9350a52cddad04224924db45b81/notes_pre_post/1040g3k83234o5cf1nao05opt8v7m5bap9jf3slg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"| 十四、子任务挂了，比如数据抓回来空的，工作流怎么重试或降级？\\n\\n**LangGraph 的条件边实现失败路由，重试靠循环边，降级靠 fallback 节点。**\\n\\n节点执行完后检查返回状态。正常走 next 边，失败了走 retry 边。retry 边指回自己，带一个重试计数器。重试策略是指数退避，最多重试 3 次。超过上限走降级边，指向一个 fallback 节点。\\n\\n降级逻辑分三档：有缓存优先读缓存返回，没缓存给一个预设的默认值或兜底回复，关键业务任务转人工审核队列，同时告警通知。\\n\\n整个流程编在图里，不是散落在代码各处的 if...
+                                                
+
+----- line 693 (api-request-blob) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/d02bd19963b0e006de9f50679a844589/notes_pre_post/1040g3k83234o5cf1nang5opt8v7m5bapsq09r2o!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 693 (api-request-blob) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"十六、为什么选 LangGraph 不直接用 LangChain？\\n\\nLangChain 是线性的链，Agent 工作流是循环的图，需求不匹配。\\n\\n| 特性 | LangChain | LangGraph |\\n|------|-----------|-----------|\\n| 编排方式 | Chain 链式，A→B→C 定死 | 有向图，节点加边，循环和分支都行 |\\n| 流程控制 | 线性执行，做条件分支很费劲 | 条件边按函数返回值路由，天然支持循环 |\\n| 状态管理 | 链间手动传参 | 内置共享 state，每步自动读写 |\\...
+                                                
+
+----- line 702 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/4948a0b74d283106f7102ed761d51e28/notes_pre_post/1040g3k8322v4hucl026g5qbht1p7ilfrje41f4o!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/f6561c8d80dbad83e3ac6684cd981a5a/notes_pre_post/1040g3k03263cv8sn4q705qkeavt4ua000lg9e40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/581e1905cbcc37e7812237e74adfcfd8/notes_pre_post/1040g3k03263cuv89kqa05qkeavt4ua000ohjrfg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+----- line 703 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171249/4948a0b74d283106f7102ed761d51e28/notes_pre_post/1040g3k8322v4hucl026g5qbht1p7ilfrje41f4o!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 705 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/f6561c8d80dbad83e3ac6684cd981a5a/notes_pre_post/1040g3k03263cv8sn4q705qkeavt4ua000lg9e40!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 707 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/581e1905cbcc37e7812237e74adfcfd8/notes_pre_post/1040g3k03263cuv89kqa05qkeavt4ua000ohjrfg!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 710 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"回忆得起的一些高频问题\\n\\n1.多轮对话 agent，怎么解决状态爆炸、上下文溢出的问题？\\n2.你怎么保证 agent 工具调用的可靠性？\\n3.如何量化评估一个 agent 的性能好坏？\\n4.Agent 的长期记忆是怎么实现的？\\n5.如何处理模型幻觉？\\n6.请介绍一下 transformer 架构\\n7.智能客服知识库使用 rag 时，如何提升回答的准确性和连续性？\\n8.多智能体之间如何协作？\\n9.你对 langchain 和 langgraph 了解多少？\\n10.简述反向传播的过程\\n11.RAG 中如何构建上下文对话能力？...
+                                                
+
+----- line 712 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"某厂 Agent 面经\\n\\n1、自我介绍\\n2、介绍你做过的 AI Agent 或相关 LLM 应用项目\\n3、AI Agent 与普通 LLM Chat 的本质区别是什么，核心组件有哪些\\n4、讲一下 ReAct (Reasoning + Acting) 范式的工作流程，Thought→Action→Observation 如何循环\\n5、意图识别在 Agent 系统里怎么做 —— 用 LLM Router，规则分类还是微调分类器，各有什么优势\\n6、LangChain 中 Chain、Agent、Tool、Memory 各自职责，LCEL 的基本链...
+                                                
+
+----- line 714 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"8、向量数据库选型（FAISS / Milvus / Qdrant / Chroma），你们为什么选这个，召回率怎么评估\\n9、Agent 调工具时参数解析失败或 JSON 格式不对怎么处理，如何防止无限循环调用\\n10、Redis 在你 Agent 系统里的用途，缓存、分布式锁、Session 存储、消息队列，各举一例\\n11、MySQL 事务 ACID 简单说一下，隔离级别有哪些\\n12、Python 中 GIL 是什么，对多线程和多进程的影响\\n13、说一下你遇到过的 Agent 最大 Bad Case 及你怎么解决的\\n14、你对 LangGrap...
+                                                
+
+----- line 723 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/ed147ae211297bf2a049bd5d4a60fe40/spectrum/1040g0k03263ck7494c005o69b9q08udp2ohrceo!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 725 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/a7a53a2627ad3d054b3b096d3d2e3b96/spectrum/1040g0k03263ck7su4a005o69b9q08udp5tqomlo!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 727 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/291361d506c2991fd21963a0df52186e/spectrum/1040g0k03263ck8jk4c005o69b9q08udpbim1d18!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 729 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/21bbe67417999e0b1ad78d460d49380e/spectrum/1040g0k03263ck9bqk6005o69b9q08udpdvinad8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 732 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"虾皮 Agent 开发面经\\n一面 / 二面\\n\\n一面\\n\\nRAG 与评测\\n\\n1. Agent 如何根据问题选择检索方式？向量检索找不到结果时怎么办？\\n\\n2. RAG 知识库更新有哪些难点？文档局部修改时，如何考虑增量更新？\\n\\n3. RAG 有没有出现过幻觉？如何处理？\\n\\n4. 工具返回内容太长时怎么处理？截断或压缩会不会丢失后续需要的信息？\\n\\n1 / 8\"", "type": "text"}]
+                                                
+
+----- line 734 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"一面问题（续）\\n\\n长期记忆\\n\\n10. 长期记忆如何组织？哪些信息直接注入，哪些需要按需检索？\\n\\n11. 如何判断一段对话是否值得存成记忆？规则和 Prompt 分别起什么作用？\\n\\n12. 关系型数据库和向量数据库在记忆系统中分别承担什么作用？保存原始对话还是提取后的记忆？\\n\\n13. 用户偏好改变时如何更新记忆？如何保留历史信息并追溯原始对话？\\n\\n3 / 8\"", "type": "text"}]
+                                                
+
+----- line 736 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"一面问题（续）\\n\\n长期记忆\\n\\n14. 记忆抽取和召回效果怎么评测？测试数据和标注从哪里来？大量使用合成数据是否可信？\\n\\nCoding Agent\\n\\n15. Coding Agent 如何定位任务相关的代码？与 grep、代码向量检索有什么区别？\\n\\n16. 跨语言的代码解析会遇到哪些问题？Go 的 package 和符号导出机制有什么特殊之处？\\n\\n17. 工具发现怎么评测？如何衡量召回准确性和 Token 节省？\\n\\n4 / 8\"", "type": "text"}]
+                                                
+
+----- line 738 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"一面问题（续）\\n\\nRAG 与评测\\n\\n5. 模型网关主要承担什么作用？\\n\\n6. 如何通过 Trace 定位问题？修复 bad case 后怎么验证，有没有影响其他问题？\\n\\n7. 评测集怎么构建、怎么分类？评测成本如何计算？Prompt Cache 是否真的命中？\\n\\n8. RRF 的全称和作用是什么？它与 Rerank 有什么区别？\\n\\n9. Skill 与 Working Memory 有什么区别？两者都进入上下文，为什么还要区分？\\n\\n2 / 8\"", "type": "text"}]
+                                                
+
+----- line 739 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/66b9c6eb31828e882199b63464abaf1b/spectrum/1040g0k03263cka4pk6005o69b9q08udph7b6f0g!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 742 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"二面问题\\n\\nCoding Agent 与需求设计\\n\\n1. 从用户提出需求到编码、测试，完整流程经过哪些 Agent 和步骤？\\n\\n2. 用户需求不清楚时如何澄清？怎么保证问题覆盖完整、问得准确？\\n\\n3. 需求澄清后，Spec、技术设计和任务拆解有什么区别？为什么不能直接生成 Todo List 开始写代码？\\n\\n4. 如果要设计一个技术设计 Agent，输入、工具和输出应该怎么设计？\\n\\n5 / 8\"", "type": "text"}]
+                                                
+
+----- line 743 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/6288ae7174e20c13b2c356b5520d8c18/spectrum/1040g0k03263ckasf4a005o69b9q08udpc7l9pf8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 746 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"二面问题（续）\\n\\nCoding Agent 与需求设计\\n\\n5. 新系统、已有系统改造、重构和数据迁移，能否使用同一个技术设计模板？如何区分？\\n\\n6. PRD Agent 和 TD Agent 的 System Prompt 应该怎么写？\\n\\n7. 技术方案如何交给用户确认？用户不同意时如何修改？\\n\\n8. 如何客观比较两个 PRD Agent 或 TD Agent 的质量？不看下游代码结果，怎么评价当前阶段的产物？\\n\\n6 / 8\"", "type": "text"}]
+                                                
+
+----- line 747 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/3ea3800dce0e47095114cc783377630f/spectrum/1040g0k03263ckbk1580g5o69b9q08udpq5srdc8!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 750 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"二面问题（续）\\n\\nCoding Agent 与需求设计\\n9. Coding Agent 的幻觉会造成什么影响？如何降低？\\n\\nRAG 与上下文\\n10. 文档进入知识库前，如何解析、标准化和切分？\\n\\n11. Agent 如何判断当前检索结果是否达标？什么时候继续检索，什么时候停止？\\n\\n12. 有哪些检索策略？检索工具与检索策略有什么区别？\\n\\n7 / 8\"", "type": "text"}]
+                                                
+
+----- line 751 (assistant) -----
+**🌐 Z.ai Built-in Tool: analyze_image**
+
+**Input:**
+```json
+{"imageSource":"http://sns-webpic-qc.xhscdn.com/202611171250/9c29e2f3f1b82bb976fe50ff1dd00519/spectrum/1040g0k03263ckcc9kc005o69b9q08udp3cukheo!nd_dft_wlteh_webp_3","prompt":"这是小红书面经帖子的一页。逐字转写图片中全部文字：保留编号、标点、错别字，不总结不改写不补全；辨认不清处标〔不清〕；无文字则只答「无文字」。"}
+```
+*Executing on server...*
+
+
+----- line 754 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"二面问题（续）\\n\\nRAG 与上下文\\n\\n13. 系统上线后如何衡量质量？怎样收集真实用户反馈？\\n\\n14. Agent 无限检索、反复调用工具时，如何处理？\\n\\n15. Function Calling 的基本原理是什么？模型与程序分别负责什么？\\n\\n16. 多轮对话超过模型上下文窗口时，有哪些处理策略？\\n\\n现场设计\\n\\n17. 现场编写一个会议语音转写、总结 Skill：触发条件、输入输出和执行步骤如何设计？怎样处理多人发言和口语化表达？\\n\\n8 / 8\"", "type": "text"}]
+                                                
+
+----- line 756 (assistant) -----
+**Output:**
+**analyze_image_result_summary:** [{"text": "\"二面问题（续）\\n\\nRAG 与上下文\\n\\n13. 系统上线后如何衡量质量？怎样收集真实用户反馈？\\n\\n14. Agent 无限检索、反复调用工具时，如何处理？\\n\\n15. Function Calling 的基本原理是什么？模型与程序分别负责什么？\\n\\n16. 多轮对话超过模型上下文窗口时，有哪些处理策略？\\n\\n\\n现场设计\\n\\n17. 现场编写一个会议语音转写、总结 Skill：触发条件、输入输出和执行步骤如何设计？怎样处理多人发言和口语化表达？\\n\\n8 / 8\"", "type": "text"}]
+

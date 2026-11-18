@@ -1,0 +1,14 @@
+{
+ "note_id": "6a320425000000001c02571a",
+ "title": "AI｜两年本科｜携程agent开发一面（凉经）",
+ "desc": "1、自我介绍，后面基本都是围绕项目展开提问\n2、QA 业务型 Agent 和 Deep Search Agent 有什么差别？\n3、解释一下项目 1 中 Agent 的工作模式。\n4、MCP 的 schema 格式是什么？MCP 协议大概包含哪些内容？\n5、业务 Agent Evaluation 的流程是什么？每个指标分别代表什么含义？如果有 tools 被多调用了，但是对最终结果没有影响，应该如何设计或采用评价指标来描述？\n6、RAG 里文档是如何 chunk 的？如果预输入不是 Markdown，而且不同文档类别的上下文格式不一样，需要怎么处理？\n7、Embedding 模型的选型原则是什么？稠密检索算法原理是什么？Rerank 采用的算法原理是什么？\n8、RAG 中如何判断是检索环节出问题，还是生成环节出问题？\n9、原生库 / NumPy 手撕 multiattention。\n反问\n1、贵部门的技术栈构成是怎样的？\n2、面试结果大概多久会出？\n3、我这次面试有哪些地方需要改善？\n#互联网大厂 #大模型 #程序员 #群面 #面经 #agent #agent开发 #人工智能就业 #ai #算法",
+ "author": "用户已注销",
+ "date": "06-17",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a320425000000001c02571a?xsec_token=ABbB-0-9kSgqz-4GG9K80TnYmrxZQinSMU7naEK64ybwc=&xsec_source="
+}

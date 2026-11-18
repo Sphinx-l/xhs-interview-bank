@@ -1,0 +1,14 @@
+{
+ "note_id": "6a697900000000001303eaad",
+ "title": "某小厂AI应用开发｜Agent开发一面面经",
+ "desc": "FOSHO自在必得公司 - AI应用开发一面，30min，零八股，全程问项目\n一、个人背景\n1. Go、Java 和 Python 都做过项目吗，还是只在学校里学习过？\n二、长视频理解 AI 问答系统\n2. 介绍一下长视频理解 AI 问答系统。\n3. 视频转文字调用的是什么模型或服务？\n4. 一个长视频从上传到处理完成大概需要多长时间？\n5. 如何处理视频转写、摘要等长耗时任务？\n6. 系统能够处理的视频大小有上限吗？\n7. 分片上传和断点续传是如何实现的？\n8. 用户能否基于视频内容直接与大模型进行自然语言对话？\n9. 用户提问后，如何检索相关片段并组装成 Prompt？\n10. 项目开发过程中遇到过哪些难点，是如何解决的？\n11. 项目目前还有哪些瓶颈，后续准备如何优化？\n12. 系统目前是否只能在单个视频中进行问答？\n13. 能否构建多视频资源库，并支持跨视频检索？\n三、Mini Coding Agent\n14. 介绍一下你的 Mini Coding Agent 项目。\n15. 目前实现了哪些功能？\n16. 上下文管理机制是如何设计的？\n17. 为什么没有使用现成的 Agent 框架，而选择自己实现？\n18. 这个项目为什么选择 Go 开发？\n19. Agent 开发主流使用 Python 和 TypeScript，你是如何进行技术选型的？\n四、反问环节\n20. 你还有什么问题想了解？\n30分钟能问到断点续传和检索组prompt，面试官是认真看项目了！！零八股全问项目反而更看真实做没做过，长视频那块会被追很细[捂脸R]\n\t\n#互联网大厂 #大模型 #agent #大模型应用 #面经 #后端开发 #rag #howto用好AI #人工智能就业",
+ "author": "小周的IT日记",
+ "date": "07-29",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a697900000000001303eaad?xsec_token=ABjZxb-0X6Fk_IT5VAt9LXQ-VZHECTxNdT7f_Kri3Eh9Y=&xsec_source="
+}

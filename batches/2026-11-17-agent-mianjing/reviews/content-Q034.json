@@ -1,0 +1,48 @@
+{
+  "question_id": "Q034",
+  "note_id": "6a03b843000000000803d1a9",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
+  "canonical_path": "question_bank/model-adaptation/medium/Q034.json",
+  "canonical_sha256": "24b85286763e0496bef7705fd2f041931d849c7824ac0b5f5440d66d19832535",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 纯汉字 362 字，低于 402 硬上限但超 350 目标 12 字，非阻塞；points 6 条、question_guide 四键非空、technical_answer 2 段+example 齐全、tags 4 个具体技术词（多模态架构/视觉编码器/模态衔接/投影层）。",
+    "difficulty": "通过。题面主体为结构解释，但考查重心落在衔接方案选型对比（线性投影 vs Q-Former）与训练冻结策略、视觉 token 成本权衡等边界判断，与题库既有 medium 机制+对比题（Q019 RRF vs Rerank、Q020 chunk 切分）定档一致，medium 合理。",
+    "student_view": "通过。学员侧字段无公司名（字节跳动仅入 editorial_provenance）与禁用旁白字样。",
+    "technical_accuracy": "通过。LLaVA 引用有可定位支撑句：points 第 2 条（『LLaVA 的定义即连接视觉编码器与 LLM 的端到端多模态模型』）、第 1 节（『LLaVA 即以此把视觉编码器与 LLM 端到端连接』）与第 2 节（『LLaVA 用 GPT-4 生成的多模态指令数据完成了这一步』），与 arXiv 2304.08485 的线性投影衔接与 GPT-4 生成指令数据一致。ViT patch 化、CLIP 特征图文对齐性、Q-Former 可学习查询压缩（如 32 token）与信息瓶颈、两阶段训练（先冻结只训投影层再指令微调解冻）表述均技术正确；Q-Former 交叉注意力抽取描述准确。",
+    "answer_responsiveness": "通过。题面两问（具体结构/视觉-语言如何衔接）由 summary 三段式+points 1、points 2-4、points 5-6 覆盖；example 以发票 OCR 演示分辨率-上下文权衡。",
+    "provenance_merge": "通过。frequency=1 与 notes 候选数一致（仅主源 C333）；C333 未被 Q001-Q033 及本批其他题使用；company=字节跳动、role=AI Agent、round=三轮技术面+HR面（2-2） 与 notes/6a03b843000000000803d1a9/note.json 一致（candidates.json 该候选 round 字段写『一面』与 note.json 不一致，以 note.json 为准的本题 editorial_provenance 正确，候选侧字段错误非题目缺陷）。",
+    "verbatim_fidelity": "通过。question_verbatim 与主源候选 C333 逐字一致，且在 notes/6a03b843000000000803d1a9/image-extract.md 第 31 行逐字核实存在；extraction=image_reading 一致。",
+    "source_integrity": "通过。source.note_id 为 24 字符『6a03b843000000000803d1a9』，与候选及 notes 目录逐字一致，note.json image_extract=true 且题面在 image-extract.md 可定位，来源链闭合。非阻塞观察：candidates.json 中 C333 状态仍为 pending，登记时需同步。",
+    "dedup": "通过。题库无多模态结构主题既有题；related_questions 关联 Q001（Agent 核心组件）仅作架构背景引用，无内容重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "LLaVA 是连接视觉编码器与 LLM 的端到端多模态模型，用线性投影衔接，并以 GPT-4 生成的多模态指令数据做指令微调",
+      "evidence": "https://arxiv.org/abs/2304.08485",
+      "result": "confirmed：与论文 abstract 及方法一致，正文三处支撑句表述准确"
+    },
+    {
+      "claim": "Q-Former 类衔接用可学习查询向量经交叉注意力抽取固定数量 token，压缩序列但引入信息瓶颈",
+      "evidence": "题库审核知识核查（BLIP-2 Q-Former 机制）",
+      "result": "confirmed：表述准确"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 362 字，超 350 目标 12 字（低于 402 硬上限）",
+    "非阻塞：candidates.json 中 C333 状态仍为 pending 且其 round 字段为『一面』与 note.json『三轮技术面+HR面（2-2）』不一致，登记时需同步修正"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:43:25+08:00"
+}

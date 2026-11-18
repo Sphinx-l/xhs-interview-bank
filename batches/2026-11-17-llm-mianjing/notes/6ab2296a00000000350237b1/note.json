@@ -1,0 +1,14 @@
+{
+ "note_id": "6ab2296a00000000350237b1",
+ "title": "字节 AI Agent 开发一面",
+ "desc": "面试时长：60min\n难度：[星R][星R][星R][星R]\n\t\n1. 先来做一段自我介绍。\n2. 详细聊一聊你的实习经历，以及负责过的项目。\n3.RAG\n① 讲一下你对 RAG 整体流程的理解。\n② 如果 RAG 检索出来的内容相关性很差，你会怎么排查？\n③ 实际做 RAG 项目时，遇到过什么问题，最后是怎么解决的？\n4.Agent\n① 你怎么理解 Agent 和 Workflow 的区别？\n② 如果一个 Agent 需要调用多个 Tool，你会怎么设计？\n③ 多 Agent 之间怎么进行任务分配和信息共享？\n5.MySQL\n① 哪些场景会导致索引失效？\n② MySQL 索引底层采用什么数据结构？\n③ 为什么 MySQL 索引主要使用 B + 树？\n\t\n6.Redis\n① Redis 常见的数据结构有哪些？\n② 缓存击穿、缓存穿透、缓存雪崩分别怎么解决？\n7. 在你平时学习或者做项目的时候，AI 大模型工具起到了什么样的作用？有没有借助它解决过实际问题？\n8. 你平时是怎么评估一个模型效果好不好的？\n9.MCP 底层使用的是什么协议？\n10. 你认为 Skills 的本质到底是什么？\n11. 如果从零设计一款 AI IDE，整体思路和方案是什么？\n12.RocketMQ 出现消息积压时，你会怎么排查和处理？\n13. 算法题：二叉树的层序遍历，请讲解思路并手写代码。\n14. 为什么想做 AI Agent 方向？你后面有什么职业规划？#面经 #后端开发 #大模型 #面试求职 #字节跳动 #大厂 #校招",
+ "author": "小小鱼Agent",
+ "date": "09-22",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6ab2296a00000000350237b1?xsec_token=AByXJbJppKbxtHkUkDDapuwYbsvSXzgL1YWqmPH2HQw74=&xsec_source="
+}

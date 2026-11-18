@@ -1,0 +1,14 @@
+{
+ "note_id": "6ae0ac590000000035031b5b",
+ "title": "大厂面经24｜字节跳动-大模型应用算法",
+ "desc": "📖面经题\n1. 如何设计一个更好的 Prompt（提示词）？\n2. Prompt Engineering 和 Context Engineering 有什么区别？\n3. Agent 的记忆类型有哪些？\n4. 如果上下文超过模型的最大长度，通常如何解决？\n5. 除了 ReAct 模式之外，Agent 还有哪些常见范式？\n6. 是否使用过多智能体（Multi-Agent）？\n7. 如何搭建多智能体系统？\n8. 常见的多智能体架构有哪些？\n9. 最近有哪些比较新的 RAG 框架？例如 GraphRAG 等。\n\t\n👋手撕题\n1. LeetCode 1905：统计子岛屿数量\n\t\n#算法 #大厂 #面经 #大模型面试 #大厂算法 #秋招 #互联网大厂 #字节跳动 #算法实习 #大模型学习",
+ "author": "草莓师姐",
+ "date": "编辑于 7天前 上海",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6ae0ac590000000035031b5b?xsec_token=ABRltLWp6LJchCicFVFam-AyZ_WirQnTJUJPLKjO5jONs=&xsec_source="
+}

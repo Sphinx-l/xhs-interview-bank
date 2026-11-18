@@ -1,0 +1,14 @@
+{
+ "note_id": "6a915ecf000000002102dcfd",
+ "title": "腾讯大模型算法岗08.25一二面面经",
+ "desc": "投稿来自“我的女朋友叫景甜”。\n\t\n图片右滑附参考答案。\n\t\n一面\n1. 智能体强化学习（Agentic RL）与传统大模型RL的核心差异\n2. 长时序任务下Agent强化学习训练失稳、容易崩模型的底层原因\n3. Agent自进化机制的核心逻辑，是否属于模型自主迭代训练\n4. PPO与GRPO算法在信用分配机制上的核心区别\n5. PPO的Clip截断约束与KL散度约束是否等价、适用场景差异\n6. DAPO算法Token级损失函数，相较于原生GRPO的优化差异\n7.手撕算法（简单）：三数之和\n\t\n二面\n1. PPO算法中GAE优势函数的作用，已有Critic网络为何仍需GAE\n2. 上下文压缩（Context Compaction）操作后，模型信用分配难度加剧的原因\n3. Agent强化学习场景Reward Hacking问题高发的底层机理\n4. DSPO算法侧重序列级优化的设计逻辑与优势\n5. DeepSeek-V4对比V3版本的核心技术迭代与能力升级\n6. DeepSeek-V4大量采用在线策略蒸馏、替代纯RL迭代训练的设计考量\n7. DeepSeek-V4的OPD在线策略蒸馏，与常规知识蒸馏的本质区别\n8.手撕算法（偏难）：图像差异最小包围矩形求解\n\t\n#互联网大厂 #算法 #面经 #大模型 #深度学习 #腾讯",
+ "author": "不太会当老板",
+ "date": "08-28",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a915ecf000000002102dcfd?xsec_token=ABCJmpgry-PnjO1jXeVZM2_hYl5_Jg7UK8aK57WbR6zJs=&xsec_source="
+}

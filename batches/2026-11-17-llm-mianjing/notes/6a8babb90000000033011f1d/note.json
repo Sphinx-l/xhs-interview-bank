@@ -1,0 +1,14 @@
+{
+ "note_id": "6a8babb90000000033011f1d",
+ "title": "小鹏大模型面经分享✅一面",
+ "desc": "1.介绍项目，问项目难点在哪，怎么解决的。（考真实做过）\n2.项目里的数据合成方法？如果不这么做还可以怎么做？（考数据思维）\n3.RAG的流程：知识库、检索方式、提示词怎么写的；检索不到怎么办？知识库没结果怎么办？（RAG场景题）\n4.DPO、PPO、GRPO原理？loss怎么算的？对比一下。（RL后训练重灾区）\n5.做DPO的时候调了哪个参数？有什么作用？（beta参数，考细节）\n6.Transformer架构、注意力机制，除了MHA还知道哪些？（注意力变体）\n7.知道GQA等吗？讲原理。\n8.手撕：旋转遍历矩阵。\n\t\n✅二面\n9.介绍项目，问项目背景和项目里的一些问题。\n10.讲实习项目里DPO的一些设计。\n11.模型训练参数：温度参数、top-p、top-k？互相搭配的影响？原理是什么？\n12.大模型幻觉问题怎么解决？RAG、RLHF对齐、事实监督各自适用场景？\n\t\n💡面试官风格：两轮都深挖项目（数据合成/RAG/DPO），RAG场景题和DPO细节是真考点，没做过项目答不上来。\n\t\n📌小鹏大模型岗，一面二面都偏实战，RAG+RL后训练是核心，手撕题中等难度，适合有项目经验的同学冲。\n\t\n#互联网大厂 #大模型 #大模型应用 #算法 #面经 #人工智能就业 #面试经验howto #LLM #后端开发",
+ "author": "改bug的小禾",
+ "date": "08-24",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a8babb90000000033011f1d?xsec_token=ABCARw0ln7aUQKJdmwyAXqLj2BexHXxvslXJQd04_YrMY=&xsec_source="
+}

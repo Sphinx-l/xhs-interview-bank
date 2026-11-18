@@ -1,0 +1,45 @@
+{
+  "question_id": "Q026",
+  "note_id": "6adc069a0000000025023c8e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-6",
+  "canonical_path": "question_bank/agent-performance/medium/Q026.json",
+  "canonical_sha256": "ab93a7cf1a14735ef1253023b3bea8a4843619438a779574b81869b461fec73d",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 纯汉字 347 字，在 180-350 区间内；summary 2 句直接结论；points 6 条覆盖题干两问（排查+取舍）；question_guide 四键非空；technical_answer 无 summary 键，2 段+example（scenario/steps/observation 齐全）。",
+    "difficulty": "通过。延迟归因定位与按场景取舍属选型/边界判断，medium 定档符合规则。",
+    "student_view": "通过。学员侧字段扫描无公司名（字节/携程等）与『面经/博主/发帖人/原帖/教研』字样；公司信息仅在 editorial_provenance。",
+    "technical_accuracy": "通过。核心主张『agentic systems 经常以延迟和成本换取更好的任务表现』与 Anthropic Building effective agents 原文一致；分段归因（token 变长、轮次暴涨、工具 P95 劣化、排队）与三类场景取舍（交互保首字、批处理保质量、硬 SLA 降级）技术正确，无过度断言。",
+    "answer_responsiveness": "通过。题面两问（怎么排查、怎么取舍）在 summary、points 1-4（排查）、points 5-6（取舍）中均被直接回答；example 以 5→20 分钟事故演示分段下钻闭环。",
+    "provenance_merge": "通过。frequency=3 与 notes 列出的合并候选数（C067 主源+C192+C193）一致；C067/C192/C193 均未被 Q001-Q025 及本批其他题使用（已全库扫描）；company=字节跳动、role=Agent Harness、round=一面 与主源 note.json 及 candidates.json 逐字一致。",
+    "verbatim_fidelity": "通过。question_verbatim『长任务从 5 分钟变 20 分钟，怎么排查延迟』与主源候选 C067 逐字一致；extraction=note_text 一致。",
+    "references_support": "通过。technical_references 唯一条目（Building effective agents）有明确支撑句：points 第 6 条『自主 Agent 用延迟和成本换任务效果是结构性代价』及第 2 节整段展开，非装饰性引用。",
+    "dedup": "通过。与 Q025（可观测性体系设计）、Q023（bad case 归因）主题相邻但核心问题不同（本题是延迟归因方法论与场景预算），四维合计远低于 70% 门槛；example 观察句以一句交叉引用带过，无内容重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "Anthropic 对 agentic systems 的定性：经常以延迟和成本换取更好的任务表现",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed：Q026 第 2 节与 points 第 6 条的转述与原文语义一致，且用于支撑取舍框架而非孤悬引用"
+    },
+    {
+      "claim": "延迟来源清单（上下文变长推理变慢、工具 P95 劣化、重试风暴、循环轮次暴涨、排队）",
+      "evidence": "工程常识+第 1 节四类典型结论内部自洽",
+      "result": "confirmed：无虚构数字，example 中 1s→6s、40%→15% 等数字明确为示例场景设定"
+    }
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:31:38+08:00"
+}

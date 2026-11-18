@@ -1,0 +1,59 @@
+{
+  "question_id": "Q030",
+  "note_id": "6a60ba03000000000f017ac2",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-6",
+  "canonical_path": "question_bank/agent-cost/medium/Q030.json",
+  "canonical_sha256": "d11f250b4d3b2460c51680fa65333a6b05d07a8e73e1656ab3be126db9acac32",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（round 1 结论维持，附提示）。recommended_answer 纯汉字 399 字，超 350 目标 49 字但低于 402 硬上限；points 6 条；question_guide 四键非空；technical_answer 3 段+example 齐全。本轮修订未动正文，字数提示保留为非阻塞建议。",
+    "difficulty": "通过（round 1 结论维持）。手段清单+代价边界判断，medium 合理。",
+    "student_view": "通过（round 1 结论维持）。学员侧字段无公司名（字节跳动/网易互娱仅入 editorial_provenance）与禁用旁白字样；正文中『字节稳定/字节级』为 byte 语义技术用语，非公司名。",
+    "technical_accuracy": "通过（round 1 结论维持）。两条 technical_references 均有可定位支撑句：Anthropic『经常以延迟和成本换更好的任务表现』支撑第 3 节权衡框架与 summary；vLLM copy-on-write 前缀共享支撑第 1 节『与 PagedAttention 的 copy-on-write 前缀共享同源』。前缀缓存字节级稳定前提、路由错分监控、压缩保护工具调用配对等表述技术正确。",
+    "answer_responsiveness": "通过（round 1 结论维持）。题面四问由 summary 三手段框架、points 1-4、points 5-6 覆盖；example 以月成本 40 万→19 万演示量化权衡。",
+    "provenance_merge": "通过（round 1 结论维持）。frequency=2 与 notes 候选数一致（C329 主源+C099）；C099 未被 Q001-Q025 及本批其他题使用；company=字节跳动、role=AI Agent、round=一面 与主源 note.json（notes/6a60ba03000000000f017ac2/note.json）一致。",
+    "verbatim_fidelity": "通过（round 1 结论维持）。question_verbatim 与主源候选 C329 逐字一致；extraction=note_text 一致。",
+    "source_integrity": "通过（round 1 退回原因已修复）。source.note_id 已由 23 字符的『6a60ba0300000000f017ac2』补正为 24 字符的『6a60ba03000000000f017ac2』，与主源候选 C329 及 notes 目录逐字一致，notes/<note_id>/note.json 可解析，来源链闭合；本轮逐字段复核确认除该 note_id 外其余内容与 round 1 审核版本完全一致，无夹带改动。",
+    "dedup": "通过（round 1 结论维持）。题库无成本优化主题既有题；与 Q009 通过 related_questions 显式关联，压缩手段仅一句引用不展开，无内容重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "agentic systems 经常以延迟和成本换取更好的任务表现（第 3 节权衡框架的定性基础）",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed"
+    },
+    {
+      "claim": "前缀缓存/上下文缓存的显存复用与 PagedAttention 的 copy-on-write 前缀共享同源",
+      "evidence": "https://blog.vllm.ai/2023/06/20/vllm.html",
+      "result": "confirmed"
+    },
+    {
+      "claim": "source.note_id 与主源候选 C329 的 note_id 一致（round 1 退回点）",
+      "evidence": "batches/2026-11-17-agent-mianjing/candidates.json + notes/6a60ba03000000000f017ac2/note.json",
+      "result": "confirmed：round 2 实测题目 JSON 中 note_id 为 24 字符，与候选及 notes 目录逐字相等，来源链已闭合"
+    }
+  ],
+  "issues": [],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reason": "source.note_id 少一个 0（23 字符），与主源候选 C329（24 字符）不一致，notes/<note_id>/note.json 无法解析，来源可追溯链断裂",
+      "fix": "编写者仅补正 note_id 为 6a60ba03000000000f017ac2，其余内容未动（round 2 逐字段复核确认）",
+      "round1_sha256": "e3f44ed5d324df77ab021066032868d07a65c9fd7f16fe13bd19603b0957f5eb",
+      "round1_reviewed_at": "2026-11-17T20:31:38+08:00"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T21:02:00+08:00"
+}

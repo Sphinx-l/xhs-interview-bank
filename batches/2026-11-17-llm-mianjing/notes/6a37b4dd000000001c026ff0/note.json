@@ -1,0 +1,25 @@
+{
+ "note_id": "6a37b4dd000000001c026ff0",
+ "title": "美团 AI Agent开发 一面面经",
+ "desc": "前段时间学弟面的，记录一下，回忆版\n暑期实习\n时间：50min多\n1.自我介绍\n2.拷打实习\n3.拷打第一个项目：工业PDF里面经常跨页的超大表格，切片的时候你是怎么处理的？怎么保证表格不被切碎导致模型看不懂？你的多模态检索里，图片向量和文本向量混合之后，你是怎么给两路检索分配权重的？用Ragas评估的时候，怎么测幻觉？\n4.拷打第二个项目：对于心理咨询Agent，如果用户情绪波动很大，怎么用LangGraph控制对话走向，不让模型说不合适的话？用户的长期画像和短期聊天历史分别存在哪里？怎么把这两部分记忆喂给大模型？讲一下MCP在这个项目里具体解决了什么问题？不用它的话你怎么去实现工具调用？\n5.向量检索和关键词检索各适合什么场景？为什么现在做混合检索更多？\n6.为什么要加Reranker重排？直接拿向量检索出来的结果给模型会有什么问题？\n7.文档切片的时候为什么要有Overlap？它主要解决什么问题？\n8.在工程和Prompt设计上，有哪些常用的手段可以防止大模型在回答时产生幻觉？\n9.讲一下ReAct的原理，它跟单轮问答最本质的区别在哪？\n10.怎么保证大模型每次都能稳定输出JSON格式来调工具？如果输出的JSON格式不对，你在代码里怎么兜底？\n11.Agent做多步任务时速度很慢，怎么把中间的思考步骤和工具执行状态流式传输实时返回给前端？\n12.你怎么理解Agent Harness？没有它，大模型会遇到什么瓶颈？\n13.Skills和普通的Tool调用有什么区别？\n14.不微调模型的话，怎么实现Agent自进化？\n15.Python异步编程在Agent应用开发里有什么用处？有哪些场景必须用异步？\n16.反问\n无手撕\n#大模型 #互联网大厂 #面经#人工智能 #大模型面试 #校招 #agent #程序员 #编程 #ai智能体",
+ "author": "会敲代码的鱼",
+ "date": "06-21",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611180909/4a6d1a99316002010f4f6377e248b811/1040g2sg321ln2i8h7aig5q7m55itp963d7hh8s0!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/626997d9f92698c8962c977a074b7066/1040g2sg321ln2i8h7aj05q7m55itp96361nihv8!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/c26856a12b9bd23da852b3e8b410b66f/1040g2sg321ln2i8h7ajg5q7m55itp963c84sqt8!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/9db23718efe8d3f0d69966ef085e0da0/1040g2sg321ln2i8h7ak05q7m55itp963nv0l6hg!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/d2d65551cb7bbe26c9bd2bb33dd83c5c/1040g2sg321ln2i8h7akg5q7m55itp963al3mua8!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/3d73a2d027009176b0806ee4351b5b07/1040g008321m32ae67u005q7m55itp963309dne8!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/9b660a7ac5a1daeafd97fae79d3d3d3e/1040g008321m32ae67u0g5q7m55itp9630t857co!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/7cf221a4619bc42a85626ffb43ad3a08/1040g008321m32ae67u105q7m55itp963kql7c38!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/29e0cb23b959f8debe6872e88635a15b/1040g008321m32ae67u1g5q7m55itp963ae0eh38!nd_dft_wlteh_webp_3",
+  "https://sns-webpic-qc.xhscdn.com/202611180909/d78db890fd88baefb277e8e4bc5c2423/1040g008321m32ae67u205q7m55itp9639p5q8fo!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [],
+ "img_count": 10,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a37b4dd000000001c026ff0?xsec_token=ABHESZMtgHtJLcLevsFUsRYemMndxcGAzcZMv6GZP3MUY=&xsec_source="
+}

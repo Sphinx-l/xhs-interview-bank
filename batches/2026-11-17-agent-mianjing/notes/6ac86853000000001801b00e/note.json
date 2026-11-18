@@ -1,0 +1,21 @@
+{
+ "note_id": "6ac86853000000001801b00e",
+ "url": "https://www.xiaohongshu.com/explore/6ac86853000000001801b00e?xsec_token=ABW5_clKgK-wSTwyqnbk-Iit572Y0FA2H4le2dvTd9mUw=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "",
+ "author": "努力学习LLM应用开发中05-24",
+ "published_at": null,
+ "date_raw": "10-09",
+ "likes": "37",
+ "status": "retained",
+ "status_reason": "无标题帖，正文自称某厂Agent一面，15题在图片中，画面提取完成",
+ "company": "unspecified",
+ "role": "Agent 开发",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "#小红书春日特派员 某厂Agent一面面经\n记得当时面完最大的感受就是这岗确实偏难，问得很细，尤其 Harness 和 LangGraph 状态机那块，不会让你背八股直接让你画架构讲 Trade‑off\n面下来还挺累的\n#agent #面经 #面试题 #计算机",
+ "images": [
+  "01.webp",
+  "02.webp"
+ ],
+ "image_extract": true
+}

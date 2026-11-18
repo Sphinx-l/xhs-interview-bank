@@ -1,0 +1,14 @@
+{
+ "note_id": "6a6b3a670000000024027ccc",
+ "title": "字节seed大模型一面",
+ "desc": "整场面试不偏八股、不考偏题怪题\n核心围绕：大模型基础原理 + 实战  + 中等算法题\n\t\n1、大模型核心原理（重点）\n\t\n▪️Transformer核心结构详解，自注意力机制计算过程\n▪️多头注意力作用、为什么需要多头？单头和多头区别\n▪️位置编码原理，绝对位置编码&相对位置编码差异\n▪️大模型预训练、微调、对齐完整流程\n▪️RLHF、DPO、GRPO核心原理与优劣对比\n▪️过拟合、欠拟合在大模型训练中的解决方案\n\t\n2、微调&工程落地\n\t\n▪️LoRA/全量微调区别、适用场景\n▪️Prompt Tuning、Prefix Tuning原理\n▪️大模型推理加速核心方法（KV缓存、量化）\n▪️FP8/FP16量化原理、精度损失如何规避\n\t\n3、深度学习基础\n\t\n▪️交叉熵损失、激活函数优缺点\n▪️梯度消失/梯度爆炸原因及解决方式\n▪️BatchNorm、LayerNorm适用场景区别\n\t\n面试总结\n\t\n字节大模型算法岗一面极度看重基础扎实度\n不追求难题秒杀，更关注原理吃透 + 项目落地细节\n只要基础扎实、项目能讲透，通过率非常高！\n\t\n后续持续更新二面面经+备考笔记，备考大厂大模型的宝子可以蹲住！！\n\t\n#字节跳动 #字节面试 #大厂面试 #算法工程师 #大模型面试 #AI大模型 #算法岗面试 #面试面筋 #互联网求职 #大模型学习",
+ "author": "我要做陪玩",
+ "date": "07-30",
+ "imgs": [],
+ "video": false,
+ "interaction": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文为一面考点罗列（真实面经归纳）",
+ "url": "https://www.xiaohongshu.com/search_result/6a6b3a670000000024027ccc?xsec_token=AB764B2Iv9Hy2hAH5YqEvkdTH77GPYvldh6470CAJxoYY=&xsec_source="
+}

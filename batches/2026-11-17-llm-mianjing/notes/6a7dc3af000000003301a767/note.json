@@ -1,0 +1,14 @@
+{
+ "note_id": "6a7dc3af000000003301a767",
+ "title": "某节AI Agent开发一面凉经（TikTok）",
+ "desc": "1. 自我介绍\n2. 会议的转写流程\n3. 为什么用阿里云 ASR？对比过别的ASR服务吗\n4. ASR 的错误率如何？有错别字怎么办\n5. 视频通话用户的隐私如何保证？\n6. 服务器是中心化的还是去中心化的？为什么这么设计\n7. 向量 chunk 的策略？以及 chunk 的大小\n8. 为什么要用这个策略与大小\n9. Token 是如何确定的？例如为什么有些情况下 strawberry 是两个 token\n10.为什么大模型要用token 作为基本的单位？\n11.Transformer 了解吗，QKV 介绍一下，怎么计算的\n12.为什么会发生Lost in the Middle，有什么好的方法解决吗\n13.上下文是什么？为什么需要上下文\n14.上下文窗口大小是如何确定的\n15.Codex 上下文窗口是多少？\n16.怎么修改上下文窗口大小？以及为什么能修\n17. 窗口越大越好吗？为什么\n18.一个模型支持的上下文大小是如何训练出来\n19.SFT 了解吗？PPO DPO GRPO 介绍一下\n20.为什么选多 Agent 而不是单 Agent\n21.为什么不用去中心化的编排\n22.（手撕）list->tree（JSON格式）没做出来.让说了一下思路\n23.（手撕）Zig-zag 遍历树节点\n#agent #秋招 #大模型 #大模型面试 #人工智能  #互联网大厂 #面经 #程序员 #后端开发",
+ "author": "大模型小小咪",
+ "date": "08-13",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a7dc3af000000003301a767?xsec_token=ABrweDE0XhxzbY0T36ae8jRD7B0XZis84n00nC2R195VY=&xsec_source="
+}

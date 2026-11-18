@@ -1,0 +1,55 @@
+{
+  "question_id": "Q027",
+  "note_id": "6a0320240000000006023ed4",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-6",
+  "canonical_path": "question_bank/agent-performance/medium/Q027.json",
+  "canonical_sha256": "a0e859f11a4786f3a09570260c8154a359e3c3fb9084ea5b9ca0c924cd60ea15",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 纯汉字 347 字，在 180-350 区间内；points 6 条覆盖题干全部子问（加速方向、KV Cache、continuous batching、vLLM 收益）；question_guide 四键非空；technical_answer 2 段+example 齐全。",
+    "difficulty": "通过。需要机制原理+瓶颈选型判断（吞吐瓶颈 vs 单请求延迟瓶颈分治），medium 合理；未因合并四个候选而人为拔高。",
+    "student_view": "通过。学员侧字段无公司名与禁用旁白字样。",
+    "technical_accuracy": "通过。关键数字与 vLLM 博客一致：LLaMA-13B 单序列 KV Cache 最高约 1.7GB、现有系统因碎片与预留浪费 60%-80% 显存、较 HF Transformers 最高 24 倍吞吐、copy-on-write 前缀共享；表述均标注『官方口径/官方分析』，未夸大为普遍保证。KV Cache 消除重算、continuous batching 步粒度调度、PagedAttention 分页映射的机制描述正确。",
+    "answer_responsiveness": "通过。题面四问（方向、CB、KV Cache、vLLM 为什么快）分别由 summary 三层框架、points 1-3、points 4-5 回答；points 6 补选型判断，是主源候选 C124『从哪些方向做』的实质增量。",
+    "provenance_merge": "通过。frequency=4 与 notes 候选数一致（C126 主源+C124+C125+C127）；携程推理加速四连问 C124-C127 此前未被使用，全库扫描确认仅本题使用，未跨题重复；company=携程、role=Agent 开发、round=二面 与主源 note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim『有没有用continuous batching、KV Cache这类方案？』与主源候选 C126 逐字一致；extraction=note_text 一致。",
+    "references_support": "通过。vLLM 博客条目支撑句明确：第 1 节『LLaMA-13B 单序列最高约 1.7GB』『60%-80%』、第 2 节『最高 24 倍吞吐提升』『copy-on-write 共享相同前缀』，全部可在学员侧正文定位。",
+    "dedup": "通过。题库中无推理加速/KV Cache/vLLM 主题既有题；Q030 仅在成本侧提及 PagedAttention 前缀共享（一句、视角不同），不构成重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "LLaMA-13B 单序列 KV Cache 最高约 1.7GB",
+      "evidence": "https://blog.vllm.ai/2023/06/20/vllm.html",
+      "result": "confirmed"
+    },
+    {
+      "claim": "现有系统因 KV Cache 碎片与预留浪费 60%-80% 显存",
+      "evidence": "https://blog.vllm.ai/2023/06/20/vllm.html",
+      "result": "confirmed"
+    },
+    {
+      "claim": "vLLM 较 HuggingFace Transformers 最高 24 倍吞吐提升且不改模型架构",
+      "evidence": "https://blog.vllm.ai/2023/06/20/vllm.html",
+      "result": "confirmed"
+    },
+    {
+      "claim": "PagedAttention 借鉴操作系统虚拟内存分页，配合 copy-on-write 共享相同前缀",
+      "evidence": "https://blog.vllm.ai/2023/06/20/vllm.html",
+      "result": "confirmed"
+    }
+  ],
+  "issues": [],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:31:38+08:00"
+}

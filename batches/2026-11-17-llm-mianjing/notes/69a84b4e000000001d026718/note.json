@@ -1,0 +1,16 @@
+{
+ "note_id": "69a84b4e000000001d026718",
+ "title": "字节大模型算法面经",
+ "desc": "1. 项目拷打\n2. 详细阐述Transformer的底层原理，并说明其能够替代RNN的核心优势；结合Transformer架构的成熟度，分析Self-Attention机制在多模态对齐任务中是否存在瓶颈，以及在实际业务场景中，是否出现过注意力权重完全偏移的情况。\n3. 讲解LoRA的技术原理，说明LoRA是否仅能嵌入Linear层；分析LoRA无法在LayerNorm层之后插入的原因，以及该操作会对模型训练稳定性产生哪些具体影响。\n4. 结合实操经验，说明QLoRA降低训练资源成本的核心逻辑；列举常见的模型量化方式，并解释QLoRA选择NF4与FP16组合而非其他方案的原因，阐述NF4的分布拟合逻辑。\n5. 针对采用multi-query attention优化后，decoder延迟仍居高不下的问题，分析潜在性能瓶颈；探讨vLLM自带的KV Cache是否会成为推理过程中的负担。\n6. 分别说明Embedding模型与Rerank模型处理文本语料的核心流程，并结合实际应用场景举例说明。\n7. 结合过往RAG项目经验，讲解从数据清洗到检索服务上线的完整链路搭建流程，重点说明chunk切分的具体策略。\n8. 分析当前RAG技术落地的最大瓶颈，并阐述你在项目中采取过哪些优化手段来提升检索召回率（Recall）。\n9. 针对XX领域大模型的训练工作，说明SFT（监督微调）数据集的构造方法与核心思路。\n10. 结合LoRA微调实操经历，说明rank值的选择依据；在合并adapter权重的过程中，是否遇到过梯度爆炸问题，以及对应的解决方法。\n11. 结合你的模型部署相关经验，说明模型参数量与硬件算力需求之间的对应关系（例如不同参数量级模型所需的算力配置标准）；以部署一个稀疏率千分之三的235B参数量MOE架构模型为例，估算其所需的算力规模。\n12. 在搭建RAG知识库时，若需对文档进行动态更新，你采用的是全量嵌入还是增量处理方案？若为增量处理，如何规避新旧文档数据分布不一致导致的检索偏差问题。\n13. 针对机械臂动作态融合相关工作，说明数据融合的具体实现方案，以及对比实验的设计思路与评估指标。\n#互联网大厂 #人工智能就业 #大模型面试",
+ "author": "大模型师兄",
+ "date": "编辑于 03-07",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611181126/6bedf5abc8932bc2f0bf4c64a1a12177/notes_pre_post/1040g3k031ta1dbdf5k0g5n2qfhsm794qdmv51so!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [],
+ "img_count": 1,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/69a84b4e000000001d026718?xsec_token=AB7_m2KpngMZYgU9sYmFnWNsmgabTZVgrpEGKWYQKREeQ=&xsec_source="
+}

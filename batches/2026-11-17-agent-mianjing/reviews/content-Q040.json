@@ -1,0 +1,49 @@
+{
+  "question_id": "Q040",
+  "note_id": "6ac865b1000000000b0061c2",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
+  "canonical_path": "question_bank/agent-engineering/high/Q040.json",
+  "canonical_sha256": "9885c94b09aef92d9d847d56a6abb1a49249d804216c7aae7a2ce28f4acf24d8",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 实测纯汉字 354 字，低于 402 硬上限、超 350 目标 4 字，非阻塞；summary 1 句 + points 6 条；question_guide 四键非空；technical_answer 2 段 + example 齐全；tags 4 个具体技术词（Coding Agent/需求澄清/Spec设计/产物评审），『Coding Agent』为专名非泛词。",
+    "difficulty": "通过。同帖真实系统性追问链 C394→C401（现场设计→澄清→Spec/TD/拆解→TD Agent 设计→模板区分→Prompt→用户确认→产物客观比较）共 8 问，high 档证据完整保留于 notes。",
+    "student_view": "通过。学员侧字段无公司名与『面经/博主/发帖人/原帖/教研』字样；虾皮仅出现在 editorial_provenance。",
+    "technical_accuracy": "通过。Spec（做什么/可验收）与 TD（怎么做/结构决策）的区分、澄清段缺失信息检测与分批提问、任务粒度以可独立验收为准、验收断言即规格、rubric 逐维打分与结构化 diff 确认，表述技术正确。BEA 引用有可定位支撑句：technical_answer 第 2 节『Anthropic 的 SWE-bench 实践佐证了这条路线：让 Agent 逐步获得环境 ground truth（执行与测试结果）并迭代修复……同时人的审查仍不可少——自动化验证功能，人类把关方向』，与 anthropic.com/engineering/building-effective-agents 中 coding agents（SWE-bench、以测试结果迭代、人工审查仍关键）表述对应。",
+    "answer_responsiveness": "通过。title 三问均覆盖：需求到测试全流程（summary 五段流水线 + points 1-5）、Spec/TD/拆解区分（points 2-4、第 1 节高频考点段）、产物客观比较与确认（points 6、第 2 节 rubric 与结构化 diff）。",
+    "provenance_merge": "通过。frequency=8 与 notes 计数候选 C394-C401 一致；C402 不计入本题的记账成立——C402（Coding Agent 幻觉）已全额计入 Q038 的 frequency=4，本题 notes 明确『仅在防幻觉段引用其思路、不计入 frequency』，避免同一候选跨题重复计数；全库 grep 证实 C394-C401 无跨题使用；各候选 company/round 与 candidates.json 及 note.json 核对无误。",
+    "verbatim_fidelity": "通过。question_verbatim『从用户提出需求到编码、测试，完整流程经过哪些 Agent 和步骤？』与主源候选 C394 逐字一致，并在 notes/6ac865b1000000000b0061c2/image-extract.md 第 84 行核实。",
+    "source_integrity": "通过。note_id『6ac865b1000000000b0061c2』24 字符、与 notes 目录一致（与 Q036 同帖不同题，不违反规则）；extraction=image_reading 与候选及 note.json image_extract=true 一致。",
+    "category_check": "通过。category_id=agent-engineering，taxonomy.json 已注册；Coding Agent 流水线工程（阶段产物、确认门禁、防幻觉落地）属工程实践范畴，归 agent-engineering 正确。",
+    "dedup": "通过。题库无 Coding Agent 全链路设计既有题；与 Q006（workflow 选型）、Q038（幻觉机制）各为相邻边界，核心问题不同不构成 >70% 重复；related_questions 指向 Q006/Q038 合理且不重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "Anthropic 工程文章：coding agents 在 SWE-bench 上以执行/测试结果为环境 ground truth 逐步迭代修复，且人工审查仍不可少",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed：题目第 2 节引用句与该文 coding agents 附录表述一致"
+    },
+    {
+      "claim": "C402 记账：已由 Q038 承接并计入其 frequency，本题防幻觉段仅引用思路不重复计数",
+      "evidence": "question_bank/evaluation-reliability/medium/Q038.json editorial_provenance（frequency=4 含 C402）+ 全库候选 grep 唯一性",
+      "result": "confirmed：记账成立，无跨题重复使用"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 354 字，超 350 目标 4 字（低于 402 硬上限），可忽略",
+    "非阻塞：candidates.json 中 C394-C402 状态仍为 pending，登记时需同步 admitted+question_id=Q040（C402 建议 reason 注明已归 Q038）"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:55:11+08:00"
+}

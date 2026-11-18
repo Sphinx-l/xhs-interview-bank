@@ -1,0 +1,27 @@
+{
+ "note_id": "6a677c95000000001302f0fb",
+ "url": "https://www.xiaohongshu.com/explore/6a677c95000000001302f0fb?xsec_token=ABBs5YDCigaGjUJ9cb-I3F3hqdgxsW-4tgv4jRQD24kQ0=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "淘天AI Agent一面",
+ "author": "程序员尺哥05-13",
+ "published_at": null,
+ "date_raw": "07-27",
+ "likes": "555",
+ "status": "retained",
+ "status_reason": "淘天AI Agent一面16题+复盘答案（图片），画面提取完成",
+ "company": "淘天（阿里）",
+ "role": "AI Agent",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "#howto入门codex #人工智能 #大模型 #大厂 #互联网大厂 #算法 #人工智障与人工智能 #管培生 #AI学习 #后端开发",
+ "images": [
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
+  "06.webp",
+  "07.webp",
+  "08.webp"
+ ],
+ "image_extract": true
+}

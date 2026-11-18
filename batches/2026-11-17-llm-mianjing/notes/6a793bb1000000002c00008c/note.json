@@ -1,0 +1,14 @@
+{
+ "note_id": "6a793bb1000000002c00008c",
+ "title": "哔哩哔哩AI应用岗技术面还原",
+ "desc": "[暗中观察R]面试感受：\n\t\n确实不水，不是背八股就能混过去的。一面就把 Python 异步和 Go 并发真刀真枪问了，Agent 不让你只讲概念，必须能拆 Loop、拆 State、拆 Resolver。二面开始往 Harness 和 LangGraph checkpoint 刨，答浅了直接被问到上下文衰减和降级策略上。三面明显在挑能不能扛生产的人，监控、烧钱、无限循环、老板逼上线这些才是真问题。B 站这岗叫 AI Agent 但实际要的是后端底子 + LLM 工程化 + 能拍架构的人，纯调 LangChain 的会被问死。\n\t\n#agent开发 #ai应用开发 #python #面经 #后端开发 #大模型 #面试求职 #互联网大厂 #面试题 #langgraph",
+ "author": "程序员小熊",
+ "date": "08-10",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "fetch_failed",
+ "review_reason": "正文仅总结段，题面未取到",
+ "url": "https://www.xiaohongshu.com/search_result/6a793bb1000000002c00008c?xsec_token=ABJ1qprW7vOTXKH05zbrbN7Awoq64YEx7yvcqmZIIZEf4=&xsec_source="
+}

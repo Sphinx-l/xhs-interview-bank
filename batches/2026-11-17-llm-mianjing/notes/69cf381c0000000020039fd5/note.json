@@ -1,0 +1,14 @@
+{
+ "note_id": "69cf381c0000000020039fd5",
+ "title": "字节大模型Agent算法一面",
+ "desc": "1.请介绍 Transformer 的结构组成及各部份作用。\n2. 如何降低 Transformer 的计算复杂度？常见的稀疏注意力变体有哪些？\n3.LORA 微调的原理是什么？秩r 的选择会对模型表现产生什么影响？\n4.KV Cache 是什么？为什么能提升推理速度？\n5.RAG 的完整流程是怎样的？\n6.微调时的训练数据是怎么构建的？如何保证样本多样性和质量？\n7.在 RAG +知识图谱的 Agent系统中，知识图谱更新机制是怎样的？\n8.在高并发查询的 Agent 系统中，你会如何优化召回和生成阶段的延迟？\n9.训练LoRA模型时，你是如何选择冻结层的？\n10.大规模Agent系统在多线程场景下，资源调度策略如何设计？\n#agent #面经 #大模型应用 #人工智能 #算法 #ai大模型 #程序员 #校招 #大模型面试",
+ "author": "程序员阿树ya",
+ "date": "04-03",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/69cf381c0000000020039fd5?xsec_token=ABKrvXutbsTIeSPo6ytStM2UEXrP_VGOiMH0GyfDcvstE=&xsec_source="
+}

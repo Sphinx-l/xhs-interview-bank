@@ -1,0 +1,14 @@
+{
+ "note_id": "6ab0fac2000000003602a36d",
+ "title": "阿里大模型算法面经（已经offer）",
+ "desc": "该面经来自网友9月投稿：要求匿名\n\t\n一面：\n项目相关\n1. 如何判断SFT数据量是否足够？通过哪些指标判断可以进入RL阶段？\n2. 训练数据需要扩大十倍、百倍时，如何扩展数据构建与筛选流程？\n3. GRPO中的优势消失是什么？为什么组内奖励方差为零时没有有效学习信号？\n4. PPO和 GRPO的本质区别是什么？\n5. DPO的基本原理是什么？损失函数如何构造？\n6. Pass@1、Pass@k分别是什么意思？\n7. 什么是OPD？Forward KL和 reverse KL有什么区别，如何选择？\n8. 上下文压缩会如何影响缓存命中率？怎么做压缩和缓存命中的取舍的？\n9. 了解Gist吗？它是如何压缩提示信息的？\n10. 有看过最新的技术报告吗？讲一讲deepseek和qwen模型的区别？\n\t\n【手撕】\n写一个基本的agentloop（伪代码即可）\n\t\n二面：\n项目深挖\n1. SFT、DPO和RL有什么区别？\n2. PPO和GRPO有什么区别？\n3. PPO中的clip有什么作用？Advantage大于和小于0时，分别是哪一侧约束生效？\n4. 讲一下GSPO和DAPO？\n5. 什么是训推不一致？在MoE强化学习中会产生什么影响？\n6. On-policy、off-policy与online、offline分别有什么区别？\n7. 多轮Agent的reward如何设计？工具调用失败、参数错误应该如何计分？\n8. 遇到过哪些reward hacking？如何限制模型通过拉长交互过程获取奖励？\n9. 一条rollout应该什么时候结束？如果任务一直无法完成，如何终止？\n10. 被截断的轨迹如何计算reward？完成程度不同的失败轨迹，奖励是否应该相同？\n11. 如何设计过程奖励？每个step或turn的分数如何加权？\n12. GRPO中组内全成功或全失败时，如何获得有效学习信号？\n13. 如何通过reward设计，让模型用更少的训练步数达到相同效果？\n14. 上下文压缩何时触发？如何评估不同阈值造成的信息损失？\n15.在Agent设计的过程中如何区分长期记忆、短期记忆和过时信息？\n\t\n【手撕】\nDPO、GRPO的Loss（伪代码），接雨水。\n#大模型算法 #oc #互联网大厂#24h新鲜面经#agent #阿里巴巴 #电子科技大学#字节跳动 #计算机硕士#计算机",
+ "author": "成电摆子哥",
+ "date": "编辑于 09-21",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6ab0fac2000000003602a36d?xsec_token=ABESq9yqKvYxoRRyM60-c79C2vjA5V_JaSZDC6w_zEVCQ=&xsec_source="
+}

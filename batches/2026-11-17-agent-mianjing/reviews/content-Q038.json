@@ -1,0 +1,59 @@
+{
+  "question_id": "Q038",
+  "note_id": "6a61be15000000000f00b322",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
+  "canonical_path": "question_bank/evaluation-reliability/medium/Q038.json",
+  "canonical_sha256": "cff5c9bad8a29b2ec53c760ec7fb1c4e4401b9130e56b607d750c3411b5f50a2",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 实测纯汉字 365 字，低于 402 硬上限、超 350 目标 15 字，非阻塞；summary 1 句 + points 6 条；question_guide 四键非空；technical_answer 2 段 + example 齐全；tags 4 个具体技术词（幻觉缓解/RAG忠实度/跨Agent传播/溯源）。",
+    "difficulty": "通过。成因分类归因 + 对策选型 + 传播阻断边界判断，属 medium；主源 C164 为直问『如何处理模型幻觉』，合并追问未构成系统性设计链，不定 high 合理。",
+    "student_view": "通过。学员侧字段（含新增 ReAct 支撑句）无公司名与『面经/博主/发帖人/原帖/教研』字样；虾皮/米哈游仅出现在 editorial_provenance.notes。",
+    "technical_accuracy": "通过。三类成因（知识缺失/材料噪声/指令冲突）与对应缓解、『有据可答无据则拒』、引用回溯与裁判模型忠实度校验、结论对象 {内容,来源,置信度,状态} 的中间表示、假设与事实分账，机制表述技术正确。新增支撑句将 ReAct 定位为『与外部环境交互获取真实反馈以打断纯思维链的幻觉与错误传播』，与论文动机表述一致且融入论证（承接『为什么提示不够』），不再是装饰性引用。",
+    "answer_responsiveness": "通过。title 三问均覆盖：幻觉处理（summary+points 1-4）、RAG 幻觉（points 3 忠实度回溯、第 1 节材料噪声型）、跨 Agent 传播（summary 末句、points 5、第 2 节三条阻断设计 + example）。",
+    "provenance_merge": "通过。frequency=4 与 notes 候选数一致（C164/C379/C402/C416）；C402 计入本题一次、Q040 明确不重复计数（见 content-Q040 审核记录），全库无跨题重复使用；各候选 company/round 与 candidates.json 及所属 note.json 核对无误。",
+    "verbatim_fidelity": "通过。question_verbatim『如何处理模型幻觉？』与主源候选 C164 逐字一致，并在 notes/6a61be15000000000f00b322/image-extract.md 第 15 行（『5.如何处理模型幻觉？』）核实；本轮修订未触碰 source 字段。",
+    "source_integrity": "通过。note_id『6a61be15000000000f00b322』24 字符、与 notes 目录一致；extraction=image_reading 与候选及 note.json image_extract=true 一致。",
+    "category_check": "通过。category_id=evaluation-reliability，taxonomy.json 已注册；幻觉作为失败模式与防护属『失败模式与防护』范畴，归类正确。",
+    "dedup": "通过。题库无幻觉主题既有题；与 Q024（LLM-as-judge 偏差）、Q017（RAG 链路）边界清晰；related_questions 指向 Q017/Q005 合理。",
+    "technical_references": "通过（round 1 阻塞项已修复）。唯一引用 ReAct（arXiv 2210.03629）现可在 technical_answer 第 1 节定位支撑句：『ReAct 论文的核心动机之一正是：纯思维链推理存在幻觉与错误传播，引入与外部环境（如知识库 API）的交互获取真实反馈才能打断它』，与摘要『通过与 Wikipedia API 交互克服思维链的幻觉与错误传播』对应（正文以『知识库 API』泛化指称外部环境，属忠实转述）。硬检查『每条引用须在学员侧正文有支撑句』满足。"
+  },
+  "claims_checked": [
+    {
+      "claim": "ReAct 论文摘要称纯思维链存在幻觉与错误传播，与外部环境（Wikipedia API）交互获取真实反馈可克服之",
+      "evidence": "https://arxiv.org/abs/2210.03629",
+      "result": "confirmed：第 1 节新增支撑句与摘要动机一致，支撑链闭合"
+    },
+    {
+      "claim": "幻觉成因三类（知识缺失/材料噪声/指令冲突）与『检索空结果显式降级、引用回溯、忠实度裁判、置信度随行+假设事实分账』的缓解与阻断机制",
+      "evidence": "题库审核知识核查（RAG 忠实度与多 Agent 可靠性工程共识）",
+      "result": "confirmed：正文技术表述准确"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 365 字，超 350 目标 15 字（低于 402 硬上限）",
+    "非阻塞：candidates.json 中 C164/C379/C402/C416 状态仍为 pending，登记时统一同步 admitted+question_id=Q038（C402 在 reason 注明归 Q038）"
+  ],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reason": "technical_references 唯一条目（ReAct, arXiv 2210.03629）在学员侧正文无支撑句，仅存在于引用标题（硬检查不满足）",
+      "fix": "编写者在 technical_answer 第 1 节末补 ReAct 支撑句，recommended_answer/source 等其余字段未动",
+      "reReviewedAt": "2026-11-17T20:58:22+08:00",
+      "previousSha256": "cf68f675609223367c67839f1129fe3a7e32d0b285b660033617aca81776fee4"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:58:22+08:00"
+}

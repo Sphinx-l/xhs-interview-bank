@@ -1,0 +1,45 @@
+{
+ "question_id": "Q024",
+ "note_id": "6add53de000000002b01d079",
+ "author_agent": "claude-opus-5-5-author",
+ "reviewer_agent": "claude-opus-5-5-independent-reviewer-5",
+ "canonical_path": "question_bank/evaluation-reliability/medium/Q024.json",
+ "canonical_sha256": "12bddce5b1cd9e6e7c19c1b0aca29fbeb6d414f18d8b59f77c14ca2d17fea4a7",
+ "review_round": 2,
+ "reviewed_sections": [
+  "recommended_answer",
+  "technical_answer",
+  "example",
+  "question_guide",
+  "source",
+  "editorial_provenance",
+  "technical_references"
+ ],
+ "dimensions": {
+  "structure_contract": "通过。recommended_answer 仅 point 2 措辞变化（『regardless 质量』→『不论实际质量』），合计纯汉字 378 字，在 402 硬上限内；points 6 条；question_guide 四键非空；tags 4 个具体无泛词。",
+  "difficulty": "通过（round 1 结论维持）。偏差识别与控制属方法选型与边界判断，medium 正确。",
+  "student_view": "通过。学员侧字段扫描无公司名与『面经/博主/发帖人/原帖/教研』字样；MT-Bench/Chatbot Arena/GPT-4 为技术名词。",
+  "technical_accuracy": "通过（round 1 结论维持）。偏差清单、缓解手段与『约 80%+ 一致、接近人类间一致水平』口径与 arXiv 2306.05685 一致；本次修订仅为中文化措辞，无技术内容变化。",
+  "answer_responsiveness": "通过。题面覆盖关系未变；example 三步演示位置偏差识别与一致性校准。",
+  "provenance_merge": "通过。frequency=1 与主源候选 C308 一致；复合题面前半由 Q022 承接且 notes 有说明；company=阿里巴巴、role=大模型 Agent、round=三面 与主源 note.json 一致。",
+  "verbatim_fidelity": "通过。question_verbatim 与主源候选 C308 逐字一致；extraction=note_text 一致。"
+ },
+ "claims_checked": [
+  {
+   "claim": "LLM-as-judge 位置/冗长/自增强偏差、缓解方案、强裁判约 80%+ 与人类一致性",
+   "evidence": "https://arxiv.org/abs/2306.05685",
+   "result": "confirmed（round 1 结论维持）：第 1 节与 points 表述与论文实际结论一致，非装饰性引用"
+  }
+ ],
+ "issues": [],
+ "revision_history": [
+  {
+   "round": 1,
+   "date": "2026-11-17",
+   "issue": "非阻断建议：point 2 夹带未翻译英文词 regardless",
+   "resolution": "编写者改为『不论实际质量』，round 2 复核通过；因文件字节变化重绑 SHA-256"
+  }
+ ],
+ "decision": "passed",
+ "reviewed_at": "2026-11-17T23:55:00+08:00"
+}

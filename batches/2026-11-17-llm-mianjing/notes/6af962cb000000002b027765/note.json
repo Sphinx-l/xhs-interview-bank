@@ -1,0 +1,14 @@
+{
+ "note_id": "6af962cb000000002b027765",
+ "title": "28届理想Agent开发实习一面",
+ "desc": "算是一次学习到很多的面试经历吧，面试官给我提了很多学习上的建议，面试官真的蛮好的，话说回来，这几次遇到的面试官都挺好的哈哈，当然要是最后能给我offer当然就更好了[害羞R]，还是自己太菜啊\n1、自我介绍\n2、场景题（真无语了，我听到这种题脑子瞬间就空白了，胡乱乱讲一通，主打一个嘴在前边飞，脑子在后面追[完啦R]）\n假设要实现情感分类、文本总结等算法接口，在实时性、准确率、成本要求不同时，你会怎么做技术选型？\n假设淘宝有千万级用户评论，需要将评论划分为正面、中性、负面，要求速度快、成本低，你会采用什么方案？\n3、BERT，Transformer，Self-Attention介绍\n4、项目拷打（这里面试官针对我的项目给我了很多针对性的建议，学习到了很多！）\n5、RAG相关：假设你有一个知识库，并且已经完成了向量化，你觉得 RAG 主要存在哪些问题？应该如何进一步提升效果？\n6、你怎么理解 Skill？Skill 的设计主要是为了解决什么问题？它有哪些优势？\n7、反问环节\n#互联网大厂实习 #Agent开发 #找实习 #日常实习 #理想 #大模型应用",
+ "author": "没事早点睡",
+ "date": "2天前 河南",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6af962cb000000002b027765?xsec_token=ABgR6QfgmsV16HXxVG5wVuNcYI_kVi_YXRGC4RBnCAsNA=&xsec_source="
+}

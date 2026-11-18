@@ -1,0 +1,18 @@
+{
+ "note_id": "6add53de000000002b01d079",
+ "url": "https://www.xiaohongshu.com/explore/6add53de000000002b01d079?xsec_token=AB_cZnpuvEaQ4rctolBJEMLTVrSrrgsJ0y6tHgXXy6m8k=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "阿里巴巴大模型Agent三面10.25",
+ "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+ "published_at": null,
+ "date_raw": "编辑于 10-25 湖南",
+ "likes": "248",
+ "status": "retained",
+ "status_reason": "阿里巴巴大模型Agent三面13题，偏架构设计，题面完整",
+ "company": "阿里巴巴",
+ "role": "大模型 Agent",
+ "round": "三面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1.如何形式化定义 Agent 执行引擎的状态机，并保证崩溃恢复后工具调用幂等、事务边界清晰、补偿可重放？\n2.Planner 输出不可靠时，如何设计 Executor 的防御性校验、局部重规划和失败隔离？如何证明不会放大错误？\n3.工具返回超时、部分成功、脏数据或对抗性结果时，如何做结果验证、置信度校准和一致性补偿？\n4.上下文预算有限时，系统提示、工具 Schema、记忆、轨迹、中间结果如何做全局最优分配？压缩损失如何量化？\n5.长程任务中如何在线检测目标漂移、子目标遗漏和过早终止？如何做目标保持与信用分配？\n6.多 Agent 通信如何设计协议、共识、冲突消解、死锁检测与避免？何时应退化为单 Agent 工作流？\n7.记忆系统如何做写入质量控制、冲突消解、时效性建模和跨租户隔离？遗忘权如何工程化落地？\n8.如何设计 Agent 可观测性体系，使 Trace、Span、工具链和决策日志能支持根因定位与因果归因？\n9.Agent 评测集如何构建？如何控制 LLM-as-judge 的位置/长度/风格偏差、评测污染和离线在线偏差？\n10.模型、Prompt、工具 Schema 变更时，如何做行为回归、兼容性管理、灰度发布和可回滚审计？\n11.Prompt Injection、工具越权、数据外泄如何在架构层做纵深防御？权限最小化、沙箱和审计如何协同？\n12.从 0 到 1 设计 Agent 平台：核心抽象、MVP 边界、多租户隔离、SLA、指标体系和 6 个月路线图如何取舍？\n13.实现 Agent 记忆缓存（LRU + TTL）\n#Agent面试 #大模型 #大模型面试 #大模型开发 #Agent开发 #阿里巴巴 #互联网大厂 #AI求职 #面经 #秋招每周复盘",
+ "images": [],
+ "image_extract": false
+}

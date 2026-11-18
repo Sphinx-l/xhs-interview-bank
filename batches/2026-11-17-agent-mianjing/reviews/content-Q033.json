@@ -1,0 +1,53 @@
+{
+  "question_id": "Q033",
+  "note_id": "6a03b843000000000803d1a9",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-7",
+  "canonical_path": "question_bank/model-adaptation/high/Q033.json",
+  "canonical_sha256": "8728ffec7bf6bb7e4b7d77663581485595470e1cf67f7500e293a4e907b5ca45",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 纯汉字 370 字，低于 402 硬上限但超 350 目标 20 字，非阻塞；points 6 条、question_guide 四键非空、technical_answer 2 段+example 齐全、tags 4 个具体技术词（Agentic训练/三阶段流程/observation mask/损失掩码）。",
+    "difficulty": "通过。题面为跨模块设计题：单题横跨 CPT/SFT/RL 三阶段训练目标与损失掩码设计两个模块，且要求机制推导而非名词复述，high 定档有原帖证据（image-extract.md 第 5 题原文）。",
+    "student_view": "通过。学员侧字段无公司名（字节跳动仅入 editorial_provenance）与禁用旁白字样。",
+    "technical_accuracy": "通过。两条引用均有支撑句：InstructGPT 由 summary（『对应 InstructGPT 的 SFT 阶段』）与第 1 节（『先收集标注者示范做监督微调，再收集输出排序用于人类反馈强化学习』）支撑，与 arXiv 2203.02155 三段流程一致；AgentTuning 由第 1 节末句（『用多任务 agent 轨迹做指令微调即可显著提升模型的 agent 能力且保持通用能力』）支撑，与 arXiv 2310.12823 一致。observation mask 推导自洽：模型运行时只生成 Thought/Action/回答、observation 由环境填入，损失应只定义在模型负责的 token 上，与对齐训练只对助手回复计损失同原理——『损失定义即学习目标』论证成立，三条不 mask 危害（目标错位/信号稀释/行为退化）逻辑正确。",
+    "answer_responsiveness": "通过。题面两问（三阶段分别是什么/为什么 mask observation）由 summary+points 1-3 与 points 4-6 分层覆盖；example 以对照实验演示 mask 差异。",
+    "provenance_merge": "通过。frequency=1 与 notes 候选数一致（仅主源 C335）；C335 未被 Q001-Q032 及本批其他题使用；company=字节跳动、role=AI Agent、round=三轮技术面+HR面（2-2） 与 notes/6a03b843000000000803d1a9/note.json 一致。",
+    "verbatim_fidelity": "通过。question_verbatim 与主源候选 C335 逐字一致，且在 notes/6a03b843000000000803d1a9/image-extract.md 第 35 行逐字核实存在（『Agentic CPT、SFT、RL三阶段训练流程分别是什么？为什么SFT时要mask observation tokens?』）；extraction=image_reading 一致。",
+    "source_integrity": "通过。source.note_id 为 24 字符『6a03b843000000000803d1a9』，与候选及 notes 目录逐字一致，note.json image_extract=true 且题面在 image-extract.md 中可定位，来源链闭合。非阻塞观察：candidates.json 中 C335 状态仍为 pending，登记时需同步。",
+    "dedup": "通过。题库无 agentic 训练流程主题既有题；与 Q031（升级决策）/Q032（失效边界）/Q035（RM）经 related_questions 关联且各题边界清晰。"
+  },
+  "claims_checked": [
+    {
+      "claim": "InstructGPT 流程为先收集标注者示范做 SFT、再收集输出排序数据用于 RLHF",
+      "evidence": "https://arxiv.org/abs/2203.02155",
+      "result": "confirmed：与论文三步法（SFT→RM→PPO）一致，正文第 1 节表述准确"
+    },
+    {
+      "claim": "AgentTuning 用多任务 agent 轨迹指令微调提升 agent 能力且保持通用能力",
+      "evidence": "https://arxiv.org/abs/2310.12823",
+      "result": "confirmed：第 1 节末句支撑，与论文结论一致"
+    },
+    {
+      "claim": "SFT 对 agent 轨迹仅对模型生成 token 计损失、observation 置 loss_mask=0 属工程共识做法",
+      "evidence": "题面推导逻辑与对齐训练 loss-on-assistant-tokens-only 原理同构",
+      "result": "confirmed：第 2 节从『损失定义即学习目标』自洽推导，无事实错误"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 370 字，超 350 目标 20 字（低于 402 硬上限），后续修订时可顺带压缩",
+    "非阻塞：candidates.json 中 C335 状态仍为 pending，登记时需同步 admitted+question_id=Q033"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:43:25+08:00"
+}

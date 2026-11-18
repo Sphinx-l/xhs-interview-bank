@@ -1,0 +1,14 @@
+{
+ "note_id": "6afc67ae000000002a03bac8",
+ "title": "英特尔｜AI应用工程师面经",
+ "desc": "面试题目一览\nQ1：你在项目里用过什么Agent框架，为什么这样选？\nQ2：请说明你的RAG方案和数据规模，怎样判断规模变化后的影响？\nQ3：Agent端到端延迟偏高，从哪几个阶段找原因？\nQ4：MCP接工具时，哪些问题最值得提前检查？\nQ5：LangGraph里如何把工具执行结果带回模型？\nQ6：提示词里放哪些信息？工具参数定义怎样传递？\nQ7：分布式数据并行训练为什么还要同步梯度？\nQ8：训练数据集怎么清洗和切分，才能避免评估泄漏？\nQ9：选两种大模型架构思路，怎样解释它们的不同成本？\nQ10：做过自定义算子吗？选一个说明如何确认正确与加速。#英特尔 #英特尔面试 #面试 #工程师 #求职 #2026校招季 #应届生求职 #互联网大厂实习 #求职青年 #24h新鲜面经",
+ "author": "栗栗不困",
+ "date": "昨天 22:41 江西",
+ "imgs": [],
+ "video": false,
+ "interaction": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6afc67ae000000002a03bac8?xsec_token=AB2XtWuPZqaRgC3y917gfvcXN_RnNxYn61vXLFMyZ-Ovc=&xsec_source="
+}

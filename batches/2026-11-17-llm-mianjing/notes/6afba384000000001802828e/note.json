@@ -1,0 +1,14 @@
+{
+ "note_id": "6afba384000000001802828e",
+ "title": "27秋招Seed大模型二面面经",
+ "desc": "1、自我介绍：实习+论文\n2、介绍论文\n（1）论文里面的技术如何应用到工业界的实践当中？\n（2）有没有试过用PE的方式改造reasoning\n3、参加过的数学竞赛对你做LLM有没有什么帮助？\n4、如何看待code和edu(math/reasoning)这两个方向？\n5、实习中工作的最大挑战？\n6、手撕：\n标题：寻找目标子数组\n题目描述 给你一个整数数组 nums 和一个整数 k ，如果 nums 有一个目标子数组，返回 true ，否则返回 false： 目标子数组的定义是：长度至少为 2 ，且子数组元素总和为 k 的倍数。 注意： 子数组 是数组中 连续 的部分。如果存在一个整数 n ，令整数 x 符合 x = n * k ，则称 x 是 k 的一个倍数。0 始终 视为 k 的一个倍数。\n输入：nums = [23,2,4,6,7], k = 6 输出：true  输入：nums = [5,0,0,0,0], k = 3 输出：true  输入：nums = [23,2,6,4,7], k = 13 输出：false\n面试回答参考图片内容～\n#24h新鲜面经 #大模型 #面试经验howto #校招 #秋招有路子 #秋招每周复盘 #大模型学习路线 #大模型秋招",
+ "author": "27秋招战喵",
+ "date": "编辑于 昨天 16:50 北京",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6afba384000000001802828e?xsec_token=ABYNDwmG9pWf1mzxWEHByoUDcZbg7NbxIuBGl4H7ale40=&xsec_source="
+}

@@ -1,0 +1,18 @@
+{
+ "note_id": "69a002ca000000001a01dd93",
+ "url": "https://www.xiaohongshu.com/explore/69a002ca000000001a01dd93?xsec_token=ABV5YTwUb-O_J8v13qEb2J-DetW5C43Sf6eTt7Y9W33CI=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "某教育agent开发面经",
+ "author": "想去鹅厂看企鹅09-15",
+ "published_at": null,
+ "date_raw": "编辑于 02-26",
+ "likes": "257",
+ "status": "retained",
+ "status_reason": "某教育公司Agent开发面经12题，题面完整",
+ "company": "unspecified（某教育公司）",
+ "role": "Agent 开发",
+ "round": "unspecified",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1. 介绍一下项目一，oauth2.1为什么要接入进mcp中\n2. 项目一中遇到最困难的点是什么\n3. 做重构的时候是如何使用ai的\n4. RAG项目二中MySQL和ES数据一致性是怎么做的\n5. embedding模型是如何选型的\n6. 手动干预切片是怎么实现的\n7. 讲解召回重排的策略\n8. 如何实现多租户隔离\n9. sse流式输出在用户关闭浏览器的时候就断开了，如何保证中断后还能保持之前输出\n10. 是否了解k8s\n11. 对agent的看法\n12. 讲一下agent中有哪些模式\n#面经 #大模型",
+ "images": [],
+ "image_extract": false
+}

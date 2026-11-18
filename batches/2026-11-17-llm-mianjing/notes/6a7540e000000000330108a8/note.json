@@ -1,0 +1,14 @@
+{
+ "note_id": "6a7540e000000000330108a8",
+ "title": "AI｜211硕｜传音AI Agent开发一面",
+ "desc": "面试时间： 8 月 5 日\n面试岗位： AI Agent 开发\n面试时长：约 40 分钟\n\t\n1、为什么引入父子索引？\n2、为什么在检索阶段引入 BM25？\n3、Rerank 后一般返回几个块？\n4、Rerank 后的 Top K 截断是怎么做的？\n5、讲一下上下文工程是怎么设计的。\n6、记忆机制是怎么做的？\n7、Function Calling 是怎么设计的？\n8、Agent 的任务规划是怎么做的？\n9、Prompt 注入攻击如何防御？\n10、工具调用的安全控制是怎么实现的？\n11、讲一下分布式令牌桶限流。\n12、漏桶算法是什么？\n13、滑动窗口算法是怎么实现的？\n14、滑动窗口和令牌桶相比有什么区别？\n15、布隆过滤器讲一下。\n16、数据库索引失效的情况有哪些？\n17、LIKE 查询会不会导致索引失效？\n18、RAG 系统如何评测？\n19、有哪些评测维度？\n20、评测数据集一般包括哪些内容？\n21、如果要提升相关度，你会怎么做？\n22、如果要优化回答效果，有哪些思路？\n23、如果设计一个数据处理场景，比如有一千条数据需要求和，你会如何设计处理流程？\n24、RAG 的性能如何提升？\n25、当前的上下文是如何处理的？\n#互联网大厂 #人工智能 #小红书科技AMA #大模型 #agent #AI工具 #LLM #面经 #程序员 #秋招",
+ "author": "大模型研习",
+ "date": "08-07",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6a7540e000000000330108a8?xsec_token=ABVkhivv-exOKoLEysKBlNrTZVWWJ6sO97x9zWLSpPKHk=&xsec_source="
+}

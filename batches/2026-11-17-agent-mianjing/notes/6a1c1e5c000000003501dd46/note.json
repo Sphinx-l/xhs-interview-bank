@@ -1,0 +1,30 @@
+{
+ "note_id": "6a1c1e5c000000003501dd46",
+ "url": "https://www.xiaohongshu.com/explore/6a1c1e5c000000003501dd46?xsec_token=ABfr-PwIgAQzs0_yeNMPS-q25fku0_bFuywQpsdUe97tI=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "腾讯 Agent二面凉经带答案",
+ "author": "北大第一小趴菜11-08",
+ "published_at": null,
+ "date_raw": "编辑于 06-05",
+ "likes": "522",
+ "status": "retained",
+ "status_reason": "腾讯Agent二面11题（图片），带复盘答案，画面提取完成",
+ "company": "腾讯",
+ "role": "Agent 开发",
+ "round": "二面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "二面主要问的都是工程实际相关的问题，第一次被拷打麻了。#算法 #互联网大厂 #实习 #面试",
+ "images": [
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
+  "06.webp",
+  "07.webp",
+  "08.webp",
+  "09.webp",
+  "10.webp",
+  "11.webp"
+ ],
+ "image_extract": true
+}

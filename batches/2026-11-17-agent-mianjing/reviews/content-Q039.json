@@ -1,0 +1,59 @@
+{
+  "question_id": "Q039",
+  "note_id": "6a1c1e5c000000003501dd46",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
+  "canonical_path": "question_bank/agent-architecture/high/Q039.json",
+  "canonical_sha256": "c072169f319982f8f0057f6cc2d262a0e4534ec9ca90986f7746f1f99f149c6d",
+  "review_round": 2,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过（附提示）。recommended_answer 实测纯汉字 396 字，低于 402 硬上限仅 6 字余量、超 350 目标 46 字，逼近硬限，后续修订建议压缩；summary 1 句 + points 6 条；question_guide 四键非空；technical_answer 2 段 + example 齐全；tags 4 个中『AI面试』『面试官Agent』为场景专名（非泛词 ai/面试/agent 单用），可接受但建议后续换成更技术化的词（如 workflow编排/计划锁定/rubric评分）。",
+    "difficulty": "通过。同帖真实系统性追问链 C051→C054（设计→缺陷→核心指标→路径震荡）构成 high 档证据，保留于 editorial_provenance.notes；补写场景未用于升档。",
+    "student_view": "通过。学员侧字段无公司名与『面经/博主/发帖人/原帖/教研』字样；腾讯仅出现在 editorial_provenance。",
+    "technical_accuracy": "通过。『流程固定、内容自主』的 Workflow 主干 + 自主节点设计、评分 rubric 事前锁定与出题/评分分离、震荡源于每步全局重规划且以『计划分层 + 重规划限阶段边界触发』治理（收紧 Plan-Execute 的 Re-plan 触发）表述技术正确。BEA 引用有可定位支撑句：question_guide『把 Workflow/Agent 模式组合成产品』、summary『流程用 Workflow 固化…内嵌自主 Agent』与第 1 节『适合 Workflow 主干包住自主节点』，与 anthropic.com/engineering/building-effective-agents 的 workflow/agent 组合模式对应。",
+    "answer_responsiveness": "通过。title 四问均覆盖：整体设计（points 1-4、第 1 节状态机）、缺点（points 5、第 2 节诚实缺陷分析）、核心指标（summary、第 2 节体验层/有效层两层指标）、路径震荡（points 6、第 2 节震荡治理 + example）。",
+    "provenance_merge": "通过。frequency=4 与 notes 候选数一致（C051/C052/C053/C054，同帖追问链）；四候选均未被 Q001-Q035 及本批其他题使用（全库 grep 唯一）。",
+    "verbatim_fidelity": "通过。question_verbatim『场景题，如果给你一个假设的需求，比如用agent实现一个ai面试的程序，你会怎么设计？』与主源候选 C051 逐字一致（含原小写 agent/ai），并在 notes/6a1c1e5c000000003501dd46/image-extract.md 第 83 行核实。",
+    "source_integrity": "通过（round 1 阻塞项已修复）。note_id『6a1c1e5c000000003501dd46』24 字符、与 notes 目录一致；extraction 已更正为 image_reading，与 candidates.json C051（image_reading）、note.json（image_extract=true、images 11 张、desc 不含该题面）及 image-extract.md 第 83 行来源链完全一致。",
+    "category_check": "通过。category_id=agent-architecture，taxonomy.json 已注册；场景设计考 Workflow/Agent 编排与规划治理，归 agent-architecture 正确。",
+    "dedup": "通过。题库无 AI 面试场景设计既有题；Q006（workflow 选型理由）、Q003（ReAct vs Plan-Execute）为相邻概念题，本题为产品场景综合设计，核心问题不同不构成 >70% 重复；related_questions 指向 Q006/Q003 合理。"
+  },
+  "claims_checked": [
+    {
+      "claim": "Anthropic BEA 提出 workflow（代码编排固定路径）与 agent（模型自主决策）两类构建块及其组合适用场景",
+      "evidence": "https://www.anthropic.com/engineering/building-effective-agents",
+      "result": "confirmed：题目『固定主干 + 自主节点』设计与其 workflow/agent 组合表述一致"
+    },
+    {
+      "claim": "路径震荡源于每步允许全局重规划，治理是把 Re-plan 触发从每步收紧到阶段边界+异常事件（计划分层：会话级/题目级/追问级）",
+      "evidence": "题库审核知识核查（Plan-Execute 重规划治理工程共识）",
+      "result": "confirmed：表述准确，example 的三级触发演示与正文一致"
+    }
+  ],
+  "issues": [
+    "非阻塞：recommended_answer 纯汉字 396 字，距 402 硬上限仅 6 字余量、超 350 目标 46 字，后续修订时建议压缩（如 points 1/4 合并）",
+    "非阻塞：tags『AI面试』『面试官Agent』为场景专名可接受，建议后续替换为更技术化标签",
+    "非阻塞：candidates.json 中 C051-C054 状态仍为 pending，登记时统一同步 admitted+question_id=Q039"
+  ],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reason": "source.extraction=note_text 与 candidates.json 主源候选 C051（image_reading）、note.json（image_extract=true、题面仅在图片）不符",
+      "fix": "编写者将 source.extraction 更正为 image_reading，其余字段未动（recommended_answer 仍 396 字）",
+      "reReviewedAt": "2026-11-17T20:58:22+08:00",
+      "previousSha256": "9e17c737a0011abf5f5fac98e5f8a4c465be8c3bc5cd1a8b0b1c63b2df0b4f55"
+    }
+  ],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:58:22+08:00"
+}

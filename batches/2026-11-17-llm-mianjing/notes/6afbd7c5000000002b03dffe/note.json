@@ -1,0 +1,14 @@
+{
+ "note_id": "6afbd7c5000000002b03dffe",
+ "title": "运维开发｜小红书Dots LLMOps完整4轮面经",
+ "desc": "整体下来，小红书Dots这个「大模型运维/LLMOps岗」，和市面上普通大模型运维不一样：\n\t\n1. 核心围绕MoE稀疏模型，Dots自研MoE，AlltoAll通信、专家负载均衡是高频考点，提前看dots.llm1技术报告非常加分；\n​\n2. 考核优先级：GPU集群故障排查 > 推理服务SLO & 成本优化 > K8s容器基础 > 大模型基础原理；\n​\n3. 不考复杂算法手撕，但是非常看重生产落地经验，喜欢听真实事故复盘，讨厌背标准答案；\n​\n4. 团队是算法+基建深度绑定，你不能只懂机器，要听得懂算法侧的诉求（训练稳定、评测、微调LoRA）；\n​\n5. 门槛：传统运维可以转，但如果完全没有GPU、RDMA、vLLM/SGLang实操，很容易卡在二面。\n\t\n#运维 #面试技巧 #运维开发 #运维面试 #面试经验howto #数据开发 #小红书 #LLMOps #SRE #GPU",
+ "author": "数据工程师勇哥",
+ "date": "昨天 12:27 江苏",
+ "imgs": [],
+ "video": false,
+ "comments": [],
+ "img_count": 0,
+ "review_status": "fetch_failed",
+ "review_reason": "正文为考核要点总结，逐题题面未取到",
+ "url": "https://www.xiaohongshu.com/search_result/6afbd7c5000000002b03dffe?xsec_token=ABYNDwmG9pWf1mzxWEHByoUBQmBcUKzZTFcmMwY_axhF8=&xsec_source="
+}

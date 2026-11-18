@@ -1,0 +1,48 @@
+{
+  "question_id": "Q036",
+  "note_id": "6ac865b1000000000b0061c2",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer-8",
+  "canonical_path": "question_bank/data-governance/medium/Q036.json",
+  "canonical_sha256": "058ed49cb80ef6a089ebe3699f57f8015c64b23aa806d916498a5ea2843e3f3a",
+  "review_round": 1,
+  "reviewed_sections": [
+    "recommended_answer",
+    "technical_answer",
+    "example",
+    "question_guide",
+    "source",
+    "editorial_provenance",
+    "technical_references"
+  ],
+  "dimensions": {
+    "structure_contract": "通过。recommended_answer 实测纯汉字 341 字（180-350 区间内，低于 402 硬上限）；summary 1 句 + points 6 条非空；question_guide 四键非空；technical_answer 2 段 + example 三键齐全；tags 4 个具体技术词（知识库更新/增量更新/数据一致性/版本管理），无禁用泛词。",
+    "difficulty": "通过。增量更新粒度选择（diff 对齐切分逻辑）、单写源+异步同步+对账补偿的方案选型，属典型 medium 的选型/边界判断，非跨模块系统设计追问链。",
+    "student_view": "通过。学员侧字段（含 technical_references 标题）无公司名与『面经/博主/发帖人/原帖/教研』字样；虾皮/携程等仅出现在 editorial_provenance。",
+    "technical_accuracy": "通过。块级 diff 增量、overlap 邻块重切、别名/版本指针原子切换、『文档 ID+位置+内容指纹』块 ID 策略、binlog/消息队列异步同步 + 幂等消费 + (ID,版本,哈希) 对账补偿，均为索引更新与异构存储一致性的标准工程表述，无概念错误。AWS RAG 引用有可定位支撑句：technical_answer 第 2 节『RAG 对时效的诉求本身也是它存在的理由之一（把模型连到频繁更新的信息源）』，与 aws.amazon.com 页面表述对应。",
+    "answer_responsiveness": "通过。title 三问均有覆盖：更新难点（points 4 局部修改 overlap 难点、第 1 节重建成本）、增量更新（points 1-2、第 1 节全流程）、MySQL/ES 一致性（points 5、第 2 节单写源+对账）；另加分项覆盖版本治理与度量（points 3/6）。",
+    "provenance_merge": "通过。frequency=3 与 notes 列出的合并候选数一致（C378/C211/C244），主源 C378 与 question_verbatim 对应；C211（携程一面，note 69f9f8c5）、C244（某教育公司，note 69a002ca）候选记录核对无误；三候选均未被 Q001-Q035 及本批其他题使用（全库 grep 唯一）。",
+    "verbatim_fidelity": "通过。question_verbatim『RAG 知识库更新有哪些难点？文档局部修改时，如何考虑增量更新？』与主源候选 C378 逐字一致，并在 notes/6ac865b1000000000b0061c2/image-extract.md 第 18 行核实（含原标点与问法）。",
+    "source_integrity": "通过。note_id『6ac865b1000000000b0061c2』为 24 字符且与 notes 目录、candidates.json 逐字一致；extraction=image_reading 与候选及 note.json image_extract=true 一致，来源链闭合。",
+    "category_check": "通过。category_id=data-governance，taxonomy.json 已注册；题目核心是知识库运营、版本生命周期与多存储一致性（数据治理而非检索算法），归 data-governance 而非 rag-retrieval 正确。",
+    "dedup": "通过。与 Q017（RAG 全链路流程）、Q020（分块策略）核心问题不同：本题考更新/一致性治理而非检索效果，四维合计不超 70%；related_questions 指向 Q017/Q020 合理且不含自身、不重复。"
+  },
+  "claims_checked": [
+    {
+      "claim": "RAG 的价值之一是把模型连到频繁更新的信息源，故『数据变更到可检索』滞后应作为 SLA 指标",
+      "evidence": "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
+      "result": "confirmed：AWS 页面存在该表述，题目第 2 节引用与之一致"
+    },
+    {
+      "claim": "以关系库为单写源、binlog/消息队列异步驱动 ES/向量库、消费端以版本号幂等、对账任务比对 (ID,版本,哈希) 并补偿，是异构存储最终一致的成熟方案",
+      "evidence": "题库审核知识核查（CDC/最终一致工程共识）",
+      "result": "confirmed：表述准确，未虚构具体产品指标"
+    }
+  ],
+  "issues": [
+    "非阻塞：candidates.json 中 C211/C244/C378 已标 admitted+question_id=Q036，但本批其余四题的合并候选状态仍为 pending，登记时需统一同步（见各题 issues）"
+  ],
+  "revision_history": [],
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T20:55:11+08:00"
+}

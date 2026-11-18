@@ -1,0 +1,18 @@
+{
+ "note_id": "6a60ba03000000000f017ac2",
+ "url": "https://www.xiaohongshu.com/explore/6a60ba03000000000f017ac2?xsec_token=ABk95bsCHV0Ub3x_3yjQG7vKvTj7OB8SlJ8W-Y1tmixow=&xsec_source=pc_search&source=web_explore_feed",
+ "title": "字节跳动AI Agent一面，7.22",
+ "author": "Charles的AI产品进阶-途灵灵昨天 17:05",
+ "published_at": null,
+ "date_raw": "07-22",
+ "likes": "397",
+ "status": "retained",
+ "status_reason": "字节跳动AI Agent一面13题，题面完整",
+ "company": "字节跳动",
+ "role": "AI Agent",
+ "round": "一面",
+ "collected_at": "2026-11-17T11:00:00+08:00",
+ "desc": "1.请解释Agent的核心架构，它与单纯调用大模型API相比，解决了哪些问题？\n2.Function Calling中，如何设计工具描述和参数Schema来提升大模型的调用准确率？\n3.多步任务中Agent陷入循环或偏离目标时，如何设计有效的终止条件与反思机制？\n4.设计一个支持长期记忆和上下文压缩的Agent记忆模块，核心组件与技术选型有哪些？\n5.请描述ReAct模式的工作原理，并举例说明它如何结合推理与行动。\n6.多Agent协作场景下，Agent之间的通信、任务分配和状态同步如何实现？\n7.Agent调用外部API出现超时或返回异常格式时，如何设计稳健的重试和降级策略？\n8.如何将RAG与Agent结合？当检索结果有噪声时，如何避免干扰Agent的推理与决策？\n9.评估Agent系统的性能，你会关注哪些关键指标？如何收集和监控这些指标？\n10.使用LangChain等框架开发Agent时，遇到过哪些架构或性能局限？你是如何绕过的？\n11.Agent需要操作数据库或文件系统，如何防止提示注入导致的越权或误操作？\n12.为控制延迟和成本，Agent在调用大模型时有哪些优化策略？（如缓存、压缩、模型路由等）\n13.给出一段Agent循环调用工具的伪代码，分析可能导致token快速耗尽或死循环的问题点，并给出改进思路。\n#大模型面试 #Agent #互联网大厂实习 #大模型开发 #大模型 #面经 #字节跳动 #AI面试",
+ "images": [],
+ "image_extract": false
+}

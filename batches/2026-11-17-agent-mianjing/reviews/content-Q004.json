@@ -1,0 +1,36 @@
+{
+  "question_id": "Q004",
+  "note_id": "6adc069a0000000025023c8e",
+  "author_agent": "claude-opus-5-5-author",
+  "reviewer_agent": "claude-opus-5-5-independent-reviewer",
+  "canonical_path": "question_bank/agent-architecture/high/Q004.json",
+  "canonical_sha256": "a6eec64bdd402f028695671b5dc1abf1a45dae6e7c8a667500cc54c99af6b4bc",
+  "review_round": 2,
+  "reviewed_sections": ["recommended_answer", "technical_answer", "example", "question_guide", "source", "editorial_provenance", "technical_references"],
+  "dimensions": {
+    "structure_contract": "通过（round 1 长度问题已修复）。结构字段齐全合规；tags 4 个具体；question_guide 四键非空；technical_answer 无 summary、3 段+example；related_questions=[Q003] 合规。recommended_answer 压缩后 summary+points 纯汉字约 311 字，回到契约 180-350 区间；points 仍为 6 条（上限内）。",
+    "difficulty": "通过。high 定档的原帖证据不变：主源 note 6adc069a 为系统性 Harness 面试链，note 6adf6239 中存在真实追问链 C277→C278→C279→C280，相关维度均已并入。",
+    "student_view": "通过。无来源侧旁白、无公司名泄漏；压缩未引入新旁白。",
+    "technical_accuracy": "通过。硬限/软停双轨、状态指纹检测、熔断、收尾模式、验收闭环论断在压缩后均保留且无失真；point 5『看不懂失败原因是重复调用的头号诱因』与 technical_answer 中『循环高频诱因』的限定表述基本一致，属工程经验性论断，可接受。",
+    "answer_responsiveness": "通过。压缩后四个子问覆盖完整：point 1 流程、point 2 何时停、point 4 死循环与重复调用、point 3 终止后校验；point 5-6 为工程补充。",
+    "provenance_merge": "通过。C058/C144/C278/C320 与关联候选 C277/C279 均存在且维度已并入；verbatim 与主源 C058 逐字一致且未改动；company=字节跳动、role=Agent Harness、round=一面 与 note.json 一致；frequency=4 正确。",
+    "verbatim_fidelity": "通过。verbatim 保留原帖题面未改写。"
+  },
+  "claims_checked": [
+    {"claim": "Anthropic：agent 任务常以完成为止，但也普遍设置停止条件（如最大迭代数）以保持控制", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"},
+    {"claim": "执行中 Agent 需逐步从环境获取 ground truth（工具调用结果/代码执行）评估进展", "evidence": "https://www.anthropic.com/engineering/building-effective-agents", "result": "confirmed"}
+  ],
+  "issues": [],
+  "revision_history": [
+    {
+      "round": 1,
+      "decision": "rejected",
+      "reviewed_at": "2026-11-17T19:43:28+08:00",
+      "issue": "recommended_answer 纯汉字约 438 字，超出契约『约 180-350 汉字』约 25%，须压缩。",
+      "resolution": "编写者已压缩至约 311 汉字，6 条 points 与四个子问覆盖全部保留，technical_answer 与 example 未动；round 2 复核确认在区间内且无内容失真。"
+    }
+  ],
+  "notes": "round 2 复审通过。修订仅压缩 recommended_answer 措辞，其余部分与 round 1 审核版本一致。",
+  "decision": "passed",
+  "reviewed_at": "2026-11-17T19:49:39+08:00"
+}

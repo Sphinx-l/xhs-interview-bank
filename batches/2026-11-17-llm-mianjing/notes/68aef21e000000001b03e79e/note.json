@@ -1,0 +1,16 @@
+{
+ "note_id": "68aef21e000000001b03e79e",
+ "title": "商汤大模型二面面筋8.27（后续：已oc",
+ "desc": "主包也不知道结果会这么样，因为没有聊得很深。主包不会多模态…面试官想问，但是我不会[失望R]\n一些八股：\n1. 注意力机制\n2. LN和RMSNorm\n3. 长思维链了解吗？（不太了解\n4. 多模态了解吗？（不了解\n5. LoRA和 QLoRA？\n6. 多轮对话怎么处理（主包只是讲了讲自己的思路\n7. GRPO讲解一下\n\t\n最后问了主包一个开放性题。让主包讲了讲一个多模态场景下的处理思路（面试官说整体上逻辑是正确的，建议下去再学一学多模态）\n\t\n手撕（lc hot 100原题）\n\t\n总时长：46min",
+ "author": "Q.y",
+ "date": "编辑于 2025-08-29",
+ "imgs": [
+  "https://sns-webpic-qc.xhscdn.com/202611181128/8063098fcf776bbe61d4066a22beef89/1040g00831lmh58k8l8005pij5i51ohhgg7ktgi8!nd_dft_wlteh_webp_3"
+ ],
+ "video": false,
+ "comments": [],
+ "img_count": 1,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/68aef21e000000001b03e79e?xsec_token=ABBiOYkX01WdIQMFnzd5Cez2fvn_tWKBmsgyT1z64y9kg=&xsec_source="
+}

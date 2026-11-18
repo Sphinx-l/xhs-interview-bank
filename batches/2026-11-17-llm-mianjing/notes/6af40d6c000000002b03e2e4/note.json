@@ -1,0 +1,18 @@
+{
+ "note_id": "6af40d6c000000002b03e2e4",
+ "title": "智谱 具身算法 一面面经",
+ "desc": "📝 一面（全程项目深挖）\n\t\n预训练\n· 预训练数据的质量建模怎么做的\n· 预训练数据的分布怎么衡量\n· 高价值样本和低质量样本怎么定义\n· 预训练的时候会看哪些指标，仿真/真机评测看哪些指标\n· ego数据和 robot数据的 domain gap 怎么解决\n· retarget的误差、可达性问题\n· 预训练数据里 ego 和机器人数据的配比\n· 预训练的一些工程细节\n\t\n后训练\n· 人在回路只在一种机器人构型上做过吗\n· 后训练是先 SFT 再 RL 吗，SFT 完成功率大概是多少\n· 真机的 infra 怎么设计的\n\t\n无 coding\n\t\n#具身智能 #秋招 #面经 #智谱 #算法 #VLA #大模型 #机器人",
+ "author": "阿卜加加加",
+ "date": "6天前 北京",
+ "imgs": [],
+ "video": false,
+ "interaction": [
+  "126",
+  "155",
+  "15"
+ ],
+ "img_count": 0,
+ "review_status": "retained",
+ "review_reason": "正文含真实题面",
+ "url": "https://www.xiaohongshu.com/search_result/6af40d6c000000002b03e2e4?xsec_token=ABeAR7O0uWvkfGa-0NiQS-MrpO6XMrcQFsJALMzhs5mjk=&xsec_source="
+}
